@@ -1,0 +1,55 @@
+.navbar-toggler {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    padding: 6px;
+    transition: all .5s ease-in-out;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* The Burger Button */
+.menu-btn__burger {
+    width: 22px;
+    height: 2px;
+    display: block;
+    background: #4B504A;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #4B504A;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-8px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(8px);
+}
+
+/* The Burger Button Animation */
+.navbar-toggler.change .menu-btn__burger {
+    background-color: white;
+}
+
+.navbar-toggler.change .menu-btn__burger::before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler.change .menu-btn__burger::after {
+    transform: rotate(-45deg);
+}
