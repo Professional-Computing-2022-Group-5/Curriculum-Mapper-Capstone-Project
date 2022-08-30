@@ -1,0 +1,1 @@
+FLASK_APP=curriculum_mapper.pypip install flask-migrate
