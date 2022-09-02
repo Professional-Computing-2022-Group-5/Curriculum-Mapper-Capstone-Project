@@ -8,5 +8,14 @@
 2. Install yarn
 ### `npm install --global yarn`
 
-3. Run the react app
+3. Install all the dependencies (e.g. react-force-graph-2d)
+### `npm install`
+
+4. Run the react app
 ### `npm start`
+
+Now the app will be running on: http://localhost:3000/
+
+----- To run the Flask Server at the same time ----
+1. Open a new terminal
+
