@@ -16,7 +16,7 @@
 
 Now the app will be running on: http://localhost:3000/
 
------ To run the Flask Server at the same time ----
+# ----- To run the Flask Server at the same time ----
 Open a new terminal and do the following:
 
 1. Make sure pip is installed: 
