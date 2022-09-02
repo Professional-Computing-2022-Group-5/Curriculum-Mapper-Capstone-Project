@@ -15,7 +15,7 @@ import {
 import "./style.css";
 
 var data = {
-  nodes: [{ id: "A", Name:"B" }, { id: "B" }, { id: "C" }, { id: "D" }],
+  nodes: [{ id: "A"}, { id: "B" }, { id: "C" }, { id: "D" }],
   links: [
     { source: "B", target: "C", value: 8 },
     { source: "C", target: "D", value: 10 },
