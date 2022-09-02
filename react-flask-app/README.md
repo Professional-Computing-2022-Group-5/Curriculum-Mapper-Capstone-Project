@@ -35,17 +35,11 @@ Open a new terminal and do the following:
  <br> &nbsp;&nbsp;  <code> MacOS & Linux: $ source venv/bin/activate </code>  
  <br> &nbsp;&nbsp;  <code> Microsoft: $ venv\Scripts\activate </code> <br><br>
 
-5. Run Flask:
- <br> &nbsp;&nbsp;  <code>$ export FLASK_APP=curriculum_mapper.py</code>
-
-6. Run our website through Flask: 
+5. Run our website through Flask: 
 <br> &nbsp;&nbsp; <code> $ flask run </code> <br>
+  Now running on http://127.0.0.1:5000/ (Press CTRL+C to quit), but you don't necessarily need to use it as it is just the server as doesn't have anything to display
 
-7. Deactivate the virtual environment when finished
+6. Deactivate the virtual environment when finished
  <br> &nbsp;&nbsp; <code> $ deactivate </code> 
- 
-<h2>Deployment</h2>
-Via localhost at port 5000, i.e. the following line should be showing on your terminal: </pre> <pre class=tab > * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) </pre> 
-To run our website, you must open "http://127.0.0.1:5000/" on a browser tab.
 
 
