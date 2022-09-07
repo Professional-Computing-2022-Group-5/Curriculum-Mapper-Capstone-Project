@@ -1,0 +1,205 @@
+Unique name,superclass 1
+allen key,wrench
+alloy steel threaded fastener,steel threaded fastener
+austenitic stainless steel threaded fastener,stainless steel threaded fastener
+bolt,physical object
+british standard pipe thread,thread
+button head rivet,rivet
+buttress thread,thread
+cap nut,nut
+carriage bolt,round head threaded fastener
+castle nut,lock nut
+cheese fastener head,threaded fastener head
+cheese head threaded fastener,threaded fastener with head
+clutch socket fastener head,cylindric socket fastener head
+clutch socket head threaded fastener,cylinder head threaded fastener
+clutch-type socket driving recess,socket driving recess
+cone head rivet,rivet
+conical driving recess,driving recess
+conical threaded fastener,threaded fastener
+cotter pin,split pin
+cup pointed end,screw end
+cylinder head threaded fastener,threaded fastener with head
+cylindric socket fastener head,threaded fastener head
+cylindrical threaded fastener,threaded fastener
+cylindrical threaded rod,cylindrical threaded fastener
+double end stud bolt,partially threaded stud bolt
+dovetail thread,thread
+dowel pin,pin
+drill pipe thread,thread
+driving end,end
+driving recess,feature
+dryseal pipe thread,thread
+expansion bolt,bolt
+external thread,thread
+externally threaded end,threaded end
+eye bolt,cylindrical threaded fastener
+eye fastener head,threaded fastener head
+eye nut,nut
+fastener head,feature
+fillister fastener head,threaded fastener head
+fillister head threaded fastener,threaded fastener with head
+flanged hexagonal nut,hexagonal nut
+flat driving end,driving end
+flat fastener head,threaded fastener with head
+flat head threaded fastener,threaded fastener with head
+flat screwdriver,screwdriver
+fluted pan head threaded fastener,pan head threaded fastener
+fluted round head threaded fastener,round head threaded fastener
+fluted socket driving recess,socket driving recess
+fluted socket fastener head,cylindric socket fastener head
+fluted socket flat fastener head,flat fastener head
+fluted socket flat head threaded fastener,flat head threaded fastener
+fluted socket head threaded fastener,cylinder head threaded fastener
+frearson driving end,driving end
+frearson fillister fastener head,fillister fastener head
+frearson fillister head threaded fastener,fillister head threaded fastener
+frearson flat fastener head,flat fastener head
+frearson flat head threaded fastener,flat head threaded fastener
+frearson oval fastener head,oval fastener head
+frearson oval head threaded fastener,oval head threaded fastener
+frearson round fastener head,round fastener head
+frearson round head threaded fastener,round head threaded fastener
+frearson screwdriver,screwdriver
+frearson-type recess,conical driving recess
+fully threaded fastener,threaded fastener
+fully threaded stud bolt,fully threaded fastener
+gimlet pointed end,screw end
+grub screw,cylindrical threaded fastener
+half dog pointed end,screw end
+hex bolt ansi b18.2.1,cylindrical threaded fastener
+hex socket head threaded fastener,cylinder head threaded fastener
+hexagonal fastener head,threaded fastener head
+hexagonal head flange bolt,hexagonal head threaded fastener
+hexagonal head lock nut,lock nut
+hexagonal head threaded fastener,threaded fastener with head
+hexagonal nut,nut
+hexagonal socket driving recess,socket driving recess
+hexagonal socket fastener head,cylindric socket fastener head
+hexagonal socket flat head threaded fastener,flat head threaded fastener
+hexagonal weld nut,weld nut
+hook thread,thread
+internal thread,thread
+internally threaded end,threaded end
+left hand thread,thread
+line-pipe thread,thread
+lock nut,nut
+lock nut assembly,physical object
+lock washer,washer
+metal threaded fastener,threaded fastener
+mushroom fastener head,threaded fastener head
+mushroom fin neck fastener head,mushroom fastener head
+mushroom head fin neck bolt,mushroom head threaded fastener
+mushroom head rib neck bolt,mushroom head threaded fastener
+mushroom head square neck bolt,mushroom head threaded fastener
+mushroom head threaded fastener,threaded fastener
+mushroom ribbed neck fastener head,mushroom fastener head
+nail,physical object
+nail head,fastener head
+np thread,thread
+npsc thread,np thread
+npsh thread,np thread
+npsl thread,np thread
+npsm thread,np thread
+npt thread,np thread
+nptr thread,np thread
+nut,physical object
+one-way head threaded fastener,threaded fastener
+oval fastener head,threaded fastener head
+oval head threaded fastener,threaded fastener with head
+pan fastener head,threaded fastener head
+pan head threaded fastener,threaded fastener with head
+partially threaded fastener,threaded fastener
+partially threaded stud bolt,partially threaded fastener
+phillips driving end,driving end
+phillips fillister fastener head,fillister fastener head
+phillips fillister head threaded fastener,fillister head threaded fastener
+phillips flat fastener head,flat fastener head
+phillips flat head threaded fastener,flat head threaded fastener
+phillips oval fastener head,oval fastener head
+phillips oval head threaded fastener,oval head threaded fastener
+phillips pan fastener head,pan fastener head
+phillips pan head threaded fastener,pan head threaded fastener
+phillips round fastener head,round fastener head
+phillips round head threaded fastener,round head threaded fastener
+phillips screwdriver,screwdriver
+phillips-type recess,conical driving recess
+pin,physical object
+plain washer,washer
+pozidriv driving end,driving end
+pozidriv fillister fastener head,fillister fastener head
+pozidriv fillister head threaded fastener,fillister head threaded fastener
+pozidriv flat fastener head,flat fastener head
+pozidriv flat head threaded fastener,flat head threaded fastener
+pozidriv oval fastener head,oval fastener head
+pozidriv oval head threaded fastener,oval head threaded fastener
+pozidriv pan fastener head,pan fastener head
+pozidriv pan head threaded fastener,pan head threaded fastener
+pozidriv round fastener head,round fastener head
+pozidriv round head threaded fastener,round head threaded fastener
+pozidriv screwdriver,screwdriver
+pozidriv-type recess,conical driving recess
+right hand thread,thread
+ring fastener head,threaded fastener head
+ring head threaded fastener,threaded fastener with head
+ring nut,nut
+rivet,physical object
+round fastener head,threaded fastener head
+round head threaded fastener,threaded fastener with head
+round nut,nut
+round thread,thread
+screw end,end
+screwdriver,physical object
+self-tapping threaded fastener,threaded fastener
+set screw,cylindrical threaded fastener
+slotted driving recess,driving recess
+slotted fastener head,threaded fastener head
+slotted fillister fastener head,fillister fastener head
+slotted fillister head threaded fastener,fillister head threaded fastener
+slotted flat fastener head,flat fastener head
+slotted flat head threaded fastener,flat head threaded fastener
+slotted oval fastener head,oval fastener head
+slotted oval head threaded fastener,oval head threaded fastener
+slotted pan fastener head,pan fastener head
+slotted pan head threaded fastener,pan head threaded fastener
+slotted round fastener head,round fastener head
+slotted round head threaded fastener,round head threaded fastener
+socket driving recess,driving recess
+split pin,pin
+spring washer,lock washer
+spring washer az,spring washer
+spring washer azr,spring washer
+square fastener head,threaded fastener head
+square head threaded fastener,threaded fastener with head
+square nut,nut
+square washer,washer
+square weld nut,weld nut
+stainless steel threaded fastener,steel threaded fastener
+star washer,lock washer
+steel threaded fastener,metal threaded fastener
+stud bolt,cylindrical threaded fastener
+taper pin,pin
+thread,feature
+thread cutting threaded fastener,self-tapping threaded fastener
+thread forming threaded fastener,self-tapping threaded fastener
+threaded end,end
+threaded fastener,physical object
+threaded fastener head,fastener head
+threaded fastener with head,threaded fastener
+threaded fastener without head,threaded fastener
+threaded hole,hole
+t-nut,nut
+unified inch external left hand screw thread ,unified inch external screw thread
+unified inch external right hand screw thread ,unified inch external screw thread
+unified inch external screw thread ,unified inch screw thread
+unified inch internal left hand screw thread ,unified inch internal screw thread
+unified inch internal right hand screw thread,unified inch internal screw thread
+unified inch internal screw thread,unified inch screw thread
+unified inch screw thread,thread
+washer,physical object
+wedge thread,thread
+weld nut,nut
+weld nut din 929,hexagonal weld nut
+wing fastener head,threaded fastener head
+wing head threaded fastener,threaded fastener with head
+wing nut,nut

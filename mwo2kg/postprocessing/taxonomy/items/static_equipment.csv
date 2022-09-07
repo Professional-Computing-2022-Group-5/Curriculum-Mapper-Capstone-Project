@@ -1,0 +1,504 @@
+Unique name,superclass 1
+activated carbon filter,filter
+aeration basin,basin
+air distributor,gas distributor
+air filter,filter
+air grid,aerator
+air receiver,gas receiver
+anchor bolt,bolt
+anchor bolt ring,base ring
+anchor chair,support
+angle support,support
+apron,shield
+asterisks bottom internal,physical object
+asterisks interbed internal,physical object
+atmospheric storage tank,storage tank
+atmospheric vessel,vessel
+auxiliary baffle,baffle
+axial nozzle,nozzle
+backing strip,strip
+backwash filter,filter
+baffle tray,tray
+bag filter,filter
+bag house,filter
+bare vessel,vessel
+base plate,mounting plate
+base ring,ring
+batch reactor,process reactor
+beam,support
+berl saddle packing,process packing
+bin,vessel
+bin section,section
+biofiltration filter,filter
+bioreactor,process reactor
+bladder accumulator,pressure accumulator
+bottle,container
+bottom basket,basket
+bottom corner,feature
+bottom entry feed nozzle,feed nozzle
+bottom vessel head,vessel head
+breather,physical object
+bubble cap,riser cap
+bubble cap tray,tray
+bubble column,process column
+buffer vessel,vessel
+bulk product compartment,compartment
+bullet vessel,horizontal vessel
+bunker reactor,process reactor
+burp tube,gas distributor
+caged ladder,ladder
+calming section tray,tray
+candle filter,filter
+cartridge filter,filter
+catalyst bed,physical object
+catalyst distributor,distributor
+catalyst drop out nozzle,nozzle
+catalyst hopper,hopper
+catalyst spider,catalyst distributor
+catalytic converter,chemical converter
+catalytic deaerator,deaerator
+catcher,physical object
+center downcomer,downcomer
+ceramic balls packing,process packing
+ceramic filter,filter
+certification body name plate,name plate
+channel,physical object
+checker plate,plate
+chemical converter,converter
+chimney tray,draw off tray
+clean out door,physical object
+closed beam support frame,frame
+coalescent filter,gas filter
+coalescer,gravity separator
+cold high pressure separator,separator
+cold low pressure separator,separator
+cold wall reactor,process reactor
+collecting cone,bin
+combi-tower,process column
+compartmented vessel,vessel
+compensation sleeve,sleeve
+conical bottom tank,tank
+conical head,head
+conical roof,roof
+conical roof tank,tank
+conical shell,shell
+conical skirt,skirt
+consep tray,tray
+process contactor,physical object
+conventional downcomer tray,valve tray
+converter,physical object
+corrugated plate interceptor,interceptor
+cover flange,plate
+crankcase air filter,air filter
+cross flow filter,filter
+cyclone separator,separator
+cylindrical tank,tank
+cylindrical vessel,vessel
+dash pot,physical object
+davit support clip,clip
+deaerator,separator
+decanter,settler
+demister,physical object
+demister support tray,support tray
+desalter,vessel
+dewaxing filter,filter
+diaphragm accumulator,pressure accumulator
+dilchill,physical object
+dip pipe,physical object
+disc and doughnut tray,tray
+discharge vessel,vessel
+dished head,head
+distillation column,process column
+distributor pan,pan
+distributor tray,tray
+dollar plate,plate
+dome,physical object
+dome roof,roof
+dome roof tank,tank
+double deck floating roof tank,floating roof tank
+double decker draw off tray,draw off tray
+double wall sight glass,sight glass
+downcomer,physical object
+drain hole,hole
+drain nozzle,nozzle
+draw off bin,bin
+draw off tray,tray
+drum,vessel
+duplex filter,filter
+dust collector,container
+dust filter,gas filter
+ebbulating bed reactor,process reactor
+ebullating bed,catalyst bed
+eccentric section,section
+egg slicer,physical object
+ejector,vacuum pump
+electrostatic precipitator,separator
+electrostatic separator,separator
+ellipsoidal head,head
+enamelled vessel,lined vessel
+extraction column,process column
+extractor,process column
+feed bed,vessel bed
+feed nozzle,nozzle
+filter,separator
+filter cartridge,filter element
+filter cloth,filter element
+filter element,physical object
+filter press,filter
+filter tray,tray
+final treatment basin,basin
+fireproofing support clip,clip
+first stage separator,separator
+fixed bed,catalyst bed
+fixed bed reactor,process reactor
+fixed roof tank,tank
+flanged nozzle,nozzle
+flash tower,process column
+flash vessel,vessel
+flasher,physical object
+flat head,head
+floating roof tank,tank
+flow trough cyclone,cyclone separator
+fluid accumulator,accumulator
+fluid regulator cap,fluid regulator
+fluidisation ring,aerator
+fluidized bed,vessel bed
+fluidized bed reactor,process reactor
+forged nozzle,nozzle
+fourth stage separator,separator
+fractionator,physical object
+fuel filter,filter
+fuel injector,physical object
+fuel tank,tank
+full containment tank,tank
+full containment tank pit,tank pit
+gas bottle,pressure vessel
+gas cap,enclosure
+gas cylinder,pressure vessel
+gas distributor,distributor
+gas filter,filter
+gas flow damper,pressure vessel
+gas holder,tank
+gas quench system,quench system
+gas receiver,pressure vessel
+gas reversal chamber,chamber
+gasifier,physical object
+gas-liquid separator,separator
+gas-solid separator,separator
+glass lined reactor,process reactor
+globe cone,physical object
+grab rung,rung
+gravity distributor tray,distributor tray
+gravity separator,separator
+grid,physical object
+grid bar,physical object
+grid support beam,support beam
+grid tray,tray
+guard bed reactor,process reactor
+gulftronic filter,filter
+gutter,trough
+handhole,nozzle
+handhole cover,cover
+hatch way cover,cover
+hatch way door,door
+heat transfer plate pack,physical object
+hemispherical head,head
+hifi calming section,downcomer
+hifi calming section tray,calming section tray
+hifi tray,valve tray
+high dispersion tray,tray
+hold down grid,grid
+holding basin,basin
+hopper,vessel
+horizontal vessel,vessel
+horizontal vessel with boot,horizontal vessel
+horizontal vessel with dome,horizontal vessel
+hot high pressure separator,separator
+hot low pressure separator,separator
+hot wall reactor,process reactor
+hydro cyclone,cyclone separator
+hydrocracker reactor,process reactor
+hydrodesulphurizer reactor,process reactor
+hydrotreater reactor,process reactor
+impingement plate,plate
+inlet device,physical object
+inlet nozzle,nozzle
+inlet screen,filter
+inlet weir,weir
+in-line filter,filter
+in-line mixer,static mixer
+inspection cover,cover
+inspection hole,nozzle
+instrument nozzle,nozzle
+insulation collar,ring
+insulation support clip,clip
+insulation support ring,ring
+integrally reinforced nozzle,reinforced nozzle
+interceptor,separator
+internal floating cover,cover
+interrupter bar,baffle
+ion exchanger,physical object
+jacket,enclosure
+jacketed nozzle,nozzle
+klöpper head,torispherical head
+knock out drum,drum
+knock out vessel,vessel
+korbbogen head,torispherical head
+ladder,physical object
+ladder support,support
+ladder support clip,clip
+lagoon,reservoir
+level gauge nozzle,instrument nozzle
+lift pot,physical object
+lifter roof tank,tank
+lifting device,physical object
+lifting lug,lug
+lifting trunnion,trunnion
+linde reactor,process reactor
+lined vessel,vessel
+liquid absorber,absorber
+liquid catcher,physical object
+liquid distribution tray,distributor tray
+liquid distributor,distributor
+liquid-liquid separator,separator
+loop reactor,process reactor
+lug,physical object
+magnetic separator,separator
+manhole,nozzle
+manhole cover,cover
+manhole door,door
+manhole with jacket,manhole
+manufacturer's name plate,name plate
+m-cap tray,bubble cap tray
+membrane,sieve
+membrane reactor,process reactor
+membrane tank,tank
+mesh,physical object
+fluid mixer,physical object
+mixer settler,settler
+mixing vessel,vessel
+mobile vessel,vessel
+molecular sieve,sieve
+monobloc vessel,vessel
+mound,physical object
+mounded bullet vessel,bullet vessel
+mounded tankage,tankage
+mounded vessel,vessel
+mounting plate,physical object
+moving bed,catalyst bed
+moving bed reactor,process reactor
+mud pit,pit
+multi compartment tank,tank
+multi cone bottom internal,physical object
+multi cone interbed internal,physical object
+multi cyclone,cyclone separator
+multi layer shell,shell
+multi layer vessel,vessel
+multi tube reactor,process reactor
+nozzle flange,flange
+nozzle neck,pipe
+nozzle reinforcing pad,physical object
+nozzle reinforcing ring,reinforcing ring
+oblong sight glass,sight glass
+oil filter,filter
+oil interceptor,interceptor
+oil sump,reservoir
+oil trap,separator
+open tank,tank
+outlet collector,collecting cone
+outlet device,physical object
+outlet nozzle,nozzle
+outlet weir,weir
+overhead system,system
+owner's name plate,name plate
+oxidation tank,tank
+packed bed,vessel bed
+packed bed reactor,process reactor
+packed column,process column
+packed product compartment,compartment
+packing support,support
+packing support grid,support grid
+pall ring packing,process packing
+pan,container
+panel (vessel internal),plate
+parallel plate interceptor,interceptor
+partial draw off tray,draw off tray
+particle,physical object
+perforated pipe,pipe
+pipe clip,clip
+pipe guide,pipe support
+pipe guide clip,pipe clip
+pipe support,support
+pipe support clip,pipe clip
+plane (physical),feature
+plate,physical object
+plate and frame filter press,filter press
+plate settler,settler
+platform support,support
+platform support clip,clip
+platformer reactor,process reactor
+precipitator,separator
+predistributor,distributor
+preferential baffle,baffle
+prefluidisation ring,aerator
+pressure accumulator,pressure vessel
+pressure vessel,vessel
+pressurised plate interceptor,interceptor
+pressurised tankage,tankage
+prestripper,distillation column
+process column,vertical vessel
+process nozzle,nozzle
+process packing,physical object
+process reactor,vessel
+production test plate,plate
+production weld test plate,weld test plate
+quench column,process column
+quench internal,physical object
+quench ring,physical object
+quench system,system
+quench tray,tray
+radial nozzle,nozzle
+rake,physical object
+random procss packing,process packing
+reactor bed support,support
+reclaimer,physical object
+redistributor,distributor
+reference plane,plane (physical)
+reflux distributor tray,distributor tray
+reflux elbow,pipe elbow
+reflux spider,spider
+refractory lined vessel,lined vessel
+refrigerated tankage,tankage
+regenerator,process reactor
+reinforced nozzle,nozzle
+reinforcing bar,physical object
+reinforcing ring,ring
+rhoo-cap,physical object
+riser cap,cap
+riser pipe,pipe
+riser reactor,process reactor
+roof,physical object
+roof corner,feature
+rotary belt filter,filter
+rotary filter,filter
+rotating disc contactor,process contactor
+round sight glass,sight glass
+rung,physical object
+saddle doubling plate,plate
+saddle support,support
+sand filter,filter
+sand trap,separator
+saturator,vessel
+scale catching tray,tray
+scraper,physical object
+screen filter,filter
+screen filter element,filter cartridge
+scrubber,distillation column
+seal pan,physical object
+second stage separator,separator
+sectional plate,plate
+sectional tray,tray
+segmental downcomer,downcomer
+separator,physical object
+septic tank,tank
+settlement basin,basin
+settler,separator
+shell,physical object
+shell flange,flange
+shell nozzle,nozzle
+side downcomer,downcomer
+sieve,physical object
+sieve plate,plate
+sieve tray,tray
+sight hole,inspection hole
+silo,vessel
+sliding support,support
+sloped downcomer,downcomer
+slug catcher,catcher
+slurry reactor,process reactor
+soaker,physical object
+sole plate,mounting plate
+solid bed reactor,process reactor
+sour water stripper,stripper
+sparger,ejector
+sphere,pressure vessel
+spider,physical object
+splitter,distillation column
+spray,physical object
+staircase,physical object
+static mixer,physical object
+static process equipment class,mechanical equipment class
+steam ejector,ejector
+steam jet,ejector
+steam out nozzle,nozzle
+steamation box,enclosure
+stepped downcomer,downcomer
+stiffener ring,ring
+storage equipment class,mechanical equipment class
+storage tank,tank
+storage vessel,vessel
+straight downcomer,downcomer
+stripper,distillation column
+structured packing,process packing
+suction vessel,vessel
+sulphur lock,physical object
+support beam,beam
+support bracket,bracket
+support grid,grid
+support leg,support
+support ring,ring
+support tray,tray
+surge basin,basin
+surge tank,tank
+suspended deck,physical object
+swirl deck,physical object
+swirl tube,cyclone separator
+tailing lug,lifting lug
+tangential nozzle,nozzle
+tank,vessel
+tank pit,pit
+tankage,physical object
+third stage separator,separator
+three phase separator,separator
+top bed filter,filter
+top cover,cover
+top head,head
+torispherical head,head
+total draw off tray,draw off tray
+tray,physical object
+tray support beam,support beam
+treatment basin,basin
+trickle flow bed reactor,process reactor
+trough,reservoir
+trunnion,physical object
+twin-drum,separator
+vacuum column,distillation column
+vacuum vessel,pressure vessel
+valve tray,tray
+vane inlet distributor,distributor
+vane pack,physical object
+variable vapour space tank,tank
+vent nozzle,nozzle
+vent pipe,pipe
+vertical vessel,vessel
+vessel,container
+vessel assembly,physical object
+vessel bed,physical object
+vessel skirt,support
+v-grid tray,tray
+vibrating screen separator,separator
+vortex breaker,physical object
+water quench system,quench system
+water seal vessel,vessel
+water tower,physical object
+wedge,physical object
+wedge screen,filter cartridge
+weir,plate
+weir distributor,distributor
+weir trough distributor,weir distributor
+weld overlay,lining
+weld test plate,plate
+welded nozzle,nozzle
+wire screen cartridge,filter cartridge
+wiremesh,filter element
+wiremesh demister,demister

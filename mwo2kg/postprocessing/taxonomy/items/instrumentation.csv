@@ -1,0 +1,677 @@
+Unique name,superclass 1
+2-valve manifold,valve manifold assembly
+5-valve manifold,valve manifold assembly
+absolute pressure transmitter,pressure transmitter
+acceleration based vibration channel,monitor channel
+accelerometer,detector
+acetic acid analyser,analysing instrument
+actuator,physical object
+actuator stem,physical object
+air flow meter,flow meter
+air pressure regulator,pressure regulator
+air pressure regulator and filter,pressure regulator
+alarm signal processing circuit board,control circuit board
+alarm unit,physical object
+alignment instrument,detecting instrument
+amca straightener,flow straightener
+ampere-hour meter,electric measuring instrument
+amperemeter,detecting instrument
+amplifier circuit board,amplifier
+analogue indicating instrument,indicating instrument
+analogue operating instrument,process instrument
+analogue signal input circuit board,input circuit board
+analogue signal output circuit board,output circuit board
+analogue temperature indicating instrument,analogue indicating instrument
+analogue temperature indicator housing,temperature indicator housing
+analogue to digital converter,signal converter
+analysing instrument,detecting instrument
+anemometer,detecting instrument
+antenna,electromagnetic transducer
+antisurge controller,electronic controller
+areometer,detecting instrument
+astatic instrument,process instrument
+averaging pitot tube flow meter,pitot tube flow meter
+axial displacement channel,monitor channel
+axial displacement probe,detecting element
+back pressure regulator,regulator
+bell,physical object
+bimetal temperature indicator,temperature indicator
+bimetallic temperature element,temperature sensing element
+bimetallic temperature gauge,temperature gauge
+biplanar flange,instrument process flange
+boiling point analyser,analysing instrument
+bolted rupture disc holder,rupture disc holder
+bourdon tube,pressure element
+bourdon tube differential pressure gauge,differential pressure gauge
+bourdon tube pressure gauge,pressure gauge
+bull eye,sight glass
+burner controller,electronic controller
+burst alarm unit,alarm unit
+bus controller,electronic controller
+capacitance probe,detecting element
+capacitive level transmitter,level transmitter
+capacitive pressure element,pressure element
+capillary temperature element,temperature sensing element
+capillary temperature element armour,physical object
+carbon dioxide analyser,analysing instrument
+catalytic analyser,gas analyser
+cause and effect chart,chart
+chart,document
+chart driving mechanism,physical object
+chart recorder,recording instrument
+chemical colorimetry analyser,analysing instrument
+chemical seal diaphragm,diaphragm
+chromatograph,analysing instrument
+cloud point analyser,analysing instrument
+communications controller,electronic controller
+compressor unload valve actuator,valve actuator
+computer,physical object
+concentric hole orifice plate,orifice plate
+condensation dew point analyser,dew point analyser
+conductivity cell,detecting element
+conductivity level transmitter,transmitter
+conductivity meter,detecting instrument
+conical concentric orifice plate,concentric hole orifice plate
+conical orifice hole,hole
+continuous line recorder,recording instrument
+control box,terminal box
+control cable,signal cable
+control circuit board,transmitter
+control element,physical object
+control system,system
+controller,regulator
+coplanar flange,instrument process flange
+coriolis mass flow meter,mass flow meter
+corrosion meter,detecting instrument
+corrosion probe,detecting element
+coulometer,detecting instrument
+counter,detecting instrument
+cpu socket,interface card
+current to current converter,signal converter
+current to pressure converter,signal converter
+current to voltage converter,signal converter
+cylindrcal concentric orifice plate,concentric hole orifice plate
+cylindrical antenna,antenna
+dall tube,flow sensor
+dall tube flow meter,differential pressure flow meter
+densitometer,detecting instrument
+density analyser,analysing instrument
+detecting element,physical object
+detecting instrument,process instrument
+detector,physical object
+detector base,electrical socket
+dew point analyser,analysing instrument
+diaphragm actuator,actuator
+diaphragm casing,enclosure
+diaphragm type gauge,pressure gauge
+differential measuring instrument,process instrument
+differential pressure cell,detecting element
+differential pressure flow meter,flow meter
+differential pressure gauge,gauge
+differential pressure indicator,pressure indicator
+differential pressure level transmitter,level transmitter
+differential pressure meter,detecting instrument
+differential pressure regulator,regulator
+differential pressure switch,pilot switch
+differential pressure transmitter,pressure transmitter
+differential temperature switch,pilot switch
+digital display,display
+digital input circuit board,input circuit board
+digital output circuit board,output circuit board
+digital temperature indicator,temperature indicator
+digital temperature indicator housing,temperature indicator housing
+digital to analogue converter,signal converter
+dip tube level meter,level meter
+dipole antenna,antenna
+direct operated pressur regulator,pressure regulator
+disc recorder,recording instrument
+disk controller,electronic controller
+dispersive infra-red gas analyser,gas analyser
+displacer level switch,level switch
+display,physical object
+domed rupture disc,rupture disc
+doppler flow meter,ultrasonic flow meter
+dot matrix printer,printing machine
+double acting actuator,actuator
+double acting hydraulic piston actuator,hydraulic piston actuator
+double acting pneumatic diaphragm actuator,pneumatic diaphragm actuator
+double acting pneumatic piston actuator,pneumatic piston actuator
+double chamber orifice fitting,orifice plate fitting
+dual solenoid actuator,solenoid actuator
+dynamometer,detecting instrument
+dynamometer ammeter,amperemeter
+eccentric hole orifice plate,orifice plate
+elbow flow meter,differential pressure flow meter
+electric signal transducer,transducer
+electric valve actuator,valve actuator
+electrical density analyser,density analyser
+electrical differential pressure transmitter,differential pressure transmitter
+electrical flow transmitter,flow transmitter
+electrical level transmitter,level transmitter
+electrical position transmitter,position transmitter
+electrical pressure transmitter,pressure transmitter
+electrical speed transmitter,speed transmitter
+electrical temperature transmitter,temperature transmitter
+electroacoustic transducer,transducer
+electrodynamic instrument,induction instrument
+electromagnetic flow meter,velocity flow meter
+electromagnetic flow meter body,in-line instrument body
+electromagnetic flow transmitter,flow transmitter
+electromagnetic transducer,transducer
+electromechanical transducer,transducer
+electronic circuit board,physical object
+electronic controller,controller
+electronic flow controller,electronic controller
+electronic liquid level controller,electronic controller
+electronic load cell,electromechanical transducer
+electronic pressure controller,electronic controller
+electronic sensor,detecting element
+electronic speed governor,speed governor
+electronic temperature controller,electronic controller
+epoxy-polyester-covered aluminium transmitter housing,transmitter housing
+erosion probe,detecting element
+etolle straightener,flow straightener
+ferrodynamic instrument,induction instrument
+fill fluid,fluid
+filled thermal element,temperature sensing element
+fire detector,detector
+fixed mounted instrument,process instrument
+flame detector,detector
+flame ionisation analyser,analysing instrument
+flange mounted actuator,actuator
+flanged thermowell,thermowell
+flash point analyser,analysing instrument
+flat rupture disc,rupture disc
+float,physical object
+float and rod switch,level switch
+float collar,variable area flow meter element
+float switch,level switch
+float tank gauge,tank gauge
+flow computer,computer
+flow controller,controller
+flow detector,detector
+flow gauge,gauge
+flow indicator,indicating instrument
+flow limiter,flow regulator
+flow meter,detecting instrument
+flow meter rotor,rotor
+flow nozzle meter,differential pressure flow meter
+flow regulator,regulator
+flow scale,indicator scale
+flow sensor,detecting element
+flow sight glass,sight glass
+flow straightener,physical object
+flow switch,functional switch
+flow transmitter,transmitter
+flow turbine transmitter,flow transmitter
+flowmeter oscillating piston,flow meter rotor
+flowmeter tube protection cover,protection material
+flume flow meter,open channel flow meter
+fragmenting rupturing disc,rupture disc
+frequency to current converter,signal converter
+frequency to voltage converter,signal converter
+full-turn actuator,actuator
+functional switch,regulator
+gamma detector,detector
+gamma radiation level transmitter,level transmitter
+gas analyser,analysing instrument
+gas chromatograph,chromatograph
+gas density analyser,density analyser
+gas detector,detector
+gas liquid chromatograph,chromatograph
+gauge,detecting instrument
+gauge glass,level gauge
+gauge pressure transmitter,pressure transmitter
+gear positive displacement flow meter,positive displacement flow meter
+gear wheel rotor,flow meter rotor
+grid antenna,antenna
+gyro stabilised antenna,antenna
+h2s analyser,analysing instrument
+h2s detector,gas detector
+hardness analyser,analysing instrument
+hastelloy c-276 diaphragm,chemical seal diaphragm
+hc gas infrared point detector,infrared detecting element
+heat detector,detector
+heat detector for surface mounting,heat detector
+hf antenna,antenna
+hf in air detector,gas detector
+hour counter,counter
+hours run meter,detecting instrument
+humidity detector,detector
+humidity sensor,detecting element
+hydraulic actuator,actuator
+hydraulic controller,controller
+hydraulic piston actuator,hydraulic actuator
+hydraulic speed governor,speed governor
+hydraulic valve actuator,hydraulic actuator
+hydrocarbons in water detector,detector
+inclinometer,detecting instrument
+indicating instrument,physical object
+indicator glass,sight glass
+indicator housing,instrument housing
+indicator scale,physical object
+induction instrument,process instrument
+infrared analyser,analysing instrument
+infrared beam,physical object
+infrared detecting element,detecting element
+infrared flame detector,flame detector
+infrared gas detector,gas detector
+infrared light source,light source
+infrared receiver,signal receiver
+ink jet recorder,recording instrument
+in-line instrument body,instrument body
+in-line mounted instrument,process instrument
+in-line ultrasonic flow meter,ultrasonic flow meter
+input - output circuit board,interface card
+input circuit board,input - output circuit board
+insert type rupture disc holder,rupture disc holder
+instrument body,housing
+instrument body liner,liner
+instrument dial,physical object
+instrument housing,enclosure
+instrument level flange,instrument process flange
+instrument mounting bracket,bracket
+instrument mounting bracket for 2 ins pipe,pipe mounting bracket
+instrument panel,physical object
+instrument process connection,orifice flange
+instrument process flange,pipe flange
+instrument rack,support
+instrument with limit switches,detecting instrument
+instrument with locking device,detecting instrument
+instrument with optical index,indicating instrument
+instrument with suppressed zero,process instrument
+integral orifice paddle,handle
+integrating meter,detecting instrument
+integrating power meter,integrating meter
+integrating reactive power meter,integrating meter
+interface card,distribution board
+internal power supply,power supply
+intrinsically safe barrier,current limiter
+ionisation flame detector,flame detector
+ionization smoke detector,smoke detector
+isochronous speed governor,speed governor
+joystick,lever
+keyboard,control panel
+knock sensor,detecting element
+laser printer,printing machine
+leak detector,detector
+led display,display
+level controller,controller
+level detector,detector
+level float transmitter,level transmitter
+level gauge,gauge
+level indicator,indicating instrument
+level meter,detecting instrument
+level regulator,regulator
+level sensor,detecting element
+level switch,functional switch
+level transmitter,transmitter
+lever,physical object
+light source,physical object
+light-emitting diode,diode
+line voltage detector,detector
+linear temperature indicator,temperature indicator
+lined rupture disc,rupture disc
+liquid crystal display,display
+liquid density analyser,density analyser
+log periodic antenna,antenna
+loudspeaker,transducer
+magnetic actuator,actuator
+magnetic inductive pickoff,electronic sensor
+magnetic level gauge,level gauge
+magnetic level meter,level meter
+magnetic reluctance pickoff,electronic sensor
+magnetometer,detecting instrument
+manometer,pressure gauge
+manual loader,mechanical controller
+mass flow meter,flow meter
+mass flow meter body,in-line instrument body
+mass flow meter tube,meter tube
+mass flow transmitter,flow transmitter
+mechanical controller,controller
+mechanical positioner,mechanical controller
+mechanical speed governor,speed governor
+memory chip,integrated circuit
+mercaptan analyser,gas analyser
+meter run,physical object
+meter tube,pipe
+mf antenna,antenna
+micro switch,pilot switch
+microwave transducer,electroacoustic transducer
+mist detector,detector
+modulated carrier frequency pickoff,electronic sensor
+moisture detector,detector
+moisture meter,detecting instrument
+moisture sensing element,detecting element
+monel diaphragm,chemical seal diaphragm
+monitor,physical object
+monitor channel,physical object
+motherboard,electronic circuit board
+moving-iron instrument,induction instrument
+moving-magnet instrument,induction instrument
+moving-scale instrument,indicating instrument
+multi point indicator,indicating instrument
+multi point recorder,recording instrument
+multimeter,detecting instrument
+multiphase meter,flow meter
+multiple pitot tube flow meter,pitot tube flow meter
+multiplexor,transmitter
+multiport pitot tube,pitot tube
+negative resistance temperature element,resistance temperature element
+non wetted transducer,transducer
+non-dispersive infra-red gas analyser,gas analyser
+nox analyser,analysing instrument
+nuclear magnetic resonance spectroscopy analyser,analysing instrument
+nucleonic level switch,level switch
+nucleonic level transmitter,level transmitter
+nutating disk,flow meter rotor
+nutating disk flow meter,positive displacement flow meter
+octane number analyser,analysing instrument
+off-line analyser,analysing instrument
+offset reflector antenna,antenna
+oil in water analyser,analysing instrument
+oil mist detector,mist detector
+one-piece paddle orifice plate,paddle orifice plate
+on-line analyser,analysing instrument
+on-line process gas chromatograph,gas chromatograph
+open channel flow meter,flow meter
+operator interface panel,control panel
+optical smoke detector,smoke detector
+orifice and tapered plug flow meter,variable area flow meter
+orifice flange,pipe flange
+orifice handle,handle
+orifice meter run,orifice plate flow meter
+orifice meter tube,physical object
+orifice plate,physical object
+orifice plate fitting,physical object
+orifice plate flow meter,differential pressure flow meter
+orifice plate flowmeter assembly,physical object
+orifice plate for assembeled paddle orifice plates,orifice plate
+orifice plate holder,physical object
+orifice plate holder with hold-down screws,orifice plate holder
+orifice plate holder with integral plate seal,orifice plate holder
+orifice plate holder with snap-ring clip,orifice plate holder
+orifice plate seal,seal ring
+oscillating piston flow meter,positive displacement flow meter
+oscillograph,recording instrument
+output circuit board,input - output circuit board
+oxygen content analyser,analysing instrument
+paddle orifice plate,orifice plate
+paddle wheel flow meter,positive displacement flow meter
+panel antenna,antenna
+panel mounted instrument,process instrument
+panel mounting bracket,instrument mounting bracket
+parabolic reflector antenna,antenna
+parametric oxygen analyser,gas analyser
+part-turn actuator,actuator
+pen recorder,recording instrument
+permanent-magnetic moving-coil instrument,induction instrument
+personal computer,computer
+ph analyser,analysing instrument
+phase sequence indicator,indicating instrument
+photoelectric transducer,transducer
+pig detector,detector
+pig indicator,indicating instrument
+pilot air operated solenoid actuator,solenoid actuator
+pilot operated regulator,pressure regulator
+pipe mounting bracket,instrument mounting bracket
+piston actuator,actuator
+pitot tube,flow sensor
+pitot tube flow meter,differential pressure flow meter
+pna-meter,analysing instrument
+pneumatic actuator,actuator
+pneumatic amplifier,amplifier
+pneumatic controller,mechanical controller
+pneumatic density analyser,density analyser
+pneumatic diaphragm actuator,pneumatic actuator
+pneumatic differential pressure transmitter,differential pressure transmitter
+pneumatic flow controller,pneumatic controller
+pneumatic flow transmitter,flow transmitter
+pneumatic indicator,detecting instrument
+pneumatic level controller,pneumatic controller
+pneumatic level transmitter,level transmitter
+pneumatic piston actuator,pneumatic actuator
+pneumatic position transmitter,position transmitter
+pneumatic pressure controller,pneumatic controller
+pneumatic pressure transmitter,pressure transmitter
+pneumatic relay,relay
+pneumatic speed transmitter,speed transmitter
+pneumatic temperature controller,pneumatic controller
+pneumatic temperature transmitter,temperature transmitter
+pointer instrument,indicating instrument
+polarity indicator,indicating instrument
+position detector,detector
+position indicator,indicating instrument
+position transducer,transducer
+position transmitter,transmitter
+positive displacement flow meter,flow meter
+positive displacement flow meter body,in-line instrument body
+positive displacement flow transmitter,flow transmitter
+positive resistance temperature element,resistance temperature element
+pour point analyser,analysing instrument
+power supply,physical object
+power supply card,power supply unit
+pressure controller,controller
+pressure element,detecting element
+pressure gauge,gauge
+pressure indicator,indicating instrument
+pressure meter,detecting instrument
+pressure regulator,regulator
+pressure sensor body,instrument body
+pressure sensor module,physical object
+pressure switch,functional switch
+pressure to current converter,signal converter
+pressure to voltage converter,signal converter
+pressure transmitter,transmitter
+printing machine,physical object
+printing recorder,recording instrument
+probe,detecting element
+probe housing,instrument housing
+process connection fill fluid,fill fluid
+process connector,connector
+process control system,control system
+process instrument,physical object
+programmable logic controller,controller
+proximity probe,detecting element
+proximity switch,position switch
+pt100 temperature element,resistance temperature element
+pt100 temperature transmitter,electrical temperature transmitter
+pulse counter,counter
+push button,manual control switch
+quarter circle orifice hole,hole
+quarter circle orifice plate,orifice plate
+quarter-circle concentric orifice plate,concentric hole orifice plate
+radar level transmitter,level transmitter
+radar type tank level gauge,tank gauge
+radial probe,detecting element
+radioactive level transmitter,level transmitter
+radioactive switch,pilot switch
+rail mounted temperature transmitters,electrical temperature transmitter
+receiver card,interface card
+recording controller,recording instrument
+recording instrument,process instrument
+rectangular venturi,venturi
+refractive index analyser,analysing instrument
+regulator,physical object
+relative density gas analyser,density analyser
+relay card,electronic circuit board
+relayed speed governor,speed governor
+remote-operated control unit,process control system
+resistance temperature element,temperature sensing element
+resistance temperature indicator,temperature indicator
+resistance to current converter,signal converter
+restriction orifice plate,orifice plate
+return actuator,actuator
+reverse buckling rupture disc,rupture disc
+rotameter flow meter,variable area flow meter
+rotational speed sensor,detecting element
+rupture disc,physical object
+rupture disc assembly,physical object
+rupture disc gasket,gasket
+rupture disc handle,handle
+rupture disc holder,physical object
+rupture disc holder ring,physical object
+salinity sensor,detecting element
+salinometer,detecting instrument
+sampler,physical object
+sampling tube,sampler
+sand detection probe,detecting element
+sand detector,detector
+screwed thermowell,thermowell
+segmental orifice hole,hole
+segmental orifice plate,orifice plate
+segmental orifice plate for dirty gas,segmental orifice plate
+segmental orifice plate for dirty liquid,segmental orifice plate
+segmental wedge flow meter,differential pressure flow meter
+seismic probe,detecting element
+servo tank gauge,tank gauge
+sight flow indicator,indicating instrument
+sight glass,physical object
+signal converter,electric signal transducer
+signal receiver,physical object
+single acting actuator,actuator
+single acting hydraulic piston actuator,hydraulic piston actuator
+single acting pneumatic diaphragm actuator,pneumatic diaphragm actuator
+single acting pneumatic piston actuator,pneumatic piston actuator
+single chamber orifice fitting,orifice plate fitting
+single pen recorder,pen recorder
+single solenoid actuator,solenoid actuator
+sliding vane,flow meter rotor
+slotted lined rupture disc,rupture disc
+smoke detector,detector
+socket weld thermowell,thermowell
+solenoid actuator,actuator
+solid electrolyte oxygen analyser,oxygen content analyser
+solid forged flanged thermowell,flanged thermowell
+span adjustment device,physical object
+speed changer,physical object
+speed governor,controller
+speed meter,detecting instrument
+speed transmitter,transmitter
+spm-nipple,physical object
+spot recorder,recording instrument
+sprenkle conditioner,flow straightener
+spring return actuator,actuator
+square edged orifice hole,hole
+square root temperature indicator,temperature indicator
+square-edged concentric orifice plate,concentric hole orifice plate
+stepped stem thermowell,thermowell
+stepped thermowell stem,thermowell stem
+straight stem thermowell,thermowell
+straight thermowell stem,thermowell stem
+strain gauge level transmitter,level transmitter
+sulphur analyser,analysing instrument
+sulphur in gas analyser,sulphur analyser
+sulphur in oil analyser,sulphur analyser
+surface mounted gas detector,gas detector
+swirl flow meter,velocity flow meter
+synchronoscope,detecting instrument
+tachometer,detecting instrument
+tank gauge,gauge
+tapered stem thermowell,thermowell
+tapered thermowell stem,thermowell stem
+target flow meter,flow meter
+television receiver,signal receiver
+temperature channel,monitor channel
+temperature controller,controller
+temperature gauge,gauge
+temperature indicator,indicating instrument
+temperature indicator housing,indicator housing
+temperature indicator scale,indicator scale
+temperature meter,detecting instrument
+temperature regulator,regulator
+temperature sensing element,detecting element
+temperature switch,functional switch
+temperature transmitter,transmitter
+thermal conductivity analyser,analysing instrument
+thermal conductivity gas analyser,thermal conductivity analyser
+thermal element bulb,physical object
+thermal element sheath,physical object
+thermal mass flow meter,mass flow meter
+thermal recorder,recording instrument
+thermal velocity flow meter,velocity flow meter
+thermocouple,temperature sensing element
+thermocouple transmitter,electrical temperature transmitter
+thermometer,detecting instrument
+thermowell,physical object
+thermowell process connection,instrument process connection
+thermowell stem,physical object
+threaded rupture disc holder,rupture disc holder
+time of flight ultrasonic flow meter,ultrasonic flow meter
+timepiece,indicating instrument
+timer,timepiece
+toc analyser,analysing instrument
+transceiver,physical object
+transducer,physical object
+transmitter,physical object
+transmitter electronic circuit,physical object
+transmitter housing,enclosure
+transmitter housing assembly,physical object
+transponder,transceiver
+travel indicator,detecting instrument
+travel stop,position switch
+trend recorder,recording instrument
+tube bundle conditioner,flow straightener
+turbidimeter,detecting instrument
+turbidity analyser,analysing instrument
+turbine flow meter,velocity flow meter
+turbine flow meter body,in-line instrument body
+turbine flow meter rotor,flow meter rotor
+turbine speed governor,speed governor
+twin beam flame detector,flame detector
+uhf antenna,antenna
+uhf receiver,signal receiver
+ultrasonic flow meter,velocity flow meter
+ultrasonic level switch,level switch
+ultrasonic level transmitter,level transmitter
+ultrasonic transducer,electromagnetic transducer
+ultraviolet detector,detector
+ultraviolet flame detector,flame detector
+union rupture disc holder,rupture disc holder
+universal type orifice plate,orifice plate
+u-tube manometer,manometer
+valve manifold assembly,physical object
+van stone thermowell,flanged thermowell
+vane flow meter,flow meter
+vapour pressure dew point analyser,dew point analyser
+variable area flow meter,flow meter
+variable area flow meter element,float
+variable area flow transmitter,flow transmitter
+v-cone flow meter,differential pressure flow meter
+vdu controller,electronic controller
+velocity based vibration channel,monitor channel
+velocity flow meter,flow meter
+venturi,physical object
+venturi tube,pipe
+venturi tube flow meter,differential pressure flow meter
+vhf antenna,antenna
+vhf receiver,signal receiver
+vibration detector,detector
+vibration meter,detecting instrument
+vibration probe,detecting element
+video recorder,recording instrument
+viscosity analyser,analysing instrument
+voltage to current converter,signal converter
+voltage to pressure converter,signal converter
+voltage to voltage converter,signal converter
+vortex flow meter,velocity flow meter
+vortex pickup,electronic sensor
+vortex probe,flow sensor
+vortex transmitter,flow transmitter
+water detector,detector
+weighing scale,detecting instrument
+weight indicator,indicating instrument
+weir flow meter,open channel flow meter
+welded flange thermowell,flanged thermowell
+welded paddle orifice plate,paddle orifice plate
+welded thermowell,thermowell
+wetted transducer,transducer
+whip antenna,antenna
+wind sensor,detecting element
+wire antenna,antenna
+wobbe index meter,analysing instrument
+xy recorder,recording instrument
+yagi antenna,antenna
+zanker conditioner,flow straightener
+zener barrier,intrinsically safe barrier
+zero adjustment device,physical object

@@ -1,0 +1,208 @@
+Unique name,superclass 1
+air conditioner,physical object
+air cooled heat exchanger,cooler
+air cooler,cooler
+air heater,gas heater
+air preheater,air heater
+all welded plate heat exchanger,plate and shell heat exchanger
+atomiser,physical object
+baffle,physical object
+baffle seal,seal
+bare tube,pipe
+barometric condenser,condenser
+barometric leg,physical object
+bayonet heat exchanger,shell and tube heat exchanger
+bayonet tube,physical object
+belt cooler,freezer
+boiler,physical object
+boiler convection section,boiler section
+boiler section,section
+boiler tube ferrule,seal
+bolt extension sleeve,sleeve
+burner,physical object
+ceramic tube,pipe
+chiller,cooler
+cladded tube sheet,tube sheet
+co boiler,boiler
+coal burner,burner
+combustion chamber,chamber
+condenser,cooler
+cooler,heat exchanger
+cooling tower,cooler
+corrugated plate heat exchanger,non-tubular heat exchanger
+cross flow shell and tube heat exchanger,shell and tube heat exchanger
+crude oil heater,heater
+cryogenic device,physical object
+cryogenic heat exchanger,heat exchanger
+crystalliser,separator
+de-superheater,cooler
+direct contact heat exchanger,heat exchanger
+directly fired boiler,pulverised fuel fired boiler
+disk and doughnut baffle,transverse baffle
+disk baffle,baffle
+distance pipe,pipe
+divided flow shell and tube heat exchanger,shell and tube heat exchanger
+double pipe heat exchanger,heat exchanger
+double pipe scraped surface heat exchanger,scraped surface heat exchanger
+double segmental baffle,transverse baffle
+double split flow shell and tube heat exchanger,shell and tube heat exchanger
+double tube sheet,tube sheet
+double tube sheet heat exchanger,shell and tube heat exchanger
+doughnut baffle,baffle
+drains subcooling zone enclosure,enclosure
+drier,physical object
+dry cooling tower,cooling tower
+economiser,heat exchanger
+embedded finned tube,finned tube
+ethylene cracking furnace,furnace
+evaporator,heat exchanger
+external floating head cover,cover
+externally sealed floating tube sheet head,shell and tube heat exchanger rear end head
+falling film evaporator,evaporator
+fibre tube,pipe
+finned tube,pipe
+finned tube air preheater,air preheater
+finned tube heat exchanger,heat exchanger
+fired boiler,boiler
+fixed tube sheet heat exchanger,shell and tube heat exchanger
+fixed tube sheet heat exchanger with bellows,fixed tube sheet heat exchanger
+flaker,freezer
+flame pipe boiler,fired boiler
+flare tip,burner
+flash drier,drier
+floating head,shell and tube heat exchanger rear end head
+floating head backing device,backing ring
+floating head cover,removable cover
+floating head cover flange,flange
+floating head heat exchanger,shell and tube heat exchanger
+floating head with backing device,floating head
+floating tube sheet,tube sheet
+floating tube sheet skirt,sleeve
+fluid bed drier,drier
+fluid heater,heater
+fluidised bed boiler,boiler
+forced down draught furnace,forced draught furnace
+forced draught air cooler,air cooler
+forced draught cooling tower,cooling tower
+forced draught furnace,furnace
+forced up draught furnace,forced draught furnace
+freeze condenser,condenser
+freezer,cooler
+front end vessel shell flange,vessel shell flange
+furnace,physical object
+gas heater,heater
+gaseous fuel boiler,boiler
+graphite block heat exchanger,graphite heat exchanger
+graphite fibre tube,graphite tube
+graphite heat exchanger,unfired heat exchanger
+graphite plate heat exchanger,non-tubular heat exchanger
+graphite shell and tube heat exchanger,shell and tube heat exchanger
+graphite tube,pipe
+hairpin multiple double pipe heat exchanger,multiple double pipe heat exchanger
+hairpin single double pipe heat exchanger,single double pipe heat exchanger
+heat exchanger,physical object
+heat exchanger bonnet,stationary head
+heat exchanger shell,vessel shell
+heat exchanger submerged tube,pipe
+heat pipe,unfired heat exchanger
+heat shield,shield
+heater,physical object
+horizontal furnace,furnace
+hot oil furnace,furnace
+ignition burner,burner
+ignition unit,physical object
+incinerator,furnace
+indirect contact heat exchanger,heat exchanger
+induced draught air cooler,air cooler
+induced draught furnace,furnace
+integral finned tube,finned tube
+kettle reboiler,reboiler
+kiln,furnace
+limpet coil,profile coil
+line burner,burner
+liquid coupled air preheater,air preheater
+liquid fuel boiler,boiler
+longitudinal baffle,baffle
+mixing chamber,chamber
+multiple double pipe heat exchanger,heat exchanger
+natural circulation boiler,boiler
+natural draught air cooled heat exchanger,air cooled heat exchanger
+non-corrugated plate heat exchanger,non-tubular heat exchanger
+non-tubular heat exchanger,indirect contact heat exchanger
+once through boiler,boiler
+outside packed floating head,floating head
+packaged boiler,boiler
+pass partition gasket,gasket
+pass partition plate,physical object
+pilot burner,ignition burner
+pipe coil,pipe
+plate air preheater,air preheater
+plate and frame heat exchanger,corrugated plate heat exchanger
+plate and shell heat exchanger,corrugated plate heat exchanger
+plate fin heat exchanger,non-corrugated plate heat exchanger
+preheater,heater
+printed circuit heat exchanger,non-corrugated plate heat exchanger
+profile coil,physical object
+pulverised fuel fired boiler,fired boiler
+rear end vessel shell flange,vessel shell flange
+reboiler,boiler
+refractory lining,lining
+reheater,indirect contact heat exchanger
+rotary kiln,kiln
+scraped surface heat exchanger,unfired heat exchanger
+segmental baffle,baffle
+semi-welded plate and frame heat exchanger,plate and frame heat exchanger
+shell and coil heat exchanger,tubular heat exchanger
+shell and tube condenser,condenser
+shell and tube cooler,cooler
+shell and tube heat exchanger,tubular heat exchanger
+shell and tube heat exchanger channel,physical object
+shell and tube heat exchanger channel and removable cover assembly,stationary head
+shell and tube heat exchanger channel cover,removable cover
+shell and tube heat exchanger front end,physical object
+shell and tube heat exchanger front end head,vessel head
+shell and tube heat exchanger internal bellows,bellows
+shell and tube heat exchanger rear end head,vessel head
+shell and tube heat exchanger tube bundle,tube bundle
+shielded tube,pipe
+shock tube,pipe
+single double pipe heat exchanger,double pipe heat exchanger
+single spit flow shell and tube heat exchanger,shell and tube heat exchanger
+spool wound heat exchanger,tubular heat exchanger
+start up burner,burner
+stationary head,vessel head
+stationary head  channel flange,flange
+stationary head bonnet flange,flange
+stationary head nozzle,nozzle
+stationary tube sheet,tube sheet
+steam coil,pipe coil
+steam de-superheater,de-superheater
+steam generator,boiler
+steam heated air preheater,air preheater
+studded tube,pipe
+subcooling zone drain,drain
+sulphur condenser,condenser
+superheater,gas heater
+surface condenser,condenser
+swirl burner,burner
+thermosyphon reboiler,vertical reboiler
+transverse baffle,baffle
+tube bundle,physical object
+tube bundle support plate,plate
+tube sheet,plate
+tube sheet hole,hole
+tubular heat exchanger,indirect contact heat exchanger
+unfired heat exchanger,indirect contact heat exchanger
+u-tube,pipe
+u-tube bundle,shell and tube heat exchanger tube bundle
+u-tube heat exchanger,shell and tube heat exchanger
+vertical furnace,furnace
+vertical reboiler,reboiler
+vessel cylindrical shell,physical object
+vessel head,physical object
+vessel shell,physical object
+vessel shell cover,cover
+vessel shell flange,flange
+waste heat boiler,boiler
+water pipe boiler,fired boiler
+wet cooling tower,cooling tower

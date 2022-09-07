@@ -1,0 +1,623 @@
+Unique name,superclass 1
+articulated bellows unit,piping bellows unit
+articulated single bellows unit,articulated bellows unit
+articulated twin bellows unit,articulated bellows unit
+austenitic stainless steel pipe,steel pipe
+axial grooving metal-loss,metal-loss feature
+axial piping bellows unit,piping bellows unit
+axial slotting metal-loss,metal-loss feature
+backing ring,ring
+bar clamp,physical object
+basket strainer,strainer
+bath tub strainer,strainer
+bellows,physical object
+bellows unit,physical object
+bent pipe section,feature
+bevel end pipe,pipe
+bevelled end,pipe end
+bevelled end pipe cap,butt welding pipe cap
+blanking cap pipe union,physical object
+blind flange,pipe flange
+bolted pipe clamp,pipe clamp
+bounded seal,pipe flange gasket
+bridge plug,plug
+bulkhead union,threaded nipple
+bulldog slips,slips
+butt welding elbolet,elbolet
+butt welding end,pipe end
+butt welding latrolet,latrolet
+butt welding long radius pipe return,long radius pipe return
+butt welding pipe,pipe
+butt welding pipe cap,pipe cap
+butt welding pipe cross,pipe cross
+butt welding pipe reducer,pipe reducer
+butt welding pipe tee,pipe tee
+butt welding pipe union,pipe union
+carbon steel pipe,steel pipe
+casing crossover,combination pipe coupling
+casing hanger,well string hanger
+casing nipple,physical object
+casing slips,slips
+casing spool,physical object
+casing spool bushing,physical object
+casing spool flanged end,casing spool
+casing spool hub end,casing spool
+casing spool hub end outlet,casing spool
+casing spool lockdown,casing spool
+casing spool studded outlet,casing spool
+casing spool threaded outlet,casing spool
+cast iron pipe,pipe
+chamfered end,bevelled end
+christmas tree,physical object
+circumferential grooving metal-loss,metal-loss feature
+circumferential slotting metal-loss,metal-loss feature
+clamp jaw,jaw
+coiled tubing,pipe
+collar slips,slips
+combination pipe coupling,pipe coupling
+compound bevel end,bevelled end
+compound bevel end pipe,bevel end pipe
+compression end,pipe end
+concentric butt welding pipe reducer,butt welding pipe reducer
+concentric flanged pipe reducer,concentric pipe reducer
+concentric pipe reducer,pipe reducer
+concentric swaged pipe nipple,swaged pipe nipple
+concentric tubing hanger,tubing hanger
+conductor housing,physical object
+continuous-welded pipe,welded pipe
+corroded feature,metal-loss feature
+corrugated pipe,pipe
+crack,feature
+crossover,physical object
+delta ring flange,pipe flange
+delta ring gasket contact face,gasket contact face
+double hub end pipe,hub end pipe
+double jacketed gasket,jacketed gasket
+double lever pipe clamp,lever pipe clamp
+double slips casing hanger,casing hanger
+drift mandrel,physical object
+drill collar,threaded pipe
+drill collar nonmagnetic,drill collar
+drill pipe,threaded pipe
+drill stem assembly,physical object
+drill stem bit sub,drill stem sub
+drill stem collar sub,drill stem sub
+drill stem crossover sub,drill stem sub
+drill stem lift sub,drill stem sub
+drill stem lower kelly valve,drill stem sub
+drill stem sub,physical object
+drill stem swivel sub,drill stem sub
+drill stem tool joint sub,drill stem sub
+drill stem upper kelly valve,drill stem sub
+drip ring,physical object
+dual tubing hanger,tubing hanger
+eccentric butt welding pipe reducer,butt welding pipe reducer
+eccentric flanged pipe reducer,eccentric pipe reducer
+eccentric pipe reducer,pipe reducer
+eccentric swaged pipe nipple,swaged pipe nipple
+eccentric tubing hanger,tubing hanger
+elbolet,olet
+electric welded pipe,welded pipe
+electric-fusion-welded pipe,electric welded pipe
+electric-resistance-welded pipe,electric welded pipe
+equal hexagonal nipple,hexagonal nipple
+equal pipe cross,pipe cross
+equal pipe cross butt welding,equal pipe cross
+equal pipe cross externally and internally threaded,equal pipe cross threaded
+equal pipe cross externally threaded,equal pipe cross threaded
+equal pipe cross internally threaded,equal pipe cross threaded
+equal pipe cross socket welding,equal pipe cross
+equal pipe cross threaded,equal pipe cross
+equal pipe lateral tee,pipe lateral tee
+equal pipe tee,pipe tee
+equal pipe tee externally and internally threaded,pipe tee threaded externally and internally
+equal pipe tee externally threaded,pipe tee externally threaded
+equal pipe tee internally threaded,pipe tee internally threaded
+equal pipe tee socket welding,equal pipe tee
+equal pipe tee threaded,equal pipe tee
+expander flange,pipe flange
+extended seal neck tubing hanger,tubing hanger
+external metal-loss feature,metal-loss feature
+external upset pipe,upset pipe
+externally upset well tubing both ends,pipe threaded externally both ends
+female face flanged end,flanged end
+female gasket contact face,gasket contact face
+ferritic-austenitic stainless steel pipe,steel pipe
+flanged end,pipe end
+flanged end tubing head adapter,tubing head adapter
+flanged pipe,pipe
+flanged pipe cross,pipe cross
+flanged pipe reducer,pipe reducer
+flanged pipe tee,pipe tee
+flared end,pipe end
+flat bar pipe clamp,physical object
+flat bar pipe clamp assembly,physical object
+flat face flange,pipe flange
+flat face flanged end,flanged end
+flat gasket contact face,gasket contact face
+flat ring gasket,pipe flange gasket
+flexible pipeline,pipeline
+fluid conductor,fluid transport device
+fluid transport device,transport device
+full face gasket,pipe flange gasket
+full pipe coupling,pipe coupling
+gasket contact face,feature
+general metal-loss,metal-loss feature
+gmaw welded pipe,welded pipe
+graphite pipe flange gasket,pipe flange gasket
+grinded feature,metal-loss feature
+groove face flanged end,flanged end
+groove flange,pipe flange
+groove gasket contact face,gasket contact face
+half pipe coupling,pipe coupling
+hammerlug pipe union nut,pipe union nut
+hammerlug union,pipe union
+heat treated pipe,pipe
+helical seam welded pipe,welded pipe
+hexagonal head pipe plug,threaded pipe plug
+hexagonal nipple,threaded nipple
+hexagonal pipe union,pipe union
+hexagonal pipe union nut,pipe union nut
+hinged casing hanger,casing hanger
+horizontal tubing hanger,tubing hanger
+hose coupling,physical object
+hose coupling swivel,physical object
+hose nipple,physical object
+hub end,pipe end
+hub end pipe,pipe
+hub end tubing head adapter,tubing head adapter
+insert pipe reducer,pipe reducer
+inside threaded female pipe union sub,pipe union female sub threaded end
+inside threaded male pipe union sub,pipe union male sub threaded end
+integral joint well tubing,pipe threaded externally one end and internally other end
+internal and external upset pipe,upset pipe
+internal metal-loss feature,metal-loss feature
+internal upset pipe,upset pipe
+jacketed gasket,pipe flange gasket
+jaw,physical object
+kelly,drill stem sub
+kelly saver sub,drill stem sub
+landing nipple,physical object
+lap joint flange,pipe flange
+lap joint stub end,physical object
+lapped end,pipe end
+lapped flange,pipe flange
+latroflange,latrolet
+latrolet,olet
+lens ring flange,pipe flange
+lens ring gasket contact face,gasket contact face
+lever pipe clamp,pipe clamp
+liner hanger,well string hanger
+long radius pipe return,pipe return
+long radius reducing pipe elbow butt welding,pipe elbow reducing
+male face flanged end,flanged end
+male gasket contact face,gasket contact face
+marker,physical object
+metallic gasket,gasket
+metal-loss cluster,metal-loss feature
+metal-loss end point,end point
+metal-loss feature,feature
+metal-loss start point,start point
+mid-wall feature,metal-loss feature
+mitered pipe bend,physical object
+nipoflange,olet
+nipolet,olet
+non metallic flat gasket,gasket
+nonupset pipe,threaded pipe
+nonupset well tubing both ends,pipe threaded externally both ends
+nozzle,physical object
+npt threaded full pipe coupling,threaded full pipe coupling
+octagonal ring gasket,r ring gasket
+olet,physical object
+O-ring,seal ring
+O-ring flange,pipe flange
+O-ring gasket contact face,gasket contact face
+outside threaded female pipe union sub,pipe union female sub threaded end
+outside threaded male pipe union sub,pipe union male sub threaded end
+oval ring gasket,ring joint gasket
+overshot slips,slips
+pad flange,pipe flange
+pinhole metal-loss,metal-loss feature
+pipe,physical object
+pipe bend,physical object
+pipe blind hub,physical object
+pipe bushing,physical object
+pipe bushing flush,pipe bushing
+pipe bushing hexagonal head,pipe bushing
+pipe cap,physical object
+pipe clamp,physical object
+pipe coupling,physical object
+pipe cross,physical object
+pipe cross reducing on both branches,reducing pipe cross
+pipe cross reducing on one branch,reducing pipe cross
+pipe cross reducing one run and both branches,reducing pipe cross
+pipe cross reducing one run and one branch,reducing pipe cross
+pipe cross reducing opposite branches equal,reducing pipe cross
+pipe crossover,physical object
+pipe crossover flanged end,pipe crossover
+pipe crossover flanged end one side and threaded end other side,pipe crossover flanged end
+pipe crossover flanged end one side and union female end other side,pipe crossover flanged end
+pipe crossover flanged end one side and union male end other side,pipe crossover flanged end
+pipe crossover flanged ends,pipe crossover flanged end
+pipe crossover hub end,pipe crossover
+pipe crossover hub end one side and flanged end other side,pipe crossover hub end
+pipe crossover hub end one side and threaded end other side,pipe crossover hub end
+pipe crossover hub end one side and union female end other side,pipe crossover hub end
+pipe crossover hub end one side and union male end other side,pipe crossover hub end
+pipe crossover hub ends,pipe crossover hub end
+pipe crossover threaded end,pipe crossover
+pipe crossover threaded end one side and union female end other side,pipe crossover threaded end
+pipe crossover threaded end one side and union male end other side,pipe crossover threaded end
+pipe crossover threaded ends,pipe crossover threaded end
+pipe crossover union end,pipe crossover
+pipe crossover union end female,pipe crossover union end
+pipe crossover union end male,pipe crossover union end
+pipe crossover union ends,pipe crossover union end
+pipe crossover union ends ff,pipe crossover union ends
+pipe crossover union ends mm,pipe crossover union ends
+pipe crowsfoot,physical object
+pipe dent,dent
+pipe elbow,physical object
+pipe elbow 30 degree,pipe elbow
+pipe elbow 45 degree,pipe elbow
+pipe elbow 45 degree externally and internally threaded end,pipe elbow 45 degree threaded
+pipe elbow 45 degree externally threaded end,pipe elbow externally threaded end
+pipe elbow 45 degree flanged,pipe elbow 45 degree
+pipe elbow 45 degree flanged end flat face,pipe elbow 45 degree flanged
+pipe elbow 45 degree flanged end raised face,pipe elbow 45 degree flanged
+pipe elbow 45 degree flanged end ring joint,pipe elbow 45 degree flanged
+pipe elbow 45 degree internally threaded end,pipe elbow 45 degree threaded
+pipe elbow 45 degree threaded,pipe elbow 45 degree
+pipe elbow 60 degree,pipe elbow
+pipe elbow 90 degree,pipe elbow
+pipe elbow base type,pipe elbow
+pipe elbow butt welding,pipe elbow
+pipe elbow double branch,pipe elbow
+pipe elbow externally and internally threaded end,pipe elbow threaded
+pipe elbow externally threaded end,pipe elbow threaded
+pipe elbow flanged,pipe elbow
+pipe elbow internally threaded end,pipe elbow threaded
+pipe elbow long radius,pipe elbow
+pipe elbow long radius butt welding,pipe elbow butt welding
+pipe elbow long tangent,pipe elbow
+pipe elbow reducing,pipe elbow
+pipe elbow short radius,pipe elbow
+pipe elbow side outlet,pipe elbow
+pipe elbow socket welding,pipe elbow
+pipe elbow threaded,pipe elbow
+pipe elbow union,pipe elbow
+pipe end,end
+pipe end buttress threads,threaded pipe end
+pipe end dovetail threads,threaded pipe end
+pipe end external buttress threads,pipe end external threads
+pipe end external dovetail threads,pipe end external threads
+pipe end external hook threads,pipe end external threads
+pipe end external line-pipe threads,pipe end external threads
+pipe end external round threads,pipe end external threads
+pipe end external threads,threaded pipe end
+pipe end external wedge threads,pipe end external threads
+pipe end hook threads,threaded pipe end
+pipe end internal buttress threads,pipe end internal threads
+pipe end internal dovetail threads,pipe end internal threads
+pipe end internal hook threads,pipe end internal threads
+pipe end internal line-pipe threads,pipe end internal threads
+pipe end internal round threads,pipe end internal threads
+pipe end internal threads,threaded pipe end
+pipe end internal wedge threads,pipe end internal threads
+pipe end line-pipe threads,threaded pipe end
+pipe end round threads,threaded pipe end
+pipe end stepped threaded,threaded pipe end
+pipe end wedge threads,threaded pipe end
+pipe expansion device,physical object
+pipe flange,physical object
+pipe flange gasket,gasket
+pipe flange hub,feature
+pipe flange spacer,physical object
+pipe flange spade,physical object
+pipe goatshead,physical object
+pipe hanger,physical object
+pipe hub,physical object
+pipe hub end seal ring,seal ring
+pipe lateral tee,physical object
+pipe nipple,pipe
+pipe pig,physical object
+pipe plug,physical object
+pipe reducer,physical object
+pipe reducer assembly,physical object
+pipe return,physical object
+pipe rotary shouldered box connection,pipe end internal threads
+pipe rotary shouldered pin connection,pipe end external threads
+pipe tee,physical object
+pipe tee externally threaded,threaded pipe tee
+pipe tee internally threaded,threaded pipe tee
+pipe tee reducing both runs,reducing pipe tee
+pipe tee reducing branch,reducing pipe tee
+pipe tee reducing branch butt welding,butt welding pipe tee
+pipe tee reducing branch threaded,reducing pipe tee threaded
+pipe tee reducing one run,reducing pipe tee
+pipe tee reducing one run and branch,reducing pipe tee
+pipe tee straight butt welding,equal pipe tee
+pipe tee threaded externally and internally,threaded pipe tee
+pipe threaded both ends,threaded pipe
+pipe threaded externally both ends,pipe threaded both ends
+pipe threaded externally one end and internally other end,pipe threaded both ends
+pipe threaded internally both ends,pipe threaded both ends
+pipe union,physical object
+pipe union female sub,pipe union sub
+pipe union female sub bevelled end,pipe union female sub
+pipe union female sub flanged end,pipe union female sub
+pipe union female sub socketwelded end,pipe union female sub
+pipe union female sub threaded end,pipe union female sub
+pipe union male sub,pipe union sub
+pipe union male sub bevelled end,pipe union male sub
+pipe union male sub socketwelding end,pipe union male sub
+pipe union male sub threaded end,pipe union male sub
+pipe union nut,nut
+pipe union sub,physical object
+pipe wye,physical object
+pipeline,fluid conductor
+pipeline freespan end point,end point
+pipeline freespan section,pipeline span section
+pipeline freespan start point,start point
+pipeline intermittent spanning end point,end point
+pipeline intermittent spanning section,pipeline span section
+pipeline intermittent spanning start point,start point
+pipeline marker,marker
+pipeline section,section
+pipeline section end point,end point
+pipeline section start point,start point
+pipeline span section,pipeline section
+pipeline supported section,pipeline section
+piping bellows unit,bellows unit
+piping expansion bellows,bellows
+piping standard assembly,physical object
+piping system,system
+pitting metal-loss,metal-loss feature
+plain bevel end,bevelled end
+plain bevel end pipe,bevel end pipe
+plain end,pipe end
+plain end nipolet,nipolet
+plain end pipe,pipe
+plain end pipe cap,butt welding pipe cap
+plate flange,physical object
+pup joint,spool piece
+r ring gasket,ring joint gasket
+raised face flange,pipe flange
+raised face flanged end,flanged end
+raised gasket contact face,gasket contact face
+recess face flanged end,flanged end
+recess flange,pipe flange
+recess gasket contact face,gasket contact face
+rectangular backing ring,backing ring
+reducing branch pipe tee externally and internally threaded,pipe tee threaded externally and internally
+reducing branch pipe tee externally threaded,pipe tee externally threaded
+reducing branch pipe tee internally threaded,pipe tee internally threaded
+reducing flange,pipe flange
+reducing hexagonal nipple,hexagonal nipple
+reducing pipe coupling,pipe coupling
+reducing pipe cross,pipe cross
+reducing pipe cross externally and internally threaded,reducing pipe cross threaded
+reducing pipe cross externally threaded,reducing pipe cross threaded
+reducing pipe cross internally threaded,reducing pipe cross threaded
+reducing pipe cross socket welding,reducing pipe cross
+reducing pipe cross threaded,reducing pipe cross
+reducing pipe lateral tee,pipe lateral tee
+reducing pipe tee,pipe tee
+reducing pipe tee socket welding,reducing pipe tee
+reducing pipe tee threaded,reducing pipe tee
+reducing slip-on flange,slip-on flange
+reducing threaded flange,threaded flange
+reinforced nipoflange,olet
+return bend,pipe bend
+rigid pipeline,pipeline
+ring joint flange,pipe flange
+ring joint flanged end,flanged end
+ring joint gasket,pipe flange gasket
+ring joint gasket contact face,gasket contact face
+ring joint groove,groove
+riser,physical object
+riser crossover,combination pipe coupling
+riser pipe clamp,flat bar pipe clamp assembly
+round base pipe elbow,pipe elbow base type
+round base pipe elbow flanged end,round base pipe elbow
+round base pipe elbow flanged end raised face,round base pipe elbow flanged end
+round base pipe elbow flanged end ring joint,round base pipe elbow flanged end
+round head pipe plug,threaded pipe plug
+round nipple,threaded nipple
+round nut union,pipe union
+round pipe union nut,pipe union nut
+rx ring gasket,ring joint gasket
+seal ring,seal
+seal slips,slips
+seamless pipe,pipe
+serrated end,pipe end
+short radius butt welding pipe elbow,pipe elbow short radius
+short radius pipe return,pipe return
+side outlet pipe elbow left,pipe elbow side outlet
+side outlet pipe elbow right,pipe elbow side outlet
+side outlet pipe tee,pipe tee
+side outlet pipe tee left hand,side outlet pipe tee
+side outlet pipe tee right hand,side outlet pipe tee
+single hub end pipe,hub end pipe
+single jacketed gasket,jacketed gasket
+single lever pipe clamp,lever pipe clamp
+single tubing hanger,tubing hanger
+sliding sleeve,slide valve
+sliding sleeve and anchor,pipe expansion device
+slip on welding end,pipe end
+slip type tubing hanger,tubing hanger
+slip-on flange,pipe flange
+slips,physical object
+snap end,pipe end
+snap female end,snap end
+snap male end,snap end
+socket welding concentric pipe reducer,socket welding pipe reducer
+socket welding elbolet,elbolet
+socket welding end,pipe end
+socket welding flange,pipe flange
+socket welding full pipe coupling,full pipe coupling
+socket welding half pipe coupling,half pipe coupling
+socket welding latrolet,latrolet
+socket welding pipe cap,pipe cap
+socket welding pipe coupling,pipe coupling
+socket welding pipe cross,pipe cross
+socket welding pipe reducer,pipe reducer
+socket welding pipe tee,pipe tee
+socket welding pipe union,pipe union
+socket welding reducing pipe coupling,reducing pipe coupling
+sockolet,olet
+spectacle blind,physical object
+spigot face flanged end,flanged end
+spigot flange,pipe flange
+spigot gasket contact face,gasket contact face
+spiral wound gasket,pipe flange gasket
+split casing hanger,casing hanger
+split tubing hanger,tubing hanger
+spool piece,physical object
+spray nozzle,nozzle
+square base pipe elbow,pipe elbow base type
+square base pipe elbow flanged end,square base pipe elbow
+square base pipe elbow flanged end raised face,square base pipe elbow flanged end
+square base pipe elbow flanged end ring joint,square base pipe elbow flanged end
+square head pipe plug,threaded pipe plug
+steam trap,trap
+steel pipe,pipe
+straight seam welded pipe,welded pipe
+strainer,filter
+stubin,physical object
+studded end,pipe end
+studded end tubing head adapter,tubing head adapter
+studded pipe tee,pipe tee
+swaged pipe nipple,pipe reducer
+sweepolet,olet
+swivel piece no 1 long elbow,pipe elbow 90 degree
+swivel piece no 1 short elbow,pipe elbow 90 degree
+swivel piece no 2 long elbow,pipe elbow 90 degree
+swivel piece no 2 short elbow,pipe elbow 90 degree
+swivel piece no 3 straight,pipe nipple
+swivel piece no 3 straight bevelled end,swivel piece no 3 straight
+swivel piece no 3 straight flanged end,swivel piece no 3 straight
+swivel piece no 3 straight threaded end,swivel piece no 3 straight
+swivel piece no 3 straight union end,swivel piece no 3 straight
+swivel piece no 3 straight union female end,swivel piece no 3 straight union end
+swivel piece no 3 straight union male end,swivel piece no 3 straight union end
+swivel piece no 4 long elbow,pipe elbow 90 degree
+swivel piece no 4 long elbow bevelled end,swivel piece no 4 long elbow
+swivel piece no 4 long elbow flanged end,swivel piece no 4 long elbow
+swivel piece no 4 long elbow threaded end,swivel piece no 4 long elbow
+swivel piece no 4 long elbow union end,swivel piece no 4 long elbow
+swivel piece no 4 long elbow union female end,swivel piece no 4 long elbow union end
+swivel piece no 4 long elbow union male end,swivel piece no 4 long elbow union end
+swivel piece no 4 short elbow,pipe elbow 90 degree
+swivel piece no 4 short elbow bevelled end,swivel piece no 4 short elbow
+swivel piece no 4 short elbow flanged end,swivel piece no 4 short elbow
+swivel piece no 4 short elbow threaded end,swivel piece no 4 short elbow
+swivel piece no 4 short elbow union end,swivel piece no 4 short elbow
+swivel piece no 4 short elbow union female end,swivel piece no 4 short elbow union end
+swivel piece no 4 short elbow union male end,swivel piece no 4 short elbow union end
+swivel piece no 5 long elbow,pipe elbow 90 degree
+swivel piece no 5 long elbow bevelled end,swivel piece no 5 long elbow
+swivel piece no 5 long elbow flanged end,swivel piece no 5 long elbow
+swivel piece no 5 long elbow threaded end,swivel piece no 5 long elbow
+swivel piece no 5 long elbow union end,swivel piece no 5 long elbow
+swivel piece no 5 long elbow union female end,swivel piece no 5 long elbow union end
+swivel piece no 5 long elbow union male end,swivel piece no 5 long elbow union end
+swivel piece no 5 short elbow,pipe elbow 90 degree
+swivel piece no 6 straight,pipe nipple
+swivel piece no 6 straight bevelled end,swivel piece no 6 straight
+swivel piece no 6 straight flanged end,swivel piece no 6 straight
+swivel piece no 6 straight threaded end,swivel piece no 6 straight
+swivel piece no 6 straight union end,swivel piece no 6 straight
+swivel piece no 6 straight union female end,swivel piece no 6 straight union end
+swivel piece no 6 straight union male end,swivel piece no 6 straight union end
+taper backing ring,backing ring
+threaded elbolet,elbolet
+threaded end tubing head adapter,tubing head adapter
+threaded flange,pipe flange
+threaded full pipe coupling,full pipe coupling
+threaded half pipe coupling,half pipe coupling
+threaded latrolet,latrolet
+threaded nipolet,nipolet
+threaded nipple,physical object
+threaded pipe,pipe
+threaded pipe cap,pipe cap
+threaded pipe coupling,pipe coupling
+threaded pipe cross,pipe cross
+threaded pipe end,pipe end
+threaded pipe plug,pipe plug
+threaded pipe reducer,pipe reducer
+threaded pipe tee,pipe tee
+threaded pipe union,pipe union
+threaded reducing pipe coupling,reducing pipe coupling
+threaded tubing hanger,tubing hanger
+threaded tubing head adapter,tubing head adapter
+threadolet,olet
+tongue and groove joint gasket,pipe flange gasket
+tongue face flanged end,flanged end
+tongue flange,pipe flange
+tongue gasket contact face,gasket contact face
+tool joint,physical object
+tool joint pin member,tool joint
+top hat strainer,strainer
+tube,pipe
+tubing crossover,combination pipe coupling
+tubing hanger,well string hanger
+tubing head,physical object
+tubing head adapter,physical object
+tubing head external thread,tubing head threaded end
+tubing head internal thread,tubing head threaded end
+tubing head threaded end,tubing head
+tubing head welded end,tubing head
+tubing nipple,threaded nipple
+tubing spool,physical object
+tubing spool bushing,sleeve
+tubing spool flanged end,tubing spool
+tubing spool hub end,tubing spool
+tubing spool lockdown,tubing spool
+tubing spool studded end,tubing spool
+tubing spool studded outlet,tubing spool
+tubing spool threaded outlet,tubing spool
+union end,pipe end
+union female end,union end
+union male end,union end
+union pipe cross,pipe cross
+upset pipe,threaded pipe
+u-ring,seal ring
+v-ring,seal ring
+wafer end,pipe end
+wafer end flat face,wafer end
+wafer end grooved,wafer end
+wafer end raised face,wafer end
+wafer end recess,wafer end
+wafer end ring joint,wafer end
+wafer end spigot face,wafer end
+wafer end tongue face,wafer end
+weld feature,feature
+weld neck flange,pipe flange
+weld neck flange hub,pipe flange hub
+weld neck flat face flange,weld neck flange
+weld neck orifice flange,orifice flange
+weld neck raised face flange,weld neck flange
+weld neck ring joint flange,weld neck flange
+welded pipe,pipe
+welding boss,olet
+welding end transition,feature
+weldoflange,olet
+weldolet,olet
+well casing,lining
+well casing head,physical object
+well casing head externally threaded end,well casing head threaded end
+well casing head flanged end,well casing head
+well casing head hub end,well casing head
+well casing head internally threaded end,well casing head threaded end
+well casing head studded outlet,well casing head
+well casing head threaded end,well casing head
+well casing head threaded outlet,well casing head
+well casing head welded end,well casing head
+well conductor casing,threaded pipe
+well string hanger,physical object
+well tubing,fluid conductor
+wellhead crossover flange,crossover
+wellhead crossover packoff,physical object
+wellhead housing,physical object
+y strainer,strainer

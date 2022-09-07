@@ -1,0 +1,1668 @@
+Unique name,superclass 1
+absolute activity of b,property
+absolute design pressure,design pressure
+absolute humidity,property
+absolute operating pressure,operating pressure
+absolute pressure,pressure
+absolute temperature,indirect property
+absorbed dose,property
+absorbed dose rate,rate
+absorption factor,ratio
+ac power supply voltage range,supply voltage range
+acceleration,property
+acceleration due to gravity,indirect property
+acceptor number density,indirect property
+accuracy,indirect property
+acentric factor,indirect property
+acoustic energy,indirect property
+acoustic impedance,property
+active energy,indirect property
+active power,indirect property
+activity (radioactivity),property
+activity coefficient of b,ratio
+activity coefficient of solute b (especially in a dilute liquide solution),ratio
+activity of solute b,indirect property
+activity of solvent a,ratio
+actual volume flow rate,indirect property
+adjustment referance temperature,indirect property
+admittance,property
+affinity (of a chemical reaction),property
+air consumption,indirect property
+air gap,gap
+air passage,indirect property
+air refreshment rate,indirect property
+alarm limit HH,set point
+alarm limit LL,set point
+alarm limit WH,set point
+alarm limit WL,set point
+alfven number,property
+allowable back pressure,back pressure
+allowable nozzle torque,torque
+allowable pressure drop gradient,indirect property
+allowable temperature,indirect property
+alpha disintegration energy,property
+ambient operating humidity,indirect property
+ambient operating temperature,indirect property
+ambient storage humidity,indirect property
+angle,property
+angle of optical rotation,indirect property
+angular acceleration,acceleration
+angular cross-section,indirect property
+angular frequency,frequency
+angular impulse,indirect property
+angular momentum,momentum
+angular orientation,indirect property
+angular reciprocal lattice vector,indirect property
+angular repetency,indirect property
+angular velocity,velocity
+angular wavenumber,indirect property
+aniline point,indirect property
+API gravity,property
+apparent power,indirect property
+approximate total height,height
+approximate total length,total length
+approximate total width,width
+approximately discharge time,indirect property
+area,property
+area charge,property
+area heat flow rate,indirect property
+arm length,straight linear distance
+asymmetric peak withstand current,short-circuit current
+atomic attenuation coefficient,property
+atomic number,property
+atomic weight,property
+attenuation,ratio
+attenuation coefficient,property
+autogenous ignition temperature,ignition temperature
+autoreclose interruption time,indirect property
+autoreclose open time,indirect property
+average energy loss per ion pair formed,indirect property
+average height,height
+average logaritmic energy decrement,indirect property
+average wall thickness socket-welding end,wall thickness
+avogadro constant,property
+axial flow impeller diameter,impeller diameter
+axial load,indirect property
+back pressure,indirect property
+background corrosion depth,indirect property
+baffle cut,indirect property
+baffle spacing,straight linear distance
+basic thread major diameter,diameter
+basic thread pitch diameter,diameter
+baud rate,property
+bend diameter,shape dimension
+bending moment per length,property
+bending stress,indirect property
+beta disintegration energy,indirect property
+beta ratio,indirect property
+bevelled end inner bevel angle,indirect property
+bevelled end inner bevel angle design,bevelled end inner bevel angle
+bevelled end inner bevel thickness,thickness
+bevelled end inner bevel thickness design,bevelled end inner bevel thickness
+bevelled end outer bevel angle,indirect property
+bevelled end outer bevel angle design,indirect property
+bevelled end outside diameter,outside diameter
+bevelled end outside diameter design,nominal outside diameter
+bevelled end plain bevel angle,indirect property
+bevelled end plain bevel angle design,bevelled end plain bevel angle
+bevelled end root face thickness,thickness
+bevelled end root face thickness design,bevelled end root face thickness
+bevelled end wall thickness,wall thickness
+bevelled end wall thickness design,bevelled end wall thickness
+binding fraction,ratio
+blast pressure,dynamic pressure
+blocking temperature,indirect property
+boiling temperature,indirect property
+boiling temperature at standard conditions,boiling temperature
+bolt circle diameter,diameter
+bolt hole diameter,diameter
+bolt length,shape dimension
+boltzmann constant,property
+bragg angle,property
+brake force,indirect property
+brake horsepower,indirect property
+breakdown torque,torque
+breakdown torque multiplier,ratio
+brinell hardness,hardness
+bubble point,indirect property
+buckling resistance,indirect property
+built-up back pressure,back pressure
+bulk density,indirect property
+bulk modulus,indirect property
+bulk volume,indirect property
+burgers vector,indirect property
+burst pressure,indirect property
+cable armour cross section area,cross section area
+cable lower limit bending radius,radius
+calculated absolute open flow,indirect property
+calculated area,indirect property
+calculated average height,average height
+calculated beta ratio,indirect property
+calculated customary unit valve flow coefficient,calculated valve flow coefficient
+calculated differential pressure range,range
+calculated metric valve flow coefficient,calculated valve flow coefficient
+calculated valve flow coefficient,valve flow coefficient
+calculated valve flow coefficient range,valve flow coefficient range
+calculated weight,weight
+calibrated range,range
+calorific value gas volume,indirect property
+calorific value mass basis,indirect property
+calorific value mole basis,indirect property
+calorific value solid liquid vol,indirect property
+canonical partition function,property
+capacitance,property
+capacitance of a capacitor,indirect property
+capacity (volume flow rate),indirect property
+capacity (volume),indirect property
+carrier life time,indirect property
+celestial latitude,indirect property
+celestial longitude,indirect property
+centre of buoyancy,indirect property
+centre of gravity,indirect property
+centroid ref x axis,straight linear distance
+centroid ref y axis,straight linear distance
+change interval,indirect property
+characteristic impedance of a medium,indirect property
+charge number of ion,ratio
+charging current of a capacitor,indirect property
+charging of a capacitor,indirect property
+check interval,indirect property
+chemical energy,indirect property
+chemical potential of b,indirect property
+CIE colometric functions,property
+circumference,length of path
+clearance,straight linear distance
+closing pressure,indirect property
+cloud point,indirect property
+coefficient of heat transfer,property
+coherence length,shape dimension
+cold filter plugging point,indirect property
+cold locked rotor time,indirect property
+commissioning date,indirect property
+compressibility,property
+compression ratio,indirect property
+compton wavelength,indirect property
+concentration,property
+concentration mass per mass,concentration
+concentration mass per volume,concentration
+concentration mol per mol,concentration
+concentration mole per volume,concentration
+concentration of b,concentration
+concentration volume per mole,concentration
+concentration volume per volume,concentration
+condemnation rate,indirect property
+conductance,property
+conductance (for alternating current),indirect property
+conductance (for direct current),indirect property
+conductivity,property
+"conductivity, fluid in lower phase",indirect property
+"conductivity, fluid in upper phase",indirect property
+constant back pressure,back pressure
+contact gap,gap
+contact rating,property
+continuous current-carrying capacity of a conductor,indirect property
+controllable valve flow coefficient,valve flow coefficient
+controllable valve flow coefficient range,valve flow coefficient range
+conventional operating current,indirect property
+conventional touch voltage limit,touch voltage
+corrosion allowance,indirect property
+corrosion rate,indirect property
+count,property
+count rate,indirect property
+counter bore diameter,inside diameter
+coupling factor,ratio
+coupling rating,indirect property
+cowling number,property
+creation date,indirect property
+critical pressure,indirect property
+cross section area,indirect property
+cross-section,property
+cubic expansion coefficient,property
+curie temperature,indirect property
+current at delta connection,indirect property
+current at star connection,indirect property
+current density of particles,indirect property
+current in a fault,indirect property
+current in the short circuit,indirect property
+current when activated,indirect property
+current when not activated,indirect property
+curvature,indirect property
+customary unit valve flow coefficient,valve flow coefficient
+cyclotron angular frequency,indirect property
+cylinder diameter,inside diameter
+damping coefficient,property
+dc power supply voltage range,supply voltage range
+dead time,indirect property
+deadband range,range
+debye angular frequency,indirect property
+debye angular repetency,indirect property
+debye temperature,indirect property
+debye-waller factor,indirect property
+decay constant,property
+deflection,straight linear distance
+degree of dissociation,indirect property
+delivery date,indirect property
+delivery price,indirect property
+demulsibility,property
+density,property
+density at flow condition,indirect property
+density at lower limit differential pressure,indirect property
+density at lower limit flow rate,density at flow condition
+density at upper limit differential pressure,indirect property
+density at upper limit flow rate,density at flow condition
+density gas,indirect property
+density liquid,indirect property
+density of states,indirect property
+density solid,indirect property
+design angle elbow,indirect property
+design current of a circuit,indirect property
+design inside diameter,inside diameter
+design length center end outlet end cross,indirect property
+design length center end outlet end tee,indirect property
+design length center end run end cross,indirect property
+design length center end run tee,indirect property
+design length center to base for flanged base fitting,indirect property
+design length end to end,end to end length
+design outside diameter,diameter
+design pressure,indirect property
+design ring joint groove angle,ring joint groove angle
+design ring joint groove depth,ring joint groove depth
+design ring joint groove pitch diameter,ring joint groove pitch diameter
+design ring joint groove width,ring joint groove width
+design ring joint raised portion height,ring joint raised portion height
+design temperature,indirect property
+design thickness of flanged end,thickness
+design wall thickness of flanged fitting,indirect property
+detection threshold,indirect property
+dew point,indirect property
+diameter,straight linear distance
+diameter range,shape dimension
+dielectric hysteresis,hysteresis
+differential head,head
+differential pressure range,range
+diffusion area,indirect property
+diffusion coefficient,property
+diffusion coefficient for neutron fluence rate,indirect property
+diffusion coefficient for neutron number density,indirect property
+diffusion length,indirect property
+diffusion length (solide state physics),indirect property
+direction,property
+direction angle,indirect property
+directional spectral emissivity,ratio
+discharge pressure,indirect property
+discharge time,indirect property
+discharging current of a capacitor,indirect property
+discharging of a capacitor,indirect property
+displacement per revolution,indirect property
+displacement vector of ion or atom,indirect property
+dissipation factor,ratio
+distance,indirect property
+distance between plates,straight linear distance
+distance between point of tension and compression,straight linear distance
+distance covered,length of path
+distance from nearest upstream marker,length of path
+distance from upstream girth weld,length of path
+distance to downstream girth weld,length of path
+distance to nearest downstream marker,length of path
+donor number density,indirect property
+dose equivalent,property
+drag pressure,indirect property
+drift diameter,inside diameter
+drift diameter t & c,inside diameter
+drop point,indirect property
+dry point,indirect property
+dry weight,weight
+dynamic friction factor,property
+dynamic load,indirect property
+dynamic pressure,indirect property
+earth fault current,fault current
+earthing resistor,indirect property
+earthquake load,dynamic load
+effective multiplication factor,indirect property
+efficiency,ratio
+elbow flanged end center to end length design,indirect property
+elbow inside threaded end center to face of band length design,indirect property
+elbow socket-welding center to bottom socket length design,indirect property
+electric charge,property
+electric current,property
+electric current density,property
+electric dipole moment,property
+electric dipole moment of molecule,property
+electric field strength,property
+electric flux,property
+electric flux density,property
+electric polarizability of molecule,property
+electric polarization,property
+electric potential,property
+electric potential difference,property
+electric susceptibility,property
+electrical cable resistance at 20 deg. C,resistance (to direct current)
+electrical cable resistance at 85 deg. C,resistance (to direct current)
+electrical energy,indirect property
+electrical frequency,indirect property
+electrolytic conductivity,indirect property
+electromotive force,property
+electron affinity,property
+electron number density,property
+elementary charge,indirect property
+emission,property
+emissivity,ratio
+end to end length,straight linear distance
+energy,property
+energy fluence,indirect property
+energy fluence rate,rate
+energy imparted,indirect property
+energy loss,indirect property
+energy loss factor,ratio
+energy shortfall,indirect property
+enthalpy,property
+entropy,property
+equivalent absorption area of a surface or object,indirect property
+erosion depth,indirect property
+escape route height,height
+escape route width,width
+estimated average height,average height
+estimated dry weight,estimated weight
+estimated operating weight,estimated weight
+estimated weight,weight
+euler number,property
+evaporation point,indirect property
+exchange integral,property
+exhaust gas power,indirect property
+expiration date,indirect property
+explosion load,dynamic load
+explosion load pressure impulse,indirect property
+exposure,indirect property
+exposure rate,rate
+extent of reaction,indirect property
+external blast load,dynamic load
+external design pressure,design pressure
+external pressure,indirect property
+external thread allowance,outside diameter
+external thread lower limit major diameter,outside diameter
+external thread lower limit minor diameter,outside diameter
+external thread lower limit pitch diameter,outside diameter
+external thread major diameter,outside diameter
+external thread major diameter tolerance,outside diameter
+external thread pitch diameter tolerance,outside diameter
+external thread upper limit major diameter,outside diameter
+external thread upper limit pitch diameter,outside diameter
+failure frequency,indirect property
+faraday constant,property
+fast fission factor,property
+fatigue strength,indirect property
+fault clearance time,indirect property
+fault current,indirect property
+fault current interruption time,indirect property
+fault impedance,indirect property
+ferets particle diameter,particle diameter
+fermi angular repetency,indirect property
+fermi energy,indirect property
+fermi temperature,indirect property
+fine-structure constant,property
+fire extinguiser propellant gas capacity,indirect property
+fire extinguisher reach distance,straight linear distance
+fire extinguising agent capacity,indirect property
+fire load,indirect property
+fire point,indirect property
+first radiation constant,property
+flame detector field of view angle,indirect property
+flame detector response distance,straight linear distance
+flanged thermowell insertion length,thermowell insertion length
+float travel,straight linear distance
+flock point,indirect property
+flow measuring range,measuring range
+flow rate,rate
+flow rate at lower limit differential pressure,indirect property
+flow rate at lower limit flow,indirect property
+flow rate at upper limit differential pressure,indirect property
+flow rate at upper limit flow,indirect property
+flow rate mole basis,flow rate
+flow rate per area mass basis,flow rate
+flow rate per area mole basis,flow rate
+flow rate per area volume basis,flow rate
+flow rate per length mass basis,flow rate
+flow rate per length volume basis,flow rate
+force,property
+force per length,property
+fouling factor,indirect property
+foundation torque,indirect property
+foundation torque on x-axis (longitudinal),foundation torque
+foundation torque on y-axis (transverse),foundation torque
+foundation torque on z-axis (vertical),foundation torque
+fourier number,indirect property
+fourier number for mass transfer,indirect property
+freespan free length,length of path
+freespan height,height
+freezing temperature,indirect property
+freezing temperature at standard conditions,freezing temperature
+frequency,property
+frequency interval,property
+frequency measuring range,measuring range
+frequency measuring range 1 - 10000 Hz,indirect property
+friction loss,indirect property
+froude number,property
+fuel consumption,indirect property
+fuel mileage,indirect property
+fugacity of b (in a gaseous mixture),indirect property
+fundamental lattice vector,indirect property
+fundamental reciprocal lattice vectors,indirect property
+gain,ratio
+gap,straight linear distance
+gap energy,indirect property
+gas molecular weight,indirect property
+gauge pressure,indirect property
+gear ratio,indirect property
+geographical latitude,indirect property
+geographical longitude,indirect property
+g-factor of atom or electron,property
+g-factor of nucleus or nuclear particle,property
+gibbs free energy,indirect property
+GR neisen parameter,property
+grand-canonical partition function,property
+grashof number,property
+grashof number for mass transfer,property
+gravitational constant,property
+gravitational force,indirect property
+gross head of hydroelectric power station,head
+gross longitudinal centre of gravity distance,longitudinal centre of gravity distance
+gross thermal efficiency of a unit,indirect property
+gross total weight,total weight
+gross transverse centre of gravity distance,transverse centre of gravity distance
+gross vertical centre of gravity distance,vertical centre of gravity distance
+group velocity,indirect property
+gyromagnetic coefficient,property
+half-life,indirect property
+half-thickness,indirect property
+hall coefficient,property
+hardness,property
+hartmann number,property
+hartree energy,indirect property
+head,indirect property
+heat capacity,property
+heat emission,heat generated
+heat emission during operation,heat emission
+heat emission on standby,heat emission
+heat energy,energy
+heat flow,property
+heat flow rate,flow rate
+heat generated,indirect property
+heat generation unit,property
+heat rate,indirect property
+heat release rate,indirect property
+heat transfer coefficient,property
+heave speed,indirect property
+height,straight linear distance
+height of raised face standout,height
+helmholtz free energy,indirect property
+high voltage,voltage
+highest voltage of a system,indirect property
+holding current,indirect property
+hole number density,property
+hot locked rotor time,indirect property
+hub angle,indirect property
+hub cylinder length,straight linear distance
+hydraulic power,indirect property
+hydrostatic test pressure,test pressure
+hydrostatic test weight,test weight
+hysteresis,property
+IEC 902 characteristic value,indirect property
+ignition temperature,indirect property
+illuminance,property
+impact energy,indirect property
+impedance,property
+impedance voltage,indirect property
+impeller diameter,diameter
+impulse,property
+inertia,property
+infinite medium multiplication factor,property
+infrared free cylinder diameter,diameter
+inlet design pressure,design pressure
+inlet flow rate,indirect property
+inlet pressure,indirect property
+inlet pressure at lower limit differential pressure,inlet pressure
+inlet pressure at lower limit flow,inlet pressure
+inlet pressure at normal differential pressure,inlet pressure
+inlet pressure at upper limit differential pressure,inlet pressure
+inlet pressure at upper limit flow,inlet pressure
+inlet temperature,indirect property
+inner fillet radius,radius
+input impedance,indirect property
+inrush current,indirect property
+inrush current half peak value time,indirect property
+inside area,indirect property
+inside diameter,diameter
+inside diameter range,diameter range
+inside flange corner radius,radius
+inside surface area,indirect property
+inside web corner radius,radius
+inspection date,indirect property
+inspection interval,indirect property
+installation date,indirect property
+insulation thickness,thickness
+intermittent spanning length,length of path
+internal conversion factor,ratio
+internal design pressure,design pressure
+internal pressure,indirect property
+internal thread lower limit minor diameter,inside diameter
+internal thread lower limit pitch diameter,inside diameter
+internal thread major diameter,inside diameter
+internal thread minor diameter tolerance,inside diameter
+internal thread pitch diameter tolerance,inside diameter
+internal thread upper limit major diameter,inside diameter
+internal thread upper limit minor diameter,inside diameter
+internal thread upper limit pitch diameter,inside diameter
+internal volume,indirect property
+interval transit time,indirect property
+intrinsic number density,property
+inventory weight,weight
+ion number density,property
+ionic strength,property
+irradiance,property
+isentropic exponent,ratio
+kerma,property
+kinematic viscosity,property
+kinetic energy,indirect property
+knudsen number,property
+kp distance,length of path
+landau-ginzburg number,property
+larmor angular frequency,indirect property
+last revised date,indirect property
+latent heat of fusion,indirect property
+latent heat of vaporization,indirect property
+lateral critical speed,indirect property
+lattice plane spacing,indirect property
+lattice vector,indirect property
+lay ratio,ratio
+lead time,indirect property
+leakage current,indirect property
+leakage factor,property
+leakage rate,indirect property
+length center to end of pipe elbow bevelled end,shape dimension
+length of lay,shape dimension
+length of path,shape dimension
+length per volume,property
+length tan tan,straight linear distance
+lethargy,property
+level of a field quantity,indirect property
+level of a power quantity,indirect property
+level width,indirect property
+lewis number,property
+light exposure,indirect property
+limited-end-float,straight linear distance
+linear absorption coefficient,property
+linear attenuation coefficient,property
+linear electric current density,property
+linear energy transfer,property
+linear expansion coefficient,property
+linear ionization by a particle,property
+linear strain,ratio
+linear velocity,indirect property
+lineic mass,indirect property
+liquid volume,indirect property
+load factor,indirect property
+load factor relative to upper limit load,load factor
+load impedance,indirect property
+load loss,active power
+locked rotor torque,torque
+locked rotor torque multiplier,indirect property
+log distance,length of path
+logarithmic decrement,property
+london penetration depth,indirect property
+longitudinal centre of gravity,straight linear distance
+longitudinal centre of gravity distance,straight linear distance
+lorenz coefficient,property
+loss angle,indirect property
+loss factor,ratio
+loudness,property
+low voltage,voltage
+lower critical magnetic flux density,indirect property
+lower limit acceptable wall thickness,wall thickness
+lower limit allowable rotational speed,indirect property
+lower limit allowable temperature,allowable temperature
+lower limit allowed pressure,design pressure
+lower limit ambient operating humidity,indirect property
+lower limit ambient storage humidity,indirect property
+lower limit bevelled end inner bevel angle,bevelled end inner bevel angle
+lower limit bevelled end inner bevel thickness,bevelled end inner bevel thickness
+lower limit bevelled end off angle,indirect property
+lower limit bevelled end off plane,indirect property
+lower limit bevelled end outer bevel angle,bevelled end outer bevel angle
+lower limit bevelled end plain bevel angle,bevelled end plain bevel angle
+lower limit bevelled end root face thickness,bevelled end root face thickness
+lower limit bevelled end wall thickness,bevelled end wall thickness
+lower limit brake force,brake force
+lower limit calculated valve flow coefficient,lower limit valve flow coefficient
+lower limit cap threaded end wall thickness,wall thickness
+lower limit center to bottom of socket-welding end length,indirect property
+lower limit clearance above,indirect property
+lower limit clearance behind,indirect property
+lower limit clearance front,indirect property
+lower limit clearance side,indirect property
+lower limit conductivity,indirect property
+lower limit continous thermal flow,indirect property
+lower limit continuous stable flow,indirect property
+lower limit controllable valve flow coefficient,lower limit valve flow coefficient
+lower limit counter bore diameter,inside diameter
+lower limit cross center to outlet end length,indirect property
+lower limit cross center to run end length,indirect property
+lower limit crown radius,radius
+lower limit crown section thickness,thickness
+lower limit cylindrical section thickness,thickness
+lower limit design pressure,design pressure
+lower limit design temperature,design temperature
+lower limit displacement per revolution,displacement per revolution
+lower limit elbow angle,indirect property
+lower limit elbow flanged end center to end length,straight linear distance
+lower limit elbow inside threaded end center to face of band length,straight linear distance
+lower limit elbow socket-welding center to bottom socket length,straight linear distance
+lower limit electrical current,indirect property
+lower limit end to end length,end to end length
+lower limit flammability concentration,indirect property
+lower limit frequency,electrical frequency
+lower limit gasket contact face outside diameter,outside diameter gasket contact face
+lower limit guaranteed torque,torque
+lower limit height,height
+lower limit hub cylinder length,hub cylinder length
+lower limit hydraulic power,hydraulic power
+lower limit impeller diameter,impeller diameter
+lower limit inlet flow rate,indirect property
+lower limit inlet pressure,inlet pressure
+lower limit inner knucle radius,radius
+lower limit liquid density,indirect property
+lower limit liquid volume,liquid volume
+lower limit lowering speed,lowering speed
+lower limit operating ambient temperature,indirect property
+lower limit operating inlet temperature,inlet temperature
+lower limit operating pressure,operating pressure
+lower limit operating temperature,operating temperature
+lower limit operating voltage,lower limit voltage
+lower limit operating volume,operating volume
+lower limit operating volume flow rate,indirect property
+lower limit outlet pressure,outlet pressure
+lower limit outside diameter,outside diameter
+lower limit outside diameter of flanged end,indirect property
+lower limit pipe elbow bevelled end center to end length,indirect property
+lower limit pipe flange thickness,pipe flange thickness
+lower limit power consumption,power consumption
+lower limit pressure,indirect property
+lower limit pressure drop gradient,indirect property
+lower limit pressure rating-dynamic,dynamic pressure
+lower limit pressure rating-static,lower limit pressure
+lower limit raised portion outside diameter,outside diameter
+lower limit recomended installation temperature,lower limit temperature
+lower limit required pressure,required pressure
+lower limit selected valve flow coefficient,lower limit valve flow coefficient
+lower limit socket-welding body wall thickness,indirect property
+lower limit socket-welding end bore diameter,indirect property
+lower limit socket-welding end socket depth,wall thickness
+lower limit socket-welding end wall thickness,shape dimension
+lower limit span,indirect property
+lower limit starting time,starting time
+lower limit storage ambient temperature,storage ambient temperature
+lower limit submergence,indirect property
+lower limit supply pressure,supply pressure
+lower limit tee center to outlet end length,indirect property
+lower limit tee center to run end length,indirect property
+lower limit temperature,indirect property
+lower limit thickness of flange end,indirect property
+lower limit threaded body wall thickness,indirect property
+lower limit threaded length,threaded length
+lower limit valve flow coefficient,valve flow coefficient
+lower limit voltage,indirect property
+lower limit volume,indirect property
+lowering speed,indirect property
+lowest voltage of a system,indirect property
+lubrication interval,indirect property
+luminance,property
+luminous efficacy,property
+luminous efficiency,efficiency
+luminous exitance,property
+luminous flux,property
+mach number,property
+madelung constant,property
+magnetic constant,property
+magnetic field strength,property
+magnetic flux,property
+magnetic flux quantum,property
+magnetic force,indirect property
+magnetic hysteresis,hysteresis
+magnetic induction,property
+magnetic moment,property
+magnetic moment of particle or nucleus,property
+magnetic polarization,property
+magnetic potential difference,property
+magnetic reynolds number,property
+magnetic susceptibility,property
+magnetic vector potential,property
+magnetization,property
+magnetomotive force,property
+martins particle diameter,particle diameter
+mass attenuation coefficient,property
+mass concentration of b,property
+mass energy transfer coefficient,property
+mass excess,property
+mass flow rate,flow rate
+mass fraction of b,ratio
+massic activity,property
+massic optical rotatory power,property
+massic volume,ratio
+massieu function,property
+maximum pressure,indirect property
+mean energy imparted,indirect property
+mean free path,straight linear distance
+mean life,indirect property
+mean linear range,indirect property
+mean mass range,indirect property
+mean preventive maintenance time,indirect property
+mean time between failure,indirect property
+mean time between maintenance,indirect property
+mean time to failure,indirect property
+mean time to repair,indirect property
+measured dry weight,measured weight
+measured height of raised face standout,height of raised face standout
+measured outside diameter gasket contact face,outside diameter gasket contact face
+measured pipe flange thickness,pipe flange thickness
+measured taper angle,taper angle
+measured weight,weight
+measurement threshold,indirect property
+measuring range,range
+mechanical impedance,property
+medium voltage,indirect property
+melting temperature,indirect property
+mesh density,straight linear distance
+metacentre,indirect property
+metal-loss area,indirect property
+metal-loss cluster average depth,indirect property
+metal-loss cluster length,indirect property
+metal-loss cluster peak depth,indirect property
+metal-loss cluster width,indirect property
+metal-loss depth,indirect property
+metal-loss length,straight linear distance
+metal-loss width,width
+meter factor,property
+meter tube downstream length,straight linear distance
+meter tube upstream length,straight linear distance
+metric valve flow coefficient,valve flow coefficient
+microcanonical partition function,property
+microwave transducer blocking distance,straight linear distance
+mid point temperature,indirect property
+migration area,indirect property
+migration length,indirect property
+minimum pressure,indirect property
+mobility,property
+mobility ratio,property
+modulus of admittance,property
+modulus of elasticity,property
+molality of solute b,property
+molar absorption coefficient,property
+molar attenuation coefficient,property
+molar conductivity,property
+molar entropy,property
+molar gas constant,property
+molar heat capacity,property
+molar mass,property
+molar optical rotatory power,property
+molar thermodynamic energy,property
+molar volume,property
+mole fraction of b,ratio
+mole ratio of solute b,ratio
+molecular concentration of b,indirect property
+molecular partition function,property
+molecular weight,property
+moment of a couple,indirect property
+moment of force,indirect property
+moment of inertia,property
+moment of inertia ref u axis,indirect property
+moment of inertia ref v axis,indirect property
+moment of inertia ref x axis,indirect property
+moment of inertia ref y axis,indirect property
+moment of momentum,indirect property
+momentum,property
+multiplication factor,property
+mutual inductance,property
+neel temperature,indirect property
+negative sequence current component,indirect property
+negative sequence voltage component,indirect property
+net head of a hydroelectric power station,head
+net positive suction head,head
+net positive suction head available,net positive suction head
+net positive suction head required,net positive suction head
+net thermal efficiency of a unit,indirect property
+net total weight,total weight
+neutral point displacement voltage,indirect property
+neutron fluence rate,property
+neutron number,property
+neutron source density,property
+neutron speed,property
+neutron yield per absorption,property
+neutron yield per fission,property
+no fault found factor,indirect property
+noise emission,property
+no-load loss,active power
+nominal bolt circle diameter,nominal diameter
+nominal bolt diameter,nominal diameter
+nominal bolt hole diameter,nominal diameter
+nominal burst pressure,nominal pressure
+nominal design pressure,design pressure
+nominal diameter,diameter
+nominal handle length,nominal length
+nominal handle width,nominal width
+nominal height raised face standout,height of raised face standout
+nominal inside diameter,nominal diameter
+nominal length,shape dimension
+nominal length center to bottom of socket-welding end,nominal length
+nominal length center to end of pipe elbow bevelled end,nominal length
+nominal operating temperature,operating temperature
+nominal outside diameter,nominal diameter
+nominal outside diameter gasket contact face,nominal outside diameter
+nominal outside diameter of flanged end,nominal outside diameter
+nominal outside diameter of hub,nominal outside diameter
+nominal pipe flange thickness,pipe flange thickness
+nominal pressure,indirect property
+nominal supply frequency,supply frequency
+nominal supply voltage,supply voltage
+nominal thickness,thickness
+nominal voltage,indirect property
+nominal voltage of a system,nominal voltage
+nominal weight,weight
+nominal width,width
+normal brake force,brake force
+normal design inlet temperature,design temperature
+normal design lowering speed,lowering speed
+normal design outlet temperature,design temperature
+normal design pressure,indirect property
+normal design raising speed,raising speed
+normal design temperature,design temperature
+normal design volume flow rate,indirect property
+normal operating ambient temperature,indirect property
+normal operating back pressure,back pressure
+normal operating density,density at flow condition
+normal operating flow velocity,indirect property
+normal operating inlet pressure,inlet pressure
+normal operating power consumption,power consumption
+normal operating pressure,operating pressure
+normal operating pressure drop,indirect property
+normal operating pressure drop gradient,indirect property
+normal operating temperature,operating temperature
+normal operating vapour compressibility factor,vapour compressibility factor
+normal operating vapour pressure,vapour pressure
+normal operating viscosity,viscosity at t
+normal operating volume,operating volume
+normal operating volume flow rate,indirect property
+normal storage ambient temperature,storage ambient temperature
+normal stress,indirect property
+nuclear precession angular frequency,indirect property
+nuclear quadrupole moment,property
+nuclear radius,radius
+nucleon number,property
+nuclidic mass,property
+number of conductor groups,indirect property
+number of cubicles,indirect property
+number of molecules or other elementary entities,indirect property
+number of phases,indirect property
+number of plates,indirect property
+number of poles,indirect property
+number of required cables,indirect property
+nusselt number,property
+nusselt number for mass transfer,property
+operating level,indirect property
+operating pressure,indirect property
+operating pressure range,range
+operating temperature,indirect property
+operating temperature range,range
+operating voltage,indirect property
+operating voltage of a system,operating voltage
+operating voltage range,operating voltage
+operating volume,indirect property
+operating weight,weight
+optical density,property
+orifice area,cross section area
+orifice area calculated,orifice area
+orifice area selected,orifice area
+orifice bore diameter,inside diameter
+orifice meter tube downstream length,straight linear distance
+orifice meter tube upstream length,straight linear distance
+osmotic coefficient of solvent a (especially in dilut liquid solution),property
+osmotic pressure,indirect property
+outlet design pressure,design pressure
+outlet flow rate,indirect property
+outlet pressure,indirect property
+outlet temperature,indirect property
+output signal lower limit,indirect property
+outside diameter,diameter
+outside diameter gasket contact face,outside diameter
+outside diameter of flanged end,outside diameter
+outside diameter of hub,outside diameter
+outside diameter raised portion,outside diameter
+outside diameter range,diameter range
+outside fillet radius,radius
+outside surface area,indirect property
+overall height,straight linear distance
+overall length,straight linear distance
+overall width,straight linear distance
+overcurrent,indirect property
+overload current,indirect property
+overpressure,indirect property
+packing fraction,ratio
+parachor,property
+partial pressure of b,indirect property
+particle diameter,diameter
+particle drag diameter,particle diameter
+particle fluence,property
+particle fluence rate,property
+particle perimeter diameter,particle diameter
+particle projected area diameter,particle diameter
+particle sift diameter,width
+particle stokes diameter,particle diameter
+particle surface diameter,particle diameter
+particle surfacevolume diameter,particle diameter
+particle volume diameter,particle diameter
+peclet number,property
+peclet number for mass transfer,property
+peltier coefficient for substances a and b,property
+period,indirect property
+period of time,property
+permeance,property
+permittivity,property
+permittivity of vacuum,possible individual
+ph,property
+phase coefficient,property
+phase difference,property
+phase to earth voltage,indirect property
+phase to neutral voltage,indirect property
+phase to phase voltage,indirect property
+phase velocity,indirect property
+phase-to-earth clearance,clearance
+phase-to-phase clearance,clearance
+photon exitance,property
+photon exposure,property
+photon flux,property
+photon intensity,property
+photon irradiance,property
+photon luminance,property
+photon number,property
+pipe flange thickness,thickness
+piping design pressure,design pressure
+piping flange hub length,straight linear distance
+piping flange hub nominal length,piping flange hub length
+piston velocity,indirect property
+pit depth,shape dimension
+pitot tube diameter,diameter
+pitot tube insertion length,straight linear distance
+planck constant,possible individual
+planck function,property
+plastic modulus,property
+plastic section modulus about x axis,indirect property
+plastic section modulus about y axis,indirect property
+pneumatic test pressure,test pressure
+pointer deflection,indirect property
+poisson ratio,ratio
+porosity,ratio
+positive sequence current component,indirect property
+positive sequence voltage component,indirect property
+potential difference,indirect property
+potential energy,indirect property
+pour point,indirect property
+power,property
+power (for direct current),indirect property
+power consumption,indirect property
+power consumption at lower limit load,power consumption
+power consumption at upper limit load,power consumption
+power factor,ratio
+power per area,property
+poynting vector,property
+prandtl number,property
+pressure,property
+pressure coefficient,property
+pressure drop at full range,indirect property
+pressure drop at lower limit differential pressure,indirect property
+pressure drop at lower limit flow,indirect property
+pressure drop at upper limit differential pressure,indirect property
+pressure drop at upper limit flow,indirect property
+pressure drop gradient,indirect property
+pressure gradient,property
+pressure load,indirect property
+pressure measuring range,measuring range
+pressure raise,indirect property
+pressure stress,indirect property
+preventive maintenance interval,indirect property
+price,property
+price per dozen,indirect property
+price per hundred,indirect property
+price per thousand,indirect property
+price per unit,indirect property
+process design pressure,design pressure
+productivity index,property
+profile bulb radius,radius
+profile constant thickness web height,height
+profile crossection area,cross section area
+profile flange thickness,thickness
+profile flange width,width
+profile flange-web radius,radius
+profile inside corner radius,radius
+profile sloped flange thickness,thickness
+profile surface area pr unit of length,indirect property
+profile surface area pr unit of mass,indirect property
+profile web thickness,thickness
+propagation coefficient,property
+prospective touch voltage,touch voltage
+proton number,property
+quality factor,ratio
+quantity of light,property
+radial and mixed flow impeller diameter,impeller diameter
+radial load,indirect property
+radiance,property
+radiance exposure,property
+radiant energy,indirect property
+radiant energy density,property
+radiant energy fluence,property
+radiant exitance,property
+radiant flux,rate
+radiant intensity,property
+radiant power,indirect property
+radioactivity,property
+radius,shape dimension
+radius of gyration,radius
+raising speed,indirect property
+range,indirect property
+rate,property
+rated air consumption,air consumption
+rated capacitance of a capacitor,capacitance of a capacitor
+rated current,indirect property
+rated efficiency,indirect property
+rated efficiency at 1/1 load,indirect property
+rated efficiency at 3/4 load,indirect property
+rated frequency,electrical frequency
+rated hydraulic power,hydraulic power
+rated impeller diameter,impeller diameter
+rated output at duty type s1,rated output power
+rated output power,indirect property
+rated power consumption,power consumption
+rated primary winding current,rated current
+rated primary winding voltage,rated voltage
+rated secondary winding current,rated current
+rated secondary winding voltage,rated voltage
+rated speed at 1/1 load,indirect property
+rated thrust,thrust
+rated torque,torque
+rated voltage,indirect property
+ratio,property
+ratio of specific heats k,indirect property
+ratio of the specific heat capacities,ratio
+rayleigh number,property
+reactance,property
+reactance at 50 Hz,indirect property
+reactance at 60 Hz,indirect property
+reactance voltage,indirect property
+reaction energy,indirect property
+reactive energy,indirect property
+reactive force,indirect property
+reactive power,indirect property
+reactivity,property
+reactor time constant,indirect property
+reclaim time,indirect property
+recombination coefficient,property
+reduced pressure,indirect property
+reduced temperature,indirect property
+reference level,indirect property
+reference wall thickness,wall thickness
+reflection factor,ratio
+refractive index,ratio
+regulating energy of a system,indirect property
+reid vapour pressure,vapour pressure
+relative atomic mass,ratio
+relative humidity,ratio
+relative mass defect,property
+relative mass excess,property
+relative molecular mass,ratio
+relative permeability,ratio
+relative permittivity,ratio
+relative pressure coefficient,property
+relaxation time,indirect property
+reluctance,property
+remaining wall thickness,wall thickness
+reopening pressure,indirect property
+repair condemnation rate,indirect property
+repeatability,property
+required pressure,indirect property
+required wall thickness,wall thickness
+residence time,indirect property
+residual current,indirect property
+residual resistivity,indirect property
+residual voltage,indirect property
+resistance (to alternating current),indirect property
+resistance (to direct current),indirect property
+resistance voltage,indirect property
+resistivity,property
+resonance energy,kinetic energy
+response time,indirect property
+reverberation time,indirect property
+reynolds number,property
+richardson constant,property
+ring joint groove angle,indirect property
+ring joint groove bottom radius,radius
+ring joint groove depth,shape dimension
+ring joint groove pitch diameter,diameter
+ring joint groove width,width
+ring joint raised portion height,height
+rms symmetric breaking current,short-circuit current
+rockwell hardness,hardness
+root-mean-square velocity,indirect property
+rotational frequency,indirect property
+run up time,indirect property
+rupture disc face to face dimension,shape dimension
+rupturing disc area,indirect property
+rydberg constant,property
+safe working load,indirect property
+saturation,indirect property
+scheduled maintenance hours per week,property
+schmidt number,property
+screw thread depth,height
+sea wave direction,direction angle
+seal face width,width
+seal-off pressure,indirect property
+second moment of area,property
+second moment of area about eta-axis,indirect property
+second moment of area about ksi-axis,indirect property
+second moment of area about u axis,indirect property
+second moment of area about v axis,indirect property
+second moment of area about x axis,indirect property
+second moment of area about y axis,indirect property
+second polar moment of area,indirect property
+second radiation constant,property
+section modulus,property
+section modulus ref eta axis,indirect property
+section modulus ref u axis,indirect property
+section modulus ref v axis,indirect property
+section modulus ref x axis,indirect property
+section modulus ref y axis,indirect property
+seebeck coefficient for substances a and b,property
+seismic load,dynamic load
+selected valve flow coefficient,valve flow coefficient
+selected valve flow coefficient range,valve flow coefficient range
+self inductance,property
+sensitivity,property
+series impedance,indirect property
+service factor,ratio
+set point,indirect property
+set pressure,indirect property
+shaft diameter,diameter
+shaft diameter at coupling,shaft diameter
+shaft diameter at sleeve,shaft diameter
+shaft diameter between bearings,shaft diameter
+shaft span,straight linear distance
+shaft span between bearing and impeller,shaft span
+shaft span between bearing centres,shaft span
+shear modulus,property
+shear rate,rate
+shear strain,ratio
+shear stress,indirect property
+shipping volume,indirect property
+shipping weight,weight
+shock current,indirect property
+short term excursion pressure,indirect property
+short-circuit current,indirect property
+"short-circuit current - 0,2 second",short-circuit current
+"short-circuit current - 0,3 second",short-circuit current
+"short-circuit current - 0,5 second",short-circuit current
+short-circuit current - 1 second,short-circuit current
+short-circuit current capability,short-circuit current
+short-circuit impedance,fault impedance
+short-circuit impedance voltage,impedance voltage
+short-circuit impedance voltage in %,indirect property
+short-circuit power,indirect property
+short-circuit reactance voltage,reactance voltage
+short-circuit reactance voltage in %,indirect property
+short-circuit resistance voltage,resistance voltage
+slowing-down area,indirect property
+slowing-down density,indirect property
+slowing-down length,indirect property
+slowness,indirect property
+socket-welding body bore diameter,indirect property
+socket-welding end bore diameter,indirect property
+socket-welding end bore diameter lower limit,inside diameter
+socket-welding end wall thickness,wall thickness
+softening point,indirect property
+solid angle,indirect property
+solidification temperature,indirect property
+sound energy density,indirect property
+sound intensity,indirect property
+sound particle acceleration,indirect property
+sound particle displacement,indirect property
+sound particle velocity,indirect property
+sound power,indirect property
+sound power level,property
+sound power level at nominal load,indirect property
+sound power level at standby,indirect property
+sound power level at upper limit  load,indirect property
+sound pressure,indirect property
+sound pressure level,property
+sound pressure level allowed,indirect property
+sound pressure level at nominal load,indirect property
+sound pressure level at standby,indirect property
+sound pressure level at upper limit load,indirect property
+sound pressure level calculated,indirect property
+sound pressure level lp dBA < 80 at nominal load,sound pressure level at nominal load
+sound reduction index,property
+source impedance,indirect property
+spacer length,straight linear distance
+span,property
+specific energy,property
+specific energy imparted,indirect property
+specific enthalpy,property
+specific entropy,property
+specific fuel consumption mass,indirect property
+specific fuel consumption volume,indirect property
+specific gibbs free energy,property
+specific gravity,ratio
+specific gravity at lower limit temperature,indirect property
+specific gravity at STP,indirect property
+specific heat capacity,property
+specific heat capacity at constant pressure,indirect property
+specific heat capacity at constant volume,indirect property
+specific heat capacity at saturation,indirect property
+specific heat capacity mass,property
+specific heat capacity mole,property
+specific helmholtz free enegry,property
+specific humidity,ratio
+specific productivity index,property
+specific speed,indirect property
+specific thermodynamic energy,property
+specific volume,property
+specific volume mass,specific volume
+specific volume mass gas,specific volume
+specific volume mole,specific volume
+spectral absorption factor,ratio
+spectral angular cross-section,property
+spectral concentration of radiant energy density,property
+spectral concentration of vibrational modes,property
+spectral cross-section,property
+spectral emissivity,ratio
+spectral luminous efficacy,property
+spectral luminous efficiency,efficiency
+spectral radiance factor,ratio
+spectral reflection factor,ratio
+spectral transmission factor,ratio
+spontaneous ignition temperature,ignition temperature
+standard absolute activity of b (in a liquide or a solution),property
+standard absolute activity of solvent a,property
+standard delivery time,indirect property
+standard density,indirect property
+standard equilibrium constant,property
+standard pressure,indirect property
+standard price,indirect property
+standard price EUR,standard price
+standard price JPY,standard price
+standard price USD,standard price
+standard rated current,rated current
+standard temperature,indirect property
+standard volume,indirect property
+standard volume gas,indirect property
+standard volume liquid,indirect property
+stanton number,property
+stanton number for mass transfer,property
+starting current,indirect property
+starting current delta connection,starting current
+starting current delta connection at 1 un,starting current delta connection
+starting current multiplier,indirect property
+starting current star connection,starting current
+starting current star connection at 1 un,starting current star connection
+starting power factor,indirect property
+starting time,indirect property
+starting time at 80% voltage,starting time
+starting time at nominal voltage,starting time
+static friction factor,indirect property
+static load,indirect property
+static operating pressure,static pressure
+static pressure,indirect property
+statistical weight,property
+steam out pressure,indirect property
+steam out temperature,indirect property
+stefan-boltzmann constant,property
+stoichiometric number of b,property
+storage ambient temperature,indirect property
+storage life,indirect property
+straight linear distance,shape dimension
+stress,property
+stroke length,straight linear distance
+strouhal number,property
+sub zero temperature,indirect property
+suction can thickness,thickness
+suction specific speed,indirect property
+superconductor transition temperature,indirect property
+superimposed back pressure,back pressure
+supply frequency,electrical frequency
+supply pressure,indirect property
+supply pressure range,supply pressure
+supply voltage,indirect property
+supply voltage delta connected,supply voltage
+supply voltage lower limit,supply voltage
+supply voltage range,supply voltage
+supply voltage star connected,supply voltage
+support load,indirect property
+surface coefficient of heat transfer,property
+surface density,indirect property
+surface density of mechanical impedance,property
+surface energy,indirect property
+surface per plate,indirect property
+surface tension,indirect property
+surface tension parachor,indirect property
+surveying easting,straight linear distance
+surveying latitude,straight linear distance
+surveying longitude,straight linear distance
+surveying northing,straight linear distance
+susceptance,property
+synchronous speed,indirect property
+system impedance ratio,indirect property
+taper angle,indirect property
+temperature,property
+temperature at lower limit differential pressure,indirect property
+temperature at lower limit flow,indirect property
+temperature at upper limit differential pressure,indirect property
+temperature at upper limit flow,indirect property
+temperature coefficient of electric resistance,property
+temperature drop,indirect property
+temperature element diameter,outside diameter
+temperature element insertion length,straight linear distance
+temperature element sensitive length,straight linear distance
+temperature per length,property
+temperature rise,indirect property
+"temperature rise, dielectric",temperature rise
+"temperature rise, windings",indirect property
+tensile strength,indirect property
+tension stress,indirect property
+test load,indirect property
+test pressure,indirect property
+test weight,weight
+thermal conductivity,property
+thermal diffusion coefficient,property
+thermal diffusion factor,property
+thermal diffusion ratio,property
+thermal diffusivity,property
+thermal insulance,property
+thermal neutron absorption crossection,property
+thermal resistance,property
+thermal time constant eexe motor,time constant
+thermal utilization factor,property
+thermodynamic energy,property
+thermowell insertion length,straight linear distance
+thermowell internal bore,inside diameter
+thermowell lag length,straight linear distance
+thermowell standout length,straight linear distance
+thermowell stem larger outside diameter,outside diameter
+thermowell stem outside diameter at support,outside diameter
+thermowell stem tip outside diameter,outside diameter
+thermowell stem tip thickness,thickness
+thermowell total length,total length
+thickness,straight linear distance
+thomson coefficient,property
+thread pitch metric thread,straight linear distance
+thread pitch un/unr thread,indirect property
+threaded length,straight linear distance
+threaded thermowell insertion length,thermowell insertion length
+through fault current,fault current
+thrust,indirect property
+thrust down at design flow,thrust
+thrust down at lower limit flow,thrust
+thrust down at runout flow,thrust
+thrust up at design flow,thrust
+thrust up at lower limit flow,thrust
+thrust up at runout flow,thrust
+tilt,indirect property
+time constant,indirect property
+time constant at 0.8 nominal voltage,time constant
+time constant at nominal voltage,time constant
+time constant multiplier,indirect property
+time constant of an exponentially varying quantity,time constant
+torque,indirect property
+torsion stress,indirect property
+torsional critical speed,indirect property
+tortuosity,property
+total atomic stopping power,property
+total back pressure,back pressure
+total cross-section,indirect property
+total height,height
+total ionization by a particle,property
+total length,shape dimension
+total linear stopping power,property
+total mass stopping power,property
+total required flow rate,indirect property
+total running time,indirect property
+total volume,indirect property
+total weight,weight
+total width,width
+touch voltage,indirect property
+traction force,indirect property
+training hours to perform scheduled maintenance,property
+training period,indirect property
+transducer blocking distance,straight linear distance
+transducer cable length,shape dimension
+transducer insertion length,straight linear distance
+transfer impedance,indirect property
+transmission factor,ratio
+transport load,indirect property
+transport number of the ion b,indirect property
+transverse centre of gravity,straight linear distance
+transverse centre of gravity distance,straight linear distance
+triple point pressure,indirect property
+triple point temperature,indirect property
+true vapour pressure,vapour pressure
+tube length,shape dimension
+turbulence coefficient,property
+twisting angle,indirect property
+ultrasonic transducer blocking distance,indirect property
+unavoidable energy,indirect property
+unified atomic mass constant,property
+unit productivity index,property
+unit weight,weight
+unthreaded length,straight linear distance
+upper critical magnetic flux density,indirect property
+upper limit  beta particle energy,indirect property
+upper limit  freespan height,freespan height
+upper limit  height,height
+upper limit  spectral luminous efficacy,indirect property
+upper limit absorbed power,indirect property
+upper limit acceptable corrosion rate,corrosion rate
+upper limit allowable rotational speed,indirect property
+upper limit allowable temperature,allowable temperature
+upper limit allowed pressure,upper limit pressure
+upper limit ambient operating humidity,indirect property
+upper limit ambient storage humidity,indirect property
+upper limit axial load,indirect property
+upper limit bevelled end inner bevel thickness,bevelled end inner bevel thickness
+upper limit bevelled end off angle,indirect property
+upper limit bevelled end off plane,indirect property
+upper limit bevelled end outer bevel angle,bevelled end outer bevel angle
+upper limit bevelled end outside diameter,bevelled end outside diameter
+upper limit bevelled end plain bevel angle,bevelled end plain bevel angle
+upper limit bevelled end root face thickness,bevelled end root face thickness
+upper limit bevelled end wall thickness,bevelled end wall thickness
+upper limit bore diameter socket-welding end,inside diameter
+upper limit brake force,brake force
+upper limit calculated flow,indirect property
+upper limit calculated valve flow coefficient,upper limit valve flow coefficient
+upper limit center to bottom of socket-welding end length,indirect property
+upper limit conductor cross section area,cross section area
+upper limit continous rotational speed,indirect property
+upper limit continuous stable flow,indirect property
+upper limit controllable valve flow coefficient,upper limit valve flow coefficient
+upper limit crown radius,radius
+upper limit crown section thickness,thickness
+upper limit cylindrical section thickness,thickness
+upper limit design pressure,design pressure
+upper limit design temperature,design temperature
+upper limit differential pressure,upper limit pressure
+upper limit displacement per revolution,displacement per revolution
+upper limit distance detector transmitter,length of path
+upper limit distance element transmitter,length of path
+upper limit distance meter transmitter,length of path
+upper limit elbow angle,indirect property
+upper limit elbow flanged end center to end length,straight linear distance
+upper limit elbow inside threaded end center to face of band length,straight linear distance
+upper limit elbow socket-welding center to bottom socket length,straight linear distance
+upper limit end to end length,end to end length
+upper limit flammability concentration,indirect property
+upper limit frequency,electrical frequency
+upper limit head with rated impeller diameter,head
+upper limit height,height
+upper limit hub angle,hub angle
+upper limit hub cylinder length,hub cylinder length
+upper limit hydraulic power,hydraulic power
+upper limit impedance,indirect property
+upper limit inlet pressure,inlet pressure
+upper limit inner knucle radius,radius
+upper limit liquid volume,liquid volume
+upper limit lowering speed,lowering speed
+upper limit maintenance weight,weight
+upper limit nucleon dose rate,indirect property
+upper limit operating ambient temperature,indirect property
+upper limit operating inlet temperature,inlet temperature
+upper limit operating inlet volume flow rate,indirect property
+upper limit operating pressure,operating pressure
+upper limit operating temperature,operating temperature
+upper limit operating voltage,operating voltage
+upper limit operating volume,operating volume
+upper limit operating volume flow rate,indirect property
+upper limit operational path length,length of path
+upper limit outlet pressure,outlet pressure
+upper limit outside diameter,outside diameter
+upper limit overpressure protection,upper limit pressure
+upper limit permissible starting current,starting current
+upper limit power consumption,power consumption
+upper limit power consumption with rated impeller,power consumption
+upper limit pressure,indirect property
+upper limit pressure drop,indirect property
+upper limit pressure drop gradient,pressure drop gradient
+upper limit pressure rating-dynamic,upper limit pressure
+upper limit pressure rating-static,upper limit pressure
+upper limit radial load,indirect property
+upper limit raising speed,raising speed
+upper limit required pressure,required pressure
+upper limit required valve actuator thrust,upper limit thrust
+upper limit required valve actuator torque,upper limit torque
+upper limit ring joint groove bottom radius,radius
+upper limit selected valve flow coefficient,upper limit valve flow coefficient
+upper limit shut off differential pressure,upper limit pressure
+upper limit socket-welding end bore diameter,indirect property
+upper limit sound pressure level,indirect property
+upper limit span,indirect property
+upper limit specific gravity at temperature,indirect property
+upper limit starting time,starting time
+upper limit static operating pressure,static operating pressure
+upper limit static pressure,static pressure
+upper limit storage ambient temperature,storage ambient temperature
+upper limit supply pressure,supply pressure
+upper limit supply voltage,supply voltage
+upper limit taper angle,taper angle
+upper limit temperature,indirect property
+upper limit tension stress,tension stress
+upper limit thermowell stem outside diameter,outside diameter
+upper limit thickness of flange end,indirect property
+upper limit thrust,thrust
+upper limit torque,torque
+upper limit traction force,traction force
+upper limit valve actuator twisting torque,upper limit torque
+upper limit valve flow coefficient,valve flow coefficient
+upper limit voltage,indirect property
+upper limit volume,indirect property
+useful water capacity of a reservoir,indirect property
+valve actuator thrust at lower limit supply,rated thrust
+valve actuator thrust at upper limit supply,rated thrust
+valve actuator torque at lower limit supply,rated torque
+valve actuator torque at upper limit supply,rated torque
+valve closing time,indirect property
+valve design flow opening area,inside area
+valve flow coefficient,indirect property
+valve flow coefficient range,range
+valve opening time,indirect property
+valve stem travel,straight linear distance
+vapour compressibility factor,indirect property
+vapour compressibility factor at lower limit differential pressure,vapour compressibility factor
+vapour compressibility factor at lower limit flow,vapour compressibility factor
+vapour compressibility factor at upper limit differential pressure,vapour compressibility factor
+vapour compressibility factor at upper limit flow,vapour compressibility factor
+vapour pressure,indirect property
+vapour pressure at lowe limit flow,vapour pressure
+vapour pressure at lower limit differential pressure,vapour pressure
+vapour pressure at lower limit operating temperature,vapour pressure
+vapour pressure at operating temperature,vapour pressure
+vapour pressure at upper limit differential pressure,vapour pressure
+vapour pressure at upper limit flow,vapour pressure
+vapour pressure at upper limit operating temperature,vapour pressure
+variable back pressure,back pressure
+velocity,property
+velocity at lower limit flow rate,indirect property
+velocity at upper limit flow rate,indirect property
+velocity of sound,indirect property
+vertical centre of gravity,straight linear distance
+vertical centre of gravity distance,straight linear distance
+vibration acceleration,indirect property
+vibration frequency,indirect property
+vibration velocity,indirect property
+vickers hardness,hardness
+viscosity,property
+viscosity at lower limit flow,viscosity at t
+viscosity at t,indirect property
+viscosity at temperature and lower limit differential pressure,viscosity at t
+viscosity at temperature and upper limit differential pressure,viscosity at t
+viscosity at upper limit  flow,viscosity at t
+voltage,property
+voltage change factor,indirect property
+voltage level,indirect property
+volume,property
+volume flow rate,property
+volume fraction,indirect property
+volume fraction of b,property
+volume fraction per length,property
+volume per length,property
+volume per mass,property
+volume strain,ratio
+volumetric heat transfer coefficient,property
+volumetric thermal expansion,property
+volumic activity,property
+volumic charge,property
+volumic cross-section,property
+volumic electromagnetic energy,property
+volumic number of molecules (or particles),property
+volumic total cross-section,property
+w/n frequency ratio,ratio
+wall thickness,thickness
+warm-up period,indirect property
+warranty period,indirect property
+water depth,indirect property
+wave height,indirect property
+wavelength,straight linear distance
+wavenumber,property
+wax congealment point,solidification temperature
+weber number,property
+weeks after contract,indirect property
+weeks after equipment delivery,indirect property
+weeks after request,indirect property
+weeks after test,indirect property
+weeks after vessel delivery,indirect property
+weeks before equipment delivery,indirect property
+weeks before test,indirect property
+weeks before vessel delivery,indirect property
+weight,indirect property
+weighted average boiling temperature,boiling temperature
+weld leg length,straight linear distance
+weld throat thickness,thickness
+width,straight linear distance
+wind direction,direction angle
+wind direction relative to ship,direction angle
+wind load,indirect property
+wind pressure,indirect property
+wind speed,indirect property
+wind speed relative to ship,indirect property
+work,property
+work function,property
+work per length,indirect property
+working clearance,clearance
+yield strength,indirect property
+yield stress,indirect property
+youngs modulus of elasticity,property
+zero elevation,indirect property
+zero sequence current component,indirect property
+zero sequence voltage component,indirect property
+zero suppression,indirect property

@@ -1,0 +1,108 @@
+Unique name,superclass 1
+repair,activity
+replace,activity
+modify,activity
+minor_maintenance,activity
+inspect,activity
+fabr,replace
+fit,replace
+remove,replace
+change out,replace
+change,replace
+chg,replace
+chge,replace
+c/o,replace
+c/ out,replace
+replace,replace
+repl,replace
+overhaul,replace
+o/h,replace
+o/ haul,replace
+ovhl,replace
+over haul,replace
+swap,replace
+install,replace
+R&R,replace
+r & r,replace
+u/s,replace
+seized,replace
+siezed,replace
+recover,repair
+repair,repair
+reseal,repair
+re-seal,repair
+weld,repair
+maint,repair
+build,repair
+weld,repair
+line,repair
+refurb,repair
+line,repair
+recode,repair
+reprogram,repair
+diag,repair
+investigate,repair
+troubleshoot,repair
+locate,repair
+scope,repair
+rectify,modify
+mod ,modify
+mods,modify
+modify,modify
+update,modify
+upgrade,minor_maintenance
+relube,minor_maintenance
+regrease,minor_maintenance
+oil change out,minor_maintenance
+change out oil,minor_maintenance
+kidney,minor_maintenance
+bleed,minor_maintenance
+service,minor_maintenance
+transport,minor_maintenance
+adjust,minor_maintenance
+recal,minor_maintenance
+calib,minor_maintenance
+clean,minor_maintenance
+tune up,minor_maintenance
+recharge,minor_maintenance
+pressurise,minor_maintenance
+pressurize,minor_maintenance
+flush,minor_maintenance
+fush,minor_maintenance
+minor repair,minor_maintenance
+jump start,minor_maintenance
+out of fuel,minor_maintenance
+tighten,minor_maintenance
+tension,minor_maintenance
+turn,minor_maintenance
+retorque,minor_maintenance
+remove/replace,replace
+reinstall,replace
+breakdown-change,replace
+c/out,replace
+changeout,replace
+change-out,replace
+c/out.,replace
+u/s.,replace
+replace.,replace
+change,replace
+c-out,replace
+repair/replace,replace
+/replace,replace
+o/haul,replace
+overhaul.,replace
+seized.,replace
+"seized,",replace
+changing,replace
+snapped,replace
+blown,replace
+fit_new,replace
+install_new,replace
+change_out,replace
+change_out.,replace
+needs_replacing,replace
+over_haul,replace
+failed.,replace
+*breakdown*,replace
+check,inspect
+monitor,inspect

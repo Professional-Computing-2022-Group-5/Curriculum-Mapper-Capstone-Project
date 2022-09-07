@@ -1,0 +1,103 @@
+Unique name,superclass 1
+acoustic enclosure,enclosure
+acoustic insulation material,protection material
+anchor,physical object
+anti condensation barrier,protection material
+anticorrosion coating,coating
+arrestor,physical object
+asphalt enamel coating,enamel coating
+boundary layer,layer
+canopy,cover
+carton,physical object
+ceramic coating,coating
+clad metal,composite material
+cladding,layer
+closure,physical object
+coal tar enamel coating,enamel coating
+coated material,physical object
+coating,layer
+concrete coating,coating
+condition monitoring system,system
+conservation material,protection material
+corrosion monitoring system,condition monitoring system
+corrosion protection material,protection material
+corrosion protection system,protection system
+cryogenic insulation material,thermal insulation material
+dust respirator,respirator
+electrical heat tracing system,heat tracing system
+enamel coating,coating
+epoxy coating,coating
+epoxy lining,liner
+epoxy paint,paint
+epoxy powder,powder
+external coating,coating
+face mask,physical object
+finishing layer,layer
+fire detection system,safety system
+fire extinguisher,physical object
+fire fighting system,safety system
+fire water system,fire fighting system
+fluid expansion system,safety system
+fluid film,fluid
+foil,sheet
+foil layer,layer
+fusion bonded epoxy coating,epoxy coating
+gas detection system,safety system
+glass lining,lining
+glove,physical object
+heat barrier,protection material
+heat conductor,conductor
+heat-shrinkable sleeve,sleeve
+heat tracing system,system
+impregnated fiberglass cloth,cloth
+insulator,physical object
+internal coating,coating
+isolation material,physical object
+lined material,physical object
+lining layer,layer
+metallic coating,coating
+oil film,fluid film
+packaging material,physical object
+paint,physical object
+physical label,physical object
+plastic lining,lining
+polyethylene coating,coating
+polyethylene sleeve,sleeve
+polypropylene coating,coating
+polyurethane coating,coating
+powder,physical object
+pressure relief device,fluid regulator
+pressure relief system,safety system
+primer,coating
+protection material,physical object
+protection system,safety system
+protective boots,physical object
+protective equipment class,equipment class
+protective glasses,physical object
+protective suit,physical object
+rain canopy,canopy
+refractory,thermal insulation material
+respirator,physical object
+safety device,physical object
+safety shower,shower
+safety system,system
+safety ventilation system,safety system
+screen,physical object
+sheet,plate
+sheeting,physical object
+shower,physical object
+silencer,physical object
+sleeve,physical object
+splash goggles,protective glasses
+steam heat tracing system,tubular heat tracing system
+surface insulation material,protection material
+tempered epoxy paint,tempered paint
+tempered paint,coating
+thermal insulation material,protection material
+thermal protection material,protection material
+three layer polyethylene coating,polyethylene coating
+three layer polypropylene coating,polypropylene coating
+tubular heat tracing system,heat tracing system
+two layer polyethylene coating,polyethylene coating
+vapour respirator,respirator
+wrapping material,physical object

@@ -1,0 +1,85 @@
+Unique name,superclass 1
+aerodyne,aircraft
+aerostat,aircraft
+aircraft,physical object
+airplane,aerodyne
+airship,aerostat
+articulated loading arm,loading arm
+automobile,motor vehicle
+barge,boat
+bay,physical object
+boat,watercraft
+buoy,physical object
+bus,automobile
+chain,mechanical cable
+chemical carrier,freight carrier
+closed transport device,transport device
+crane,lifting appliance
+deck,physical object
+dolphin,mooring-post
+drilling ship,ship
+electric motor vehicle,motor vehicle
+elevator,lift
+fender,physical object
+fixed loading arm,loading arm
+flexible loading arm,loading arm
+freight carrier,transport device
+gantry,frame
+gas carrier,freight carrier
+helicopter,rotorcraft
+helideck,deck
+hoist,lifting appliance
+life boat,boat
+lift,physical object
+lifting appliance,physical object
+loading - unloading system,transport system
+loading arm,physical object
+loading bay,bay
+loading system,loading - unloading system
+loading track,rail track
+loading yard,yard-site
+locomotive,motor vehicle
+marshalling locomotive,locomotive
+marshalling yard,yard-site
+mechanical cable,physical object
+mooring cable,mechanical cable
+mooring chain,chain
+mooring launch,boat
+mooring-post,physical object
+motor vehicle,vehicle
+motorcycle,motor vehicle
+non self driving vehicle,vehicle
+passenger elevator,elevator
+pontoon,physical object
+porters truck,non self driving vehicle
+quay,physical object
+rail switch,physical object
+rail tank waggon,rail waggon
+rail track,physical object
+rail truck,rail waggon
+rail waggon,non self driving vehicle
+rope,mechanical cable
+rotorcraft,aerodyne
+ship,watercraft
+solid materials handling system,transport system
+sorting yard,yard-site
+storage facility,plant
+submarine,watercraft
+submersible,submarine
+tank truck,motor vehicle
+telescopic loading lance,loading arm
+train,vehicle
+transport device,physical object
+transport system,system
+transport tray,transport device
+trolley,vehicle
+truck,motor vehicle
+unloading system,loading - unloading system
+van,motor vehicle
+vehicle,physical object
+watercraft,physical object
+weigh bridge,weighing device
+weighing device,physical object
+well pulling hoist,hoist
+wire rope,rope
+yard-site,physical object

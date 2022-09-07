@@ -1,0 +1,53 @@
+Unique name,superclass 1
+assel mill,elongator
+ball mill,tumbling mill
+bath,container
+belt conveyor,conveyor
+billet,physical object
+billet heating furnace,furnace
+bloom,physical object
+chain conveyor,conveyor
+continuous rolling mill,rolling mill
+conveyor,physical object
+crusher,mill
+cutter,physical object
+elongator,continuous rolling mill
+feeder,closed transport device
+forklift truck,vehicle
+granulator,physical object
+grinding mill,mill
+hammer mill,mill
+hydraulic press,physical object
+ingot,physical object
+jaw crusher,crusher
+mandrel,physical object
+mill,physical object
+palletiser,physical object
+pebble mill,ball mill
+pellet,physical object
+piercer,physical object
+piercing mill,continuous rolling mill
+piercing press,physical object
+pilger mill,elongator
+plug mill,rolling mill
+pneumatic conveyor,conveyor
+reducing mill,sizing mill
+reeling machine,piercer
+rod mill,tumbling mill
+roll,physical object
+roll press piercing mill,piercing mill
+roller conveyor,conveyor
+roller mill,mill
+rolling mill,mill
+rotary expander mill,mill
+rotary hearth furnace,furnace
+round ingot,ingot
+screw conveyer,conveyor
+sizing mill,mill
+slag sluice,sluice
+slat conveyor,conveyor
+sluice,physical object
+square billet,billet
+tempering furnace,furnace
+tumbling mill,mill
+vibrating conveyer,conveyor

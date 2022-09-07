@@ -1,0 +1,71 @@
+Unique name,superclass 1
+absorber,physical object
+auxiliary system,system
+bag,container
+basin,container
+basket,container
+bracket,support
+cap,physical object
+chamber,physical object
+clip,physical object
+cloth,physical object
+compartment,physical object
+component,physical object
+composite material,physical object
+compound,physical object
+connection,physical object
+connector,connection
+container,physical object
+cover,physical object
+davit,physical object
+dent,feature
+diaphragm,physical object
+disc,physical object
+distributor,physical object
+divider,physical object
+door,physical object
+drain,physical object
+drain plug,plug
+enclosure,physical object
+end,feature
+end point,feature
+face,feature
+feature,arranged individual
+fin,physical object
+flange,physical object
+fluid,compound
+fluid compound,compound
+frame,physical object
+gasket,seal
+groove,hole
+handle,physical object
+hanger,support
+hole,feature
+housing,enclosure
+inlet port,physical object
+layer,physical object
+liner,physical object
+lining,physical object
+manifold,physical object
+name plate,physical object
+opening,hole
+outlet port,physical object
+pit,physical object
+plant,physical object
+plug,physical object
+rail,physical object
+removable cover,cover
+ring,physical object
+rotor,physical object
+seal,physical object
+section,physical object
+skirt,physical object
+spring,physical object
+start point,feature
+strip,physical object
+stud,support
+support ,physical object
+system,functional physical object
+trap,physical object
+vent,physical object
+wrench,physical object
