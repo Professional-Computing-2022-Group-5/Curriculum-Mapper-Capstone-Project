@@ -18,9 +18,9 @@ with app.app_context():
     db.create_all()
 
 # If logged in, return information about the current user
-@app.route("/")
+@app.route("/",methods=["GET"] )
 def index():
-    return "Hello World!"
+    return jsonify("Hello World!")
 
 
 @app.route("/@me")
