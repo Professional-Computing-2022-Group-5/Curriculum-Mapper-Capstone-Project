@@ -137,20 +137,20 @@ function App() {
                 </p>
             </div>
             </div>
-<<<<<<< Updated upstream
-            <div>
-                    <label>Input Query: </label>
-                    <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>
-                </div>
-                <button type="button" onClick={() => executeQuery()}>Submit</button>
 
-=======
+            <div>
+                <label>Input Query: </label>
+                <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>
+                </div>
+            
+            <button type="button" onClick={() => executeQuery()}>Submit</button>
+
             <p className="filer-section">
 
             </p>
 
             <div>
->>>>>>> Stashed changes
+
             <App />
             </div>
         </div>
