@@ -1,6 +1,6 @@
-    import React, { useRef, useEffect } from "react";
-
-    import ForceGraph2D from "react-force-graph-2d";
+import React, { useRef, useEffect, useState } from "react";
+import httpClient from "./httpClient.js";
+import ForceGraph2D from "react-force-graph-2d";
 
     /*var data = {
     nodes: [{ id: "A"}, { id: "B" }, { id: "C" }, { id: "D" }],
@@ -49,6 +49,25 @@
     }
 
     function Query() {
+        const [query, setQuery] = useState("");
+        
+        const executeQuery = async () => {
+            console.log(query);
+
+            try {
+                const dbData = await httpClient.post("//localhost:5000/query", {
+                    query
+                });
+                console.log(dbData.data)
+                //HERE IS THE DATA
+
+            } catch (error) {
+                if (error.response.status === 401) {
+                    alert("Invalid Query");
+                }
+            }
+        };
+
     return (
         <div className="query">
         <div class="container">
@@ -70,6 +89,12 @@
                 </p>
             </div>
             </div>
+            <div>
+                    <label>Input Query: </label>
+                    <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>
+                </div>
+                <button type="button" onClick={() => executeQuery()}>Submit</button>
+
             <App />
         </div>
         </div>
