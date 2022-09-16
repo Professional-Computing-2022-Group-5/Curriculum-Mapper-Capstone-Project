@@ -12,14 +12,15 @@ function Navigation() {
             class="navbar-toggler"
             type="button"
             onclick="burgerFunction(this)"
-            onClick={(event) => {
-              if (event.classList.contains("change")) {
-                  event.classList.remove("change");
-              } else {
-                  event.classList.add("change");
-              }
-              }
-            }
+            
+            //onClick={(event) => {
+            //  if (event.classList.contains("change")) {
+            //      event.classList.remove("change");
+            //  } else {
+            //      event.classList.add("change");
+            //  }
+            //  }
+            //}
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"

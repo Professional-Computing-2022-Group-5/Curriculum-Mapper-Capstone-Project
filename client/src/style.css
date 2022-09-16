@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: pink;
 }
 
 code {
@@ -68,3 +69,23 @@ code {
   transform: rotate(-45deg);
 }
 
+.container{
+  border-color: aqua;
+  background-color: purple;
+}
+
+.graph-container{
+  border-color: green;
+  background-color: yellow;
+}
+
+.filter-container{
+  background-color: aqua;
+}
+
+.graph-element{
+  background-color: aquamarine;
+}
+
+[data-reactroot] 
+        {height: 66% !important; }

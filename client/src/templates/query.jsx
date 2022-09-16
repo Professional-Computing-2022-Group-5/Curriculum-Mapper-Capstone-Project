@@ -14,6 +14,7 @@ import ForceGraph2D from "react-force-graph-2d";
     ]
     };*/
 
+
     var data = {
     nodes:[
         {"availabilities":"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];","credit":6, "deleted":false, "id":183,"programmingBased":true,"title":"Computational Data Analysis","type":"node","unitCode":"CITS4009"},
@@ -31,18 +32,65 @@ import ForceGraph2D from "react-force-graph-2d";
         {"property":{"deleted":false,"id":240,"type":"relationship"},"source":183,"target":291}],
     }
 
-    function App() {
+function  nodeHoverFunc(n) {
+
+    console.log("---------------------");
+    console.log("Read Link");
+    console.log("---------------------");
+}
+
+function  nodeClickFunc(n) {
+
+    console.log("---------------------");
+    console.log("update or delete node");
+    console.log("---------------------");
+}
+
+function  linkHoverFunc(l) {
+
+    console.log("---------------------");
+    console.log("Read Link");
+    console.log("---------------------");
+}
+
+function  linkClickFunc(l) {
+
+    console.log("---------------------");
+    console.log("update or delete link");
+
+    console.log("---------------------");
+}
+
+function  backgroundClickFunc(n) {
+
+    console.log("---------------------");
+    console.log("create new node or link");
+    console.log("---------------------");
+}
+
+function App() {
+
     const forceRef = useRef(null);
     useEffect(() => {
         forceRef.current.d3Force("charge").strength(-400);
     });
+
     return (
         <ForceGraph2D
         graphData={data}
-        nodeLabel="id"
+        
+        nodeLabel={n => nodeHoverFunc(n)}
+        onNodeClick={n => nodeClickFunc(n)}
+
+        onLinkHover={l => linkHoverFunc(l)}
+        onLinkClick={l => linkClickFunc(l)}
+        
+        onBackgroundClick={b => backgroundClickFunc(b)}
+
         linkCurvature="curvature"
         enablePointerInteraction={true}
         linkDirectionalParticleWidth={1}
+
         ref={forceRef}
         />
     );
@@ -89,13 +137,22 @@ import ForceGraph2D from "react-force-graph-2d";
                 </p>
             </div>
             </div>
+<<<<<<< Updated upstream
             <div>
                     <label>Input Query: </label>
                     <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>
                 </div>
                 <button type="button" onClick={() => executeQuery()}>Submit</button>
 
+=======
+            <p className="filer-section">
+
+            </p>
+
+            <div>
+>>>>>>> Stashed changes
             <App />
+            </div>
         </div>
         </div>
     );

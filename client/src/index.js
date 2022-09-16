@@ -1,6 +1,7 @@
 import React from 'react';
 //import React, { useRef, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
+import { createRoot } from "react-dom/client";
 import './style.css';
 //import App from './App';
 
@@ -68,8 +69,11 @@ function App() {
 }
 
 
+
+
 const rootElement = document.getElementById("root");
-ReactDOM.render(  
+const root = createRoot(rootElement);
+root.render(  
   <Router>
     <Navigation />
     <Routes>
@@ -82,7 +86,8 @@ ReactDOM.render(
     </Routes>
     <App />
     <Footer />
-  </Router>, rootElement);
+  </Router>
+  );
 
 
 // If you want to start measuring performance in your app, pass a function
