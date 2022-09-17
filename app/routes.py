@@ -20,3 +20,16 @@ def query_by_user():
         return data
     else:
         return redirect(url_for('textBox_page')) 
+
+# create new nodes and new relationships by user
+@app.route('/user_create', methods=['POST', 'GET'])
+def create_by_user():
+    if request.method == 'POST':
+        user_input = request.get_json()
+        try:
+            neo4jDB.create_by_user(user_input)
+            return {'status': 'success'}
+        except:
+            return {'status': 'error'}
+    else:
+        return redirect(url_for('user_create'))
