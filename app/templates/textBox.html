@@ -12,6 +12,13 @@
             border-radius: 5px;
             padding: 5px;
         }
+
+        div {
+            border: 1px;
+            border-style: solid;
+            border-color: black;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -21,5 +28,71 @@
         <input type="text" class="textBox" name="user_query">
         <button type="submit">Enter</button>
     </form>
+    <br><br><br>
+
+    <div>
+        user input format: <br>
+        <pre>
+            #The label and name attributes are required, and other attributes can be added or deleted arbitrarily
+            data = [{
+                #start node
+                'source':{
+                    #label for each node
+                    'label':'Test_Start_Node',
+                    #name as the unique identifier of each node
+                    'name':'start_node',
+                    'test':'test',
+                    'age':'23'
+                },
+                #end node
+                'target':{
+                    'label':'Test_End_Node',
+                    'name':'end_node',
+                    'age':'21'
+                },
+                #relationship
+                'relationship':{
+                    'label':'Test_Relationship',
+                    'name':'is_friend_of',
+                    'gender':'male'
+                }
+            }])
+        </pre>
+        click the button to test create function: <button id="ajaxBtn">Ajax submit</button> <br> <br>
+        </div>
+    
+        <!-- send a ajax post request to backend -->
+        <script>
+            //user input 
+            data = [{
+            'source':{
+                'label':'Test_Start_Node',
+                'name':'start_node',
+                'test':'test',
+                'age':'23'
+            },
+            'target':{
+                'label':'Test_End_Node',
+                'name':'end_node',
+                'age':'21',
+                'weight':'0.5'
+            },
+            'relationship':{
+                'label':'Test_Relationship',
+                'name':'is_friend_of',
+                'gender':'male'
+            }
+            }]
+    
+            const ajaxBtn = document.getElementById("ajaxBtn");
+            ajaxBtn.addEventListener("click", () => {
+                // console.log("event works")
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "/user_create", true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(JSON.stringify(data));
+                // console.log(JSON.stringify(data))
+            });
+        </script>
 </body>
 </html>
