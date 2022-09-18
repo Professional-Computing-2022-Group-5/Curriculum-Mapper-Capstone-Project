@@ -1,13 +1,10 @@
 import React from 'react';
 //import React, { useRef, useEffect } from 'react';
-//import ReactDOM from 'react-dom';
+
 import { createRoot } from "react-dom/client";
 import './style.css';
 //import App from './App';
 
-
-//import ReactDOM from "react-dom";
-//import ForceGraph2D from "react-force-graph-2d";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import {
@@ -49,25 +46,6 @@ var data = {
       {"property":{"deleted":false,"id":240,"type":"relationship"},"source":183,"target":291}],
 }
 */
-function App() {
-  /*const forceRef = useRef(null);
-  useEffect(() => {
-    forceRef.current.d3Force("charge").strength(-400);
-  });
-  return (
-    <ForceGraph2D
-      graphData={data}
-      nodeLabel="id"
-      linkCurvature="curvature"
-      enablePointerInteraction={true}
-      linkDirectionalParticleWidth={1}
-      ref={forceRef}
-    />
-  );*/
-
-  return <div></div>
-}
-
 
 
 
@@ -80,7 +58,7 @@ root.render(
       <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      
+
       <Route path="/query" element={<Query />} />
       <Route path="/reportGen" element={<ReportGen />} />
     </Routes>

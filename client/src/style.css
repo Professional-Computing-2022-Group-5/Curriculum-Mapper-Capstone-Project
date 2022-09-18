@@ -68,24 +68,3 @@ code {
 .navbar-toggler.change .menu-btn__burger::after {
   transform: rotate(-45deg);
 }
-
-.container{
-  border-color: aqua;
-  background-color: purple;
-}
-
-.graph-container{
-  border-color: green;
-  background-color: yellow;
-}
-
-.filter-container{
-  background-color: aqua;
-}
-
-.graph-element{
-  background-color: r;
-}
-
-[data-reactroot] 
-        {height: 66% !important; }

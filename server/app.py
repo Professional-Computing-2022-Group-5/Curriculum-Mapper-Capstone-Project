@@ -17,10 +17,10 @@ db.init_app(app)
 with app.app_context(): 
     db.create_all()
 
-# If logged in, return information about the current user
+'''# If logged in, return information about the current user
 @app.route("/",methods=["GET"] )
 def index():
-    return jsonify("Hello World!")
+    return jsonify("Hello World!")'''
 
 
 @app.route("/@me")
@@ -51,9 +51,6 @@ def register_user():
 
     response = email + password
 
-    return(jsonify{
-       response
-    })
 
     user_exists = User.query.filter_by(email=email).first() is not None
 
@@ -65,7 +62,11 @@ def register_user():
     db.session.add(new_user)
     db.session.commit()
 
+
+
     session["user_id"] = new_user.id
+
+    
 
     return jsonify({
         "id": new_user.id,
