@@ -62,7 +62,7 @@ root.render(
       <Route path="/query" element={<Query />} />
       <Route path="/reportGen" element={<ReportGen />} />
     </Routes>
-    <App />
+
     <Footer />
   </Router>
   );
