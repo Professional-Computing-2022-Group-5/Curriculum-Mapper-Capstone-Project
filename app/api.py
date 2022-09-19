@@ -62,4 +62,8 @@ def joltAPI(user_query):
                         link['property'] = rel_property
     return_data['nodes'] = nodes
     return_data['links'] = links
-    return return_data
+    # empty data handling
+    if len(nodes) == 0 and len(links) == 0:
+        return {'status':'error'}
+    else:
+        return return_data
