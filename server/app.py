@@ -17,7 +17,12 @@ db.init_app(app)
 with app.app_context(): 
     db.create_all()
 
-# If logged in, return information about the current user
+'''# If logged in, return information about the current user
+@app.route("/",methods=["GET"] )
+def index():
+    return jsonify("Hello World!")'''
+
+
 @app.route("/@me")
 def get_current_user():
     user_id = session.get("user_id")
@@ -31,10 +36,21 @@ def get_current_user():
         "email": user.email
     }) 
 
+@app.route("/query", methods=["POST"])
+def execute_query():
+    query = request.json["query"]
+
+    response = "THE RECEIVED QUERY IS:"+ query
+
+    return jsonify(response)
+
 @app.route("/register", methods=["POST"])
 def register_user():
     email = request.json["email"]
     password = request.json["password"]
+
+    response = email + password
+
 
     user_exists = User.query.filter_by(email=email).first() is not None
 
@@ -45,8 +61,12 @@ def register_user():
     new_user = User(email=email, password=hashed_password)
     db.session.add(new_user)
     db.session.commit()
-    
+
+
+
     session["user_id"] = new_user.id
+
+    
 
     return jsonify({
         "id": new_user.id,
@@ -66,7 +86,7 @@ def login_user():
 
     if not bcrypt.check_password_hash(user.password, password):
         return jsonify({"error": "Unauthorized"}), 401
-    
+
     session["user_id"] = user.id
 
     return jsonify({
@@ -81,3 +101,19 @@ def logout_user():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+'''
+User inputs and what fdunction their doing
+
+{User inputs --> JSON} --> 
+
+
+https:lovalhost:5000/query
+
+https:lovalhost:5000/node
+type: delete or 
+https:lovalhost:5000/linkUpdate
+https:lovalhost:5000/nodeDelete
+
+'''

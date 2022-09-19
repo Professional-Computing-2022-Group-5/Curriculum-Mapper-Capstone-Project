@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: pink;
 }
 
 code {
@@ -67,4 +68,3 @@ code {
 .navbar-toggler.change .menu-btn__burger::after {
   transform: rotate(-45deg);
 }
-
