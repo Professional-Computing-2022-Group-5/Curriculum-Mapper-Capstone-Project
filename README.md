@@ -18,7 +18,8 @@ install redis:
 
 Change to the server directory to run this
 Install the requirements
-        $ pip install -r ./requirements.txt
+        $ pip install -r ./requirements.txt 
+        You may need to upgrade pip first for this to work
 
 To run the server: 
         $ python3 app.py
