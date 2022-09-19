@@ -12,7 +12,7 @@ def search_by_query(query):
         data = api.joltAPI(query) 
         return data
     except:
-        # return error message if the query is invalid
+        # return error message if the api call fails
         return {'status': 'error'}
 
 def create_by_user(data):
