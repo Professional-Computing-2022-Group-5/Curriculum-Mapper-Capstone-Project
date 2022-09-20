@@ -22,7 +22,7 @@ const Home = () => {
 
   return ( 
   <div>
-      <h1>Welcome to this React Application</h1>
+      <h1>Welcome to your curriculum mapper</h1>
       {user != null ? (
         // LOGGED IN
         <div>

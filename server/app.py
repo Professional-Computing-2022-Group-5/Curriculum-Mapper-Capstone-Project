@@ -59,6 +59,71 @@ def execute_query():
 
     return jsonify(returnData)
 
+@app.route("/nodeUpdate", methods=["POST"])
+def update_node():
+    node_Data = request.json["inputs"]
+
+    print("\n\n\n--------request ID -------------\n\n\n")
+    print(node_Data["id"])
+    response = "RECEIVED THE UPDATE NODE COMMAND FOR NODE:"+ str(node_Data["id"])
+
+    return jsonify(response)
+
+@app.route("/nodeDelete", methods=["POST"])
+def delete_node():
+    node_Data = request.json["id"]
+
+    print("\n\n\n--------request ID -------------\n\n\n")
+    print(node_Data)
+    response = "RECEIVED THE DELETE NODE COMMAND FOR NODE:"+ str(node_Data)
+
+    return jsonify(response)
+
+@app.route("/nodeCreate", methods=["POST"])
+def create_node():
+    new_Data = request.json["data"]
+
+    print("\n\n\n--------request  -------------\n\n\n")
+    print(new_Data)
+    response = "RECEIVED THE CREATE NODE COMMAND FOR NODE:"+ str(new_Data["unitCode"])
+
+    return jsonify(response)
+
+@app.route("/linkDelete", methods=["POST"])
+def delete_link():
+    link_Data = request.json["id"]
+
+    print("\n\n\n--------request ID -------------\n\n\n")
+    print(link_Data)
+    response = "RECEIVED THE DELETE LINK COMMAND FOR NODE:"+ str(link_Data)
+
+    return jsonify(response)
+
+@app.route("/linkUpdate", methods=["POST"])
+def update_link():
+    link_Source = request.json["source"]
+    link_Target = request.json["target"]
+    link_Id = request.json["id"]
+
+    print("\n\n\n--------request ID -------------\n\n\n")
+
+    print(link_Id)
+    response = "RECEIVED THE UPDATE LINK COMMAND FOR LINK:"+ str(link_Id)
+
+    return jsonify(response)
+
+@app.route("/linkCreate", methods=["POST"])
+def create_link():
+    source_data = request.json["source"]
+    target_data = request.json["target"]
+
+    print("\n\n\n--------request  -------------\n\n\n")
+    print(source_data)
+    print(target_data)
+    response = "RECEIVED THE CREATE LINK COMMAND FOR SOURCE:"+ str(source_data["unitCode"]) + "TARGET:" + str(target_data["unitCode"])
+
+    return jsonify(response)
+
 @app.route("/register", methods=["POST"])
 def register_user():
     email = request.json["email"]
