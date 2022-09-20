@@ -64,9 +64,10 @@ const Query = () => {
         <div class="container">
 
             <h1 class="font-weight-light">Query Page</h1>
-            <label>Input Query: </label>
-            <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>
-            <button type="button" onClick={() => executeQuery(query)}>Submit</button>
+            
+            {graphActive !== "showGraph" && <label>Input Query: </label>}
+            {graphActive !== "showGraph" && <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
+            {graphActive !== "showGraph" && <button type="button" onClick={() => executeQuery(query)}>Submit</button>}
 
             <div class="row align-items-center" >
 
