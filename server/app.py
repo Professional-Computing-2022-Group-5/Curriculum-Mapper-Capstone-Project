@@ -41,8 +41,23 @@ def execute_query():
     query = request.json["query"]
 
     response = "THE RECEIVED QUERY IS:"+ query
+    returnData = {"links":[
+                    {"property":{"deleted":False,"id":241,"type":"relationship"},"source":183,"target":292},
+                    {"property":{"deleted":False,"id":238,"type":"relationship"},"source":183,"target":289},
+                    {"property":{"deleted":False,"id":240,"type":"relationship"},"source":183,"target":291}],
+                "nodes":
+                    [{"availabilities":"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];","credit":6,"deleted":False,"id":183,"programmingBased":True,"title":"Computational Data Analysis","type":"node","unitCode":"CITS4009"},
+                    {"availabilities":"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];","credit":6,"deleted":False,"id":183,"programmingBased":True,"title":"Computational Data Analysis","type":"node","unitCode":"CITS4009"},
+                    {"deleted":False,"describe":"present and defend opinions by making judgments about information. validity of ideas, or quality of work based on a set of criteria.","id":292,"level":"IV.Analyzing","outcome":"(5) communicate effectively with stakeholders.","outcomeId":"5","type":"node","unitCode":"CITS4009"},
+                    {"availabilities":"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];","credit":6,"deleted":False,"id":183,"programmingBased":True,"title":"Computational Data Analysis","type":"node","unitCode":"CITS4009"},
+                    {"availabilities":"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];","credit":6,"deleted":False,"id":183,"programmingBased":True,"title":"Computational Data Analysis","type":"node","unitCode":"CITS4009"},
+                    {"deleted":False,"describe":"Exhibit memory of previously learned material by recalling facts, terms,basic concepts, and answers.","id":289,"level":"I.Remembering","outcome":"(2) select appropriate data visualisation options; ","outcomeId":"2","type":"node","unitCode":"CITS4009"},
+                    {"availabilities":"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];","credit":6,"deleted":False,"id":183,"programmingBased":True,"title":"Computational Data Analysis","type":"node","unitCode":"CITS4009"},
+                    {"availabilities":"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];","credit":6,"deleted":False,"id":183,"programmingBased":True,"title":"Computational Data Analysis","type":"node","unitCode":"CITS4009"},
+                    {"deleted":False,"describe":"Present and defend opinions by making judgments about information, validity of ideas, or quality of work based on a set of criteria.","id":291,"level":"V. Evaluating","outcome":"(4) critically assess the outcomes of a data analysis; ","outcomeId":"4","type":"node","unitCode":"CITS4009"}]
+                }
 
-    return jsonify(response)
+    return jsonify(returnData)
 
 @app.route("/register", methods=["POST"])
 def register_user():
