@@ -98,3 +98,29 @@ def create_node(data):
     else:
         source_node = source_match.first()
         return {'status':'node_already_exist'}
+
+# update node attributes
+def update_node(id, data):
+    try:
+        # match the node by id
+        node = graphDB.evaluate("MATCH (n) WHERE id(n) = {} RETURN n".format(id))
+        for (key, value) in zip(data.keys(), data.values()):
+            # update attributes
+            node[key] = value
+        graphDB.push(node)
+        return {'status':'success'}
+    except:
+        return {'status':'error'}
+
+# update relationship attributes
+def update_relationship(id, data):
+    try:
+        # match the relationship by id
+        relationship = graphDB.evaluate("MATCH ()-[r]-() WHERE id(r) = {} RETURN r".format(id))
+        for (key, value) in zip(data.keys(), data.values()):
+            # update attributes
+            relationship[key] = value
+        graphDB.push(relationship)
+        return {'status':'success'}
+    except:
+        return {'status':'error'}
