@@ -78,3 +78,23 @@ def deleteEntity(id, item):
             return {'status':'update_relationship_success'}
     except:
         return {'status':'error'}
+
+# create single node by user
+def create_node(data):
+    # create a empty node object
+    source_node = Node()
+    for (key, value) in zip(data.keys(), data.values()):
+        if key == 'label':
+            # add label to the node
+            source_node.add_label(value)
+        else:
+            # add properties to the node
+            source_node[key] = value
+    # query whether the current node already exists in the database (check both label and name)
+    source_match = NodeMatcher(graphDB).match(data['label'], name=data['name'])
+    if source_match.__len__() == 0:
+        graphDB.create(source_node)
+        return {'status':'create_node_success'}
+    else:
+        source_node = source_match.first()
+        return {'status':'node_already_exist'}
