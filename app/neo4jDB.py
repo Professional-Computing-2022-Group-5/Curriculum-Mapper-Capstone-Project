@@ -64,3 +64,17 @@ def create_by_user(data):
                 if len(rel_match.match([source_node,target_node],r_type=value)) == 0:
                     graphDB.create(rel)
 
+# delete nodes and relationships by user
+def deleteEntity(id, item):
+    try:
+        if item == 'node':
+            # match the node by id
+            node = graphDB.evaluate("MATCH (n) WHERE id(n) = {} RETURN n".format(id))
+            graphDB.delete(node)
+            return {'status':'update_node_success'}
+        elif item == 'relationship':
+            # match the relationship by id
+            relationship = graphDB.evaluate("MATCH ()-[r]-() WHERE id(r) = {} DELETE r".format(id))
+            return {'status':'update_relationship_success'}
+    except:
+        return {'status':'error'}
