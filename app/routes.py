@@ -33,3 +33,58 @@ def create_by_user():
             return {'status': 'error'}
     else:
         return redirect(url_for('user_create'))
+
+# delete nodes and relationships by user
+@app.route('/delete_entity', methods=['POST', 'GET'])
+def delete_entity():
+    if request.method == 'POST':
+        id = request.get_json()['id']
+        item = request.get_json()['type']
+        try:
+            neo4jDB.deleteEntity(id, item)
+            return {'status': 'success'}
+        except:
+            return {'status': 'delete_failed'}
+    else:
+        return {'status': 'request_error'}
+
+# create single node by user
+@app.route('/create_node', methods=['POST', 'GET'])
+def create_node():
+    if request.method == 'POST':
+        user_input = request.get_json()['data3']
+        try:
+            neo4jDB.create_node(user_input)
+            return {'status': 'success'}
+        except:
+            return {'status': 'create_failed'}
+    else:
+        return {'status': 'request_error'}
+
+# update node attributes
+@app.route('/UpdateNode', methods=['POST', 'GET'])
+def Update_node():
+    if request.method == 'POST':
+        id = request.get_json()['id']
+        item = request.get_json()['inputs']
+        try:
+            neo4jDB.update_node(id, item)
+            return {'status': 'success'}
+        except:
+            return {'status': 'update_failed'}
+    else:
+        return {'status': 'request_error'}
+
+# update relationship attributes
+@app.route('/UpdateLink', methods=['POST', 'GET'])
+def Update_link():
+    if request.method == 'POST':
+        id = request.get_json()['id']
+        item = request.get_json()['link']
+        try:
+            neo4jDB.update_relationship(id, item)
+            return {'status': 'success'}
+        except:
+            return {'status': 'update_failed'}
+    else:
+        return {'status': 'request_error'}
