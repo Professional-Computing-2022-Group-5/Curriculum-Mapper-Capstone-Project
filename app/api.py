@@ -2,7 +2,8 @@ import requests
 from requests.auth import HTTPBasicAuth
 import base64
 import json
-url = 'http://127.0.0.1:7474/db/data/transaction'
+from config import JOLT_URL, NEO4j_USER, NEO4j_PASSWORD
+
 header = {
     "content-type":'application/json'
 }
@@ -14,7 +15,7 @@ def joltAPI(user_query):
         }]
     }
     # database authentication
-    res = requests.post(url=url, data=json.dumps(data), headers=header, auth=HTTPBasicAuth('neo4j','test'))
+    res = requests.post(url=JOLT_URL, data=json.dumps(data), headers=header, auth=HTTPBasicAuth(NEO4j_USER, NEO4j_PASSWORD))
     # load json data from response
     all_data = json.loads(res.text)['results']
     # initialize return data
@@ -64,6 +65,6 @@ def joltAPI(user_query):
     return_data['links'] = links
     # empty data handling
     if len(nodes) == 0 and len(links) == 0:
-        return {'status':'error'}
+        return {'status':'empty_data'}
     else:
         return return_data

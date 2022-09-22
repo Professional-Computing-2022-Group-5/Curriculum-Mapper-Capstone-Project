@@ -1,19 +1,23 @@
 from py2neo import Graph,NodeMatcher,cypher,Node,Relationship
 import json
 from app import api
+from config import NEO4j_URI, NEO4j_USER, NEO4j_PASSWORD
 
-# graphDB -> Connect the neo4j database
-# Graph("neo4j is running on localhost and port 7474", auth=("neo4j_username", "neo4j_password"))
-graphDB = Graph("http://localhost:7474", auth=("neo4j","test"))
+# connect to the Neo4j database
+try:
+    graphDB = Graph(NEO4j_URI, auth=(NEO4j_USER, NEO4j_PASSWORD))
+except:
+    print("\n****** Neo4j connect failed, please check the neo4j service ******\n")
 
 def search_by_query(query):
     try:
         #using jolt API to get the data to the frontend
         data = api.joltAPI(query) 
+        # data = {'links':'[{},{}]','nodes':'[{},{}]'} or data = {'status':'empty_data'}
         return data
     except:
         # return error message if the api call fails
-        return {'status': 'error'}
+        return {'status': 'joltAPI_error'}
 
 def create_by_user(data):
     for item in data:
