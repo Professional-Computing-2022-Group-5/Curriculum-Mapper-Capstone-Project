@@ -61,7 +61,17 @@ def joltAPI(user_query):
                             link['target'] = item1['meta'][2]['id']
                             links.append(link)
                         link['property'] = rel_property
-    return_data['nodes'] = nodes
+
+    # remove duplicate nodes
+    id_list = []
+    node_list = []
+    for node in nodes:
+        if node['id'] not in id_list:
+            # print(node['id'])
+            node_list.append(node)
+            id_list.append(node['id'])
+
+    return_data['nodes'] = node_list
     return_data['links'] = links
     # empty data handling
     if len(nodes) == 0 and len(links) == 0:
