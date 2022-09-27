@@ -25,7 +25,6 @@ const Query = () => {
     //-----------------------------------------------------------------------------------GLOBAL VARIABLES
     const [query, setQuery] = useState("");
     const [graphActive, setGraphActive] = useState("noGraph");
-    const [graphType, setGraphType] = useState("graphicalView");
     
     //-----------------------------------------------------------------------------------FUNCTIONS
     // EXECUTE & QUERY AND GET THE RETURN DATA
@@ -81,22 +80,27 @@ const Query = () => {
 
     //-----------------------------------------------------------------------------------RETURN
     return ( 
-        <div className="container">
+        <div className="container-fluid">
 
-            <h1 className="font-weight-light">Query Page</h1>
-            
-            {graphActive !== "showGraph" && <label>Input Query: </label>}
-            {graphActive !== "showGraph" && <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
-            {graphActive !== "showGraph" && <button type="button" onClick={() => executeQuery(query)}>Submit</button>}
+            <div className = "container-fluid">
 
-            <div className="row align-items-right" >
+            <div className="container-fluid row">
+                <h1 className="font-weight-light">Query Page</h1>
+                
+                {graphActive !== "showGraph" && <label>Input Query: </label>}
+                {graphActive !== "showGraph" && <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
+                {graphActive !== "showGraph" && <button type="button" onClick={() => executeQuery(query)}>Submit</button>}
+                </div>
+            </div>
 
-            {graphActive === "showGraph" && <button onClick={() => setGraphType("graphicalView")}>Graphical View</button>}
-            {graphActive === "showGraph" && <button onClick={() => setGraphType("tabularView")}>Tabular View</button>}
-
-            {graphType === "graphicalView" && graphActive === "showGraph" && <GraphComponent data = {response}/>}
-            {graphType === "tabularView" && graphActive === "showGraph" && <TableComponent data = {response} />}
-
+            <div className="container-fluid row xs=2 md=2 lg=2">
+                <div className="col">
+                {graphActive === "showGraph" && <GraphComponent data = {response} />}
+                </div>
+                
+                <div className="col col-lg-3">
+                {graphActive === "showGraph" && <TableComponent data = {response} />}
+                </div>
 
             </div>
         </div>

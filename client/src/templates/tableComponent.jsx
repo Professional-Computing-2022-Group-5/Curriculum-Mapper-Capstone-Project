@@ -1,4 +1,5 @@
 import React from "react";
+import Table from "react-bootstrap/Table";
 
 /*var data = [
     {"availabilities":"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];","credit":6, "deleted":false, "id":183,"programmingBased":true,"title":"Computational Data Analysis","type":"node","unitCode":"CITS4009"},
@@ -25,7 +26,7 @@ const TableComponent = ({data}) => {
     var tbodyData = data.nodes
 
     return (
-        <table>
+        <Table responsive striped hover>
             <thead>
             <tr>
                 {theadData.map(heading => {
@@ -42,7 +43,7 @@ const TableComponent = ({data}) => {
                 </tr>;
                 })}
             </tbody>
-        </table>
+        </Table>
     );
 } 
 
