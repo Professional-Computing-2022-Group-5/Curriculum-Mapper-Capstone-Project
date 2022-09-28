@@ -118,6 +118,16 @@ def joltAPI(user_query):
         if node['id'] not in id_list:
             node_list.append(node)
             id_list.append(node['id'])
+    
+    # remove duplicate links
+    linkID_list = []
+    link_list = []
+    for link_item in links:
+        if link_item['property']['id'] not in linkID_list:
+            # print(node['id'])
+            link_list.append(link_item)
+            linkID_list.append(link_item['property']['id'])
+    # print(linkID_list)
 
     return_data['nodes'] = node_list
     return_data['links'] = links
