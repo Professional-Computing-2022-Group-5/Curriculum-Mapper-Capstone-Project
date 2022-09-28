@@ -95,15 +95,16 @@ def joltAPI(user_query):
         else:
             item['displayName'] = list(labels)[0]
 
-        if list(labels)[0] in color.keys():
-            if 'Sub' in list(labels):
-                item['color'] = color['Sub']
-            elif 'Top' in list(labels):
-                item['color'] = color['Top']
-            else:
-                item['color'] = color[list(labels)[0]]
-        else:
-            item['color']  = 'grey'
+        for label_item in list(labels):
+            if label_item in color.keys():
+                item['color'] = color[label_item]
+                if 'Sub' in list(labels):
+                    item['color'] = color['Sub']
+                elif 'Top' in list(labels):
+                    item['color'] = color['Top']
+                break
+        if 'color' not in item.keys():
+                item['color'] = 'grey'
 
     for item in links:
         link_data = graphDB.relationships.get(item['property']['id'])
