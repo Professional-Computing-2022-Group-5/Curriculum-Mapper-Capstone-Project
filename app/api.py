@@ -3,6 +3,14 @@ from requests.auth import HTTPBasicAuth
 import base64
 import json
 from config import JOLT_URL, NEO4j_USER, NEO4j_PASSWORD
+from py2neo import Graph
+
+# connect to Neo4j
+try:
+    graphDB = Graph(NEO4j_URI, auth=(NEO4j_USER, NEO4j_PASSWORD))
+except:
+    print("\n****** Neo4j connect failed in api.py, please check the neo4j service ******\n")
+
 
 header = {
     "content-type":'application/json'

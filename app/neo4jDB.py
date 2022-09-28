@@ -7,7 +7,7 @@ from config import NEO4j_URI, NEO4j_USER, NEO4j_PASSWORD
 try:
     graphDB = Graph(NEO4j_URI, auth=(NEO4j_USER, NEO4j_PASSWORD))
 except:
-    print("\n****** Neo4j connect failed, please check the neo4j service ******\n")
+    print("\n****** Neo4j connect failed in neo4jDB.py, please check the neo4j service ******\n")
 
 def search_by_query(query):
     try:
