@@ -61,6 +61,16 @@ def create_node():
     else:
         return {'status': 'request_error'}
 
+# create relationship by selecting nodes and relationships
+@app.route('/linkCreate', methods=['POST', 'GET'])
+def create_relationship():
+    if request.method == 'POST':
+        data = request.get_json()
+        result = neo4jDB.create_relationship(data['inputs'])
+        return result
+    else:
+        return {'status': 'request_error'}
+
 # update node attributes
 @app.route('/nodeUpdate', methods=['POST', 'GET'])
 def Update_node():
