@@ -2,7 +2,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 import base64
 import json
-from config import JOLT_URL, NEO4j_USER, NEO4j_PASSWORD
+from config import JOLT_URL, NEO4j_USER, NEO4j_PASSWORD, NEO4j_URI
 from py2neo import Graph
 
 # connect to Neo4j
@@ -10,7 +10,6 @@ try:
     graphDB = Graph(NEO4j_URI, auth=(NEO4j_USER, NEO4j_PASSWORD))
 except:
     print("\n****** Neo4j connect failed in api.py, please check the neo4j service ******\n")
-
 
 header = {
     "content-type":'application/json'
@@ -54,21 +53,31 @@ def joltAPI(user_query):
                                 links.append(link)
                             link['property'] = rel_property
                     elif type(item1['row'][0]).__name__ == 'dict':
-                        link = {}
-                        node = {}
-                        rel_property = {}
                         for row, meta in zip(item1['row'], item1['meta']):
+                            link = {}
+                            node = {}
+                            rel_property = {}
                             if meta['type'] == 'node':
                                 # property merge
                                 node = {**row, **meta}
+                                nodes.append(node)
                             if meta['type'] == 'relationship':
                                 rel_property = {**row, **meta}
-                            nodes.append(node)
-                        if len(item1['meta']) > 1:
-                            link['source'] = item1['meta'][0]['id']
-                            link['target'] = item1['meta'][2]['id']
-                            links.append(link)
-                        link['property'] = rel_property
+                                link['property'] = rel_property
+                                rel = graphDB.relationships.get(rel_property['id'])
+                                nodes.append({
+                                    'id':rel.start_node.identity,
+                                    'type':'node',
+                                    **dict(rel.start_node)
+                                })
+                                nodes.append({
+                                    'id': rel.end_node.identity,
+                                    'type': 'node',
+                                    **dict(rel.end_node)
+                                })
+                                link['source'] = rel.start_node.identity
+                                link['target'] = rel.end_node.identity
+                                links.append(link)
 
     # add displayName and color attribute to the return data
     for item in nodes:
@@ -132,10 +141,8 @@ def joltAPI(user_query):
     link_list = []
     for link_item in links:
         if link_item['property']['id'] not in linkID_list:
-            # print(node['id'])
             link_list.append(link_item)
             linkID_list.append(link_item['property']['id'])
-    # print(linkID_list)
 
     return_data['nodes'] = node_list
     return_data['links'] = links
