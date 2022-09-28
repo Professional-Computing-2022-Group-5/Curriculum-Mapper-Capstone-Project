@@ -85,23 +85,25 @@ def deleteEntity(id, item):
 
 # create single node by user
 def create_node(data):
-    # create a empty node object
-    source_node = Node()
-    for (key, value) in zip(data.keys(), data.values()):
-        if key == 'label':
-            # add label to the node
-            source_node.add_label(value)
+    try:
+        # create a empty node object
+        node = Node()
+        for (key, value) in zip(data.keys(), data.values()):
+            if key == 'label':
+                # add label to the node
+                node.add_label(value)
+            else:
+                # add properties to the node
+                node[key] = value
+        # query whether the current node already exists in the database (check both label and name)
+        node_match = NodeMatcher(graphDB).match(data['label'], name=data['name'])
+        if node_match.__len__() == 0:
+            graphDB.create(node)
+            return {'status':'create_success'}
         else:
-            # add properties to the node
-            source_node[key] = value
-    # query whether the current node already exists in the database (check both label and name)
-    source_match = NodeMatcher(graphDB).match(data['label'], name=data['name'])
-    if source_match.__len__() == 0:
-        graphDB.create(source_node)
-        return {'status':'create_node_success'}
-    else:
-        source_node = source_match.first()
-        return {'status':'node_already_exist'}
+            return {'status':'node_exist'}
+    except:
+        return {'status':'create_failed'}
 
 # update node attributes
 def update_node(id, data):
@@ -112,9 +114,9 @@ def update_node(id, data):
             # update attributes
             node[key] = value
         graphDB.push(node)
-        return {'status':'success'}
+        return {'status':'update_success'}
     except:
-        return {'status':'error'}
+        return {'status':'update_failed'}
 
 # update relationship attributes
 def update_relationship(id, data):
@@ -125,6 +127,6 @@ def update_relationship(id, data):
             # update attributes
             relationship[key] = value
         graphDB.push(relationship)
-        return {'status':'success'}
+        return {'status':'update_success'}
     except:
-        return {'status':'error'}
+        return {'status':'update_failed'}
