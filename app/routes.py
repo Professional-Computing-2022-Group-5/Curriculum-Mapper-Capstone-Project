@@ -15,7 +15,7 @@ def textBox_page():
 @app.route('/user_query', methods=['POST', 'GET'])
 def query_by_user():
     if request.method == 'POST':
-        user_input = request.form['user_query']
+        user_input = request.form['query']
         data = neo4jDB.search_by_query(user_input)
         return data
     else:
@@ -27,7 +27,7 @@ def create_by_user():
     if request.method == 'POST':
         user_input = request.get_json()
         try:
-            neo4jDB.create_by_user(user_input)
+            neo4jDB.create_by_user(user_input['inputs'])
             return {'status': 'success'}
         except:
             return {'status': 'error'}
@@ -52,9 +52,9 @@ def delete_entity():
 @app.route('/create_node', methods=['POST', 'GET'])
 def create_node():
     if request.method == 'POST':
-        user_input = request.get_json()['data3']
+        user_input = request.get_json()
         try:
-            neo4jDB.create_node(user_input)
+            neo4jDB.create_node(user_input['inputs'])
             return {'status': 'success'}
         except:
             return {'status': 'create_failed'}
@@ -62,7 +62,7 @@ def create_node():
         return {'status': 'request_error'}
 
 # update node attributes
-@app.route('/UpdateNode', methods=['POST', 'GET'])
+@app.route('/nodeUpdate', methods=['POST', 'GET'])
 def Update_node():
     if request.method == 'POST':
         id = request.get_json()['id']
@@ -76,7 +76,7 @@ def Update_node():
         return {'status': 'request_error'}
 
 # update relationship attributes
-@app.route('/UpdateLink', methods=['POST', 'GET'])
+@app.route('/linkUpdate', methods=['POST', 'GET'])
 def Update_link():
     if request.method == 'POST':
         id = request.get_json()['id']
