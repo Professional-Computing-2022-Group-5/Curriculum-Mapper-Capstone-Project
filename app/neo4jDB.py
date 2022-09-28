@@ -130,3 +130,24 @@ def update_relationship(id, data):
         return {'status':'update_success'}
     except:
         return {'status':'update_failed'}
+
+# create a new relationship by selecting two existing nodes and a relationship type given by the user
+def create_relationship(data):
+    try:
+        # match the source node by id
+        source_node = graphDB.evaluate("MATCH (n) WHERE id(n) = {} RETURN n".format(data['sourceId']))
+        # match the target node by id
+        target_node = graphDB.evaluate("MATCH (n) WHERE id(n) = {} RETURN n".format(data['targetId']))
+        # create a relationship object
+        rel = Relationship(source_node, data['label'], target_node)
+        # add properties to the relationship object
+        for (key, value) in zip(data.keys(), data.values()):
+            if key != 'sourceId' and key != 'targetId' and key != 'label':
+                rel[key] = value
+        # query whether the current relationship already exists in the database
+        rel_match = RelationshipMatcher(graphDB)
+        if len(rel_match.match([source_node, target_node], r_type=data['label'])) == 0:
+            graphDB.create(rel)
+        return {'status':'create_success'}
+    except:
+        return {'status':'create_failed'}
