@@ -75,7 +75,7 @@ const GraphComponent = ({data}) => {
         console.log(data)
     
         try {
-            const dbData = await httpClient.post("//localhost:5000/nodeCreate", {
+            const dbData = await httpClient.post("//localhost:5000/create_node", {
                 inputs
             });
     
