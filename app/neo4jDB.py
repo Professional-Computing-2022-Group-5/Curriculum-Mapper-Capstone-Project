@@ -79,11 +79,11 @@ def delete_entity(id, item):
             # match the node by id
             node = graphDB.evaluate("MATCH (n) WHERE id(n) = {} RETURN n".format(id))
             graphDB.delete(node)
-            return {'status':'update_node_success'}
+            return {'status':'delete_success'}
         elif item == 'relationship':
             # match the relationship by id
             relationship = graphDB.evaluate("MATCH ()-[r]-() WHERE id(r) = {} DELETE r".format(id))
-            return {'status':'update_relationship_success'}
+            return {'status':'delete_success'}
     except:
         return {'status':'error'}
 
