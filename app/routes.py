@@ -12,7 +12,7 @@ def textBox_page():
     return render_template('textBox.html')
 
 # query the database(Neo4j) by user input and return json data to frontend
-@app.route('/user_query', methods=['POST', 'GET'])
+@app.route('/query', methods=['POST', 'GET'])
 def query_by_user():
     if request.method == 'POST':
         data = request.get_json()
