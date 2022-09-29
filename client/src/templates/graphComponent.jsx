@@ -347,12 +347,12 @@ const GraphComponent = ({data}) => {
         console.log(chosenType)
         var inputs = nodeInputs[chosenType];
         console.log(inputs)
-        const [nodeDetails, setNodeDetails] = useState({type: chosenType})
+        const [nodeDetails, setNodeDetails] = useState({label: chosenType})
 
         return ( 
             <div>
             <p>NODE CREATE INPUTS</p>
-            <label >Chosen Type: {nodeDetails.type}</label>
+            <label >Chosen Type: {nodeDetails.label}</label>
 
             {inputs.map((input) => (
                 <div>
@@ -391,12 +391,12 @@ const GraphComponent = ({data}) => {
 
     // CREATE LINK INPUTS COMPONENT
     const LinkInputs = () => {
-        const [linkDetails, setLinkDetails] = useState({type: chosenType})
+        const [linkDetails, setLinkDetails] = useState({label: chosenType})
         var inputs = ["X", "1", "2", "3"];
 
         return ( 
         <div>
-            <label >Chosen Type: {linkDetails.type}</label>
+            <label >Chosen Type: {linkDetails.label}</label>
             {(() => {
                 if (chosenType === 'CBOK_WEIGHTING'){
                     console.log("CBOK_WEIGHTING")
