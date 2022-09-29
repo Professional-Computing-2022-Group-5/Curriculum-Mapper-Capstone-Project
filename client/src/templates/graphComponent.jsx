@@ -166,6 +166,7 @@ const GraphComponent = ({data}) => {
         console.log(inputs, id);
         try {
             const dbData = await httpClient.post("//localhost:5000/nodeUpdate", {
+                id,
                 inputs // {"avaliability":"fssfds", "unitCode":32454}
             });
 
