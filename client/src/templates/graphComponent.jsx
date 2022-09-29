@@ -122,6 +122,7 @@ const GraphComponent = ({data}) => {
         try {
             const dbData = await httpClient.post("//localhost:5000/delete_entity", {
                 id,
+                type: 'node'
             });
 
             console.log("DBDATA _ GRAPH COMP.js")
@@ -142,8 +143,9 @@ const GraphComponent = ({data}) => {
         console.log("please delete link")
         console.log(id)
         try {
-            const dbData = await httpClient.post("//localhost:5000/linkDelete", {
-                id
+            const dbData = await httpClient.post("//localhost:5000/delete_entity", {
+                id,
+                type: 'relationship'
             });
 
             console.log("DBDATA _ GRAPH COMP.js")
