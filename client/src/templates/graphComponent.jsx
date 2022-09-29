@@ -192,8 +192,9 @@ const GraphComponent = ({data}) => {
         console.log(id)
 
         try {
-            const dbData = await httpClient.post("//localhost:5000/linkUpdate", {
-                link, id
+            const dbData = await httpClient.post("//localhost:5000/linkCreate", {
+                inputs: link
+                // link, id
             });
 
             console.log("DBDATA _ GRAPH COMP.js")
@@ -564,8 +565,9 @@ const GraphComponent = ({data}) => {
             height = {window.innerHeight*0.8}
     
             //nodeColor = {color}
-            //nodeLabel = {displayName}
-            backgroundColor="grey"
+            nodeLabel = {'displayName'}
+            linkLabel = {'displayName'}
+            backgroundColor="white"
     
             onNodeDragEnd={node => {
                 node.fx = node.x;
