@@ -73,7 +73,7 @@ def create_by_user(data):
         return {'status':'create_failed'}
 
 # delete nodes and relationships by user
-def deleteEntity(id, item):
+def delete_entity(id, item):
     try:
         if item == 'node':
             # match the node by id
