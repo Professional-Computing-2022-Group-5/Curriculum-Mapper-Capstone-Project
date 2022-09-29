@@ -1,4 +1,4 @@
-from py2neo import Graph,NodeMatcher,cypher,Node,Relationship
+from py2neo import Graph,NodeMatcher,cypher,Node,Relationship,RelationshipMatcher
 import json
 from app import api
 from config import NEO4j_URI, NEO4j_USER, NEO4j_PASSWORD
@@ -152,6 +152,8 @@ def create_relationship(data):
         rel_match = RelationshipMatcher(graphDB)
         if len(rel_match.match([source_node, target_node], r_type=data['label'])) == 0:
             graphDB.create(rel)
-        return {'status':'create_success'}
+            return {'status':'create_success'}
+        else:
+            return {'status':'relationship_exist'}
     except:
         return {'status':'create_failed'}
