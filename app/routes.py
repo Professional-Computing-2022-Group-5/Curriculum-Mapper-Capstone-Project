@@ -1,5 +1,5 @@
 from app import app, neo4jDB
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request
 
 @app.route('/')
 @app.route('/index.html')
@@ -15,36 +15,29 @@ def textBox_page():
 @app.route('/user_query', methods=['POST', 'GET'])
 def query_by_user():
     if request.method == 'POST':
-        user_input = request.form['query']
-        data = neo4jDB.search_by_query(user_input)
-        return data
+        data = request.get_json()
+        result = neo4jDB.search_by_query(data['query'])
+        return result
     else:
-        return redirect(url_for('textBox_page')) 
+        return {'status': 'request_error'}
 
 # create new nodes and new relationships by user
 @app.route('/user_create', methods=['POST', 'GET'])
 def create_by_user():
     if request.method == 'POST':
-        user_input = request.get_json()
-        try:
-            neo4jDB.create_by_user(user_input['inputs'])
-            return {'status': 'success'}
-        except:
-            return {'status': 'error'}
+        data = request.get_json()
+        result = neo4jDB.create_by_user(data['inputs'])
+        return result
     else:
-        return redirect(url_for('user_create'))
+        return {'status': 'request_error'}
 
 # delete nodes and relationships by user
 @app.route('/delete_entity', methods=['POST', 'GET'])
 def delete_entity():
     if request.method == 'POST':
-        id = request.get_json()['id']
-        item = request.get_json()['type']
-        try:
-            neo4jDB.deleteEntity(id, item)
-            return {'status': 'success'}
-        except:
-            return {'status': 'delete_failed'}
+        data = request.get_json()
+        result = neo4jDB.delete_entity(data['id'], data['type'])
+        return result
     else:
         return {'status': 'request_error'}
 
@@ -52,12 +45,9 @@ def delete_entity():
 @app.route('/create_node', methods=['POST', 'GET'])
 def create_node():
     if request.method == 'POST':
-        user_input = request.get_json()
-        try:
-            neo4jDB.create_node(user_input['inputs'])
-            return {'status': 'success'}
-        except:
-            return {'status': 'create_failed'}
+        data = request.get_json()
+        result = neo4jDB.create_node(data['inputs'])
+        return result
     else:
         return {'status': 'request_error'}
 
@@ -75,13 +65,9 @@ def create_relationship():
 @app.route('/nodeUpdate', methods=['POST', 'GET'])
 def Update_node():
     if request.method == 'POST':
-        id = request.get_json()['id']
-        item = request.get_json()['inputs']
-        try:
-            neo4jDB.update_node(id, item)
-            return {'status': 'success'}
-        except:
-            return {'status': 'update_failed'}
+        data = request.get_json()
+        result = neo4jDB.update_node(data['id'], data['inputs'])
+        return result
     else:
         return {'status': 'request_error'}
 
@@ -89,12 +75,8 @@ def Update_node():
 @app.route('/linkUpdate', methods=['POST', 'GET'])
 def Update_link():
     if request.method == 'POST':
-        id = request.get_json()['id']
-        item = request.get_json()['link']
-        try:
-            neo4jDB.update_relationship(id, item)
-            return {'status': 'success'}
-        except:
-            return {'status': 'update_failed'}
+        data = request.get_json()
+        result = neo4jDB.update_relationship(data['id'], data['link'])
+        return result
     else:
         return {'status': 'request_error'}
