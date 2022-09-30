@@ -42,6 +42,12 @@ To create the react_app
         $ cd client
         $ npm start
 
+If there is an error, you might need to remove the existing node_modules and package-lock files, so follow these steps instead: 
+        $ rm -rf node_modules
+        $ rm package-lock.json
+        $ npm install
+        $ npm start
+
 
 DON"T DO THESE THINGS
 
