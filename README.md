@@ -22,7 +22,7 @@ Install the requirements
         You may need to upgrade pip first for this to work
 
 To run the server: 
-        $ python3 app.py
+        $ python3 server/app.py
 
 
 ------------------CLIENT-----------------
