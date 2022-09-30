@@ -33,7 +33,28 @@ Make sure that Node.js is installed. To install Node.js download from the link b
     Downloading & installing Node.js will install npm & npx, which will be needed to build the react app.
 
 Install yarn
-        $ npm install 
+        $ npm install -g yarn
+
+Run yarn (to install all the node modules) (make sure you're in the client folder!)
+        $ yarn
+
+Run the front end
+        $ npm start
+
+If there is an error, you might need to remove the existing node_modules and package-lock files, so follow these steps instead: 
+        $ rm -rf node_modules
+        $ rm package-lock.json
+        $ yarn
+        $ npm start
+
+
+DON"T DO THESE THINGS-----
+
+Same with these i don't think you need to run them, but you might have to 
+What i added to the react app
+        $ yarn add react-router-dom
+        $ yarn add react-force-graph-2d
+        $ yarn add axios
 
 Don't think you need to create the react app, so just try running the npm start in the client directory. I just included the node modules since it wasn't working for Jackie and we can figure it out later
 
@@ -41,20 +62,5 @@ To create the react_app
         $ npx create-react-app client
         $ cd client
         $ npm start
-
-If there is an error, you might need to remove the existing node_modules and package-lock files, so follow these steps instead: 
-        $ rm -rf node_modules
-        $ rm package-lock.json
-        $ npm install
-        $ npm start
-
-
-DON"T DO THESE THINGS
-
-Same with these i don't think you need to run them, but you might have to 
-What i added to the react app
-        $ yarn add react-router-dom
-        $ yarn add react-force-graph-2d
-        $ yarn add axios
 
 Then when running the client, you can access it on
