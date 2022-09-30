@@ -1,10 +1,18 @@
-#gitignore
+#Mac_OS
 .DS_Store
+**/DS_Store
+
+#server side
 .vscode/*
 venv/*
 virtual-environment/*
 *.db
 *.sql
 *.out
-app/__pycache__/*
-__/__pycache__/*
+__pycache__/*
+
+# client side
+node_modules/*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
