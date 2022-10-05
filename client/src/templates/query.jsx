@@ -1,7 +1,11 @@
-import React, {useState } from "react";
+import React, {useState} from "react";
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import Form from "react-bootstrap/Form";
 import httpClient from "./httpClient.js";
 import GraphComponent from "./graphComponent";
 import TableComponent from "./tableComponent";
+
 /*
 var resultData =  ({"links":[
     {"property":{"deleted":false,"id":241,"type":"relationship"},"source":183,"target":292},
@@ -25,7 +29,10 @@ const Query = () => {
     //-----------------------------------------------------------------------------------GLOBAL VARIABLES
     const [query, setQuery] = useState("");
     const [graphActive, setGraphActive] = useState("noGraph");
-    
+    const [tableActive, setTableActive] = useState(false);
+        const closeTable = () => setTableActive(false);
+        const toggleTable = ()  => setTableActive((s) => !s);
+
     //-----------------------------------------------------------------------------------FUNCTIONS
     // EXECUTE & QUERY AND GET THE RETURN DATA
     const executeQuery = async (query) => {
@@ -84,12 +91,15 @@ const Query = () => {
 
             <div className = "container-fluid">
 
-            <div className="container-fluid row">
+            <div className="container row">
                 <h1 className="font-weight-light">Query Page</h1>
-                
-                {graphActive !== "showGraph" && <label>Input Query: </label>}
-                {graphActive !== "showGraph" && <input type = "text" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
-                {graphActive !== "showGraph" && <button type="button" onClick={() => executeQuery(query)}>Submit</button>}
+                {graphActive !== "showGraph" && <Form.Label>Input Query: </Form.Label>}
+                {graphActive !== "showGraph" && <Form.Control placeholder="Enter query" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
+                {graphActive !== "showGraph" && <Button variant="primary" onClick={() => executeQuery(query)}>Submit</Button>}
+                <div className="col auto">
+                    {graphActive == "showGraph" && <Button variant="primary" onClick={toggleTable}>Tabular View</Button>}
+                    {graphActive == "showGraph" && <Button variant="primary">Generate Report (placeholder)</Button>}
+                </div>
                 </div>
             </div>
 
@@ -98,10 +108,15 @@ const Query = () => {
                 {graphActive === "showGraph" && <GraphComponent data = {response} />}
                 </div>
                 
-                <div className="col col-lg-3">
-                {graphActive === "showGraph" && <TableComponent data = {response} />}
-                </div>
-
+                <Offcanvas show={tableActive} onHide={closeTable} placement={"end"} backdrop={false} scrolling={true}>
+                    <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>Tabular View</Offcanvas.Title>
+                    </Offcanvas.Header>
+                    <Offcanvas.Body>
+                        TEST TEST TEST
+                        {graphActive === "showGraph" && <TableComponent data = {response} />}
+                    </Offcanvas.Body>
+                </Offcanvas>
             </div>
         </div>
 

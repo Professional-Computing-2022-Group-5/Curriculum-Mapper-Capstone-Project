@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, } from "react";
+import Button from 'react-bootstrap/Button';
 import ForceGraph2D from "react-force-graph-2d";
 import httpClient from "./httpClient.js";
 
@@ -267,8 +268,8 @@ const GraphComponent = ({data}) => {
 
                 ))}
 
-                <button onClick={n => setFilterActive("NodeUpdate")}>Update</button>
-                <button onClick={e => sendDeleteNode(unitnode.id)}>Delete</button>
+                <Button variant="primary" onClick={n => setFilterActive("NodeUpdate")}>Update</Button>
+                <Button variant="primary" onClick={e => sendDeleteNode(unitnode.id)}>Delete</Button>
             </div>
         );
     }
@@ -335,8 +336,8 @@ const GraphComponent = ({data}) => {
 
                 ))}
 
-                <button onClick={n => setFilterActive("LinkUpdate")}>Update</button>
-                <button onClick={e => sendDeleteLink(unitlink.property.id)}>Delete</button>
+                <Button variant="primary" onClick={n => setFilterActive("LinkUpdate")}>Update</Button>
+                <Button variant="primary" onClick={e => sendDeleteLink(unitlink.property.id)}>Delete</Button>
             </div>
         );
     }
@@ -362,7 +363,7 @@ const GraphComponent = ({data}) => {
                 </label>
                 </div>
             ))}
-            <button onClick={e => sendCreateNode(nodeDetails)}>Submit</button>
+            <Button variant="primary" onClick={e => sendCreateNode(nodeDetails)}>Submit</Button>
             </div>
         );
     }
@@ -383,7 +384,7 @@ const GraphComponent = ({data}) => {
                         <option key={type} value={type}>{type}</option>
                         ))}
                 </select>
-                <button onClick={e => getInputs(selectedType, "NODE")}>Submit</button>
+                <Button variant="primary" onClick={e => getInputs(selectedType, "NODE")}>Submit</Button>
 
             </div>
         );
@@ -421,11 +422,11 @@ const GraphComponent = ({data}) => {
             </label>
             
         
-            <button onClick={(e) => setSearchActive("source")}>Select Source</button>
-            <button onClick={(e) => setSearchActive("target")}>Select Destination</button>
-            <button onClick={(e) => setLinkDetails({ ...linkDetails, sourceId: searchSourceId, targetId: searchTargetId })}>Confirm Source and Target</button>
+            <Button variant="primary" onClick={(e) => setSearchActive("source")}>Select Source</Button>
+            <Button variant="primary" onClick={(e) => setSearchActive("target")}>Select Destination</Button>
+            <Button variant="primary" onClick={(e) => setLinkDetails({ ...linkDetails, sourceId: searchSourceId, targetId: searchTargetId })}>Confirm Source and Target</Button>
 
-            <button onClick={e => sendCreateLink(linkDetails)}>Submit</button>
+            <Button variant="primary" onClick={e => sendCreateLink(linkDetails)}>Submit</Button>
         </div>
         );
     }
@@ -448,7 +449,7 @@ const GraphComponent = ({data}) => {
                             ))}
                     </select>
 
-                    <button onClick={e => getInputs(selectedType, "LINK")}>Submit</button>
+                    <Button variant="primary" onClick={e => getInputs(selectedType, "LINK")}>Submit</Button>
                 
             </div>
         );
@@ -484,7 +485,7 @@ const GraphComponent = ({data}) => {
             <div>
                 <p>LINK UPDATE</p>
 
-                <p>Link id: BUTTON HERE {linkDetails.id}</p>
+                <p>Link id: Button HERE {linkDetails.id}</p>
 
                 <p>PROPERTY UPDATE</p>
                 {properties.map((property) => (
@@ -503,7 +504,7 @@ const GraphComponent = ({data}) => {
                     <input type="text" value={sourceDetails.id} onChange={(e)=> setSourceDetails({ ...sourceDetails, id: searchSourceId })} />
                 </label>
                         
-                <button onClick={(e) => setSearchActive("source")}>Select Source</button>
+                <Button variant="primary" onClick={(e) => setSearchActive("source")}>Select Source</Button>
 
                 {sourceProp.map((sProperty) => (
                     <div>
@@ -517,7 +518,7 @@ const GraphComponent = ({data}) => {
                     <input type="text" value={targetDetails.id} onChange={(e)=> setTargetDetails({ ...targetDetails, id: searchTargetId })} />
                 </label>
 
-                <button onClick={(e) => setSearchActive("target")}>Select Destination</button>
+                <Button variant="primary" onClick={(e) => setSearchActive("target")}>Select Destination</Button>
 
                 {targetProp.map((tProperty) => (
                     <div>
@@ -525,9 +526,9 @@ const GraphComponent = ({data}) => {
                     </div>
                 ))}
 
-                <button onClick={(e) => updateIds()}>Confirm Source and Target</button>
-                <button onClick={e => sendLinkUpdate(linkDetails, unitLink.property.id)}>Submit</button>
-                <button onClick={e => sendDeleteLink(unitLink.property.id)}>Delete</button>
+                <Button variant="primary" onClick={(e) => updateIds()}>Confirm Source and Target</Button>
+                <Button variant="primary" onClick={e => sendLinkUpdate(linkDetails, unitLink.property.id)}>Submit</Button>
+                <Button variant="primary" onClick={e => sendDeleteLink(unitLink.property.id)}>Delete</Button>
             </div>
         );
                 }
@@ -537,8 +538,8 @@ const GraphComponent = ({data}) => {
         return ( 
             <div>
                 <p>CREATE</p>
-                <button onClick= {n => setFilterActive("NodeCreate")}>Create Node</button>
-                <button onClick= {n => setFilterActive("LinkCreate")}>Create Link</button>
+                <Button variant="primary" onClick= {n => setFilterActive("NodeCreate")}>Create Node</Button>
+                <Button variant="primary" onClick= {n => setFilterActive("LinkCreate")}>Create Link</Button>
             </div>
         );
     }
