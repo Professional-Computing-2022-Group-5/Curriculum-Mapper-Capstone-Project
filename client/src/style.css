@@ -5,8 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: pink;
+  background-color: rgb(228, 236, 247);
   padding-bottom: 120px;
+  color: #20203e;
 }
 
 code {
