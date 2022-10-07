@@ -11,5 +11,11 @@ __pycache__/*
 /server/__pycache__
 
 # client side
-/client/node_modules
+node_modules/
+
+
+
+
+
+
 
