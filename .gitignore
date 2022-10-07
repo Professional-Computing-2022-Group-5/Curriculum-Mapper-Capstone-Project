@@ -1,0 +1,15 @@
+#Mac_OS
+.DS_Store
+**/DS_Store
+
+#server side
+.vscode/*
+venv/*
+__pycache__/*
+/server/app/db.sqlite
+/server/app/__pycache__
+/server/__pycache__
+
+# client side
+/client/node_modules
+
