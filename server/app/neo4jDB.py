@@ -100,7 +100,23 @@ def create_node(data):
                 # add properties to the node
                 node[key] = value
         # query whether the current node already exists in the database (check both label and name)
-        node_match = NodeMatcher(graphDB).match(data['label'], name=data['name'])
+        if 'CBoK' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], area=data['area'])
+        elif 'Outcome' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], level=data['level'])
+        elif 'Unit' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], title=data['Title'])
+        elif 'Course' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], title=data['title'])
+        elif 'AQFcategory' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], description=data['description'])
+        elif 'AQFoutcome' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], description=data['description'])
+        elif 'Activity' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], activity=data['activity'])
+        elif data['name'] != None:
+            node_match = NodeMatcher(graphDB).match(data['label'], name=data['name'])
+            
         if node_match.__len__() == 0:
             graphDB.create(node)
             return {'status':'create_success'}
