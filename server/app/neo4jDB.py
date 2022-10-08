@@ -105,7 +105,7 @@ def create_node(data):
         elif 'Outcome' == data['label']:
             node_match = NodeMatcher(graphDB).match(data['label'], level=data['level'])
         elif 'Unit' == data['label']:
-            node_match = NodeMatcher(graphDB).match(data['label'], title=data['Title'])
+            node_match = NodeMatcher(graphDB).match(data['label'], title=data['title'])
         elif 'Course' == data['label']:
             node_match = NodeMatcher(graphDB).match(data['label'], title=data['title'])
         elif 'AQFcategory' == data['label']:
