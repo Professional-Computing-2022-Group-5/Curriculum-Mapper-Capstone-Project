@@ -80,3 +80,21 @@ def Update_link():
         return result
     else:
         return {'status': 'request_error'}
+
+# get all labels and properties of the labels
+@app.route('/get_label', methods=['POST', 'GET'])
+def get_label():
+    if request.method == 'GET':
+        data = neo4jDB.get_labels()
+        return data
+    else:
+        return {'status': 'request_error'}
+
+# get all relationship types
+@app.route('/get_relationship', methods=['POST', 'GET'])
+def get_relationship():
+    if request.method == 'GET':
+        data = neo4jDB.get_relationships()
+        return data
+    else:
+        return {'status': 'request_error'}
