@@ -1,5 +1,10 @@
 import httpClient from "./httpClient.js";
 import React, { useState } from "react";
+import Button from 'react-bootstrap/Button';
+import Form from "react-bootstrap/Form";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Register () {
     const [email, setEmail] = useState("");
@@ -17,27 +22,45 @@ function Register () {
 
 
     return (
-    <div className="register">
+    <Container className="register">
+        <Row>
+            <h1>Register</h1>
+        </Row>
 
-                <h1>Register</h1>
-                <form>
-                    <div>
+        <Row>
+            <Form>
+                    <Form.Group as={Row} className="mb-3">
+                        <Form.Label column sm={3} lg={3}>Email Address: </Form.Label>
+                        <Col sm={9} lg={6}>
+                        <Form.Control placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                        </Col>
+                    </Form.Group>
                     
-                    <label>Email: </label>
-                    <input type = "text" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-                    </div>
-                <div>
-                    <label>Password: </label>
-                    <input type = "text" value={password} onChange={(e)=> setPassword(e.target.value)}/>
-                </div>
-                <div>
-                    <label>Unit Coordinator?</label>
-                    <input type="checkbox" checked={isCoordinator} onChange={() => setIsCoordinator(!isCoordinator)}/>
-                </div>
-                <button type="button" onClick={() => registerUser()}>Submit</button>
-                </form>
+                    <Form.Group as={Row} className="mb-3">
+                        <Form.Label column sm={3} lg={3}>Password: </Form.Label>
+                        <Col sm={9} lg={6}>
+                        <Form.Control placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+                        </Col>
+                    </Form.Group>
+                    
+                    <Form.Group as={Row} className="mb-3">
+                        <Col sm={3} lg={3}>
+                        </Col>
+                        <Col>
+                        <Form.Check type={"radio"} label = {"Unit Coordinator?"} checked={isCoordinator} onChange={() => setIsCoordinator(!isCoordinator)}/>
+                        </Col>
+                    </Form.Group>
+                <Row>
+                <Col sm={3} lg={3}>
+                </Col>
+                <Col>
+                <Button variant="primary" onClick={() => registerUser()}>Submit</Button>
+                </Col>
+                </Row>
+            </Form>
+        </Row>
 
-    </div>
+    </Container>
     );
 }
 

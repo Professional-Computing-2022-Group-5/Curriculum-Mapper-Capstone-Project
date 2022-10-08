@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import httpClient from "./httpClient";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 const Home = () => {
 
@@ -28,32 +32,51 @@ const Home = () => {
 
 
   return ( 
-  <div>
-      <h1>Welcome to your curriculum mapper</h1>
+  <Container>
+    <Row>
+    <h1>Welcome to your curriculum mapper</h1>
+    </Row>
       {user != null ? (
         // LOGGED IN
-        <div>
+        
+        <Container>
+        <Row>
           <h2>Logged in</h2>
           <h3>Id: {user.id}</h3>
           <h3>Email Address: {user.email}</h3>
           <h3>UnitCoordinator {userType}</h3>
+        </Row>
 
-          <button onClick={logoutUser}>Logout</button>
-        </div>
+        <Row>
+          <Button onClick={logoutUser}>Logout</Button>
+        </Row>
+        </Container>
+
+
       ) : (
-        <div>
+
+        // NOT LOGGED IN
+        <Container>
+          <Row>
           <p>You are not logged in</p>
-          <div>
+          </Row>
+          <Row>
+            <Col sm={2} md={2} lg={2}>            
             <a href="/login">
-              <button>Login</button>
+              <Button>Login</Button>
             </a>
+            </Col>
+            <Col sm={2} md={2} lg={2}>
             <a href="/register">
-              <button>Register</button>
+              <Button>Register</Button>
             </a>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       )}
-    </div>
+
+
+    </Container>
    );
 }
  

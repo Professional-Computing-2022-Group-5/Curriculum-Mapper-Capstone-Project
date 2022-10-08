@@ -5,6 +5,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Form from "react-bootstrap/Form";
 import GraphComponent from "./graphComponent";
 import TableComponent from "./tableComponent";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 /*
 var resultData =  ({"links":[
     {"property":{"deleted":false,"id":241,"type":"relationship"},"source":183,"target":292},
@@ -88,39 +91,37 @@ const Query = () => {
     //  //{graphType === "tabularView" && graphActive === "showGraph" && <TableComponent data = {response} />}
     //-----------------------------------------------------------------------------------RETURN
     return ( 
-        <div className="container-fluid">
-<div className = "container-fluid">
+        <Container>
 
-<div className="container row">
+<Row>
     <h1 className="font-weight-light">Query Page</h1>
     {graphActive !== "showGraph" && <Form.Label>Input Query: </Form.Label>}
     {graphActive !== "showGraph" && <Form.Control placeholder="Enter query" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
     {graphActive !== "showGraph" && <Button variant="primary" onClick={() => executeQuery(query)}>Submit</Button>}
-    <div className="col auto">
+    <Col>
         {graphActive == "showGraph" && <Button variant="primary" onClick={toggleTable}>Tabular View</Button>}
         {graphActive == "showGraph" && <Button variant="primary">Generate Report (placeholder)</Button>}
-    </div>
-    </div>
-</div>
+    </Col>
+    </Row>
 
-<div className="container-fluid row xs=2 md=2 lg=2">
-    <div className="col">
+
+<Row>
+    <Col>
     {graphActive === "showGraph" && <GraphComponent data = {response} />}
-    </div>
+    </Col>
     
     <Offcanvas show={tableActive} onHide={closeTable} placement={"end"} backdrop={false} scrolling={true}>
         <Offcanvas.Header closeButton>
         <Offcanvas.Title>Tabular View</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-            TEST TEST TEST
             {graphActive === "showGraph" && <TableComponent data = {response} />}
         </Offcanvas.Body>
     </Offcanvas>
-</div>
+</Row>
 
 
-        </div>
+        </Container>
 
 );
 }

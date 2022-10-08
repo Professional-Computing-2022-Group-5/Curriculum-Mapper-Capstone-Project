@@ -1,6 +1,10 @@
-
 import httpClient from "./httpClient.js";
 import React, { useState } from "react";
+import Button from 'react-bootstrap/Button';
+import Form from "react-bootstrap/Form";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,23 +30,44 @@ const Login = () => {
       };
 
   return ( 
-    <div className="login">
-
+  <Container>
+  <Row>
     <h1>Log In</h1>
-    <form>
-        <div>
+  </Row>
+  <Row>
+    <Form>
+      <Form.Group as={Row} className="mb-3">
+        <Form.Label column sm={3} lg={2}>Email Address: </Form.Label>
         
-        <label>Email: </label>
-        <input type = "text" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-        </div>
-    <div>
-        <label>Password: </label>
-        <input type = "text" value={password} onChange={(e)=> setPassword(e.target.value)}/>
-    </div>
-    <button type="button" onClick={() => logInUser()}>Submit</button>
-    </form>
+        <Col sm={9} lg={6}>
+          <Form.Control placeholder = "Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+        </Col>
+      
+      </Form.Group>
+      
+      <Form.Group as={Row} className="mb-3">
+        <Form.Label column sm={3} lg={2}>Password: </Form.Label>
+        
+        <Col sm={9} lg={6}>
+          <Form.Control placeholder = "Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+        </Col>
+      
+      </Form.Group>
 
-    </div>
+      <Row>
+
+      <Col sm={3} lg={3}>
+      </Col>
+
+      <Col>
+      <Button variant="primary" onClick={() => logInUser()}>Submit</Button>
+      </Col>
+
+      </Row>
+
+    </Form>
+  </Row>
+  </Container>
 
   );
 }
