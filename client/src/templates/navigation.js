@@ -25,16 +25,16 @@ const Navigation = () => {
     })();
   }, []);
 
+//<Navbar bg="primary" variant="dark" sticky="top">
 
   return ( 
     <div>
-    <Navbar bg="dark" variant="dark" sticky="top">
-
+  <Navbar sticky="top" className="uwa-nav" variant="dark">
     <Container>
     <Navbar.Brand href="/home">
     <img
             src={logo}
-            alt=""
+            alt="UWA Logo"
             width="50"
             height="50"
           /></Navbar.Brand>

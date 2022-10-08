@@ -56,11 +56,11 @@ const Login = () => {
 
       <Row>
 
-      <Col sm={3} lg={3}>
+      <Col sm={3} lg={2}>
       </Col>
 
       <Col>
-      <Button variant="primary" onClick={() => logInUser()}>Submit</Button>
+      <Button variant="uwa" onClick={() => logInUser()}>Submit</Button>
       </Col>
 
       </Row>

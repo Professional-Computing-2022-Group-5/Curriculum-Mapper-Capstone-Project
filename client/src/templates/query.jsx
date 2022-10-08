@@ -95,12 +95,19 @@ const Query = () => {
 
 <Row>
     <h1 className="font-weight-light">Query Page</h1>
+    <Form.Group as={Row} ClassName="mb-3">
     {graphActive !== "showGraph" && <Form.Label>Input Query: </Form.Label>}
-    {graphActive !== "showGraph" && <Form.Control placeholder="Enter query" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
-    {graphActive !== "showGraph" && <Button variant="primary" onClick={() => executeQuery(query)}>Submit</Button>}
+
     <Col>
-        {graphActive == "showGraph" && <Button variant="primary" onClick={toggleTable}>Tabular View</Button>}
-        {graphActive == "showGraph" && <Button variant="primary">Generate Report (placeholder)</Button>}
+    {graphActive !== "showGraph" && <Form.Control className="mb-3" placeholder="Enter query" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
+    </Col>
+    <Col sm={1} md={1} lg={1}>
+    {graphActive !== "showGraph" && <Button variant="uwa" onClick={() => executeQuery(query)}>Submit</Button>}
+    </Col>
+    </Form.Group>
+    <Col>
+        {graphActive == "showGraph" && <Button variant="uwa" onClick={toggleTable}>Tabular View</Button>}
+        {graphActive == "showGraph" && <Button variant="uwa">Generate Report (placeholder)</Button>}
     </Col>
     </Row>
 

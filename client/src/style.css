@@ -5,12 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: pink;
+  background-color: white;
+  font-size: 14pt;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.uwa-nav {
+  background-color: #27348b;
+}
+
+.btn-uwa {
+  background: #e2b600;
+  color: #27348b;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+
+.btn-uwa:hover {
+  background: #fcd842;
+  text-decoration: underline;
 }
 
 .modal-backdrop {

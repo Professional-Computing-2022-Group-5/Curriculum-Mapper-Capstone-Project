@@ -61,14 +61,14 @@ const Home = () => {
           <p>You are not logged in</p>
           </Row>
           <Row>
-            <Col sm={2} md={2} lg={2}>            
+            <Col sm={1} md={1} lg={1}>            
             <a href="/login">
-              <Button>Login</Button>
+              <Button variant="uwa">Login</Button>
             </a>
             </Col>
-            <Col sm={2} md={2} lg={2}>
+            <Col sm={1} md={1} lg={1}>
             <a href="/register">
-              <Button>Register</Button>
+              <Button variant="uwa">Register</Button>
             </a>
             </Col>
           </Row>

@@ -30,31 +30,31 @@ function Register () {
         <Row>
             <Form>
                     <Form.Group as={Row} className="mb-3">
-                        <Form.Label column sm={3} lg={3}>Email Address: </Form.Label>
+                        <Form.Label column sm={3} lg={2}>Email Address: </Form.Label>
                         <Col sm={9} lg={6}>
                         <Form.Control placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
                         </Col>
                     </Form.Group>
                     
                     <Form.Group as={Row} className="mb-3">
-                        <Form.Label column sm={3} lg={3}>Password: </Form.Label>
+                        <Form.Label column sm={3} lg={2}>Password: </Form.Label>
                         <Col sm={9} lg={6}>
                         <Form.Control placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
                         </Col>
                     </Form.Group>
                     
                     <Form.Group as={Row} className="mb-3">
-                        <Col sm={3} lg={3}>
+                        <Col sm={3} lg={2}>
                         </Col>
                         <Col>
                         <Form.Check type={"radio"} label = {"Unit Coordinator?"} checked={isCoordinator} onChange={() => setIsCoordinator(!isCoordinator)}/>
                         </Col>
                     </Form.Group>
                 <Row>
-                <Col sm={3} lg={3}>
+                <Col sm={3} lg={2}>
                 </Col>
                 <Col>
-                <Button variant="primary" onClick={() => registerUser()}>Submit</Button>
+                <Button variant="uwa" onClick={() => registerUser()}>Submit</Button>
                 </Col>
                 </Row>
             </Form>
