@@ -157,3 +157,28 @@ def create_relationship(data):
             return {'status':'relationship_exist'}
     except:
         return {'status':'create_failed'}
+
+# get all labels in the database
+def get_labels(): 
+    try:
+        # get all labels
+        labels = graphDB.run("CALL db.labels() YIELD label RETURN label")
+        #get attributes of each label and store them in a dictionary (key: label, value: attributes)
+        label_dict = {}
+        for label in labels:
+            data = graphDB.run("MATCH (n:{}) RETURN n LIMIT 25".format(label['label'])).data()[0]['n']
+            label_dict[label['label']] = list(data.keys())
+        return label_dict
+    except:
+        return {'status':'error'}
+
+# get all relationship types in the database
+def get_relationships():
+    try:
+        # get all relationship types
+        relationships = graphDB.run("CALL db.relationshipTypes() YIELD relationshipType RETURN relationshipType")
+        # convert the result to a list
+        relationships = [relationship['relationshipType'] for relationship in relationships]
+        return relationships
+    except:
+        return {'status':'error'}
