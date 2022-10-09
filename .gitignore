@@ -4,7 +4,7 @@
 
 #server side
 .vscode/*
-venv/*
+**/venv/*
 __pycache__/*
 /server/app/db.sqlite
 /server/app/__pycache__
