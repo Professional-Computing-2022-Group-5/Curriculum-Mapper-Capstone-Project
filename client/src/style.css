@@ -7,11 +7,42 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
   font-size: 14pt;
+  color: #0a0a0a;
+  cursor: "text";
+}
+
+.txt-ctr {
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1, h2 {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: "TTNormsPro", Arial, sans-serif;
+}
+
+h2, h3, h4 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  line-height: 0.8;
+  font-weight: 400;
+  font-family: "TTNormsPro", Arial, sans-serif;
+}
+
+
+::selection {
+  color: #e2b600;
+  fill: #e2b600;
+  background: #0e55b5;
+  cursor: text;
 }
 
 .uwa-nav {
@@ -23,10 +54,12 @@ code {
   color: #27348b;
   padding: 4px 10px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .btn-uwa:hover {
   background: #fcd842;
+  color: #0e56b4;
   text-decoration: underline;
 }
 
@@ -45,6 +78,16 @@ code {
   background: white;
   border-radius: 5px;
   outline: none;
+}
+
+.dd-uwa {
+  background: #fffff7;
+  color: #27348b;
+}
+
+.dd-uwa:hover {
+  background: #d3d7f0;
+  color: #0a155c;
 }
 
 /* The Burger Button */

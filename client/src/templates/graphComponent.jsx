@@ -407,8 +407,8 @@ const GraphComponent = ({data}) => {
 
                 {userType === "UnitCoordinator" ? (
                     <div>
-                    <button onClick={n => setFilterActive("NodeUpdate")}>Update</button>
-                    <button onClick={e => sendDeleteNode(unitnode.id)}>Delete</button></div>)
+                    <Button variant="uwa" onClick ={n => setFilterActive("NodeUpdate")}>Update</Button>
+                    <Button variant="uwa" onClick ={e => sendDeleteNode(unitnode.id)}>Delete</Button></div>)
                     :(<div></div>)}
             
             </div>
@@ -537,8 +537,8 @@ const GraphComponent = ({data}) => {
 
                 {userType === "UnitCoordinator" ? (
                     <div>
-                    <button onClick={(n) => setFilterActive("LinkUpdate")}>Update</button>
-                    <button onClick={(e) => sendDeleteLink(unitlink.property.id)}>Delete</button>
+                    <Button variant="uwa" onClick ={(n) => setFilterActive("LinkUpdate")}>Update</Button>
+                    <Button variant="uwa" onClick ={(e) => sendDeleteLink(unitlink.property.id)}>Delete</Button>
                     </div>)
                     :(<div></div>)}
             
@@ -569,7 +569,7 @@ const GraphComponent = ({data}) => {
                 </label>
                 </div>
             ))}
-            <button onClick={e => sendCreateNode(nodeDetails)}>Submit</button>
+            <Button variant="uwa" onClick ={e => sendCreateNode(nodeDetails)}>Submit</Button>
             </div>
         );
     }
@@ -590,7 +590,7 @@ const GraphComponent = ({data}) => {
                         <option key={type} value={type}>{type}</option>
                         ))}
                 </select>
-                <button onClick={e => getInputs(selectedType, "NODE")}>Submit</button>
+                <Button variant="uwa" onClick ={e => getInputs(selectedType, "NODE")}>Submit</Button>
 
             </div>
         );
@@ -628,11 +628,11 @@ const GraphComponent = ({data}) => {
             </label>
             
         
-            <button onClick={(e) => setSearchActive("source")}>Select Source</button>
-            <button onClick={(e) => setSearchActive("target")}>Select Destination</button>
-            <button onClick={(e) => setLinkDetails({ ...linkDetails, sourceId: searchSourceId, targetId: searchTargetId })}>Confirm Source and Target</button>
+            <Button variant="uwa" onClick ={(e) => setSearchActive("source")}>Select Source</Button>
+            <Button variant="uwa" onClick ={(e) => setSearchActive("target")}>Select Destination</Button>
+            <Button variant="uwa" onClick ={(e) => setLinkDetails({ ...linkDetails, sourceId: searchSourceId, targetId: searchTargetId })}>Confirm Source and Target</Button>
 
-            <button onClick={e => sendCreateLink(linkDetails)}>Submit</button>
+            <Button variant="uwa" onClick ={e => sendCreateLink(linkDetails)}>Submit</Button>
         </div>
         );
     }
@@ -655,7 +655,7 @@ const GraphComponent = ({data}) => {
                             ))}
                     </select>
 
-                    <button onClick={e => getInputs(selectedType, "LINK")}>Submit</button>
+                    <Button variant="uwa" onClick ={e => getInputs(selectedType, "LINK")}>Submit</Button>
                 
             </div>
         );
@@ -691,7 +691,7 @@ const GraphComponent = ({data}) => {
             <div>
                 <p>LINK UPDATE</p>
 
-                <p>Link id: BUTTON HERE {linkDetails.id}</p>
+                <p>Link id: Button HERE {linkDetails.id}</p>
 
                 <p>PROPERTY UPDATE</p>
                 {properties.map((property) => (
@@ -710,7 +710,7 @@ const GraphComponent = ({data}) => {
                     <input type="text" value={sourceDetails.id} onChange={(e)=> setSourceDetails({ ...sourceDetails, id: searchSourceId })} />
                 </label>
                         
-                <button onClick={(e) => setSearchActive("source")}>Select Source</button>
+                <Button variant="uwa" onClick ={(e) => setSearchActive("source")}>Select Source</Button>
 
                 {sourceProp.map((sProperty) => (
                     <div>
@@ -724,7 +724,7 @@ const GraphComponent = ({data}) => {
                     <input type="text" value={targetDetails.id} onChange={(e)=> setTargetDetails({ ...targetDetails, id: searchTargetId })} />
                 </label>
 
-                <button onClick={(e) => setSearchActive("target")}>Select Destination</button>
+                <Button variant="uwa" onClick ={(e) => setSearchActive("target")}>Select Destination</Button>
 
                 {targetProp.map((tProperty) => (
                     <div>
@@ -732,9 +732,9 @@ const GraphComponent = ({data}) => {
                     </div>
                 ))}
 
-                <button onClick={(e) => updateIds()}>Confirm Source and Target</button>
-                <button onClick={e => sendLinkUpdate(linkDetails, unitLink.property.id)}>Submit</button>
-                <button onClick={e => sendDeleteLink(unitLink.property.id)}>Delete</button>
+                <Button variant="uwa" onClick ={(e) => updateIds()}>Confirm Source and Target</Button>
+                <Button variant="uwa" onClick ={e => sendLinkUpdate(linkDetails, unitLink.property.id)}>Submit</Button>
+                <Button variant="uwa" onClick ={e => sendDeleteLink(unitLink.property.id)}>Delete</Button>
             </div>
         );
                 }
@@ -746,8 +746,8 @@ const GraphComponent = ({data}) => {
                 {userType === "UnitCoordinator" ? (
                     <div>
                     <p>CREATE</p>
-                    <button onClick= {n => setFilterActive("NodeCreate")}>Create Node</button>
-                    <button onClick= {n => setFilterActive("LinkCreate")}>Create Link</button>
+                    <Button variant="uwa" onClick= {n => setFilterActive("NodeCreate")}>Create Node</Button>
+                    <Button variant="uwa" onClick= {n => setFilterActive("LinkCreate")}>Create Link</Button>
                     </div>)
                     :(<div></div>)}
                 
@@ -765,7 +765,7 @@ const GraphComponent = ({data}) => {
     return ( 
         <div>
 
-        <Button variant="primary" onClick={handleShow} className="my-modal">
+        <Button variant="uwa" onClick={handleShow} className="my-modal">
                 Launch demo modal
             </Button>
 
@@ -775,10 +775,10 @@ const GraphComponent = ({data}) => {
                 </Modal.Header>
                 <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
                 <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button variant="uwa" onClick={handleClose}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={handleClose}>
+                <Button variant="uwa" onClick={handleClose}>
                     Save Changes
                 </Button>
                 </Modal.Footer>

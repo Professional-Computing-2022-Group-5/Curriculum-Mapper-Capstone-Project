@@ -58,19 +58,21 @@ const Home = () => {
         // NOT LOGGED IN
         <Container>
           <Row>
-          <p>You are not logged in</p>
+          <p className="txt-ctr">You are not logged in</p>
           </Row>
           <Row>
-            <Col sm={1} md={1} lg={1}>            
+            <Col sm={4} lg={5}></Col>
+            <Col sm={2} md={2} lg={1}>            
             <a href="/login">
               <Button variant="uwa">Login</Button>
             </a>
             </Col>
-            <Col sm={1} md={1} lg={1}>
+            <Col sm={2} md={2} lg={1}>
             <a href="/register">
               <Button variant="uwa">Register</Button>
             </a>
             </Col>
+            <Col sm={4} lg={5}></Col>
           </Row>
         </Container>
       )}

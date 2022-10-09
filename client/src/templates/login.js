@@ -40,16 +40,16 @@ const Login = () => {
         <Form.Label column sm={3} lg={2}>Email Address: </Form.Label>
         
         <Col sm={9} lg={6}>
-          <Form.Control placeholder = "Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+          <Form.Control placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
         </Col>
       
       </Form.Group>
       
-      <Form.Group as={Row} className="mb-3">
+      <Form.Group as={Row} className="mb-3" controlID="formBasicPassword">
         <Form.Label column sm={3} lg={2}>Password: </Form.Label>
         
         <Col sm={9} lg={6}>
-          <Form.Control placeholder = "Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+          <Form.Control placeholder="Password" type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
         </Col>
       
       </Form.Group>

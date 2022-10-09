@@ -39,7 +39,7 @@ function Register () {
                     <Form.Group as={Row} className="mb-3">
                         <Form.Label column sm={3} lg={2}>Password: </Form.Label>
                         <Col sm={9} lg={6}>
-                        <Form.Control placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+                        <Form.Control placeholder="Password" type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
                         </Col>
                     </Form.Group>
                     

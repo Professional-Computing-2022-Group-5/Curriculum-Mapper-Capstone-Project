@@ -8,6 +8,8 @@ import TableComponent from "./tableComponent";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Dropdown from 'react-bootstrap/Dropdown';
+
 /*
 var resultData =  ({"links":[
     {"property":{"deleted":false,"id":241,"type":"relationship"},"source":183,"target":292},
@@ -36,11 +38,32 @@ const Query = () => {
         const closeTable = () => setTableActive(false);
         const toggleTable = ()  => setTableActive((s) => !s);
 
+    const basicQueries = [
+        {Name: "All CBoK levels", Query: "MATCH (e:CBoK:End)<-[r:INCLUDES]-(s:CBoK:Sub {area:'ICT Management'}) RETURN e,r,s"},
+        {Name: "ICT Management", Query: "MATCH (e:CBoK:End)<-[r1:INCLUDES]-(s:CBoK:Sub)<-[r2:INCLUDES]-(t:CBoK:Top {area:'General ICT Knowledge'}) RETURN e,r1,s,r2,t"},
+        {Name: "General ICT Knowledge", Query: "MATCH (e:CBoK:End)<-[r1:INCLUDES]-(s:CBoK:Sub)<-[r2:INCLUDES]-(t:CBoK:Top {area:'General ICT Knowledge'}) RETURN e,r1,s,r2,t"},
+        {Name: "Essential Core ICT Knwoledge", Query: "MATCH (s:CBoK:Sub)<-[r:INCLUDES]-(t:CBoK:Top {area:'Essential Core ICT Knowledge'}) RETURN s,r,t"},
+        {Name: "CITS5206 Activities", Query: "MATCH (u:Unit {unitCode: 'CITS5206'})<-[r:ACTIVITY_OF]-(a:Activity) RETURN u,r,a"},
+        {Name: "CITS5206 Activites + Mapping to end levels", Query: "MATCH (u:Unit {unitCode: 'CITS5206'})<-[r1:ACTIVITY_OF]-(a:Activity)<-[r2:MAPS_TO]-(c:CBoK:End) RETURN u,r1,a,r2,c"},
+        {Name: "CITS5206 Activites + Mapping to sub levels", Query: "MATCH (u:Unit {unitCode: 'CITS5206'})<-[r1:ACTIVITY_OF]-(a:Activity)<-[r2:MAPS_TO]-(e:CBoK:End)<-[r3:INCLUDES]-(s:CBoK:Sub) RETURN u,r1,a,r2,e,r3,s"},
+        {Name: "CITS1001 mapping to Systems Acquisition", Query: "MATCH (u:Unit {unitCode: 'CITS1001'})<-[r1:ACTIVITY_OF]-(a:Activity)<-[r2:MAPS_TO]-(c:CBoK:End {area: 'Systems acquisition'}) RETURN u,r1,a,r2,c"},
+        {Name: "CITS1001 Activites mapping to Technology Resource", Query: "MATCH (u:Unit {unitCode: 'CITS1001'})<-[r1:ACTIVITY_OF]-(a:Activity)<-[r2:MAPS_TO]-(e:CBoK:End)<-[r3:INCLUDES]-(s:CBoK:Sub {area:'Technology Resource'}) RETURN u,r1,a,r2,e,r3,s"},
+        {Name: "Units with Cybersecurity Activities", Query: "MATCH (u:Unit)<-[r1:ACTIVITY_OF]-(a:Activity)<-[r2:MAPS_TO]-(c:CBoK:End {area:'Cyber security'}) RETURN u"},
+        {Name: "Units that map to ICT Management", Query: "MATCH (u:Unit)<-[r1:ACTIVITY_OF]-(a:Activity)<-[r2:MAPS_TO]-(e:CBoK:End)<-[r3:INCLUDES]-(s:CBoK:Sub {area:'ICT Management'}) RETURN u"},
+        {Name: "Units that map to General ICT Knowledge", Query: "MATCH (u:Unit)<-[r1:ACTIVITY_OF]-(a:Activity)<-[r2:MAPS_TO]-(e:CBoK:End)<-[r3:INCLUDES]-(s:CBoK:Sub)<-[r4:INCLUDES]-(t:CBoK:Top {area:'General ICT Knowledge'}) RETURN u"},
+        {Name: "Units and Activities that map to Cybersecurity", Query: "MATCH (u:Unit)<-[r1:ACTIVITY_OF]-(a:Activity)<-[r2:MAPS_TO]-(c:CBoK:End {area:'Cyber security'}) RETURN u,r1,a LIMIT 5"},
+        {Name: "CITS4009 Unit Outcomes", Query: "MATCH (u:Unit{unitCode:'CITS4009'}), OPTIONAL MATCH r=(u)-[:Unit_Outcome]-(:Outcome), RETURN r"},
+        {Name: "CITS4009 Activity and Outcome Relationships", Query: "MATCH (u:Unit{unitCode:'CITS4009'}),(a:Activity), OPTIONAL MATCH r=(a)-[:How_outcome_will_be_assessed]-(:Outcome), RETURN r"},
+        {Name: "MIT AQF relationships", Query: "MATCH (p:Program),(c:AQFcategory),(o:AQFoutcome), WHERE p.abbreviation='MIT' , RETURN p,c,o;"},
+    ];
 
     //-----------------------------------------------------------------------------------FUNCTIONS
     // EXECUTE & QUERY AND GET THE RETURN DATA
     const executeQuery = async (query) => {
+        console.log("AAAAAAAA THE QUERY IS HERE LOOK HERE AAAAAAAAAAAAAAAA!!!");
         console.log(query);
+        console.log("--------------");
+        console.log("\n\n\n");
         try {
             const dbData = await httpClient.post("//localhost:5000/query", {
                 query
@@ -96,13 +119,23 @@ const Query = () => {
 <Row>
     <h1 className="font-weight-light">Query Page</h1>
     <Form.Group as={Row} ClassName="mb-3">
-    {graphActive !== "showGraph" && <Form.Label>Input Query: </Form.Label>}
-
-    <Col>
+    <Col sm={9} lg={10}>
     {graphActive !== "showGraph" && <Form.Control className="mb-3" placeholder="Enter query" value={query} onChange={(e)=> setQuery(e.target.value)}/>}
     </Col>
-    <Col sm={1} md={1} lg={1}>
+    <Col sm={2} md={2} lg={1}>
     {graphActive !== "showGraph" && <Button variant="uwa" onClick={() => executeQuery(query)}>Submit</Button>}
+    </Col>
+    <Col sm={1} md={1} lg={1}>
+    {graphActive !== "showGraph" && <Dropdown>
+    <Dropdown.Toggle variant="uwa" id="dropdown-basic">Basic Query </Dropdown.Toggle>
+    
+    <Dropdown.Menu>
+        {basicQueries.map((q) =>
+            (<Dropdown.Item className="dd-uwa" onClick={() => executeQuery(q.Query)}>{q.Name}</Dropdown.Item>)
+            )}
+    </Dropdown.Menu>
+    </Dropdown>
+    }
     </Col>
     </Form.Group>
     <Col>
@@ -117,7 +150,7 @@ const Query = () => {
     {graphActive === "showGraph" && <GraphComponent data = {response} />}
     </Col>
     
-    <Offcanvas show={tableActive} onHide={closeTable} placement={"end"} backdrop={false} scrolling={true}>
+    <Offcanvas show={tableActive} onHide={closeTable} placement={"end"} backdrop={false} scrol={true}>
         <Offcanvas.Header closeButton>
         <Offcanvas.Title>Tabular View</Offcanvas.Title>
         </Offcanvas.Header>
