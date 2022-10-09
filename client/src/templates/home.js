@@ -17,7 +17,7 @@ const Home = () => {
         const resp = await httpClient.get("//localhost:5000/@me");
         setUser(resp.data);
 
-        if(resp.data.isCoordinator === true){
+        if (resp.data.isCoordinator === true) {
           setUserType("UnitCoordinator")
         }
       } catch (error) {
@@ -27,8 +27,8 @@ const Home = () => {
   }, []);
 
 
-  return ( 
-  <div>
+  return (
+    <div>
       <h1>Welcome to your curriculum mapper</h1>
       {user != null ? (
         // LOGGED IN
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       )}
     </div>
-   );
+  );
 }
- 
+
 export default Home;

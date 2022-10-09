@@ -23,6 +23,8 @@ Install the requirements
 
 To run the server: 
         $ python3 server/app.py
+        Or try:
+        $ flask run
 
 
 ------------------CLIENT-----------------
