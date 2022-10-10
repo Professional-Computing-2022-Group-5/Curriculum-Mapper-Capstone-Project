@@ -34,7 +34,8 @@ const Home = () => {
   return ( 
   <Container>
     <Row>
-    <h1>Welcome to your curriculum mapper</h1>
+    <h1 className="txt-ctr">Welcome to the Curriculum Mapper</h1>
+    <h5 className="txt-ctr">This is an online graph database that provides an interactive visualisation of an academic program and its accreditation material </h5>
     </Row>
       {user != null ? (
         // LOGGED IN

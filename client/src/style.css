@@ -9,6 +9,7 @@ body {
   font-size: 14pt;
   color: #0a0a0a;
   cursor: "text";
+  margin-bottom: 100px;
 }
 
 .txt-ctr {
@@ -52,9 +53,10 @@ h2, h3, h4 {
 .btn-uwa {
   background: #e2b600;
   color: #27348b;
-  padding: 4px 10px;
+  padding: 16px;
   text-transform: uppercase;
   font-weight: 600;
+  margin:3px;
 }
 
 .btn-uwa:hover {
