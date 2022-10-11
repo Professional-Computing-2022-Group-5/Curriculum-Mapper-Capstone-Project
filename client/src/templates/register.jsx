@@ -6,15 +6,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function Register () {
+function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isCoordinator, setIsCoordinator] = useState(false);
-    
+
     const registerUser = async () => {
         console.log(email, password, isCoordinator);
-    
-        const resp = await httpClient.post("//localhost:5000/register", {email, password, isCoordinator});
+
+        const resp = await httpClient.post("//localhost:5000/register", { email, password, isCoordinator });
         console.log("frpm the backedn");
         console.log(resp.data);
 
@@ -22,45 +22,44 @@ function Register () {
 
 
     return (
-    <Container className="register">
-        <Row>
-            <h1>Register</h1>
-        </Row>
+        <Container className="register">
+            <Row>
+                <h1>Register</h1>
+            </Row>
 
-        <Row>
-            <Form>
+            <Row>
+                <Form>
                     <Form.Group as={Row} className="mb-3">
                         <Form.Label column sm={3} lg={2}>Email Address: </Form.Label>
                         <Col sm={9} lg={6}>
-                        <Form.Control placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                            <Form.Control placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </Col>
                     </Form.Group>
-                    
+
                     <Form.Group as={Row} className="mb-3">
                         <Form.Label column sm={3} lg={2}>Password: </Form.Label>
                         <Col sm={9} lg={6}>
-                        <Form.Control placeholder="Password" type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+                            <Form.Control placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                         </Col>
                     </Form.Group>
-                    
+
                     <Form.Group as={Row} className="mb-3">
                         <Col sm={3} lg={2}>
                         </Col>
                         <Col>
-                        <Form.Check type={"radio"} label = {"Unit Coordinator?"} checked={isCoordinator} onChange={() => setIsCoordinator(!isCoordinator)}/>
+                            <Form.Check type={"radio"} label={"Unit Coordinator?"} checked={isCoordinator} onChange={() => setIsCoordinator(!isCoordinator)} />
                         </Col>
                     </Form.Group>
-                <Row>
-                <Col sm={3} lg={2}>
-                </Col>
-                <Col>
-                <Button variant="uwa" onClick={() => registerUser()}>Submit</Button>
-                </Col>
-                </Row>
-            </Form>
-        </Row>
-
-    </Container>
+                    <Row>
+                        <Col sm={3} lg={2}>
+                        </Col>
+                        <Col>
+                            <Button variant="uwa" onClick={() => registerUser()}>Submit</Button>
+                        </Col>
+                    </Row>
+                </Form>
+            </Row>
+        </Container>
     );
 }
 

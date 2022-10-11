@@ -18,7 +18,7 @@ const getHeadings = (data) => {
     return Object.keys(data[0]);
 }
 
-const TableComponent = ({data}) => {
+const TableComponent = ({ data }) => {
     console.log("TABLE DATA")
     console.log(data)
     var theadData = getHeadings(data.nodes)
@@ -27,23 +27,23 @@ const TableComponent = ({data}) => {
     return (
         <table>
             <thead>
-            <tr>
-                {theadData.map(heading => {
-                return <th key={heading}>{heading}</th>
-                })}
-            </tr>
+                <tr>
+                    {theadData.map(heading => {
+                        return <th key={heading}>{heading}</th>
+                    })}
+                </tr>
             </thead>
             <tbody>
-            {tbodyData.map((row, index) => {
+                {tbodyData.map((row, index) => {
                     return <tr key={index}>
                         {theadData.map((key, index) => {
                             return <td key={row[key]}>{row[key]}</td>
                         })}
-                </tr>;
+                    </tr>;
                 })}
             </tbody>
         </table>
     );
-} 
+}
 
 export default TableComponent;

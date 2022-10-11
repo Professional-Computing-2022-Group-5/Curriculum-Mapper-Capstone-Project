@@ -9,65 +9,64 @@ import Col from 'react-bootstrap/Col';
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const logInUser = async () => {
-      console.log(email, password);
+    console.log(email, password);
 
-      try {
-          const resp = await httpClient.post("//localhost:5000/login", {
-            email,
-            password,
-          });
-          console.log(resp.data)
-                    
-          window.location.href = "/home";
-    
-        } catch (error) {
-          if (error.response.status === 401) {
-            alert("Invalid credentials");
-          }
-        }
-      };
+    try {
+      const resp = await httpClient.post("//localhost:5000/login", {
+        email,
+        password,
+      });
+      console.log(resp.data)
 
-  return ( 
-  <Container>
-  <Row>
-    <h1>Log In</h1>
-  </Row>
-  <Row>
-    <Form>
-      <Form.Group as={Row} className="mb-3">
-        <Form.Label column sm={3} lg={2}>Email Address: </Form.Label>
-        
-        <Col sm={9} lg={6}>
-          <Form.Control placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-        </Col>
-      
-      </Form.Group>
-      
-      <Form.Group as={Row} className="mb-3" controlID="formBasicPassword">
-        <Form.Label column sm={3} lg={2}>Password: </Form.Label>
-        
-        <Col sm={9} lg={6}>
-          <Form.Control placeholder="Password" type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
-        </Col>
-      
-      </Form.Group>
+      window.location.href = "/home";
 
+    } catch (error) {
+      if (error.response.status === 401) {
+        alert("Invalid credentials");
+      }
+    }
+  };
+
+  return (
+    <Container>
       <Row>
-
-      <Col sm={3} lg={2}>
-      </Col>
-
-      <Col>
-      <Button variant="uwa" onClick={() => logInUser()}>Submit</Button>
-      </Col>
-
+        <h1>Log In</h1>
       </Row>
+      <Row>
+        <Form>
+          <Form.Group as={Row} className="mb-3">
+            <Form.Label column sm={3} lg={2}>Email Address: </Form.Label>
+            <Col sm={9} lg={6}>
+              <Form.Control placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </Col>
 
-    </Form>
-  </Row>
-  </Container>
+          </Form.Group>
+
+          <Form.Group as={Row} className="mb-3" controlID="formBasicPassword">
+            <Form.Label column sm={3} lg={2}>Password: </Form.Label>
+
+            <Col sm={9} lg={6}>
+              <Form.Control placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            </Col>
+
+          </Form.Group>
+
+          <Row>
+
+            <Col sm={3} lg={2}>
+            </Col>
+
+            <Col>
+              <Button variant="uwa" onClick={() => logInUser()}>Submit</Button>
+            </Col>
+
+          </Row>
+
+        </Form>
+      </Row>
+    </Container>
 
   );
 }
