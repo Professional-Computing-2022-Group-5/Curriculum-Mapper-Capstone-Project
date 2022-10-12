@@ -1,6 +1,6 @@
 from app import app, neo4jDB, sqliteDB
 from app.models import UserModel
-from flask import render_template, request, jsonify
+from flask import render_template, request, jsonify, Response
 from flask_login import current_user
 
 @app.route('/')
@@ -137,5 +137,21 @@ def get_relationship():
     if request.method == 'GET':
         data = neo4jDB.get_relationships()
         return data
+    else:
+        return {'status': 'request_error'}
+
+# download a csv file according to the query
+@app.route('/csv', methods=['POST', 'GET'])
+def csv():
+    if request.method == 'POST':
+        data = request.get_json()
+        csvFile = neo4jDB.downloadCsv(data['query'])
+        return Response(
+            csvFile,
+            mimetype="text/csv",
+            headers={"Content-disposition":
+                        "attachment; filename=curriculum_mapper.csv"},
+            status=200
+            )
     else:
         return {'status': 'request_error'}

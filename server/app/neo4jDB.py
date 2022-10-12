@@ -1,7 +1,7 @@
 from py2neo import Graph,NodeMatcher,cypher,Node,Relationship,RelationshipMatcher
-import json
 from app import api
 from config import NEO4j_URI, NEO4j_USER, NEO4j_PASSWORD
+import pandas as pd
 
 # connect to the Neo4j database
 try:
@@ -198,3 +198,21 @@ def get_relationships():
         return relationships
     except:
         return {'status':'error'}
+
+# download a csv file according to the query result
+def downloadCsv(query):
+    try:
+        data = search_by_query(query)
+        node_len = len(data['nodes'])
+        rel_len = len(data['links'])
+        if node_len > rel_len:
+            for i in range(node_len - rel_len):
+                data['links'].append('')
+        else:
+            for i in range(rel_len - node_len):
+                data['nodes'].append('')
+        df = pd.DataFrame(data, columns=list(data.keys()), index=None) # dataframe
+        csv_bin_data = df.to_csv(index=True, encoding="utf-8") # CSV file
+        return csv_bin_data
+    except:
+        return {'status':'download_failed'}
