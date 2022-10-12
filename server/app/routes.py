@@ -1,5 +1,7 @@
-from app import app, neo4jDB
-from flask import render_template, request
+from app import app, neo4jDB, sqliteDB
+from app.models import UserModel
+from flask import render_template, request, jsonify
+from flask_login import current_user
 
 @app.route('/')
 @app.route('/index.html')
@@ -10,6 +12,45 @@ def index():
 @app.route('/textbox.html')
 def textBox_page():
     return render_template('textBox.html')
+    
+# register user
+@app.route('/register', methods=['POST', 'GET'])
+def register():
+    if request.method == 'POST':
+        data = request.get_json()
+        result = sqliteDB.register(data['username'],data['email'], data['password'], data['isCoordinator'])
+        return result
+    else:
+        return {'status': 'request_error'}
+
+# login user
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    if request.method == 'POST':
+        data = request.get_json()
+        # print(data['email'], data['password'])
+        result = sqliteDB.login(data['email'], data['password'])
+        return result
+    else:
+        return {'status': 'request_error'}
+
+@app.route('/logout', methods=['POST', 'GET'])
+def logout():
+    return sqliteDB.logout()
+
+@app.route("/@me")
+def get_current_user():
+    if not current_user.is_authenticated:
+         return jsonify({"loggedIn": False, "isCoordinator": False})
+    else:
+        user = UserModel.query.filter_by(id = current_user.id).first()
+        return jsonify({
+            "loggedIn": True,
+            "id": user.id,
+            "email": user.email,
+            "isCoordinator": user.UnitCoordinator,
+            'isAdmin': user.admin
+        })
 
 # query the database(Neo4j) by user input and return json data to frontend
 @app.route('/query', methods=['POST', 'GET'])
