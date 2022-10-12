@@ -10,6 +10,8 @@ virtual-environment/*
 *.sql
 *.out
 __pycache__/*
+**/migrations/*
+**/venv/*
 
 # client side
 node_modules/*
