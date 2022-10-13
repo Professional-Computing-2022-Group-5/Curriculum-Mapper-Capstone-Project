@@ -7,7 +7,9 @@ import Row from "react-bootstrap/Row";
 //import Col from "react-bootstrap/Col";
 //import { Formik, Field, Form } from 'formik';
 import { Formik, Form, Field } from "formik";
-
+import Form.Group from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 //const { Formik } = formik;
 import * as yup from "yup";
 
@@ -47,25 +49,42 @@ function Register() {
       >
         {({ errors, touched }) => (
           <Form>
-            <Field name="firstName" />
-            {errors.firstName && touched.firstName ? (
-              <div>{errors.firstName}</div>
-            ) : null}
-            <Field name="lastName" />
-            {errors.lastName && touched.lastName ? (
-              <div>{errors.lastName}</div>
-            ) : null}
-            <Field name="email" type="email" />
-            {errors.email && touched.email ? <div>{errors.email}</div> : null}
-            <Field name="password" type="password" />
-            {errors.password && touched.password ? (
-              <div>{errors.password}</div>
-            ) : null}
-            <Field name="passwordConfirmation" type="password" />
-            {errors.passwordConfirmation && touched.passwordConfirmation ? (
-              <div>{errors.passwordConfirmation}</div>
-            ) : null}
-            <button type="submit">Submit</button>
+            <Row className="mb-3">
+              <Field name="firstName" />
+              {errors.firstName && touched.firstName ? (
+                <div>{errors.firstName}</div>
+              ) : null}
+            </Row>
+
+            <Row className="mb-3">
+              <Field name="lastName" />
+              {errors.lastName && touched.lastName ? (
+                <div>{errors.lastName}</div>
+              ) : null}
+            </Row>
+
+            <Row className="mb-3">
+              <Field name="email" type="email" />
+              {errors.email && touched.email ? <div>{errors.email}</div> : null}
+            </Row>
+
+            <Row className="mb-3">
+              <Field name="password" type="password" />
+              {errors.password && touched.password ? (
+                <div>{errors.password}</div>
+              ) : null}
+            <Row>
+            
+            <Row className="mb-3">
+              <Field name="passwordConfirmation" type="password" />
+              {errors.passwordConfirmation && touched.passwordConfirmation ? (
+                <div>{errors.passwordConfirmation}</div>
+              ) : null}
+            </Row>
+
+            <Row className="mb-3">
+              <button type="submit">Submit</button>
+            </Row>
           </Form>
         )}
       </Formik>

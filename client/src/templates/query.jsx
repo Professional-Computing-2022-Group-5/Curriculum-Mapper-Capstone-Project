@@ -146,11 +146,11 @@ const Query = () => {
     <Container>
       <Row>
         <Col>
-          <h3 className="font-weight-light">Query: </h3>
+          <h1>Query: </h1>
         </Col>
       </Row>
       <Row>
-        <Col sm={5} lg={4}>
+        <Col sm={6} md={6} lg={6}>
           {graphActive !== "showGraph" && (
             <Form.Control
               className="mb-3"
@@ -160,13 +160,20 @@ const Query = () => {
             />
           )}
         </Col>
+        <Col sm={2} md={2} lg={2}>
+        {graphActive !== "showGraph" && (
+            <Button variant="uwa" onClick={() => executeQuery(query)}>
+              Submit
+            </Button>
+          )}
+        </Col>
         <Col sm={1} md={1} lg={1}>
           {graphActive !== "showGraph" && (
             <h3 className="font-weight-light">OR </h3>
           )}
         </Col>
 
-        <Col sm={1} md={1} lg={4}>
+        <Col sm={3} md={3} lg={3}>
           {graphActive !== "showGraph" && (
             <Dropdown>
               <Dropdown.Toggle variant="uwa" id="dropdown-basic">
@@ -184,15 +191,6 @@ const Query = () => {
                 ))}
               </Dropdown.Menu>
             </Dropdown>
-          )}
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={2} md={2} lg={1}>
-          {graphActive !== "showGraph" && (
-            <Button variant="uwa" onClick={() => executeQuery(query)}>
-              Submit
-            </Button>
           )}
         </Col>
       </Row>

@@ -210,7 +210,7 @@ const Navigation = () => {
       <div>
         <Container className="register">
           <form onSubmit={formik.handleSubmit}>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>First Name:</label>
               </Col>
@@ -225,14 +225,14 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Col>
                 {formik.errors.firstName && formik.touched.firstName ? (
                   <div className="error_message">{formik.errors.firstName}</div>
                 ) : null}
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>Last Name:</label>
               </Col>
@@ -247,12 +247,12 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               {formik.errors.lastName && formik.touched.lastName ? (
                 <div className="error_message">{formik.errors.lastName}</div>
               ) : null}
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>Email:</label>
               </Col>
@@ -268,12 +268,12 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               {formik.errors.email && formik.touched.email ? (
                 <div className="error_message">{formik.errors.email}</div>
               ) : null}
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>Password:</label>
               </Col>
@@ -289,12 +289,12 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               {formik.errors.password && formik.touched.password ? (
                 <div className="error_message">{formik.errors.password}</div>
               ) : null}
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>Confirm Password:</label>
               </Col>
@@ -310,7 +310,7 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               {formik.errors.passwordConfirmation &&
               formik.touched.passwordConfirmation ? (
                 <div className="error_message">
@@ -318,9 +318,9 @@ const Navigation = () => {
                 </div>
               ) : null}
             </Row>
-            <Row>
-              <Col sm={2} lg={{ span: 1, offset: 3 }}></Col>
-              <Col sm={2} lg={{ span: 1, offset: 3 }}>
+            <Row className="mb-2">
+              <Col sm={5} lg={{ span: 3, offset: 1 }}></Col>
+              <Col sm={1} lg={1}>
                 <input
                   id="isCoordinator"
                   name="isCoordinator"
@@ -330,11 +330,11 @@ const Navigation = () => {
                   value={formik.values.isCoordinator}
                 />
               </Col>
-              <Col sm={8} lg={{ span: 8, offset: 1 }}>
+              <Col sm={6} lg={{ span: 5, offset: 1 }}>
                 <label>Unit Coordinator?</label>
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Button variant="uwa" type="submit">
                 Submit
               </Button>
@@ -406,7 +406,7 @@ const Navigation = () => {
         centered
       >
         <Modal.Header closeButton centered>
-          <Modal.Title>Login</Modal.Title>
+          <Modal.Title ><h2>Login</h2></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Login />
@@ -422,7 +422,7 @@ const Navigation = () => {
         centered
       >
         <Modal.Header closeButton centered>
-          <Modal.Title>Register</Modal.Title>
+          <Modal.Title><h2>Register</h2></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Register />
