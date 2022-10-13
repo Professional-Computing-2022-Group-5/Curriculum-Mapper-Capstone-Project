@@ -79,3 +79,15 @@ def init_admin():
 
 # init_admin()
 
+# upgrade an existing user to unit coordinator
+def upgrade_to_coordinator(email):
+    try:
+        user = UserModel.query.filter_by(email=email).first()
+        if user:
+            user.UnitCoordinator = True
+            db.session.commit()
+            return {'status': 'upgrade_success'}
+        else:
+            return {'status': 'user_not_exist'}
+    except:
+        return {'status': 'upgrade_failed'}

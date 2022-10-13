@@ -155,3 +155,13 @@ def csv():
             )
     else:
         return {'status': 'request_error'}
+
+# upgrade user to unit coordinator
+@app.route('/upgrade', methods=['POST', 'GET'])
+def upgrade_user():
+    if request.method == 'POST':
+        data = request.get_json()
+        result = sqliteDB.upgrade_to_coordinator(data['email'])
+        return result
+    else:
+        return {'status': 'request_error'}
