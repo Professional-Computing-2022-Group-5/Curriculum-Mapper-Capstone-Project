@@ -80,7 +80,9 @@ Install Node.js: [https://nodejs.org/en/download/](https://nodejs.org/en/downloa
 Setting up environment:
 
 1. `$ cd client`
-2. `$ npm build`
+2. only for Linux (if you are not a Liunx user skip this step)
+   * `$ sudo apt install npm -y`
+3. `$ npm build`
 
 Run the React App:
 
