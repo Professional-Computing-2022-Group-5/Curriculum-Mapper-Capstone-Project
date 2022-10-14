@@ -57,9 +57,9 @@ Setting up environment:
 3. install dependency:
    `$ pip install -r requirements.txt `
 
-Install SQLite: [Click here](https://www.servermania.com/kb/articles/install-sqlite/ "sqlite") (**ignore this step for now**)
+Install SQLite: [Click here](https://www.servermania.com/kb/articles/install-sqlite/ "sqlite") 
 
-Build the database: (**ignore this step for now**)
+Build the database: 
 
 `$ flask db init`
 
@@ -80,7 +80,7 @@ Install Node.js: [https://nodejs.org/en/download/](https://nodejs.org/en/downloa
 Setting up environment:
 
 1. `$ cd client`
-2. only for Linux (if you are not a Liunx user skip this step)
+2. only for Linux (if you are not a Linux user skip this step)
    * `$ sudo apt install npm -y`
 3. `$ npm build`
 
