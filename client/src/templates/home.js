@@ -48,7 +48,7 @@ const Home = () => {
         // NOT LOGGED IN
         <Container>
           <Row>
-            <p className="txt-ctr txt-uwab">You are not logged in</p>
+            <h2 className="txt-ctr txt-uwab">You are not logged in</h2>
           </Row>
         </Container>
       )}

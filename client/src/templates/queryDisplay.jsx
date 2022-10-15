@@ -5,6 +5,8 @@ import ForceGraph2D from "react-force-graph-2d";
 import httpClient from "./httpClient.js";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Dropdown from "react-bootstrap/Dropdown";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -353,8 +355,12 @@ const queryDisplay = ({ data }) => {
 
     //for
     return (
-      <div>
-        <p>NODE READ</p>
+      <Container>
+        <Row>
+        <h2>NODE READ</h2>
+        </Row>
+
+        <Row>
         <Table responsive striped hover>
           <thead>
             <tr>
@@ -372,23 +378,29 @@ const queryDisplay = ({ data }) => {
             </tr>
           </tbody>
         </Table>
+        </Row>
 
         {userType === "UnitCoordinator" ? (
-          <div>
-            <Button
-              variant="uwa"
-              onClick={(n) => setFilterActive("NodeUpdate")}
-            >
+          <Row>
+            <Col></Col>
+            <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa"
+              onClick={(n) => setFilterActive("NodeUpdate")}>
               Update
             </Button>
+            </Col>
+
+            <Col sm="auto" md="auto" lg="auto">
             <Button variant="uwa" onClick={(e) => sendDeleteNode(unitnode.id)}>
               Delete
             </Button>
-          </div>
+            </Col>
+            <Col></Col>
+          </Row>
         ) : (
-          <div></div>
+          <Row></Row>
         )}
-      </div>
+      </Container>
     );
   };
 
@@ -400,6 +412,7 @@ const queryDisplay = ({ data }) => {
 
             </div>
         ); */
+
   // UPDATE NODE COMPONENT
   const NodeUpdate = () => {
     var unitNode = searchforNode(currentId);
@@ -414,39 +427,51 @@ const queryDisplay = ({ data }) => {
     const [nodeDetails, setNodeDetails] = useState(unitNode);
     console.log("nodeDetails");
     console.log(nodeDetails);
-    return (
-      <div>
-        <p>NODE UPDATE</p>
+    return(
+      <Container>
+        <h2>NODE UPDATE</h2>
 
-        <p>Node id: {nodeDetails.id}</p>
+        <p className="txt-ctr"><b>Node id:</b> {nodeDetails.id}</p>
+
+        <Form><Form.Group as={Row} className="mb-3">
         {attributes.map((attribute) => (
-          <div>
-            <label>
-              {attribute}:
-              <input
-                type="text"
-                value={nodeDetails[attribute]}
-                onChange={(e) =>
-                  setNodeDetails({
-                    ...nodeDetails,
-                    [attribute]: e.target.value,
-                  })
-                }
-              />
-            </label>
-          </div>
+          <Row>
+            <Col sm="auto" md={4} lg={4}>
+            <Form.Label><b>{attribute}:</b></Form.Label>
+            </Col>
+
+            <Col>
+            <Form.Control
+              // className = "mb-3"
+              value={nodeDetails[attribute]}
+              onChange={(e) =>
+                setNodeDetails({
+                ...nodeDetails,
+                [attribute]: e.target.value,
+              })}/>
+            </Col>
+          </Row>
         ))}
-        <input
-          type="submit"
+        </Form.Group></Form>
+
+        <Row>
+        <Col></Col>
+        <Col sm="auto" md="auto" lg="auto">
+        <Button variant="uwa"
           value="Submit"
-          onClick={(e) => sendNodeUpdate(nodeDetails, unitNode.id)}
-        />
-        <input
-          type="submit"
+          onClick={(e) => sendNodeUpdate(nodeDetails, unitNode.id)}>
+        Submit</Button>
+        </Col>
+
+        <Col sm="auto" md="auto" lg="auto">
+        <Button variant="uwa"
           value="Delete"
-          onClick={(e) => sendDeleteNode(unitNode.id)}
-        />
-      </div>
+          onClick={(e) => sendDeleteNode(unitNode.id)}>
+        Delete</Button>
+        </Col>
+        <Col></Col>
+        </Row>
+      </Container>
     );
   };
 
@@ -495,8 +520,10 @@ const queryDisplay = ({ data }) => {
       searchTargetId = unitlink.target.id;
     }
     return (
-      <div>
-        <h2>LINK READ</h2>
+      <Container>
+        <Row><h2>LINK READ</h2></Row>
+
+        <Row>
         <Table responsive striped hover>
           <thead>
             <tr>
@@ -514,7 +541,11 @@ const queryDisplay = ({ data }) => {
             </tr>
           </tbody>
         </Table>
-        <h2>SOURCE DATA</h2>
+        </Row>
+
+        <Row><h2>SOURCE DATA</h2></Row>
+
+        <Row>
         <Table responsive striped hover>
           <thead>
             <tr>
@@ -532,8 +563,11 @@ const queryDisplay = ({ data }) => {
             </tr>
           </tbody>
         </Table>
+        </Row>
 
-        <h2>TARGET DATA</h2>
+        <Row><h2>TARGET DATA</h2></Row>
+
+        <Row>
         <Table responsive striped hover>
           <thead>
             <tr>
@@ -551,23 +585,29 @@ const queryDisplay = ({ data }) => {
             </tr>
           </tbody>
         </Table>
+        </Row>
 
         {userType === "UnitCoordinator" ? (
-          <div>
+          <Row>
+            <Col></Col>
+            <Col sm="auto" md="auto" lg="auto">
             <Button variant="uwa" onClick={(n) => handleUpdateLink()}>
               Update
             </Button>
-            <Button
-              variant="uwa"
-              onClick={(e) => sendDeleteLink(unitlink.property.id)}
-            >
+            </Col>
+
+            <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa"
+              onClick={(e) => sendDeleteLink(unitlink.property.id)}>
               Delete
             </Button>
-          </div>
+            </Col>
+            <Col></Col>
+          </Row>
         ) : (
-          <div></div>
+          <Row></Row>
         )}
-      </div>
+      </Container>
     );
   };
 
@@ -580,28 +620,38 @@ const queryDisplay = ({ data }) => {
     const [nodeDetails, setNodeDetails] = useState({ type: chosenType });
 
     return (
-      <div>
-        <p>NODE CREATE INPUTS</p>
-        <label>Chosen Type: {nodeDetails.type}</label>
+      <Container>
+        <h2>NODE CREATE INPUTS</h2>
+        <p className="txt-ctr"><b>Chosen Type:</b> {nodeDetails.type}</p>
 
+        <Form><Form.Group as={Row} className="mb-3">
         {inputs.map((input) => (
-          <div>
-            <label>
-              {input}:
-              <input
-                type="text"
-                value={nodeDetails[input]}
-                onChange={(e) =>
-                  setNodeDetails({ ...nodeDetails, [input]: e.target.value })
-                }
-              />
-            </label>
-          </div>
+          <Row>
+            <Col sm="auto" md={4} lg={4}>
+            <Form.Label><b>{input}:</b></Form.Label>
+            </Col>
+
+            <Col>
+            <Form.Control
+              value={nodeDetails[input]}
+              onChange={(e) =>
+                setNodeDetails({ ...nodeDetails, [input]: e.target.value })
+              }/>
+            </Col>
+          </Row>
         ))}
+        </Form.Group></Form>
+
+        <Row>
+        <Col></Col>
+        <Col>
         <Button variant="uwa" onClick={(e) => sendCreateNode(nodeDetails)}>
           Submit
         </Button>
-      </div>
+        </Col>
+        <Col></Col>
+        </Row>
+      </Container>
     );
   };
 
@@ -611,9 +661,31 @@ const queryDisplay = ({ data }) => {
     const [selectedType, setSelectedType] = useState(nodeTypeInputs[0]);
 
     return (
-      <div>
-        <p>NODE CREATE</p>
-        <select
+      <Container>
+        <h2>NODE CREATE</h2>
+        <Row>
+          <Col sm="auto" md="auto" lg="auto">
+            <p><b>Select Type:</b></p>
+          </Col>
+
+          <Col sm={5} md={5} lg={5}>
+            <Dropdown>
+            <Dropdown.Toggle variant="uwa" id="dropdown-basic">
+              {selectedType}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              {nodeTypeInputs.map((type) => (
+                <Dropdown.Item
+                  className="dd-uwa"
+                  key={type}
+                  value={type}
+                  onClick={(e) => setSelectedType(type)}>
+                  {type}
+                </Dropdown.Item>))}
+            </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+{/*        <select
           value={selectedType}
           //onChange={e => setSelectedType(e.target.value)}>
           onChange={(e) => setSelectedType(e.target.value)}
@@ -623,11 +695,15 @@ const queryDisplay = ({ data }) => {
               {type}
             </option>
           ))}
-        </select>
-        <Button variant="uwa" onClick={(e) => getInputs(selectedType, "NODE")}>
-          Submit
-        </Button>
-      </div>
+        </select>*/}
+
+          <Col sm="auto" md="auto" lg="auto">
+          <Button variant="uwa" onClick={(e) => getInputs(selectedType, "NODE")}>
+            Submit
+          </Button>
+          </Col>
+        </Row>
+      </Container>
     );
   };
 
@@ -637,54 +713,81 @@ const queryDisplay = ({ data }) => {
     var inputs = ["X", "1", "2", "3"];
 
     return (
-      <div>
-        <label>Chosen Type: {linkDetails.type}</label>
+      <Container>
+        <p className="txt-ctr"><b>Chosen Type:</b> {linkDetails.type}</p>
         {(() => {
           if (chosenType === "CBOK_WEIGHTING") {
             console.log("CBOK_WEIGHTING");
             return (
-              <select
-                value={linkDetails.weight}
-                //onChange={e => setSelectedType(e.target.value)}>
-                onChange={(e) =>
-                  setLinkDetails({ ...linkDetails, weight: e.target.value })
-                }
-              >
-                {inputs.map((weight) => (
-                  <option key={weight} value={weight}>
-                    {weight}
-                  </option>
-                ))}
-              </select>
+              <Row>
+              <Col sm={5} md={5} lg={3}><p><b>Weight: </b></p></Col>
+              
+              <Col>
+              <Dropdown>
+                <Dropdown.Toggle variant="uwa" id="dropdown-basic">
+                  Weight{" "}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {inputs.map((weight) => (
+                    <Dropdown.Item
+                      className="dd-uwa"
+                      key={weight}
+                      value={weight}
+                      onClick={(e) => setLinkDetails({ ...linkDetails, weight: weight })}>
+                      {weight}
+                      </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+              </Dropdown>
+              </Col>
+              </Row>
             );
           }
           return null;
         })()}
-        <label>source id: {linkDetails.sourceId}</label>
-        <label>target id: {linkDetails.targetId}</label>
-        <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
-          Select Source
-        </Button>
-        <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
-          Select Destination
-        </Button>
-        <Button
-          variant="uwa"
-          onClick={(e) =>
-            setLinkDetails({
-              ...linkDetails,
-              sourceId: searchSourceId,
-              targetId: searchTargetId,
-            })
-          }
-        >
+
+        <Form><Form.Group className="mb-3">
+          <Row>
+          <Col sm={5} md={5} lg={3}><p><b>source id:</b> {linkDetails.sourceId}</p></Col>
+          <Col>
+          <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
+            Select Source
+          </Button>
+          </Col>
+          </Row>
+
+          <Row>
+          <Col sm={5} md={5} lg={3}><p><b>target id:</b> {linkDetails.targetId}</p></Col>
+          <Col>
+          <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
+            Select Destination
+          </Button>
+          </Col>
+          </Row>
+
+          <Row>
+          <Col sm="auto" md="auto" lg="auto">
+          <Button
+            variant="uwa"
+            onClick={(e) =>
+              setLinkDetails({
+                ...linkDetails,
+                sourceId: searchSourceId,
+                targetId: searchTargetId,
+              })
+            }
+          >
           Confirm Source and Target
         </Button>
-
+        </Col>
+        <Col sm="auto" md="auto" lg="auto">
         <Button variant="uwa" onClick={(e) => sendCreateLink(linkDetails)}>
           Submit
         </Button>
-      </div>
+        </Col>
+        </Row>
+        </Form.Group></Form>
+      </Container>
     );
   };
 
@@ -695,23 +798,39 @@ const queryDisplay = ({ data }) => {
     console.log(linkTypes);
 
     return (
-      <div>
-        <p>LINK CREATE</p>
-        <select
-          value={selectedType}
-          //onChange={e => setSelectedType(e.target.value)}>
-          onChange={(e) => setSelectedType(e.target.value)}
-        >
-          {linkTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
+      <Container>
+        <h2>LINK CREATE</h2>
+        
+        <Row>
+        <Col sm="auto" md="auto" lg="auto">
+          <p><b>Select Type:</b></p>
+        </Col>
+
+        <Col sm={5} md={5} lg={5}>
+          <Dropdown>
+            <Dropdown.Toggle variant="uwa" id="dropdown-basic">
+              {selectedType}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              {linkTypes.map((type) => (
+                <Dropdown.Item
+                  className="dd-uwa"
+                  key={type}
+                  value={type}
+                  onClick={(e) => setSelectedType(type)}>
+                  {type}
+                </Dropdown.Item>))}
+            </Dropdown.Menu>
+          </Dropdown>
+        </Col>
+
+        <Col sm="auto" md="auto" lg="auto">
         <Button variant="uwa" onClick={(e) => getInputs(selectedType, "LINK")}>
           Submit
         </Button>
-      </div>
+        </Col>
+        </Row>
+      </Container>
     );
   };
 
@@ -747,118 +866,152 @@ const queryDisplay = ({ data }) => {
     }
 
     return (
-      <div>
-        <p>LINK UPDATE</p>
+      <Container>
+        <h2>LINK UPDATE</h2>
 
-        <p>Link id: Button HERE {linkDetails.id}</p>
+        <p><b>Link id:</b> {linkDetails.id}</p>
 
-        <p>PROPERTY UPDATE</p>
+        <h3 className="txt-ctr">PROPERTY UPDATE</h3>
+
+        <Form><Form.Group as={Row} className="mb-3">
         {properties.map((property) => (
-          <div>
-            <label>
-              {property}:
-              <input
-                type="text"
+          <Row>
+            <Col sm={6} md={6} lg={3}>
+            <Form.Label><b>{property}:</b></Form.Label>
+            </Col>
+
+            <Col>
+              <Form.Control
                 value={linkDetails[property]}
                 onChange={(e) =>
                   setLinkDetails({ ...linkDetails, [property]: e.target.value })
-                }
-              />
-            </label>
-          </div>
+                }/>
+            </Col>
+          </Row>
         ))}
+        </Form.Group></Form>
 
-        <p>SOURCE UPDATE</p>
-        <label>
-          Source Id:
-          <input
+        <h3 className="txt-ctr">SOURCE UPDATE</h3>
+        
+        
+        <Form><Form.Group as={Row} className="mb-3">
+        <Row>
+        <Col sm={6} md={6} lg={3}>
+            <Form.Label><b>Source Id:</b></Form.Label>
+        </Col>
+        <Col>
+        <Form.Control
             type="text"
             value={sourceDetails.id}
             onChange={(e) =>
               setSourceDetails({ ...sourceDetails, id: searchSourceId })
-            }
-          />
-        </label>
-
+            }/>
+        </Col>
+        
+        <Col sm="auto" md="auto" lg="auto">
         <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
           Select Source
         </Button>
+        </Col>
+        </Row>
+
+        </Form.Group></Form>
 
         {sourceProp.map((sProperty) => (
-          <div>
-            <p>
-              {sProperty}: {sourceDetails[sProperty]}
-            </p>
-          </div>
+          <Row>
+            <Col sm={6} md={6} lg={3}><p><b>{sProperty}: </b></p></Col>
+            <Col><p>{sourceDetails[sProperty]}</p></Col>
+          </Row>
         ))}
 
-        <p>TARGET UPDATE</p>
-        <label>
-          Target Id:
-          <input
-            type="text"
+        <h3 className="txt-ctr">TARGET UPDATE</h3>
+
+        <Row><Form><Form.Group as={Row} className="mb-3">
+          <Col sm={6} md={6} lg={3}>
+          <Form.Label><b>Target Id:</b></Form.Label>
+          </Col>
+
+          <Col>
+          <Form.Control
             value={targetDetails.id}
             onChange={(e) =>
               setTargetDetails({ ...targetDetails, id: searchTargetId })
-            }
-          />
-        </label>
-
-        <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
-          Select Destination
-        </Button>
+            }/>
+          </Col>
+          <Col sm="auto" md="auto" lg="auto">
+          <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
+            Select Destination
+          </Button>
+          </Col>
+        </Form.Group></Form></Row>
 
         {targetProp.map((tProperty) => (
-          <div>
-            <p>
-              {tProperty}: {targetDetails[tProperty]}
-            </p>
-          </div>
+          <Row>
+            <Col sm={6} md={6} lg={3}><p><b>{tProperty}: </b></p></Col>
+            <Col><p>{sourceDetails[tProperty]}</p></Col>
+          </Row>
         ))}
 
+        <Row>
+        <Col sm="auto" md="auto" lg="auto">
         <Button variant="uwa" onClick={(e) => updateIds()}>
           Confirm Source and Target
         </Button>
+        </Col>
+        
+        
+        <Col sm="auto" md="auto" lg="auto">
         <Button
           variant="uwa"
-          onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}
-        >
+          onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}>
           Submit
         </Button>
+        </Col>
+
+        <Col sm="auto" md="auto" lg="auto">
         <Button
           variant="uwa"
-          onClick={(e) => sendDeleteLink(unitLink.property.id)}
-        >
+          onClick={(e) => sendDeleteLink(unitLink.property.id)}>
           Delete
         </Button>
-      </div>
+        </Col>
+
+        </Row>
+      </Container>
     );
   };
 
   // CREATE NODE & LINK COMPONENT
   const Create = () => {
     return (
-      <div>
+      <Container>
         {userType === "UnitCoordinator" ? (
-          <div>
-            <p>CREATE</p>
+          <Row>
+            <h2>CREATE</h2>
+            <Col></Col>
+            <Col sm="auto" md="auto" lg="auto">
             <Button
               variant="uwa"
               onClick={(n) => setFilterActive("NodeCreate")}
             >
               Create Node
             </Button>
+            </Col>
+
+            <Col sm="auto" md="auto" lg="auto">
             <Button
               variant="uwa"
               onClick={(n) => setFilterActive("LinkCreate")}
             >
               Create Link
             </Button>
-          </div>
+            </Col>
+            <Col></Col>
+          </Row>
         ) : (
-          <div></div>
+          <Row></Row>
         )}
-      </div>
+      </Container>
     );
   };
 
