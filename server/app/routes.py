@@ -1,7 +1,9 @@
-from app import app, neo4jDB, sqliteDB
+from app import app, neo4jDB, sqliteDB, mail
 from app.models import UserModel
 from flask import render_template, request, jsonify, Response
 from flask_login import current_user
+from flask_mail import Message
+from config import MAIL_USERNAME,RECIPIENT
 
 @app.route('/')
 @app.route('/index.html')
@@ -163,5 +165,22 @@ def upgrade_user():
         data = request.get_json()
         result = sqliteDB.upgrade_to_coordinator(data['email'])
         return result
+    else:
+        return {'status': 'request_error'}
+
+# send email to admin
+@app.route("/send_mail", methods=['POST', 'GET'])
+def send_mail():
+    if request.method == 'POST':
+        data = request.get_json()
+        message = data['message']
+        title = 'CITS3200 Notification'
+        msg = Message(title, sender=MAIL_USERNAME, recipients=[RECIPIENT])
+        msg.body = "Hello Flask message sent from Flask-Mail, this is a test. " + message
+        try:
+            mail.send(msg)
+            return {'status': 'send_success'}
+        except:
+            return {'status': 'send_failed'}
     else:
         return {'status': 'request_error'}
