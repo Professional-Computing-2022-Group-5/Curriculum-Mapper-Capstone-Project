@@ -11,7 +11,7 @@ def load_user(user_id):
 class UserModel(UserMixin,db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
+    username = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(345), unique=True)
     hash_password = db.Column(db.String(200), nullable=False)
     admin = db.Column(db.Boolean, default=False, nullable=False)
