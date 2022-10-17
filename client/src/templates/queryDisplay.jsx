@@ -8,6 +8,7 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
+import Modal from "react-bootstrap/Modal";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -79,6 +80,26 @@ const queryDisplay = ({ data }) => {
 
   const reset = () => {
     setSeed(Math.random());
+  };
+
+  const [showDelNode, setDelNodeShow] = useState(false);
+  const [showDelLink, setDelLinkShow] = useState(false);
+
+  const handleDelNodeClose = () => {
+      setDelNodeShow(false);
+  };
+  
+  const handleDelNodeShow = (id) => {
+      setDelNodeShow(true);
+      console.log("CHECK HERE_______________________\n\n\n")
+      console.log(id);
+  };
+
+  const handleDelLinkClose = () => {
+      setDelLinkShow(false);
+  };
+  const handleDelLinkShow = (id) => {
+      setDelLinkShow(true);
   };
 
   //-----------------------------------------------------------------------------------GET USER TYPE
@@ -330,6 +351,86 @@ const queryDisplay = ({ data }) => {
   }
 
   //-----------------------------------------------------------------------------------COMPONENTS
+  
+  // DELETE NODE MODAL
+  const DelNode = (id) => {
+    return(
+    <Modal
+    show={showDelNode}
+    onHide={handleDelNodeClose}
+    animation={true}
+    size="md"
+    aria-labelledby="contained-modal-title-vcenter"
+    backdrop="static"
+    keyboard={false}
+    centered>
+      <Modal.Header closeButton centered>
+        <Modal.Title><h2>Delete Node?</h2></Modal.Title>
+      </Modal.Header>
+      
+      <Modal.Body>
+        <Container>
+        <Row>
+          <Col></Col>
+          <Col>
+          <Button variant="uwa" onClick={handleDelNodeClose}>
+            Cancel
+          </Button>
+          </Col>
+
+          <Col>
+          <Button variant="uwa" onClick={() => sendDeleteNode(id.id)}>
+            Delete
+          </Button>
+          </Col>
+          <Col></Col>
+
+        </Row>
+        </Container>
+      </Modal.Body>
+    </Modal>
+  );};
+
+  //DELETE LINK MODAL
+  const DelLink = (id) => {
+    return(
+    <Modal
+    show={showDelLink}
+    onHide={handleDelLinkClose}
+    animation={true}
+    size="md"
+    aria-labelledby="contained-modal-title-vcenter"
+    backdrop="static"
+    keyboard={false}
+    centered>
+      <Modal.Header closeButton centered>
+        <Modal.Title><h2>Delete Link?</h2></Modal.Title>
+      </Modal.Header>
+      
+      <Modal.Body>
+        <Container>
+        <Row>
+          <Col></Col>
+          <Col>
+          <Button variant="uwa" onClick={handleDelLinkClose}>
+            Cancel
+          </Button>
+          </Col>
+
+          <Col>
+          <Button variant="uwa" onClick={() => sendDeleteLink(id.id)}>
+            Delete
+          </Button>
+          </Col>
+          <Col></Col>
+
+        </Row>
+        </Container>
+      </Modal.Body>
+    </Modal>
+  );};
+
+
   // READ NODE COMPONENT
   const NodeRead = () => {
     var unitnode = searchforNode(currentId);
@@ -393,16 +494,20 @@ const queryDisplay = ({ data }) => {
             </Col>
 
             <Col sm="auto" md="auto" lg="auto">
-              <Button variant="uwa" onClick={(e) => sendDeleteNode(unitnode.id)}>
-                Delete
-              </Button>
+            <Button variant="uwa" onClick={(e) => sendDeleteNode(unitnode.id)}>
+              Delete
+            </Button>
             </Col>
             <Col></Col>
           </Row>
         ) : (
           <Row></Row>
         )}
+
+      <DelNode id={unitnode.id}/>
+
       </Container>
+
     );
   };
 
@@ -457,23 +562,26 @@ const queryDisplay = ({ data }) => {
         </Form.Group></Form>
 
         <Row>
-          <Col></Col>
-          <Col sm="auto" md="auto" lg="auto">
-            <Button variant="uwa"
-              value="Submit"
-              onClick={(e) => sendNodeUpdate(nodeDetails, unitNode.id)}>
-              Submit</Button>
-          </Col>
+        <Col></Col>
+        <Col sm="auto" md="auto" lg="auto">
+        <Button variant="uwa"
+          value="Submit"
+          onClick={(e) => sendNodeUpdate(nodeDetails, unitNode.id)}>
+        Submit</Button>
+        </Col>
 
-          <Col sm="auto" md="auto" lg="auto">
-            <Button variant="uwa"
-              value="Delete"
-              onClick={(e) => sendDeleteNode(unitNode.id)}>
-              Delete</Button>
-          </Col>
-          <Col></Col>
+        <Col sm="auto" md="auto" lg="auto">
+        <Button variant="uwa"
+          value="Delete"
+          onClick={(e) => sendDeleteNode(unitNode.id)}>
+        Delete</Button>
+        </Col>
+        <Col></Col>
         </Row>
+      
+      <DelNode id={unitNode.id}/>
       </Container>
+
     );
   };
 
@@ -599,16 +707,19 @@ const queryDisplay = ({ data }) => {
             </Col>
 
             <Col sm="auto" md="auto" lg="auto">
-              <Button variant="uwa"
-                onClick={(e) => sendDeleteLink(unitlink.property.id)}>
-                Delete
-              </Button>
+            <Button variant="uwa"
+              onClick={(e) => sendDeleteLink(unitlink.property.id)}>
+              Delete
+            </Button>
             </Col>
             <Col></Col>
           </Row>
         ) : (
           <Row></Row>
         )}
+    
+      <DelLink id={unitlink.property.id}/>
+
       </Container>
     );
   };
@@ -955,30 +1066,49 @@ const queryDisplay = ({ data }) => {
         ))}
 
         <Row>
-          <Col sm="auto" md="auto" lg="auto">
-            <Button variant="uwa" onClick={(e) => updateIds()}>
-              Confirm Source and Target
-            </Button>
-          </Col>
+        <Col sm="auto" md="auto" lg="auto">
+        <Button variant="uwa" onClick={(e) => updateIds()}>
+          Confirm Source and Target
+        </Button>
+        </Col>
+        
+        
+        <Col sm="auto" md="auto" lg="auto">
+        <Button
+          variant="uwa"
+          onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}>
+          Submit
+        </Button>
+        </Col>
 
+        <Col sm="auto" md="auto" lg="auto">
+        <Button
+          variant="uwa"
+          onClick={(e) => sendDeleteLink(unitLink.property.id)}>
+          Delete
+        </Button>
+        </Col>
 
-          <Col sm="auto" md="auto" lg="auto">
-            <Button
-              variant="uwa"
-              onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}>
-              Submit
-            </Button>
-          </Col>
+        
+        <Col sm="auto" md="auto" lg="auto">
+        <Button
+          variant="uwa"
+          onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}>
+          Submit
+        </Button>
+        </Col>
 
-          <Col sm="auto" md="auto" lg="auto">
-            <Button
-              variant="uwa"
-              onClick={(e) => sendDeleteLink(unitLink.property.id)}>
-              Delete
-            </Button>
-          </Col>
-
+        <Col sm="auto" md="auto" lg="auto">
+        <Button
+          variant="uwa"
+          onClick={handleDelLinkShow.bind(this, unitLink.property.id)}>
+          Delete
+        </Button>
+        </Col>
         </Row>
+    
+      <DelLink id={unitLink.property.id}/>
+
       </Container>
     );
   };
