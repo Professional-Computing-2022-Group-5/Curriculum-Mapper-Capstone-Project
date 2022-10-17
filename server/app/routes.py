@@ -20,7 +20,7 @@ def textBox_page():
 def register():
     if request.method == 'POST':
         data = request.get_json()
-        result = sqliteDB.register(data['username'],data['email'], data['password'], data['isCoordinator'])
+        result = sqliteDB.register(data['username'],data['email'], data['password'])
         return result
     else:
         return {'status': 'request_error'}
@@ -182,5 +182,15 @@ def send_mail():
             return {'status': 'send_success'}
         except:
             return {'status': 'send_failed'}
+    else:
+        return {'status': 'request_error'}
+
+# add an email address to the whitelist
+@app.route("/add_whitelist", methods=['POST', 'GET'])
+def add_whitelist():
+    if request.method == 'POST':
+        data = request.get_json()
+        result = sqliteDB.add_whiteList(data['email'])
+        return result
     else:
         return {'status': 'request_error'}
