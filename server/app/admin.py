@@ -57,7 +57,7 @@ def init_admin():
                     print('\n****** The password is not the same, please try again ******')
 
             # create the admin account 
-            admin_user = UserModel(email=email, username=username, admin=True, UnitCoordinator=False)
+            admin_user = UserModel(email=email, username=username, admin=True, UnitCoordinator=True)
             admin_user.encode_password(password)
             db.session.add(admin_user)
             db.session.commit()
@@ -68,4 +68,4 @@ def init_admin():
             print('\n'+'****** Wrong inputs, please enter either "y" or "n" ******')
             init_admin()
     except Exception as e:
-        print('\n'+e+'\n')
+        print('\n'+str(e)+'\n')
