@@ -26,7 +26,7 @@ def login(email, password):
             if user.decode_password(password) and user.admin==False and user.UnitCoordinator==False:
                 login_user(user)
                 return {'status': 'basic_user'}
-            elif user.decode_password(password) and user.admin==True and user.UnitCoordinator==False:
+            elif user.decode_password(password) and user.admin==True and user.UnitCoordinator==True:
                 login_user(user)
                 return {'status': 'admin_user'}
             elif user.decode_password(password) and user.admin==False and user.UnitCoordinator==True:
