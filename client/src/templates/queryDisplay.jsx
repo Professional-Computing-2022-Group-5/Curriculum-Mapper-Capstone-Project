@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import PropTypes from "prop-types";
 
 import ForceGraph2D from "react-force-graph-2d";
 import httpClient from "./httpClient.js";
@@ -24,7 +25,7 @@ var chosenType;
 
 var nodeInputs = {
   Unit: [
-    "Avaliabilities",
+    "Availabilities",
     "Credit",
     "Programming Based",
     "Title",
@@ -51,6 +52,7 @@ var linkTypes = [
 ];
 
 const queryDisplay = ({ data }) => {
+
   //-----------------------------------------------------------------------------------GLOBAL VARIABLES
   // WHICH CRUD COMMAND TO HAVE ON
 
@@ -357,43 +359,43 @@ const queryDisplay = ({ data }) => {
     return (
       <Container>
         <Row>
-        <h2>NODE READ</h2>
+          <h2>NODE READ</h2>
         </Row>
 
         <Row>
-        <Table responsive striped hover>
-          <thead>
-            <tr>
-              {attributes.map((attribute) => (
-                <th>{attribute}</th>
-              ))}
-            </tr>
-          </thead>
+          <Table responsive striped hover>
+            <thead>
+              <tr>
+                {attributes.map((attribute) => (
+                  <th>{attribute}</th>
+                ))}
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              {attributes.map((attribute) => (
-                <th>{unitnode[attribute]}</th>
-              ))}
-            </tr>
-          </tbody>
-        </Table>
+            <tbody>
+              <tr>
+                {attributes.map((attribute) => (
+                  <th>{unitnode[attribute]}</th>
+                ))}
+              </tr>
+            </tbody>
+          </Table>
         </Row>
 
         {userType === "UnitCoordinator" ? (
           <Row>
             <Col></Col>
             <Col sm="auto" md="auto" lg="auto">
-            <Button variant="uwa"
-              onClick={(n) => setFilterActive("NodeUpdate")}>
-              Update
-            </Button>
+              <Button variant="uwa"
+                onClick={(n) => setFilterActive("NodeUpdate")}>
+                Update
+              </Button>
             </Col>
 
             <Col sm="auto" md="auto" lg="auto">
-            <Button variant="uwa" onClick={(e) => sendDeleteNode(unitnode.id)}>
-              Delete
-            </Button>
+              <Button variant="uwa" onClick={(e) => sendDeleteNode(unitnode.id)}>
+                Delete
+              </Button>
             </Col>
             <Col></Col>
           </Row>
@@ -427,49 +429,49 @@ const queryDisplay = ({ data }) => {
     const [nodeDetails, setNodeDetails] = useState(unitNode);
     console.log("nodeDetails");
     console.log(nodeDetails);
-    return(
+    return (
       <Container>
         <h2>NODE UPDATE</h2>
 
         <p className="txt-ctr"><b>Node id:</b> {nodeDetails.id}</p>
 
         <Form><Form.Group as={Row} className="mb-3">
-        {attributes.map((attribute) => (
-          <Row>
-            <Col sm="auto" md={4} lg={4}>
-            <Form.Label><b>{attribute}:</b></Form.Label>
-            </Col>
+          {attributes.map((attribute) => (
+            <Row>
+              <Col sm="auto" md={4} lg={4}>
+                <Form.Label><b>{attribute}:</b></Form.Label>
+              </Col>
 
-            <Col>
-            <Form.Control
-              // className = "mb-3"
-              value={nodeDetails[attribute]}
-              onChange={(e) =>
-                setNodeDetails({
-                ...nodeDetails,
-                [attribute]: e.target.value,
-              })}/>
-            </Col>
-          </Row>
-        ))}
+              <Col>
+                <Form.Control
+                  // className = "mb-3"
+                  value={nodeDetails[attribute]}
+                  onChange={(e) =>
+                    setNodeDetails({
+                      ...nodeDetails,
+                      [attribute]: e.target.value,
+                    })} />
+              </Col>
+            </Row>
+          ))}
         </Form.Group></Form>
 
         <Row>
-        <Col></Col>
-        <Col sm="auto" md="auto" lg="auto">
-        <Button variant="uwa"
-          value="Submit"
-          onClick={(e) => sendNodeUpdate(nodeDetails, unitNode.id)}>
-        Submit</Button>
-        </Col>
+          <Col></Col>
+          <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa"
+              value="Submit"
+              onClick={(e) => sendNodeUpdate(nodeDetails, unitNode.id)}>
+              Submit</Button>
+          </Col>
 
-        <Col sm="auto" md="auto" lg="auto">
-        <Button variant="uwa"
-          value="Delete"
-          onClick={(e) => sendDeleteNode(unitNode.id)}>
-        Delete</Button>
-        </Col>
-        <Col></Col>
+          <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa"
+              value="Delete"
+              onClick={(e) => sendDeleteNode(unitNode.id)}>
+              Delete</Button>
+          </Col>
+          <Col></Col>
         </Row>
       </Container>
     );
@@ -524,83 +526,83 @@ const queryDisplay = ({ data }) => {
         <Row><h2>LINK READ</h2></Row>
 
         <Row>
-        <Table responsive striped hover>
-          <thead>
-            <tr>
-              {linkHeadings.map((heading) => (
-                <th>{heading}</th>
-              ))}
-            </tr>
-          </thead>
+          <Table responsive striped hover>
+            <thead>
+              <tr>
+                {linkHeadings.map((heading) => (
+                  <th>{heading}</th>
+                ))}
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              {linkHeadings.map((heading) => (
-                <td>{linkBodyData[heading]}</td>
-              ))}
-            </tr>
-          </tbody>
-        </Table>
+            <tbody>
+              <tr>
+                {linkHeadings.map((heading) => (
+                  <td>{linkBodyData[heading]}</td>
+                ))}
+              </tr>
+            </tbody>
+          </Table>
         </Row>
 
         <Row><h2>SOURCE DATA</h2></Row>
 
         <Row>
-        <Table responsive striped hover>
-          <thead>
-            <tr>
-              {sourceHeadings.map((heading) => (
-                <th>{heading}</th>
-              ))}
-            </tr>
-          </thead>
+          <Table responsive striped hover>
+            <thead>
+              <tr>
+                {sourceHeadings.map((heading) => (
+                  <th>{heading}</th>
+                ))}
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              {sourceHeadings.map((heading) => (
-                <td>{sourceBodyData[heading]}</td>
-              ))}
-            </tr>
-          </tbody>
-        </Table>
+            <tbody>
+              <tr>
+                {sourceHeadings.map((heading) => (
+                  <td>{sourceBodyData[heading]}</td>
+                ))}
+              </tr>
+            </tbody>
+          </Table>
         </Row>
 
         <Row><h2>TARGET DATA</h2></Row>
 
         <Row>
-        <Table responsive striped hover>
-          <thead>
-            <tr>
-              {targetHeadings.map((heading) => (
-                <th>{heading}</th>
-              ))}
-            </tr>
-          </thead>
+          <Table responsive striped hover>
+            <thead>
+              <tr>
+                {targetHeadings.map((heading) => (
+                  <th>{heading}</th>
+                ))}
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              {targetHeadings.map((heading) => (
-                <td>{targetBodyData[heading]}</td>
-              ))}
-            </tr>
-          </tbody>
-        </Table>
+            <tbody>
+              <tr>
+                {targetHeadings.map((heading) => (
+                  <td>{targetBodyData[heading]}</td>
+                ))}
+              </tr>
+            </tbody>
+          </Table>
         </Row>
 
         {userType === "UnitCoordinator" ? (
           <Row>
             <Col></Col>
             <Col sm="auto" md="auto" lg="auto">
-            <Button variant="uwa" onClick={(n) => handleUpdateLink()}>
-              Update
-            </Button>
+              <Button variant="uwa" onClick={(n) => handleUpdateLink()}>
+                Update
+              </Button>
             </Col>
 
             <Col sm="auto" md="auto" lg="auto">
-            <Button variant="uwa"
-              onClick={(e) => sendDeleteLink(unitlink.property.id)}>
-              Delete
-            </Button>
+              <Button variant="uwa"
+                onClick={(e) => sendDeleteLink(unitlink.property.id)}>
+                Delete
+              </Button>
             </Col>
             <Col></Col>
           </Row>
@@ -625,31 +627,31 @@ const queryDisplay = ({ data }) => {
         <p className="txt-ctr"><b>Chosen Type:</b> {nodeDetails.type}</p>
 
         <Form><Form.Group as={Row} className="mb-3">
-        {inputs.map((input) => (
-          <Row>
-            <Col sm="auto" md={4} lg={4}>
-            <Form.Label><b>{input}:</b></Form.Label>
-            </Col>
+          {inputs.map((input) => (
+            <Row>
+              <Col sm="auto" md={4} lg={4}>
+                <Form.Label><b>{input}:</b></Form.Label>
+              </Col>
 
-            <Col>
-            <Form.Control
-              value={nodeDetails[input]}
-              onChange={(e) =>
-                setNodeDetails({ ...nodeDetails, [input]: e.target.value })
-              }/>
-            </Col>
-          </Row>
-        ))}
+              <Col>
+                <Form.Control
+                  value={nodeDetails[input]}
+                  onChange={(e) =>
+                    setNodeDetails({ ...nodeDetails, [input]: e.target.value })
+                  } />
+              </Col>
+            </Row>
+          ))}
         </Form.Group></Form>
 
         <Row>
-        <Col></Col>
-        <Col>
-        <Button variant="uwa" onClick={(e) => sendCreateNode(nodeDetails)}>
-          Submit
-        </Button>
-        </Col>
-        <Col></Col>
+          <Col></Col>
+          <Col>
+            <Button variant="uwa" onClick={(e) => sendCreateNode(nodeDetails)}>
+              Submit
+            </Button>
+          </Col>
+          <Col></Col>
         </Row>
       </Container>
     );
@@ -670,22 +672,22 @@ const queryDisplay = ({ data }) => {
 
           <Col sm={5} md={5} lg={5}>
             <Dropdown>
-            <Dropdown.Toggle variant="uwa" id="dropdown-basic">
-              {selectedType}
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              {nodeTypeInputs.map((type) => (
-                <Dropdown.Item
-                  className="dd-uwa"
-                  key={type}
-                  value={type}
-                  onClick={(e) => setSelectedType(type)}>
-                  {type}
-                </Dropdown.Item>))}
-            </Dropdown.Menu>
+              <Dropdown.Toggle variant="uwa" id="dropdown-basic">
+                {selectedType}
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                {nodeTypeInputs.map((type) => (
+                  <Dropdown.Item
+                    className="dd-uwa"
+                    key={type}
+                    value={type}
+                    onClick={(e) => setSelectedType(type)}>
+                    {type}
+                  </Dropdown.Item>))}
+              </Dropdown.Menu>
             </Dropdown>
           </Col>
-{/*        <select
+          {/*        <select
           value={selectedType}
           //onChange={e => setSelectedType(e.target.value)}>
           onChange={(e) => setSelectedType(e.target.value)}
@@ -698,9 +700,9 @@ const queryDisplay = ({ data }) => {
         </select>*/}
 
           <Col sm="auto" md="auto" lg="auto">
-          <Button variant="uwa" onClick={(e) => getInputs(selectedType, "NODE")}>
-            Submit
-          </Button>
+            <Button variant="uwa" onClick={(e) => getInputs(selectedType, "NODE")}>
+              Submit
+            </Button>
           </Col>
         </Row>
       </Container>
@@ -720,26 +722,26 @@ const queryDisplay = ({ data }) => {
             console.log("CBOK_WEIGHTING");
             return (
               <Row>
-              <Col sm={5} md={5} lg={3}><p><b>Weight: </b></p></Col>
-              
-              <Col>
-              <Dropdown>
-                <Dropdown.Toggle variant="uwa" id="dropdown-basic">
-                  Weight{" "}
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  {inputs.map((weight) => (
-                    <Dropdown.Item
-                      className="dd-uwa"
-                      key={weight}
-                      value={weight}
-                      onClick={(e) => setLinkDetails({ ...linkDetails, weight: weight })}>
-                      {weight}
-                      </Dropdown.Item>
-                    ))}
-                </Dropdown.Menu>
-              </Dropdown>
-              </Col>
+                <Col sm={5} md={5} lg={3}><p><b>Weight: </b></p></Col>
+
+                <Col>
+                  <Dropdown>
+                    <Dropdown.Toggle variant="uwa" id="dropdown-basic">
+                      Weight{" "}
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      {inputs.map((weight) => (
+                        <Dropdown.Item
+                          className="dd-uwa"
+                          key={weight}
+                          value={weight}
+                          onClick={(e) => setLinkDetails({ ...linkDetails, weight: weight })}>
+                          {weight}
+                        </Dropdown.Item>
+                      ))}
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </Col>
               </Row>
             );
           }
@@ -748,44 +750,44 @@ const queryDisplay = ({ data }) => {
 
         <Form><Form.Group className="mb-3">
           <Row>
-          <Col sm={5} md={5} lg={3}><p><b>source id:</b> {linkDetails.sourceId}</p></Col>
-          <Col>
-          <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
-            Select Source
-          </Button>
-          </Col>
+            <Col sm={5} md={5} lg={3}><p><b>source id:</b> {linkDetails.sourceId}</p></Col>
+            <Col>
+              <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
+                Select Source
+              </Button>
+            </Col>
           </Row>
 
           <Row>
-          <Col sm={5} md={5} lg={3}><p><b>target id:</b> {linkDetails.targetId}</p></Col>
-          <Col>
-          <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
-            Select Destination
-          </Button>
-          </Col>
+            <Col sm={5} md={5} lg={3}><p><b>target id:</b> {linkDetails.targetId}</p></Col>
+            <Col>
+              <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
+                Select Destination
+              </Button>
+            </Col>
           </Row>
 
           <Row>
-          <Col sm="auto" md="auto" lg="auto">
-          <Button
-            variant="uwa"
-            onClick={(e) =>
-              setLinkDetails({
-                ...linkDetails,
-                sourceId: searchSourceId,
-                targetId: searchTargetId,
-              })
-            }
-          >
-          Confirm Source and Target
-        </Button>
-        </Col>
-        <Col sm="auto" md="auto" lg="auto">
-        <Button variant="uwa" onClick={(e) => sendCreateLink(linkDetails)}>
-          Submit
-        </Button>
-        </Col>
-        </Row>
+            <Col sm="auto" md="auto" lg="auto">
+              <Button
+                variant="uwa"
+                onClick={(e) =>
+                  setLinkDetails({
+                    ...linkDetails,
+                    sourceId: searchSourceId,
+                    targetId: searchTargetId,
+                  })
+                }
+              >
+                Confirm Source and Target
+              </Button>
+            </Col>
+            <Col sm="auto" md="auto" lg="auto">
+              <Button variant="uwa" onClick={(e) => sendCreateLink(linkDetails)}>
+                Submit
+              </Button>
+            </Col>
+          </Row>
         </Form.Group></Form>
       </Container>
     );
@@ -800,35 +802,35 @@ const queryDisplay = ({ data }) => {
     return (
       <Container>
         <h2>LINK CREATE</h2>
-        
+
         <Row>
-        <Col sm="auto" md="auto" lg="auto">
-          <p><b>Select Type:</b></p>
-        </Col>
+          <Col sm="auto" md="auto" lg="auto">
+            <p><b>Select Type:</b></p>
+          </Col>
 
-        <Col sm={5} md={5} lg={5}>
-          <Dropdown>
-            <Dropdown.Toggle variant="uwa" id="dropdown-basic">
-              {selectedType}
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              {linkTypes.map((type) => (
-                <Dropdown.Item
-                  className="dd-uwa"
-                  key={type}
-                  value={type}
-                  onClick={(e) => setSelectedType(type)}>
-                  {type}
-                </Dropdown.Item>))}
-            </Dropdown.Menu>
-          </Dropdown>
-        </Col>
+          <Col sm={5} md={5} lg={5}>
+            <Dropdown>
+              <Dropdown.Toggle variant="uwa" id="dropdown-basic">
+                {selectedType}
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                {linkTypes.map((type) => (
+                  <Dropdown.Item
+                    className="dd-uwa"
+                    key={type}
+                    value={type}
+                    onClick={(e) => setSelectedType(type)}>
+                    {type}
+                  </Dropdown.Item>))}
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
 
-        <Col sm="auto" md="auto" lg="auto">
-        <Button variant="uwa" onClick={(e) => getInputs(selectedType, "LINK")}>
-          Submit
-        </Button>
-        </Col>
+          <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa" onClick={(e) => getInputs(selectedType, "LINK")}>
+              Submit
+            </Button>
+          </Col>
         </Row>
       </Container>
     );
@@ -874,46 +876,46 @@ const queryDisplay = ({ data }) => {
         <h3 className="txt-ctr">PROPERTY UPDATE</h3>
 
         <Form><Form.Group as={Row} className="mb-3">
-        {properties.map((property) => (
-          <Row>
-            <Col sm={6} md={6} lg={3}>
-            <Form.Label><b>{property}:</b></Form.Label>
-            </Col>
+          {properties.map((property) => (
+            <Row>
+              <Col sm={6} md={6} lg={3}>
+                <Form.Label><b>{property}:</b></Form.Label>
+              </Col>
 
-            <Col>
-              <Form.Control
-                value={linkDetails[property]}
-                onChange={(e) =>
-                  setLinkDetails({ ...linkDetails, [property]: e.target.value })
-                }/>
-            </Col>
-          </Row>
-        ))}
+              <Col>
+                <Form.Control
+                  value={linkDetails[property]}
+                  onChange={(e) =>
+                    setLinkDetails({ ...linkDetails, [property]: e.target.value })
+                  } />
+              </Col>
+            </Row>
+          ))}
         </Form.Group></Form>
 
         <h3 className="txt-ctr">SOURCE UPDATE</h3>
-        
-        
+
+
         <Form><Form.Group as={Row} className="mb-3">
-        <Row>
-        <Col sm={6} md={6} lg={3}>
-            <Form.Label><b>Source Id:</b></Form.Label>
-        </Col>
-        <Col>
-        <Form.Control
-            type="text"
-            value={sourceDetails.id}
-            onChange={(e) =>
-              setSourceDetails({ ...sourceDetails, id: searchSourceId })
-            }/>
-        </Col>
-        
-        <Col sm="auto" md="auto" lg="auto">
-        <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
-          Select Source
-        </Button>
-        </Col>
-        </Row>
+          <Row>
+            <Col sm={6} md={6} lg={3}>
+              <Form.Label><b>Source Id:</b></Form.Label>
+            </Col>
+            <Col>
+              <Form.Control
+                type="text"
+                value={sourceDetails.id}
+                onChange={(e) =>
+                  setSourceDetails({ ...sourceDetails, id: searchSourceId })
+                } />
+            </Col>
+
+            <Col sm="auto" md="auto" lg="auto">
+              <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
+                Select Source
+              </Button>
+            </Col>
+          </Row>
 
         </Form.Group></Form>
 
@@ -928,20 +930,20 @@ const queryDisplay = ({ data }) => {
 
         <Row><Form><Form.Group as={Row} className="mb-3">
           <Col sm={6} md={6} lg={3}>
-          <Form.Label><b>Target Id:</b></Form.Label>
+            <Form.Label><b>Target Id:</b></Form.Label>
           </Col>
 
           <Col>
-          <Form.Control
-            value={targetDetails.id}
-            onChange={(e) =>
-              setTargetDetails({ ...targetDetails, id: searchTargetId })
-            }/>
+            <Form.Control
+              value={targetDetails.id}
+              onChange={(e) =>
+                setTargetDetails({ ...targetDetails, id: searchTargetId })
+              } />
           </Col>
           <Col sm="auto" md="auto" lg="auto">
-          <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
-            Select Destination
-          </Button>
+            <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
+              Select Destination
+            </Button>
           </Col>
         </Form.Group></Form></Row>
 
@@ -953,28 +955,28 @@ const queryDisplay = ({ data }) => {
         ))}
 
         <Row>
-        <Col sm="auto" md="auto" lg="auto">
-        <Button variant="uwa" onClick={(e) => updateIds()}>
-          Confirm Source and Target
-        </Button>
-        </Col>
-        
-        
-        <Col sm="auto" md="auto" lg="auto">
-        <Button
-          variant="uwa"
-          onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}>
-          Submit
-        </Button>
-        </Col>
+          <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa" onClick={(e) => updateIds()}>
+              Confirm Source and Target
+            </Button>
+          </Col>
 
-        <Col sm="auto" md="auto" lg="auto">
-        <Button
-          variant="uwa"
-          onClick={(e) => sendDeleteLink(unitLink.property.id)}>
-          Delete
-        </Button>
-        </Col>
+
+          <Col sm="auto" md="auto" lg="auto">
+            <Button
+              variant="uwa"
+              onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}>
+              Submit
+            </Button>
+          </Col>
+
+          <Col sm="auto" md="auto" lg="auto">
+            <Button
+              variant="uwa"
+              onClick={(e) => sendDeleteLink(unitLink.property.id)}>
+              Delete
+            </Button>
+          </Col>
 
         </Row>
       </Container>
@@ -990,21 +992,21 @@ const queryDisplay = ({ data }) => {
             <h2>CREATE</h2>
             <Col></Col>
             <Col sm="auto" md="auto" lg="auto">
-            <Button
-              variant="uwa"
-              onClick={(n) => setFilterActive("NodeCreate")}
-            >
-              Create Node
-            </Button>
+              <Button
+                variant="uwa"
+                onClick={(n) => setFilterActive("NodeCreate")}
+              >
+                Create Node
+              </Button>
             </Col>
 
             <Col sm="auto" md="auto" lg="auto">
-            <Button
-              variant="uwa"
-              onClick={(n) => setFilterActive("LinkCreate")}
-            >
-              Create Link
-            </Button>
+              <Button
+                variant="uwa"
+                onClick={(n) => setFilterActive("LinkCreate")}
+              >
+                Create Link
+              </Button>
             </Col>
             <Col></Col>
           </Row>
@@ -1041,9 +1043,84 @@ const queryDisplay = ({ data }) => {
         longestLength = longestWord;
       }
     }
-
     return longestLength;
   }
+
+  // LEGEND COMPONENT
+  const Canvas = ({ draw, height, width }) => {
+    const canvas = React.useRef();
+
+    React.useEffect(() => {
+      const context = canvas.current.getContext("2d");
+      draw(context);
+    });
+
+    return <canvas ref={canvas} height={height} width={width} />;
+  };
+
+  Canvas.propTypes = {
+    draw: PropTypes.func.isRequired,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired
+  };
+
+  const legend = (ctx) => {
+    ctx.beginPath();
+    ctx.fillStyle = "brown";
+    ctx.arc(10, 30, 10, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = "15px Helvetica Neue";
+    ctx.fillText("Unit", 25, 35);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "orange";
+    ctx.arc(70, 30, 10, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = "15px Helvetica Neue";
+    ctx.fillText("EndCBoK", 85, 35);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "green";
+    ctx.arc(170, 30, 10, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = "15px Helvetica Neue";
+    ctx.fillText("Outcome", 185, 35);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "blue";
+    ctx.arc(270, 30, 10, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = "15px Helvetica Neue";
+    ctx.fillText("AQF Category", 285, 35);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "pink";
+    ctx.arc(400, 30, 10, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = "15px Helvetica Neue";
+    ctx.fillText("AQF Outcome", 415, 35);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "purple";
+    ctx.arc(530, 30, 10, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = "15px Helvetica Neue";
+    ctx.fillText("Sub", 545, 35);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = "red";
+    ctx.arc(590, 30, 10, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.font = "15px Helvetica Neue";
+    ctx.fillText("Top", 605, 35);
+    ctx.closePath();
+  };
 
   //-----------------------------------------------------------------------------------RETURN
   return (
@@ -1062,6 +1139,7 @@ const queryDisplay = ({ data }) => {
               </IconContext.Provider>{" "}
             </Button>
           </Col>
+          <Canvas draw={legend} height={50} width={650} />
 
           <Row>
             <Offcanvas
@@ -1174,12 +1252,12 @@ const queryDisplay = ({ data }) => {
                 nodeCanvasObject={(node, ctx, globalScale) => {
                   const MAX_FONT_SIZE = 4;
                   const LABEL_NODE_MARGIN = 1.5;
-
+ 
                   const label = node.id;
                   //  const labelWords = label.split(" ");
                   //const wordLength = [];
                   //const longestLength = [{ length: 0, index: 0 }];
-
+ 
                   //for (let i = 0; i < labelWords.length; i++) {
                   //  wordLength.push(ctx.measureText(labelWords[i]));
                   // if (wordLength[i] > longestLength.length) {
@@ -1187,15 +1265,15 @@ const queryDisplay = ({ data }) => {
                   //   longestLength.index = i;
                   // }
                   // }
-
+ 
                   const fontSize = 12 / globalScale;
                   ctx.font = `${fontSize}px Sans-Serif`;
-
+ 
                   const textWidth = ctx.measureText(label).width;
                   const bckgDimensions = [textWidth, fontSize].map(
                     (n) => n + fontSize * 0.2
                   ); // some padding
-
+ 
                   /*ctx.beginPath();
                   ctx.arc(
                     node.x,
@@ -1207,25 +1285,25 @@ const queryDisplay = ({ data }) => {
                   );
                   ctx.fillStyle = "blue";
                   ctx.fill();
-
+ 
                   ctx.textAlign = "center";
                   ctx.textBaseline = "middle";
                   ctx.fillStyle = "black";
                   ctx.fillText(label, node.x, node.y);
-
+ 
                   //const label = node.id;
-
+ 
                     const label = "multi word label example";
                   const labelWords = label.split(" ");
                   const longestLength = [{ length: 0, index: 0 }];
-
+ 
                   for (var i = 0; i < labelWords.length; i++) {
                     if (ctx.measureText(labelWords[i]) > longestLength.length) {
                       longestLength.length = ctx.measureText(labelWords[i]);
                       longestLength.index = i;
                     }
                   }
-
+ 
                   //const fontSize = 12 / globalScale;
                   // const maxTextLength =
                   //   Math.sqrt(Math.pow(node.x, 2) + Math.pow(node.y, 2)) -
@@ -1234,7 +1312,7 @@ const queryDisplay = ({ data }) => {
                     MAX_FONT_SIZE,
                     globalScale / ctx.measureText(label).width /// longestLength.length
                   );
-
+ 
                   ctx.font = `${fontSize}px Sans-Serif`;
                   //  const textWidth = longestLength.length;
                   // const bckgDimensions = [textWidth, fontSize].map(
@@ -1243,7 +1321,7 @@ const queryDisplay = ({ data }) => {
                   // const radius =
                   //  ((textWidth + LABEL_NODE_MARGIN) * labelWords.length) / 2 +
                   //   5 * LABEL_NODE_MARGIN;
-
+ 
                   ctx.beginPath();
                   // ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
                   ctx.arc(
@@ -1254,17 +1332,17 @@ const queryDisplay = ({ data }) => {
                     2 * Math.PI,
                     false
                   );
-
+ 
                   ctx.fillStyle = "blue";
                   ctx.fill();
-
+ 
                   ctx.textAlign = "center";
                   ctx.textBaseline = "middle";
                   ctx.fillStyle = "black";
-
+ 
                    const startingYPoint =
                     node.y - radius + 2.5 * LABEL_NODE_MARGIN;
-
+ 
                   for (var j = 0; j < labelWords.length; j++) {
                     ctx.fillText(
                       labelWords[j],
@@ -1272,9 +1350,9 @@ const queryDisplay = ({ data }) => {
                       startingYPoint + (fontSize + LABEL_NODE_MARGIN) * j
                     );
                   }
-
+ 
                   //ctx.textAlign = "center";
-
+ 
                   ctx.fillText(label, node.x, node.y);
                 }}*/
                 linkWidth={3}
@@ -1358,8 +1436,8 @@ const queryDisplay = ({ data }) => {
             </div>
           </div>
         </Container>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 

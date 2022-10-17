@@ -5,12 +5,9 @@ const AllDataTable = ({data}) => {
     //change this to var nHeadData = ["id", "label", "displayName", "color"] when the backend workd
     var nHeadData = ["id", "unitCode", "title"]
     var nBodyData = data.nodes
-    //console.log("nHEADDATE")
-    //console.log(nHeadData)
 
     var lHeadData = ["id", "source", "target"]
     //var lBodyData = data.links
-
     var lBodyData = []
 
     for (var i = 0; i < data.links.length; i++) {
@@ -21,12 +18,8 @@ const AllDataTable = ({data}) => {
         })
     }
 
-    console.log("lBodyData")
-    console.log(lBodyData)
-
     return (
         <div>
-
             <h2> NODES </h2>
             <Table responsive striped hover>
                 <thead>
