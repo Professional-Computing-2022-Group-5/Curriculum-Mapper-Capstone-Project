@@ -68,9 +68,11 @@ Run the React App:
 
 `$ cd client`
 
-`$ sudo apt install npm -y` (only for Linux - if you are not a Linux user skip this step)
+`$ brew install npm yarn` (for MacOS don't have brew? [click here](https://brew.sh/ "Homebrew"))
 
-`$ npm build`
+`$ sudo apt install npm && sudo apt install yarn -y` (only for Linux - if you are not a Linux user skip this step)
+
+`$ yarn install`
 
 `$ npm start`
 
@@ -79,10 +81,6 @@ Run the React App:
 To run the unit test:
 
 `$ python3 -m tests.UT`
-
-To run the selenium test:(Not ready yet)
-
-`$ python3 -m tests.xx`
 
 ## Deployment
 
