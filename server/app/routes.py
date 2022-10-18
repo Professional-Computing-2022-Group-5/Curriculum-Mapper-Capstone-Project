@@ -30,7 +30,6 @@ def register():
 def login():
     if request.method == 'POST':
         data = request.get_json()
-        # print(data['email'], data['password'])
         result = sqliteDB.login(data['email'], data['password'])
         return result
     else:
@@ -42,17 +41,17 @@ def logout():
 
 @app.route("/@me")
 def get_current_user():
-    if not current_user.is_authenticated:
-         return jsonify({"loggedIn": False, "isCoordinator": False})
-    else:
-        user = UserModel.query.filter_by(id = current_user.id).first()
+    if current_user.is_authenticated:
         return jsonify({
             "loggedIn": True,
-            "id": user.id,
-            "email": user.email,
-            "isCoordinator": user.UnitCoordinator,
-            'isAdmin': user.admin
+            "id": current_user.id,
+            "email": current_user.email,
+            "isCoordinator": current_user.UnitCoordinator,
+            'isAdmin': current_user.admin,
+            'username': current_user.username
         })
+    else:
+        return jsonify({"loggedIn": False, "isCoordinator": False})
 
 # query the database(Neo4j) by user input and return json data to frontend
 @app.route('/query', methods=['POST', 'GET'])
@@ -163,7 +162,7 @@ def csv():
 def upgrade_user():
     if request.method == 'POST':
         data = request.get_json()
-        result = sqliteDB.upgrade_to_coordinator(data['email'])
+        result = sqliteDB.upgrade_to_coordinator(data['email'], data['whitelist'])
         return result
     else:
         return {'status': 'request_error'}
@@ -176,7 +175,7 @@ def send_mail():
         message = data['message']
         title = 'CITS3200 Notification'
         msg = Message(title, sender=MAIL_USERNAME, recipients=[RECIPIENT])
-        msg.body = "Hello Flask message sent from Flask-Mail, this is a test. " + message
+        msg.body = "Hi Admin,\n\na new user just registered here is the email address of the user: " + message+"\n\nBest regards,\nCurriculum Mapper"
         try:
             mail.send(msg)
             return {'status': 'send_success'}

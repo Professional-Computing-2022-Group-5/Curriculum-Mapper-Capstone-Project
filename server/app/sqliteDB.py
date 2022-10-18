@@ -47,15 +47,16 @@ def logout():
         return {'status': 'logout_failed'}
 
 # upgrade an existing user to unit coordinator
-def upgrade_to_coordinator(email):
+def upgrade_to_coordinator(email,flag):
     try:
         user = UserModel.query.filter_by(email=email).first()
         if user:
             user.UnitCoordinator = True
             db.session.commit()
             return {'status': 'upgrade_success'}
-        else:
-            return {'status': 'user_not_exist'}
+        # if the user is not exist, add the email to the white list
+        elif flag:
+            return add_whiteList(email)
     except:
         return {'status': 'upgrade_failed'}
 
@@ -67,7 +68,9 @@ def whiteList(email):
         for line in content:
             line = line.strip()
             if email == line:
+                f.close()
                 return True
+        f.close()
         return False
     except:
         return {'status': 'file_not_found'}
@@ -80,6 +83,7 @@ def add_whiteList(email):
         else:
             with open('app/static/whiteList.txt', 'a') as f:
                 f.write(email + '\n')
+            f.close()
             return {'status': 'add_success'}
     except:
         return {'status': 'file_not_found'}

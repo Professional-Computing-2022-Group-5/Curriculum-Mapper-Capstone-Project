@@ -151,4 +151,4 @@ def joltAPI(user_query):
     if len(nodes) == 0 and len(links) == 0:
         return {'status':'empty_data'}
     else:
-        return return_data
+        return {'status':"success", 'data':return_data}

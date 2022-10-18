@@ -19,6 +19,26 @@ def search_by_query(query):
         # return error message if the api call fails
         return {'status': 'joltAPI_error'}
 
+#create two new nodes and a relationship between them(but we don't have this function in the frontend yet)) 
+'''
+data = [{
+        'source':{
+            'label':'Test_Start_Node',
+            'name':'start_node'
+            ...
+        },
+        'target':{
+            'label':'Test_End_Node',
+            'name':'end_node'
+            ...
+        },
+        'relationship':{
+            'label':'Test_Relationship',
+            'name':'is_friend_of'
+            ...
+        }
+        }]
+'''
 def create_by_user(data):
     try:
         for item in data:
@@ -184,7 +204,7 @@ def get_labels():
         for label in labels:
             data = graphDB.run("MATCH (n:{}) RETURN n LIMIT 25".format(label['label'])).data()[0]['n']
             label_dict[label['label']] = list(data.keys())
-        return label_dict
+        return {'status':'success', 'data':label_dict}
     except:
         return {'status':'error'}
 
@@ -195,7 +215,9 @@ def get_relationships():
         relationships = graphDB.run("CALL db.relationshipTypes() YIELD relationshipType RETURN relationshipType")
         # convert the result to a list
         relationships = [relationship['relationshipType'] for relationship in relationships]
-        return relationships
+        # return relationships
+        return {'status':'success', 'data':relationships}
+
     except:
         return {'status':'error'}
 
