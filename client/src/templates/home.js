@@ -41,14 +41,14 @@ const Home = () => {
 
         <Container>
           <Row>
-            <h2>Logged in</h2>
+            <h2 className="txt-ctr txt-uwab">Logged in</h2>
           </Row>
         </Container>
       ) : (
         // NOT LOGGED IN
         <Container>
           <Row>
-            <p>You are not logged in</p>
+            <h2 className="txt-ctr txt-uwab">You are not logged in</h2>
           </Row>
         </Container>
       )}

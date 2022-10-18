@@ -58,4 +58,27 @@ const ReportGen = () => {
   );
 };
 
+const ReportGen = () => {
+  // Create styles
+
+  return (
+    <div className="report_gen">
+      <div className="col-lg-5">
+        <Row>
+          <Col>
+            <h1 className="font-weight-light">Report Generation </h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <PDFViewer style={styles.viewer}>
+              <BasicDocument />
+            </PDFViewer>
+          </Col>
+        </Row>
+      </div>
+    </div>
+  );
+};
+
 export default ReportGen;

@@ -17,6 +17,10 @@ body {
   text-align: center;
 }
 
+.txt-uwab {
+  color: #27348b;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -65,7 +69,7 @@ h4 {
 }
 
 .error_message {
-  padding-top: 3px;
+  padding-top: 0px;
   color: red;
   font-size: 12px;
   text-align: right;
@@ -86,6 +90,7 @@ h4 {
 
 .content-ctr {
   justify-content: center;
+  color: #e2b600;
 }
 
 .btn-uwa {
@@ -101,7 +106,7 @@ h4 {
   width: 40px;
   height: 40px;
   background: #e2b600;
-
+  border: pink;
   color: #27348b;
   padding: 5px 5px;
   border-radius: 20px;

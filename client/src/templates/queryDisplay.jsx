@@ -1,11 +1,16 @@
 import React, { useRef, useEffect, useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
+import PropTypes from "prop-types";
+
 import ForceGraph2D from "react-force-graph-2d";
 import httpClient from "./httpClient.js";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
-import PropTypes from "prop-types";
+
+import Form from "react-bootstrap/Form";
+import Dropdown from "react-bootstrap/Dropdown";
+import Modal from "react-bootstrap/Modal";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -31,28 +36,26 @@ const queryDisplay = ({ inputData, query }) => {
   console.log("-----DATA-----");
   console.log(data);
 
-  //-----------------------------------------------------------------------------------GET USER TYPE
+  const [showDelNode, setDelNodeShow] = useState(false);
+  const [showDelLink, setDelLinkShow] = useState(false);
 
-  const [userType, setUserType] = useState("BasicUser");
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const handleDelNodeClose = () => {
+      setDelNodeShow(false);
+  };
+  
+  const handleDelNodeShow = (id) => {
+      setDelNodeShow(true);
+      console.log("CHECK HERE_______________________\n\n\n")
+      console.log(id);
+  };
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const resp = await httpClient.get("//localhost:5000/@me");
+  const handleDelLinkClose = () => {
+      setDelLinkShow(false);
+  };
+  const handleDelLinkShow = (id) => {
+      setDelLinkShow(true);
+  };
 
-        if (resp.data.isCoordinator === true) {
-          setUserType("UnitCoordinator");
-        }
-
-        if (resp.data.loggedIn === true) {
-          setUserLoggedIn(true);
-        }
-      } catch (error) {
-        console.log("No Current User Logged In");
-      }
-    })();
-  }, []);
 
   //-----------------------------------------------------------------------------------GLOBAL VARIABLES
   // WHICH CRUD COMMAND TO HAVE ON
@@ -301,6 +304,7 @@ const queryDisplay = ({ inputData, query }) => {
     } catch (error) {
       setErrorMessage("Error [sendDeleteNode]");
       handleErrorShow();
+
     }
   };
 
@@ -473,7 +477,88 @@ const queryDisplay = ({ inputData, query }) => {
       "-----handleBackgroundClick -> filterActive: " + filterActive + "-----"
     );
   }
+  
+
   //-----------------------------------------------------------------------------------COMPONENTS
+  
+  // DELETE NODE MODAL
+  const DelNode = (id) => {
+    return(
+    <Modal
+    show={showDelNode}
+    onHide={handleDelNodeClose}
+    animation={true}
+    size="md"
+    aria-labelledby="contained-modal-title-vcenter"
+    backdrop="static"
+    keyboard={false}
+    centered>
+      <Modal.Header closeButton centered>
+        <Modal.Title><h2>Delete Node?</h2></Modal.Title>
+      </Modal.Header>
+      
+      <Modal.Body>
+        <Container>
+        <Row>
+          <Col></Col>
+          <Col>
+          <Button variant="uwa" onClick={handleDelNodeClose}>
+            Cancel
+          </Button>
+          </Col>
+
+          <Col>
+          <Button variant="uwa" onClick={() => sendDeleteNode(id.id)}>
+            Delete
+          </Button>
+          </Col>
+          <Col></Col>
+
+        </Row>
+        </Container>
+      </Modal.Body>
+    </Modal>
+  );};
+
+  //DELETE LINK MODAL
+  const DelLink = (id) => {
+    return(
+    <Modal
+    show={showDelLink}
+    onHide={handleDelLinkClose}
+    animation={true}
+    size="md"
+    aria-labelledby="contained-modal-title-vcenter"
+    backdrop="static"
+    keyboard={false}
+    centered>
+      <Modal.Header closeButton centered>
+        <Modal.Title><h2>Delete Link?</h2></Modal.Title>
+      </Modal.Header>
+      
+      <Modal.Body>
+        <Container>
+        <Row>
+          <Col></Col>
+          <Col>
+          <Button variant="uwa" onClick={handleDelLinkClose}>
+            Cancel
+          </Button>
+          </Col>
+
+          <Col>
+          <Button variant="uwa" onClick={() => sendDeleteLink(id.id)}>
+            Delete
+          </Button>
+          </Col>
+          <Col></Col>
+
+        </Row>
+        </Container>
+      </Modal.Body>
+    </Modal>
+  );};
+
   // READ NODE COMPONENT
   const NodeRead = () => {
     var unitnode = searchforNode(currentId);
@@ -624,10 +709,10 @@ const queryDisplay = ({ inputData, query }) => {
     }
 
     return (
-      <div>
-        <p>NODE UPDATE</p>
+        <Container>
+        <h2>NODE UPDATE</h2>
 
-        <p>Node id: {nodeDetails.id}</p>
+        <p className="txt-ctr"><b>Node id:</b> {nodeDetails.id}</p>
         <label>
           Label:
           <select
@@ -644,34 +729,47 @@ const queryDisplay = ({ inputData, query }) => {
           </select>
         </label>
 
-        {attributes.map((attribute) => (
-          <div>
-            <label>
-              {attribute}:
-              <input
-                type="text"
-                value={nodeDetails[attribute]}
-                onChange={(e) =>
-                  setNodeDetails({
-                    ...nodeDetails,
-                    [attribute]: e.target.value,
-                  })
-                }
-              />
-            </label>
-          </div>
-        ))}
-        <input
-          type="submit"
+        <Form><Form.Group as={Row} className="mb-3">
+          {attributes.map((attribute) => (
+            <Row>
+              <Col sm="auto" md={4} lg={4}>
+                <Form.Label><b>{attribute}:</b></Form.Label>
+              </Col>
+
+              <Col>
+                <Form.Control
+                  // className = "mb-3"
+                  value={nodeDetails[attribute]}
+                  onChange={(e) =>
+                    setNodeDetails({
+                      ...nodeDetails,
+                      [attribute]: e.target.value,
+                    })} />
+              </Col>
+            </Row>
+          ))}
+        </Form.Group></Form>
+
+        <Row>
+        <Col></Col>
+        <Col sm="auto" md="auto" lg="auto">
+        <Button variant="uwa"
           value="Submit"
-          onClick={(e) => sendNodeUpdate(nodeDetails, unitNode.id)}
-        />
-        <input
-          type="submit"
+          onClick={(e) => sendNodeUpdate(nodeDetails, unitNode.id)}>
+        Submit</Button>
+        </Col>
+
+        <Col sm="auto" md="auto" lg="auto">
+        <Button variant="uwa"
           value="Delete"
-          onClick={(e) => sendDeleteNode(unitNode.id)}
-        />
-      </div>
+          onClick={(e) => sendDeleteNode(unitNode.id)}>
+        Delete</Button>
+        </Col>
+        <Col></Col>
+        </Row>
+      
+      <DelNode id={unitNode.id}/>
+      </Container>
     );
   };
 
@@ -729,21 +827,29 @@ const queryDisplay = ({ inputData, query }) => {
         </Row>
 
         {userType === "UnitCoordinator" ? (
-          <div>
-            <Button variant="uwa" onClick={(n) => handleUpdateLink()}>
-              Update
-            </Button>
-            <Button
-              variant="uwa"
-              onClick={(e) => sendDeleteLink(unitlink.property.id)}
-            >
+          <Row>
+            <Col></Col>
+            <Col sm="auto" md="auto" lg="auto">
+              <Button variant="uwa" onClick={(n) => handleUpdateLink()}>
+                Update
+              </Button>
+            </Col>
+
+            <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa"
+              onClick={(e) => sendDeleteLink(unitlink.property.id)}>
               Delete
             </Button>
-          </div>
+            </Col>
+            <Col></Col>
+          </Row>
         ) : (
-          <div></div>
+          <Row></Row>
         )}
-      </div>
+    
+      <DelLink id={unitlink.property.id}/>
+
+      </Container>
     );
   };
 
@@ -754,36 +860,38 @@ const queryDisplay = ({ inputData, query }) => {
     const [nodeDetails, setNodeDetails] = useState({ label: itemType });
 
     return (
-      <div>
-        <Row>
-          <p>CREATE NODE</p>
-        </Row>
-        <label>Chosen Type: {nodeDetails["type"]}</label>
+      <Container>
+        <h2>NODE CREATE INPUTS</h2>
+        <p className="txt-ctr"><b>Chosen Type:</b> {nodeDetails["type"]}</p>
 
-        {chosenType.map((input) => (
-          <div>
-            <label>
-              {input}:
-              <input
-                type="text"
-                value={nodeDetails[input]}
-                onChange={(e) =>
-                  setNodeDetails({ ...nodeDetails, [input]: e.target.value })
-                }
-              />
-            </label>
-          </div>
-        ))}
-        <Button
-          variant="uwa"
-          onClick={(e) => {
-            console.log(nodeDetails);
-            sendCreateNode(nodeDetails);
-          }}
-        >
-          Submit
-        </Button>
-      </div>
+        <Form><Form.Group as={Row} className="mb-3">
+          {inputs.map((input) => (
+            <Row>
+              <Col sm="auto" md={4} lg={4}>
+                <Form.Label><b>{input}:</b></Form.Label>
+              </Col>
+
+              <Col>
+                <Form.Control
+                  value={nodeDetails[input]}
+                  onChange={(e) =>
+                    setNodeDetails({ ...nodeDetails, [input]: e.target.value })
+                  } />
+              </Col>
+            </Row>
+          ))}
+        </Form.Group></Form>
+
+        <Row>
+          <Col></Col>
+          <Col>
+            <Button variant="uwa" onClick={(e) => sendCreateNode(nodeDetails)}>
+              Submit
+            </Button>
+          </Col>
+          <Col></Col>
+        </Row>
+      </Container>
     );
   };
 
@@ -843,38 +951,53 @@ const queryDisplay = ({ inputData, query }) => {
     // console.log(matchingTypes);
 
     return (
-      <div>
-        <p>NODE CREATE</p>
-        <select
-          value={selectedType}
-          //onChange={e => setSelectedType(e.target.value)}>
-          onChange={(e) => setSelectedType(e.target.value)}
-        >
-          <option value="default" disabled>
-            Please choose a type...
-          </option>
-          {matchingTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
-        <Button
-          variant="uwa"
-          onClick={(e) => {
+      <Container>
+        <h2>NODE CREATE</h2>
+        <Row>
+          <Col sm="auto" md="auto" lg="auto">
+            <p><b>Select Type:</b></p>
+          </Col>
+
+          <Col sm={5} md={5} lg={5}>
+            <Dropdown>
+              <Dropdown.Toggle variant="uwa" id="dropdown-basic">
+                {selectedType}
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                  <Dropdown.Item
+                      value="default"
+                      disabled={true}
+                      className ="dd-uwa">
+                        Please choose a type...
+                      </Dropdown.Item>
+                {nodeTypeInputs.map((type) => (
+                  <Dropdown.Item
+                    className="dd-uwa"
+                    key={type}
+                    value={type}
+                    onClick={(e) => setSelectedType(type)}>
+                    {type}
+                  </Dropdown.Item>))}
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+        
+          <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa" onClick={(e) => {
             if (selectedType !== "default") {
               getInputs(nodeTypes[selectedType], "NODE", selectedType);
-            }
-          }}
-        >
-          Submit
-        </Button>
-      </div>
+            }}}>
+              Submit
+            </Button>
+          </Col>
+        </Row>
+      </Container>
     );
   };
 
   // CREATE LINK INPUTS COMPONENT
   const LinkInputs = () => {
+
     console.log("-----NodeInputs Component [Node Create Inputs]-----");
 
     function getSource(id) {
@@ -887,41 +1010,42 @@ const queryDisplay = ({ inputData, query }) => {
     }
 
     return (
-      <div>
-        <Row>
-          <label>
-            <h3>Chosen Type:{itemType}</h3>
-          </label>
-        </Row>
-        <Row>
-          <label>
-            <h3>Source: {getSource(searchSourceId)}</h3>
-          </label>
-          <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
-            Select Source
-          </Button>
-        </Row>
-        <Row>
-          <label>
-            <h3>
-              Target:
-              {searchforNode(searchTargetId).displayName}
-            </h3>
-          </label>
-          <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
-            Select Destination
-          </Button>
-        </Row>
+      <Container>
+        <p className="txt-ctr"><b>Chosen Type:</b> {itemType}</p>
+        <Form><Form.Group className="mb-3">
+            <Row>
+            <Col sm={5} md={5} lg={3}><p><b>Source ID:</b> {getSource(setSearchSourceId)}</p></Col>
+            <Col>
+              <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
+                Select Source
+              </Button>
+            </Col>
+          </Row>
 
-        <Button
-          variant="uwa"
-          onClick={(e) => {
-            sendCreateLink(itemType, searchSourceId, searchTargetId);
-          }}
-        >
-          Submit
-        </Button>
-      </div>
+          <Row>
+            <Col sm={5} md={5} lg={3}><p><b>Target ID:</b> {searchforNode(searchTargetId).displayName}</p></Col>
+            <Col>
+              <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
+                Select Destination
+              </Button>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col></Col>
+            <Col sm="auto" md="auto" lg="auto">
+              <Button
+                  variant="uwa"
+                  onClick={(e) => {
+                  sendCreateLink(itemType, searchSourceId, searchTargetId);
+                  }}>
+                 Submit
+                </Button>
+            </Col>
+            <Col></Col>
+            </Row>
+        </Form.Group></Form>
+      </Container>
     );
   };
 
@@ -979,33 +1103,48 @@ const queryDisplay = ({ inputData, query }) => {
     //setLinkTypes(matchingTypes);
 
     return (
-      <div>
-        <p>LINK CREATE</p>
-        <select
-          value={selectedType}
-          //onChange={e => setSelectedType(e.target.value)}>
-          onChange={(e) => setSelectedType(e.target.value)}
-        >
-          <option value="default" disabled>
-            Please choose a type...
-          </option>
-          {matchingTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
-        <Button
-          variant="uwa"
-          onClick={(e) => {
+      <Container>
+        <h2>LINK CREATE</h2>
+
+        <Row>
+          <Col sm="auto" md="auto" lg="auto">
+            <p><b>Select Type:</b></p>
+          </Col>
+
+          <Col sm={5} md={5} lg={5}>
+            <Dropdown>
+              <Dropdown.Toggle variant="uwa" id="dropdown-basic">
+                {selectedType}
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                  <Dropdown.Item
+                      value="default"
+                      className="dd-uwa"
+                      disabled={true}>
+                      Please choose a type...</Dropdown.Item>
+                {linkTypes.map((type) => (
+                  <Dropdown.Item
+                    className="dd-uwa"
+                    key={type}
+                    value={type}
+                    onClick={(e) => setSelectedType(type)}>
+                    {type}
+                  </Dropdown.Item>))}
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+
+          <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa" onClick={(e) => {
             if (selectedType !== "default") {
               getInputs("", "LINK", selectedType);
             }
-          }}
-        >
-          Submit
-        </Button>
-      </div>
+          }}>
+              Submit
+            </Button>
+          </Col>
+        </Row>
+      </Container>
     );
   };
 
@@ -1052,50 +1191,8 @@ const queryDisplay = ({ inputData, query }) => {
       }
     }
 
-    const [linkTypes, setLinkTypes] = useState([]);
-
-    console.log("-----SENDING [LinkUpdate] - Get Link Labels]----- ");
-
-    useEffect(() => {
-      httpClient
-        .get("//localhost:5000/get_relationship", {})
-        .then((dbData) => {
-          console.log("   --STATUS [reload_data]: " + dbData.data.status);
-          //setNodeTypes(dbData.data);
-          if (dbData.data.status === "success") {
-            setLinkTypes(dbData.data.data);
-          }
-          if (dbData.data.status === "error") {
-            setErrorMessage(
-              "[error]: Error getting Node Labels (neo4jDB.py/get_relationship) "
-            );
-            handleErrorShow();
-          }
-          if (dbData.data.status === "request_error") {
-            setErrorMessage(
-              "[request_error]: Error getting GET Request (routes.py/get_relationship) "
-            );
-            handleErrorShow();
-          }
-        })
-        .catch((error) => {
-          setErrorMessage("Error");
-          handleErrorShow();
-        });
-    }, []);
 
     //console.log(linkTypes);
-
-    function listCheck(item) {
-      for (var j = 0; j < data.links.length; j++) {
-        if (item === data.links[j].labels) {
-          return true;
-        }
-      }
-      return false;
-    }
-
-    const matchingTypes = linkTypes.filter(listCheck);
 
     const index = properties.indexOf("id");
     if (index > -1) {
@@ -1104,102 +1201,63 @@ const queryDisplay = ({ inputData, query }) => {
     }
 
     return (
-      <div>
-        <p>LINK UPDATE</p>
+      <Container>
+        <h2>LINK UPDATE</h2>
 
-        <p>Link id: {unitLink.id}</p>
-        <div>
+        <p><b>Link ID:</b> {unitLink.property.id}</p>
+        <p><b>Link Labels:</b> {unitLink.labels}</p>
+
+        <h3 className="txt-ctr">SOURCE UPDATE</h3>
+
+
+        <Form><Form.Group as={Row} className="mb-3">
           <Row>
-            <label>
-              Label
-              {/* <input
-              type="text"
-              value={linkDetails["labels"]}
-              onChange={(e) =>
-                setLinkDetails({ ...linkDetails, ["labels"]: e.target.value })
-              }
-            /> */}
-            </label>
-            <select
-              value={linkDetails["labels"]}
-              //onChange={e => setSelectedType(e.target.value)}>
-              onChange={(e) =>
-                setLinkDetails({ ...linkDetails, ["labels"]: e.target.value })
-              }
-            >
-              {matchingTypes.map((type) => (
-                <option key={type} value={type}>
-                  {type}
-                </option>
-              ))}
-            </select>
+            <Col sm={6} md={6} lg={3}>
+              <Form.Label><b>Source ID:</b> {searchforNode(searchSourceId).displayName}</Form.Label>
+            </Col>
+            <Col sm="auto" md="auto" lg="auto">
+              <Button variant="uwa" onClick={(e) => setSearchActive("source")}>
+                Select Source
+              </Button>
+            </Col>
           </Row>
-        </div>
+        </Form.Group></Form>
 
-        <p>SOURCE UPDATE</p>
+
+        <h3 className="txt-ctr">TARGET UPDATE</h3>
+
         <Row>
-          <label>Source Id: {searchforNode(searchSourceId).displayName}</label>
-        </Row>
-
+        <Form><Form.Group as={Row} className="mb-3">
+          <Col sm={6} md={6} lg={3}>
+            <Form.Label><b>Target ID:</b> {searchforNode(searchTargetId).displayName}</Form.Label>
+          </Col>
+          <Col sm="auto" md="auto" lg="auto">
+            <Button variant="uwa" onClick={(e) => setSearchActive("target")}>
+              Select Destination
+            </Button>
+          </Col>
+        </Form.Group></Form></Row>
+        <Row>
+        <Col sm="auto" md="auto" lg="auto">
         <Button
           variant="uwa"
-          onClick={(e) => {
-            setSearchActive("source");
-          }}
-        >
-          Select Source
+          onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}>
+          Submit
         </Button>
+        </Col>
 
-        {/* {sourceProp.map((sProperty) => (
-          <div>
-            <p>
-              {sProperty}: {sourceDetails[sProperty]}
-            </p>
-          </div>
-        ))} */}
-
-        <p>TARGET UPDATE</p>
-        <Row>
-          <label>Target Id: {searchforNode(searchTargetId).displayName}</label>
-        </Row>
-
+        <Col sm="auto" md="auto" lg="auto">
         <Button
           variant="uwa"
-          onClick={(e) => {
-            setSearchActive("target");
-          }}
-        >
-          Select Target
+          onClick={handleDelLinkShow.bind(this, unitLink.property.id)}>
+          Delete
         </Button>
-
-        {/* {targetProp.map((tProperty) => (
-          <div>
-            <p>
-              {tProperty}: {targetDetails[tProperty]}
-            </p>
-          </div>
-        ))} */}
-        <Row>
-          <Button
-            variant="uwa"
-            onClick={(e) => {
-              sendLinkUpdate(
-                linkDetails["labels"],
-                searchSourceId,
-                searchTargetId
-              );
-            }}
-          >
-            Submit
-          </Button>
-          <Button
-            variant="uwa"
-            onClick={(e) => sendDeleteLink(unitLink.property.id)}
-          >
-            Delete
-          </Button>
+        </Col>
         </Row>
-      </div>
+    
+      <DelLink id={unitLink.property.id}/>
+
+      </Container>
     );
   };
 
@@ -1208,31 +1266,38 @@ const queryDisplay = ({ inputData, query }) => {
     console.log("-----Create Component-----");
 
     return (
-      <div>
+      <Container>
         {userType === "UnitCoordinator" ? (
-          <div>
-            <p>CREATE</p>
-            <Button
-              variant="uwa"
-              onClick={(n) => setFilterActive("NodeCreate")}
-            >
-              Create Node
-            </Button>
-            <Button
-              variant="uwa"
-              onClick={(n) => {
+          <Row>
+            <h2>CREATE</h2>
+            <Col></Col>
+            <Col sm="auto" md="auto" lg="auto">
+              <Button
+                variant="uwa"
+                onClick={(n) => setFilterActive("NodeCreate")}
+              >
+                Create Node
+              </Button>
+            </Col>
+
+            <Col sm="auto" md="auto" lg="auto">
+              <Button
+                variant="uwa"
+                onClick={(n) => {
                 setSearchSourceId(-1);
                 setSearchTargetId(-1);
                 setFilterActive("LinkCreate");
               }}
-            >
-              Create Link
-            </Button>
-          </div>
+              >
+                Create Link
+              </Button>
+            </Col>
+            <Col></Col>
+          </Row>
         ) : (
-          <div></div>
+          <Row></Row>
         )}
-      </div>
+      </Container>
     );
   };
 
@@ -1259,7 +1324,6 @@ const queryDisplay = ({ inputData, query }) => {
     var longestLength = 0;
     for (var i = 0; i < data.nodes.length; i++) {
       var currentNodeWords = data.nodes[i].displayName.split(" ");
-      //console.log(currentNodeWords);
       var longestWord = 0;
       for (var j = 0; j < currentNodeWords.length; j++) {
         if (currentNodeWords[j].length > longestWord) {
@@ -1270,7 +1334,6 @@ const queryDisplay = ({ inputData, query }) => {
         longestLength = longestWord;
       }
     }
-
     return longestLength;
   }
 
@@ -1457,7 +1520,6 @@ const queryDisplay = ({ inputData, query }) => {
 
                   const startingY =
                     node.y - yIncrements * ((labelWords.length - 1) / 2);
-
                   if (labelWords.length === 1) {
                     ctx.textAlign = "center";
                     ctx.textBaseline = "middle";
@@ -1476,6 +1538,7 @@ const queryDisplay = ({ inputData, query }) => {
                     }
                   }
                 }}
+
                 linkWidth={3}
                 // PUT AN ATTRIBUTE FOR LINK COLOR
                 linkColor={"linkColor"}
@@ -1514,7 +1577,6 @@ const queryDisplay = ({ inputData, query }) => {
                     textAngle = -(Math.PI - textAngle);
                   if (textAngle < -Math.PI / 2)
                     textAngle = -(-Math.PI - textAngle);
-
                   const label = link.displayName;
 
                   // estimate fontSize to fit in link length
@@ -1557,7 +1619,6 @@ const queryDisplay = ({ inputData, query }) => {
             </div>
           </div>
         </Container>
-
         <Modal show={showErrorModal} onHide={handleErrorClose}>
           <Modal.Header closeButton>
             <Modal.Title>Error</Modal.Title>

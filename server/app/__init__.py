@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, request, jsonify, session
+from flask_bcrypt import Bcrypt
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import  LoginManager
@@ -8,8 +9,11 @@ from flask_mail import Mail
 # create the application object
 app = Flask(__name__)
 app.config.from_object('config')
+
 # enable CORS
-CORS(app,supports_credentials=True)
+CORS(app, supports_credentials = True)
+server_session = Session(app)
+db.init_app(app)
 
 # create eamil object
 mail = Mail(app)

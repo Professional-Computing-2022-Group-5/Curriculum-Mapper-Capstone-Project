@@ -9,6 +9,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { QueryDisplay } from "./index.js";
 import Modal from "react-bootstrap/Modal";
 
+
 var response = {};
 
 const basicQueries = [

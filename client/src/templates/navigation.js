@@ -43,6 +43,7 @@ const Navigation = () => {
     setLoginShow(true);
     setRegisterShow(false);
   };
+
   const handleAdminClose = () => {
     setAdminShow(false);
   };
@@ -80,15 +81,13 @@ const Navigation = () => {
         if (resp.data.isCoordinator === true) {
           setUserType("UnitCoordinator");
         }
+
         if (resp.data.isAdmin === true) {
           setUserAdmin(true);
         }
 
         if (resp.data.loggedIn === true) {
           setUserLoggedIn(true);
-        }
-
-        if (resp.data.loggedIn === true) {
           setUserName(resp.data.username);
         }
       } catch (error) {
@@ -98,6 +97,7 @@ const Navigation = () => {
   }, []);
 
   const logoutUser = async () => {
+
     try {
       const dbData = await httpClient.post("//localhost:5000/logout", {});
       console.log("   --STATUS [Logout]: " + dbData.data.status);
@@ -169,6 +169,24 @@ const Navigation = () => {
   const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const logInUser = async () => {
+      console.log(email, password);
+
+      try {
+        const resp = await httpClient.post("//localhost:5000/login", {
+          email,
+          password,
+        });
+        console.log(resp.data);
+
+        window.location.href = "/home";
+      } catch (error) {
+        if (error.response.status === 401) {
+          alert("Invalid credentials");
+        }
+      }
+    };
 
     return (
       <Container>
@@ -314,6 +332,31 @@ const Navigation = () => {
           } catch (error) {
             setErrorMessage("Error [Register Componenet]");
             handleErrorShow();
+          console.log("OOOOOO");
+          console.log(values.email);
+          console.log(values.password);
+          console.log(values.isCoordinator);
+
+          const resp = await httpClient.post("//localhost:5000/register", {
+            email: values.email,
+            password: values.password,
+            isCoordinator: Boolean(values.isCoordinator),
+          });
+          console.log("frpm the backedn");
+          console.log(resp.data);
+
+          try {
+            const resp = await httpClient.post("//localhost:5000/login", {
+              email: values.email,
+              password: values.password,
+            });
+            console.log(resp.data);
+
+            window.location.href = "/home";
+          } catch (error) {
+            if (error.response.status === 401) {
+              alert("Invalid credentials");
+            }
           }
         };
 
@@ -325,7 +368,7 @@ const Navigation = () => {
       <div>
         <Container className="register">
           <form onSubmit={formik.handleSubmit}>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>User Name:</label>
               </Col>
@@ -340,12 +383,12 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               {formik.errors.username && formik.touched.username ? (
                 <div className="error_message">{formik.errors.username}</div>
               ) : null}
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>Email:</label>
               </Col>
@@ -361,12 +404,12 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               {formik.errors.email && formik.touched.email ? (
                 <div className="error_message">{formik.errors.email}</div>
               ) : null}
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>Password:</label>
               </Col>
@@ -382,12 +425,12 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               {formik.errors.password && formik.touched.password ? (
                 <div className="error_message">{formik.errors.password}</div>
               ) : null}
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Col sm={6} lg={{ span: 4, offset: 1 }}>
                 <label>Confirm Password:</label>
               </Col>
@@ -403,7 +446,7 @@ const Navigation = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               {formik.errors.passwordConfirmation &&
               formik.touched.passwordConfirmation ? (
                 <div className="error_message">
@@ -411,9 +454,9 @@ const Navigation = () => {
                 </div>
               ) : null}
             </Row>
-            <Row>
-              <Col sm={2} lg={{ span: 1, offset: 3 }}></Col>
-              <Col sm={2} lg={{ span: 1, offset: 3 }}>
+            <Row className="mb-2">
+              <Col sm={5} lg={{ span: 3, offset: 1 }}></Col>
+              <Col sm={1} lg={1}>
                 <input
                   id="isCoordinator"
                   name="isCoordinator"
@@ -423,11 +466,11 @@ const Navigation = () => {
                   value={formik.values.isCoordinator}
                 />
               </Col>
-              <Col sm={8} lg={{ span: 8, offset: 1 }}>
+              <Col sm={6} lg={{ span: 5, offset: 1 }}>
                 <label>Unit Coordinator?</label>
               </Col>
             </Row>
-            <Row>
+            <Row className="mb-2">
               <Button variant="uwa" type="submit">
                 Submit
               </Button>
@@ -517,7 +560,6 @@ const Navigation = () => {
               <div className="p-2">
                 <h4>Welcome {userName}!</h4>
               </div>
-
               <Button variant="uwa-circle" onClick={logoutUser}>
                 <IconContext.Provider
                   value={{ color: "#27348b", size: "30px" }}
@@ -539,7 +581,7 @@ const Navigation = () => {
         centered
       >
         <Modal.Header closeButton centered>
-          <Modal.Title>Login</Modal.Title>
+          <Modal.Title ><h2>Login</h2></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Login />
@@ -555,7 +597,7 @@ const Navigation = () => {
         centered
       >
         <Modal.Header closeButton centered>
-          <Modal.Title>Register</Modal.Title>
+          <Modal.Title><h2>Register</h2></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Register />
@@ -707,6 +749,7 @@ const Navigation = () => {
         </Modal.Header>
         <Modal.Body>{errorMessage}</Modal.Body>
       </Modal>
+
     </div>
   );
 };

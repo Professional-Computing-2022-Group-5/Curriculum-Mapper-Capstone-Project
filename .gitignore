@@ -5,7 +5,7 @@
 #server side
 .vscode/*
 **/venv/*
-virtual-environment/*
+**/virtual-environment/*
 *.db
 *.sql
 *.out

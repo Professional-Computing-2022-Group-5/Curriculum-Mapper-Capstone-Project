@@ -6,8 +6,9 @@ NEO4j_URI = "bolt://localhost:7687"
 NEO4j_USER = "neo4j"
 NEO4j_PASSWORD = "CITS3200"
 
-# Jolt API configuration
-JOLT_URL = "http://localhost:7474/db/data/transaction/commit"
+import os
+import redis
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 # set secret key
 SECRET_KEY = os.environ.get('SECRET_KEY') or 'sshh!'
