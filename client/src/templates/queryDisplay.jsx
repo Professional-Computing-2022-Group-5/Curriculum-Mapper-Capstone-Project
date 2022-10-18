@@ -620,8 +620,8 @@ const queryDisplay = ({ inputData, query }) => {
     }
 
     return (
-      <div>
-        <p>NODE READ</p>
+      <Container>
+        <h2>NODE READ</h2>
         <Table responsive striped hover>
           <thead>
             <tr>
@@ -640,7 +640,7 @@ const queryDisplay = ({ inputData, query }) => {
         </Table>
 
         {userType === "UnitCoordinator" ? (
-          <div>
+          <Row>
             <Col></Col>
             <Col sm="auto" md="auto" lg="auto">
               <Button
@@ -662,11 +662,11 @@ const queryDisplay = ({ inputData, query }) => {
             <Col></Col>
 
             <DelNode id={unitnode.id} />
-          </div>
+          </Row>
         ) : (
           <div></div>
         )}
-      </div>
+      </Container>
     );
   };
 
@@ -855,22 +855,50 @@ const queryDisplay = ({ inputData, query }) => {
       <Container>
         <h2>LINK READ</h2>
         <Row>
-          <Col>Id:</Col>
+          <Col>
+            <b>Id:</b>
+          </Col>
           <Col>{linkBodyData["id"]}</Col>
         </Row>
         <Row>
-          <Col>Label:</Col>
+          <Col>
+            <b>Label:</b>
+          </Col>
           <Col>{linkBodyData["labels"]}</Col>
         </Row>
 
         <Row>
-          <Col>Source:</Col>
+          <Col>
+            <h2>SOURCE</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <b>Name:</b>
+          </Col>{" "}
           <Col>{sourceBodyData["displayName"]}</Col>
+        </Row>
+        <Row>
+          <Col>
+            <b>Label:</b>
+          </Col>{" "}
           <Col>{sourceBodyData["labels"]}</Col>
         </Row>
         <Row>
-          <Col>Target:</Col>
+          <Col>
+            <h2>TARGET</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <b>Name:</b>
+          </Col>
           <Col>{targetBodyData["displayName"]}</Col>
+        </Row>
+        <Row>
+          <Col>
+            <b>Label:</b>
+          </Col>{" "}
           <Col>{targetBodyData["labels"]}</Col>
         </Row>
 
@@ -993,7 +1021,7 @@ const queryDisplay = ({ inputData, query }) => {
     // console.log(nodeTypeInputs);
     // console.log(nodeTypes);
 
-    const [selectedType, setSelectedType] = useState("default");
+    const [selectedType, setSelectedType] = useState("Please choose a type...");
 
     function listCheck(item) {
       for (var j = 0; j < data.nodes.length; j++) {
@@ -1026,12 +1054,10 @@ const queryDisplay = ({ inputData, query }) => {
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item
-                  value="default"
+                  value="Please choose a type..."
                   disabled={true}
                   className="dd-uwa"
-                >
-                  Please choose a type...
-                </Dropdown.Item>
+                ></Dropdown.Item>
                 {nodeTypeInputs.map((type) => (
                   <Dropdown.Item
                     className="dd-uwa"
@@ -1045,12 +1071,14 @@ const queryDisplay = ({ inputData, query }) => {
               </Dropdown.Menu>
             </Dropdown>
           </Col>
-
+        </Row>
+        <Row>
+          <Col></Col>
           <Col sm="auto" md="auto" lg="auto">
             <Button
               variant="uwa"
               onClick={(e) => {
-                if (selectedType !== "default") {
+                if (selectedType !== "Please choose a type...") {
                   getInputs(nodeTypes[selectedType], "NODE", selectedType);
                 }
               }}
@@ -1058,6 +1086,7 @@ const queryDisplay = ({ inputData, query }) => {
               Submit
             </Button>
           </Col>
+          <Col></Col>
         </Row>
       </Container>
     );
@@ -1081,14 +1110,18 @@ const queryDisplay = ({ inputData, query }) => {
         <p className="txt-ctr">
           <b>Chosen Type:</b> {itemType}
         </p>
+
         <Form>
-          <Form.Group className="mb-3">
+          <Form.Group as={Row} className="mb-3">
             <Row>
-              <Col sm={5} md={5} lg={3}>
-                <p>
+              <Col>
+                <Form.Label>
                   <b>Source ID:</b> {searchforNode(searchSourceId).displayName}
-                </p>
+                </Form.Label>
               </Col>
+            </Row>
+            <Row>
+              <Col></Col>
               <Col>
                 <Button
                   variant="uwa"
@@ -1097,14 +1130,24 @@ const queryDisplay = ({ inputData, query }) => {
                   Select Source
                 </Button>
               </Col>
+              <Col></Col>
             </Row>
+          </Form.Group>
+        </Form>
 
+        <h3 className="txt-ctr">TARGET UPDATE</h3>
+
+        <Form>
+          <Form.Group as={Row} className="mb-3">
             <Row>
-              <Col sm={5} md={5} lg={3}>
-                <p>
+              <Col>
+                <Form.Label>
                   <b>Target ID:</b> {searchforNode(searchTargetId).displayName}
-                </p>
+                </Form.Label>
               </Col>
+            </Row>
+            <Row>
+              <Col></Col>
               <Col>
                 <Button
                   variant="uwa"
@@ -1113,24 +1156,25 @@ const queryDisplay = ({ inputData, query }) => {
                   Select Destination
                 </Button>
               </Col>
-            </Row>
-
-            <Row>
-              <Col></Col>
-              <Col sm="auto" md="auto" lg="auto">
-                <Button
-                  variant="uwa"
-                  onClick={(e) => {
-                    sendCreateLink(itemType, searchSourceId, searchTargetId);
-                  }}
-                >
-                  Submit
-                </Button>
-              </Col>
               <Col></Col>
             </Row>
           </Form.Group>
         </Form>
+
+        <Row>
+          <Col></Col>
+          <Col sm="auto" md="auto" lg="auto">
+            <Button
+              variant="uwa"
+              onClick={(e) => {
+                sendCreateLink(itemType, searchSourceId, searchTargetId);
+              }}
+            >
+              Submit
+            </Button>
+          </Col>
+          <Col></Col>
+        </Row>
       </Container>
     );
   };
@@ -1170,7 +1214,7 @@ const queryDisplay = ({ inputData, query }) => {
         });
     }, []);
 
-    const [selectedType, setSelectedType] = useState("default");
+    const [selectedType, setSelectedType] = useState("Please choose a type...");
 
     // console.log(linkTypes);
     // console.log(selectedType);
@@ -1206,12 +1250,10 @@ const queryDisplay = ({ inputData, query }) => {
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item
-                  value="default"
+                  value="Please choose a type..."
                   className="dd-uwa"
                   disabled={true}
-                >
-                  Please choose a type...
-                </Dropdown.Item>
+                ></Dropdown.Item>
                 {linkTypes.map((type) => (
                   <Dropdown.Item
                     className="dd-uwa"
@@ -1225,12 +1267,14 @@ const queryDisplay = ({ inputData, query }) => {
               </Dropdown.Menu>
             </Dropdown>
           </Col>
-
+        </Row>
+        <Row>
+          <Col></Col>
           <Col sm="auto" md="auto" lg="auto">
             <Button
               variant="uwa"
               onClick={(e) => {
-                if (selectedType !== "default") {
+                if (selectedType !== "Please choose a type...") {
                   getInputs("", "LINK", selectedType);
                 }
               }}
@@ -1238,6 +1282,7 @@ const queryDisplay = ({ inputData, query }) => {
               Submit
             </Button>
           </Col>
+          <Col></Col>
         </Row>
       </Container>
     );
@@ -1284,24 +1329,33 @@ const queryDisplay = ({ inputData, query }) => {
       <Container>
         <h2>LINK UPDATE</h2>
 
-        <p>
-          <b>Link ID:</b> {unitLink.property.id}
-        </p>
-        <p>
-          <b>Link Labels:</b> {unitLink.labels}
-        </p>
+        <Row>
+          <Col sm={6} md={6} lg={3}>
+            <b>Link ID:</b>
+          </Col>
+          <Col> {unitLink.property.id}</Col>
+        </Row>
+        <Row>
+          <Col sm={6} md={6} lg={3}>
+            <b>Link Labels:</b>{" "}
+          </Col>
+          <Col>{unitLink.labels}</Col>
+        </Row>
 
         <h3 className="txt-ctr">SOURCE UPDATE</h3>
 
         <Form>
           <Form.Group as={Row} className="mb-3">
             <Row>
-              <Col sm={6} md={6} lg={3}>
+              <Col>
                 <Form.Label>
                   <b>Source ID:</b> {searchforNode(searchSourceId).displayName}
                 </Form.Label>
               </Col>
-              <Col sm="auto" md="auto" lg="auto">
+            </Row>
+            <Row>
+              <Col></Col>
+              <Col>
                 <Button
                   variant="uwa"
                   onClick={(e) => setSearchActive("source")}
@@ -1309,21 +1363,25 @@ const queryDisplay = ({ inputData, query }) => {
                   Select Source
                 </Button>
               </Col>
+              <Col></Col>
             </Row>
           </Form.Group>
         </Form>
 
         <h3 className="txt-ctr">TARGET UPDATE</h3>
 
-        <Row>
-          <Form>
-            <Form.Group as={Row} className="mb-3">
-              <Col sm={6} md={6} lg={3}>
+        <Form>
+          <Form.Group as={Row} className="mb-3">
+            <Row>
+              <Col>
                 <Form.Label>
                   <b>Target ID:</b> {searchforNode(searchTargetId).displayName}
                 </Form.Label>
               </Col>
-              <Col sm="auto" md="auto" lg="auto">
+            </Row>
+            <Row>
+              <Col></Col>
+              <Col>
                 <Button
                   variant="uwa"
                   onClick={(e) => setSearchActive("target")}
@@ -1331,10 +1389,13 @@ const queryDisplay = ({ inputData, query }) => {
                   Select Destination
                 </Button>
               </Col>
-            </Form.Group>
-          </Form>
-        </Row>
+              <Col></Col>
+            </Row>
+          </Form.Group>
+        </Form>
+
         <Row>
+          <Col></Col>
           <Col sm="auto" md="auto" lg="auto">
             <Button
               variant="uwa"
@@ -1352,6 +1413,7 @@ const queryDisplay = ({ inputData, query }) => {
               Delete
             </Button>
           </Col>
+          <Col></Col>
         </Row>
 
         <DelLink id={unitLink.property.id} />
