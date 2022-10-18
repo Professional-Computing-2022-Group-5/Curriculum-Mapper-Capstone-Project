@@ -1,0 +1,76 @@
+import httpClient from "./httpClient.js";
+import React, { useState } from "react";
+//import Button from "react-bootstrap/Button";
+//import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+//import Col from "react-bootstrap/Col";
+//import { Formik, Field, Form } from 'formik';
+import { Formik, Form, Field } from "formik";
+
+//const { Formik } = formik;
+import * as yup from "yup";
+
+const registrationSchema = yup.object().shape({
+  firstName: yup.string().required(),
+  lastName: yup.string().required(),
+  email: yup
+    .string()
+    .email("Invalid email")
+    .required("Required"),
+  password: yup.string().required("Password is required"),
+  passwordConfirmation: yup
+    .string()
+    .oneOf([yup.ref("password"), null], "Passwords must match"),
+});
+
+function Register() {
+  return (
+    <Container className="register">
+      <Row>
+        <h1>Register</h1>
+      </Row>
+
+      <Formik
+        initialValues={{
+          firstName: "",
+          lastName: "",
+          email: "",
+          password: "",
+          passwordConfirmation: "",
+        }}
+        validationSchema={registrationSchema}
+        onSubmit={(values) => {
+          // same shape as initial values
+          console.log(values);
+        }}
+      >
+        {({ errors, touched }) => (
+          <Form>
+            <Field name="firstName" />
+            {errors.firstName && touched.firstName ? (
+              <div>{errors.firstName}</div>
+            ) : null}
+            <Field name="lastName" />
+            {errors.lastName && touched.lastName ? (
+              <div>{errors.lastName}</div>
+            ) : null}
+            <Field name="email" type="email" />
+            {errors.email && touched.email ? <div>{errors.email}</div> : null}
+            <Field name="password" type="password" />
+            {errors.password && touched.password ? (
+              <div>{errors.password}</div>
+            ) : null}
+            <Field name="passwordConfirmation" type="password" />
+            {errors.passwordConfirmation && touched.passwordConfirmation ? (
+              <div>{errors.passwordConfirmation}</div>
+            ) : null}
+            <button type="submit">Submit</button>
+          </Form>
+        )}
+      </Formik>
+    </Container>
+  );
+}
+
+export default Register;
