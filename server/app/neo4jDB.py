@@ -1,7 +1,7 @@
 from py2neo import Graph,NodeMatcher,cypher,Node,Relationship,RelationshipMatcher
-import json
 from app import api
 from config import NEO4j_URI, NEO4j_USER, NEO4j_PASSWORD
+import pandas as pd
 
 # connect to the Neo4j database
 try:
@@ -100,7 +100,23 @@ def create_node(data):
                 # add properties to the node
                 node[key] = value
         # query whether the current node already exists in the database (check both label and name)
-        node_match = NodeMatcher(graphDB).match(data['label'], name=data['name'])
+        if 'CBoK' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], area=data['area'])
+        elif 'Outcome' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], level=data['level'])
+        elif 'Unit' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], title=data['title'])
+        elif 'Course' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], title=data['title'])
+        elif 'AQFcategory' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], description=data['description'])
+        elif 'AQFoutcome' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], description=data['description'])
+        elif 'Activity' == data['label']:
+            node_match = NodeMatcher(graphDB).match(data['label'], activity=data['activity'])
+        elif data['name'] != None:
+            node_match = NodeMatcher(graphDB).match(data['label'], name=data['name'])
+            
         if node_match.__len__() == 0:
             graphDB.create(node)
             return {'status':'create_success'}
@@ -157,3 +173,51 @@ def create_relationship(data):
             return {'status':'relationship_exist'}
     except:
         return {'status':'create_failed'}
+
+# get all labels in the database
+def get_labels(): 
+    try:
+        # get all labels
+        labels = graphDB.run("CALL db.labels() YIELD label RETURN label")
+        #get attributes of each label and store them in a dictionary (key: label, value: attributes)
+        label_dict = {}
+        for label in labels:
+            data = graphDB.run("MATCH (n:{}) RETURN n LIMIT 25".format(label['label'])).data()[0]['n']
+            label_dict[label['label']] = list(data.keys())
+
+        return {'status':'success', 'data':label_dict}
+    except:
+        return {'status':'error'}
+
+# get all relationship types in the database
+def get_relationships():
+    try:
+        # get all relationship types
+        relationships = graphDB.run("CALL db.relationshipTypes() YIELD relationshipType RETURN relationshipType")
+        # convert the result to a list
+        relationships = [relationship['relationshipType'] for relationship in relationships]
+        print(relationships)
+        return {'status':'success', 'data':relationships}
+    except:
+        return {'status':'error'}
+
+# download a csv file according to the query result
+def downloadCsv(query):
+    try:
+        output = search_by_query(query)
+       
+        print(output['data'])
+        data = output['data']
+        node_len = len(data['nodes'])
+        rel_len = len(data['links'])
+        if node_len > rel_len:
+            for i in range(node_len - rel_len):
+                data['links'].append('')
+        else:
+            for i in range(rel_len - node_len):
+                data['nodes'].append('')
+        df = pd.DataFrame(data, columns=list(data.keys()), index=None) # dataframe
+        csv_bin_data = df.to_csv(index=True, encoding="utf-8") # CSV file
+        return csv_bin_data
+    except:
+        return {'status':'download_failed'}

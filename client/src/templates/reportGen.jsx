@@ -1,25 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import PDFFile from "./PDFFile";
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
+import httpClient from "./httpClient";
 
-function ReportGen() {
+import Button from "react-bootstrap/Button";
+
+const ReportGen = () => {
+  const [userType, setUserType] = useState("BasicUser");
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const resp = await httpClient.get("//localhost:5000/@me");
+
+        if (resp.data.isCoordinator === true) {
+          setUserType("UnitCoordinator");
+        }
+      } catch (error) {
+        console.log("No Current User Logged In");
+      }
+    })();
+  }, []);
+
   return (
-    <div className="report_gen">
-      <div className="container">
-        <div className="row align-items-center my-5">
-          <div className="col-lg-7">
-            <img
-              className="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
+    <div>
+      {userType === "UnitCoordinator" ? (
+        <>
+          <div>
+            <PDFDownloadLink document={<PDFFile />} filename="CurriculumMapper">
+              {({ loading }) =>
+                loading ? (
+                  <Button col={1} variant="uwa">
+                    Loading document ...
+                  </Button>
+                ) : (
+                  <Button col={1} variant="uwa">
+                    Download
+                  </Button>
+                )
+              }
+            </PDFDownloadLink>
           </div>
-          <div className="col-lg-5">
-            <h1 className="font-weight-light">Report Gen</h1>
 
-          </div>
-        </div>
-      </div>
+          <PDFViewer width={window.innerWidth} height={window.innerHeight}>
+            <PDFFile />
+          </PDFViewer>
+        </>
+      ) : (
+        <>
+          <h1 className="txt-ctr">
+            You are not a unitCoordinator, please contact an administrator for
+            assistance!
+          </h1>
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default ReportGen;

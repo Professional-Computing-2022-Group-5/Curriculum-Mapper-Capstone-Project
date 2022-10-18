@@ -1,18 +1,56 @@
 # Curriculum-Mapper-Capstone-Project
 
-This Project is based on MacOS.
+## Features
+
+- A database for representing an academic program such as the Masters of Information Technology and its associated material for accreditation.
+- Interactive visualisation of an academic program and its accreditation material, enabling the user to zoom in and out and to call up specific details such as outcomes mappings.
+
+## Requirements
+
+The main requirements are:
+
+- Python3
+- Neo4J
+- NodeJS
+- SQLite
+- Flask
+
+Python package requirements are listed in `requirements.txt`. NodeJS requirements are listed in `client/package.json`.
+
+Install Python3: [Click here](https://realpython.com/installing-python/)
+
+Install SQLite: [Click here](https://www.servermania.com/kb/articles/install-sqlite/ "sqlite")
+
+Install Node.js: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+
+Setup the the Neo4J Graph Database: [https://github.com/weiliu2k/accreditation-Explorer]()
 
 ## Getting Started
 
-### Start Backend Server
+### Flask Server
 
-Before running the following commands you must ensure the database is configured (see installing below)
+Setting up environment:
 
-Activate the python virtual environment:
+1. Create the python virtual environment:
 
-`$ . venv/bin/activate`
+   * Mac/Linux: `$ python3 -m venv venv`
+   * Windows: `> py -3 -m venv venv`
+2. Activate the environemnt:
 
-To run the app:
+   * Mac/Linux: `$ . venv/bin/activate`
+   * Windows: `> venv/Scripts/activate`
+3. Install packages:
+   `$ pip install -r requirements.txt `
+
+Build the database:
+
+`$ flask db init`
+
+`$ flask db migrate`
+
+`$ flask db upgrade`
+
+ Run the Flask app:
 
 `$ flask run`
 
@@ -24,65 +62,15 @@ To exit the virtual environment:
 
 `$ deactivate`
 
-### Start Frontend Server
+### React Client
 
-Before running the following commands you must ensure the React App is configured (see installing below)
-
-To run the React App:
+Run the React App:
 
 `$ cd client`
 
-`$ npm start`
+`$ sudo apt install npm -y` (only for Linux - if you are not a Linux user skip this step)
 
-## Prerequisites
-
-Requires Python3, Flask, venv, SQLite, Neo4j and Node.js
-
-## Installing
-
-### Backend Server
-
-Install Python3: [Click here](https://realpython.com/installing-python/)
-
-Setting up environment:
-
-1. create the virtual environment: `$ cd server`
-
-   * Mac/Linux: `$ python3 -m venv venv`
-   * Windows: `> py -3 -m venv venv`
-2. activate the environemnt:
-
-   * Mac/Linux: `$ . venv/bin/activate`
-   * Windows: `> venv/Scripts/activate`
-3. install dependency:
-   `$ pip install -r requirements.txt `
-
-Install SQLite: [Click here](https://www.servermania.com/kb/articles/install-sqlite/ "sqlite") (**ignore this step for now**)
-
-Build the database: (**ignore this step for now**)
-
-`$ flask db init`
-
-`$ flask db migrate`
-
-`$ flask db upgrade`
-
-Install Neo4j: [https://github.com/weiliu2k/accreditation-Explorer]()
-
- Run the Flask server:
-
-`$ flask run`
-
-### Frontend Server
-
-Install Node.js: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
-
-Setting up environment:
-
-1. `$ cd client`
-2. `$ npm build`
-
-Run the React App:
+`$ npm build`
 
 `$ npm start`
 
@@ -90,15 +78,11 @@ Run the React App:
 
 To run the unit test:
 
-`$ python -m test`
+`$ python3 -m tests.UT`
 
-To run the selenium test:
+To run the selenium test:(Not ready yet)
 
-`$ python -m test`
-
-### Break down into end to end tests
-
-more to come ......
+`$ python3 -m tests.xx`
 
 ## Deployment
 
@@ -106,9 +90,7 @@ more to come ......
 
 ## Built With
 
-* [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) - The web framework used
-* VSCode & Git
-* React
+Linux, MacOS, VScode, Python3 3.6+, Flask, Github, React
 
 ## Git Log
 
@@ -116,12 +98,13 @@ more to come ......
 
 1.0
 
-## Authors
+## Contributors
 
-* A - 123
-* B - 123
-* C - 123
-
-## License
-
-## Acknowledgments
+| Name           | Student Number |
+| :------------- | :------------- |
+| Amy Burnett    | 22689376       |
+| Grace Bowen    | 22706512       |
+| Jackie Shan    | 22710446       |
+| Yupeng Li     | 22602567       |
+| Michael Semaan | 22710114       |
+| Leo Burtenshaw | 21595359       |
