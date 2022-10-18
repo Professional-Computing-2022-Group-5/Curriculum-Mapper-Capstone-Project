@@ -418,14 +418,15 @@ const queryDisplay = ({ inputData, query }) => {
   };
 
   // UPDATE LINK CRUD COMMAND POST
-  const sendLinkUpdate = async (label, sId, tId) => {
+  const sendLinkUpdate = async (label, sId, tId, id) => {
     const inputs = { label: label, sourceId: sId, targetId: tId };
     console.log("-----SENDING [sendLinkUpdate]: " + inputs);
+    console.log(inputs);
 
     try {
-      const dbData = await httpClient.post("//localhost:5000/linkCreate", {
+      const dbData = await httpClient.post("//localhost:5000/relationshisp_update", {
         inputs,
-        //link, id
+        id
       });
       console.log("   --STATUS [sendLinkUpdate]: " + dbData.data.status);
       if (dbData.data.status === "create_success") {
@@ -1058,7 +1059,7 @@ const queryDisplay = ({ inputData, query }) => {
                   disabled={true}
                   className="dd-uwa"
                 ></Dropdown.Item>
-                {nodeTypeInputs.map((type) => (
+                {matchingTypes.map((type) => (
                   <Dropdown.Item
                     className="dd-uwa"
                     key={type}
@@ -1254,7 +1255,7 @@ const queryDisplay = ({ inputData, query }) => {
                   className="dd-uwa"
                   disabled={true}
                 ></Dropdown.Item>
-                {linkTypes.map((type) => (
+                {matchingTypes.map((type) => (
                   <Dropdown.Item
                     className="dd-uwa"
                     key={type}
@@ -1399,7 +1400,7 @@ const queryDisplay = ({ inputData, query }) => {
           <Col sm="auto" md="auto" lg="auto">
             <Button
               variant="uwa"
-              onClick={(e) => sendLinkUpdate(linkDetails, unitLink.property.id)}
+              onClick={(e) => sendLinkUpdate(unitLink.labels, searchSourceId, searchTargetId, unitLink.property.id)}
             >
               Submit
             </Button>

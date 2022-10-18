@@ -103,6 +103,20 @@ def create_relationship():
     else:
         return {'status': 'request_error'}
 
+# create relationship by selecting nodes and relationships
+@app.route('/relationshisp_update', methods=['POST', 'GET'])
+def create_relationship2():
+    if request.method == 'POST':
+        data = request.get_json()
+        result = neo4jDB.delete_entity(data['id'], 'relationship')
+        if result['status'] == 'delete_success':
+            result2 = neo4jDB.create_relationship(data['inputs'])
+            return result2
+        else:
+            return result
+    else:
+        return {'status': 'request_error'}
+
 # update node attributes
 @app.route('/nodeUpdate', methods=['POST', 'GET'])
 def Update_node():
@@ -163,6 +177,8 @@ def upgrade_user():
     if request.method == 'POST':
         data = request.get_json()
         result = sqliteDB.upgrade_to_coordinator(data['email'], data['whitelist'])
+        print("----------result")
+        print(result)
         return result
     else:
         return {'status': 'request_error'}

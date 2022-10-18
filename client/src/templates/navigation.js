@@ -33,7 +33,7 @@ const Navigation = () => {
   const [showAdmin, setAdminShow] = useState(false);
   const [changeUser, setChangeUser] = useState({ email: "", whiteList: false });
   const [makeCoordinatorEmail, setMakeCoordinatorEmail] = useState("");
-  const [whiteList, setWhiteList] = useState(false);
+  const [whiteList, setWhiteList] = useState(true);
 
   const handleLoginClose = () => {
     setLoginShow(false);
@@ -426,22 +426,6 @@ const Navigation = () => {
               ) : null}
             </Row>
             <Row className="mb-2">
-              <Col sm={5} lg={{ span: 3, offset: 1 }}></Col>
-              <Col sm={1} lg={1}>
-                <input
-                  id="isCoordinator"
-                  name="isCoordinator"
-                  type="radio"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.isCoordinator}
-                />
-              </Col>
-              <Col sm={6} lg={{ span: 5, offset: 1 }}>
-                <label>Unit Coordinator?</label>
-              </Col>
-            </Row>
-            <Row className="mb-2">
               <Button variant="uwa" type="submit">
                 Submit
               </Button>
@@ -464,7 +448,9 @@ const Navigation = () => {
 
       console.log("   --STATUS [MakeAdmin]: " + dbData.data.status);
 
-      if (dbData.data.status === "lougout_success") {
+      if (dbData.data.status === "add_success") {
+        setMakeCoordinatorEmail("");
+        setAdminShow(false);
       }
       if (dbData.data.status === "logout_error") {
         setErrorMessage(
@@ -694,13 +680,13 @@ const Navigation = () => {
                   />
                 </Col>
               </Row>
-              <Row>
-                <label>White List?</label>
-                <input
+              {/* <Row> */}
+                {/* <label>White List?</label> */}
+                {/* <input
                   type="radio"
-                  onClick={() => setWhiteList((s) => !s)}
-                ></input>
-              </Row>
+                  onClick={() => {setWhiteList((s) => !s); console.log(whiteList)}}
+                ></input> */}
+              {/* </Row> */}
             </form>
           </Container>
         </Modal.Body>
