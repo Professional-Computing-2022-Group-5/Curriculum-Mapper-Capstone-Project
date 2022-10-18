@@ -224,7 +224,8 @@ def get_relationships():
 # download a csv file according to the query result
 def downloadCsv(query):
     try:
-        data = search_by_query(query)
+        output = search_by_query(query)
+        data = output['data']
         node_len = len(data['nodes'])
         rel_len = len(data['links'])
         if node_len > rel_len:
