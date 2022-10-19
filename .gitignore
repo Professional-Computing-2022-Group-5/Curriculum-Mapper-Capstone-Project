@@ -12,6 +12,10 @@ virtual-environment/*
 __pycache__/*
 **/migrations/*
 **/venv/*
+server/__pycache__
+server/app/__pycache__
+
+
 
 # client side
 node_modules/*

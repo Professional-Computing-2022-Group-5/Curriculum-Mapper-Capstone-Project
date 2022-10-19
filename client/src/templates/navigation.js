@@ -33,7 +33,7 @@ const Navigation = () => {
   const [showAdmin, setAdminShow] = useState(false);
   const [changeUser, setChangeUser] = useState({ email: "", whiteList: false });
   const [makeCoordinatorEmail, setMakeCoordinatorEmail] = useState("");
-  const [whiteList, setWhiteList] = useState(true);
+  const [whiteList, setWhiteList] = useState(false);
 
   const handleLoginClose = () => {
     setLoginShow(false);
@@ -721,13 +721,17 @@ const Navigation = () => {
                   />
                 </Col>
               </Row>
-              {/* <Row> */}
-              {/* <label>White List?</label> */}
-              {/* <input
+              <Row>
+                <label>White List?</label>
+                <input
                   type="radio"
-                  onClick={() => {setWhiteList((s) => !s); console.log(whiteList)}}
-                ></input> */}
-              {/* </Row> */}
+                  checked={whiteList}
+                  onClick={() => {
+                    setWhiteList((s) => !s);
+                    console.log(whiteList);
+                  }}
+                ></input>
+              </Row>
             </form>
           </Container>
         </Modal.Body>
