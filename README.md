@@ -98,11 +98,11 @@ Linux, MacOS, VScode, Python3 3.6+, Flask, Github, React
 
 ## Contributors
 
-| Name           | Student Number |
-| :------------- | :------------- |
-| Amy Burnett    | 22689376       |
-| Grace Bowen    | 22706512       |
-| Jackie Shan    | 22710446       |
-| Yupeng Li     | 22602567       |
-| Michael Semaan | 22710114       |
-| Leo Burtenshaw | 21595359       |
+| Name           | Student Number | Student Number             |
+| :------------- | :------------- | :-------------             |
+| Amy Burnett    | 22689376       | amy.ellie@hotmail.com      |
+| Grace Bowen    | 22706512       | gracebbowen@gmail.com      |
+| Jackie Shan    | 22710446       | jackie.shan.q@gmail.com    |
+| Yupeng Li      | 22602567       | lypa520@gmail.com          |
+| Michael Semaan | 22710114       | michael.asemaan@gmail.com  |
+| Leo Burtenshaw | 21595359       | leonardharris899@gmail.com |
