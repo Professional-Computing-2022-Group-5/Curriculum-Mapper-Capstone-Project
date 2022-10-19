@@ -424,10 +424,13 @@ const queryDisplay = ({ inputData, query }) => {
     console.log(inputs);
 
     try {
-      const dbData = await httpClient.post("//localhost:5000/relationshisp_update", {
-        inputs,
-        id
-      });
+      const dbData = await httpClient.post(
+        "//localhost:5000/relationshisp_update",
+        {
+          inputs,
+          id,
+        }
+      );
       console.log("   --STATUS [sendLinkUpdate]: " + dbData.data.status);
       if (dbData.data.status === "create_success") {
         closeCrudTable();
@@ -1400,7 +1403,14 @@ const queryDisplay = ({ inputData, query }) => {
           <Col sm="auto" md="auto" lg="auto">
             <Button
               variant="uwa"
-              onClick={(e) => sendLinkUpdate(unitLink.labels, searchSourceId, searchTargetId, unitLink.property.id)}
+              onClick={(e) =>
+                sendLinkUpdate(
+                  unitLink.labels,
+                  searchSourceId,
+                  searchTargetId,
+                  unitLink.property.id
+                )
+              }
             >
               Submit
             </Button>
@@ -1725,10 +1735,10 @@ const queryDisplay = ({ inputData, query }) => {
                   }
                 }}
                 // PUT AN ATTRIBUTE FOR LINK COLOR
-                linkColor={"black"}
+                //linkColor={"black"}
                 linkDirectionalArrowLength={6}
                 linkDirectionalArrowRelPos={1}
-                linkDirectionalArrowColor={"black"}
+                //linkDirectionalArrowColor={"black"}
                 //linkCanvasObjectMode={(() => 'after')}
                 linkCanvasObjectMode={() => "after"}
                 linkCanvasObject={(link, ctx) => {
