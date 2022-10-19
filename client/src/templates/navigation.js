@@ -116,59 +116,10 @@ const Navigation = () => {
     }
   };
 
-  const logInUser = async (email, password) => {
-    console.log("-----SENDING [logInUser]: " + email + password);
-    try {
-      const dbData = await httpClient.post("//localhost:5000/login", {
-        email,
-        password,
-      });
-      console.log("   --STATUS [Login]: " + dbData.data.status);
-
-      if (
-        dbData.data.status === "basic_user" ||
-        "admin_user" ||
-        "coordinator_user"
-      ) {
-        handleLoginClose();
-        window.location.href = "/home";
-      }
-      if (dbData.data.status === "request_error") {
-        handleLoginClose();
-        setErrorMessage(
-          "[request_error]: Error Receiving POST Request (routes.py - /login) "
-        );
-        handleErrorShow();
-      }
-      if (dbData.data.status === "password_error") {
-        handleLoginClose();
-        setErrorMessage(
-          "[password_error]: Password Error (sqliteDB.py - /login) "
-        );
-        handleErrorShow();
-      }
-      if (dbData.data.status === "user_not_exist") {
-        handleLoginClose();
-        setErrorMessage(
-          "[user_not_exist]: User does not exist (sqliteDB.py - /login) "
-        );
-        handleErrorShow();
-      }
-      if (dbData.data.status === "login_error") {
-        handleLoginClose();
-        setErrorMessage("[login_error]: Log in error (sqliteDB.py - /login) ");
-        handleErrorShow();
-      }
-    } catch (error) {
-      setErrorMessage("Error [Login Componenet]");
-      handleErrorShow();
-    }
-  };
-
   const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    /*
     const logInUser = async () => {
       console.log(email, password);
 
@@ -184,6 +135,58 @@ const Navigation = () => {
         if (error.response.status === 401) {
           alert("Invalid credentials");
         }
+      }
+    };
+*/
+
+    const logInUser = async (email, password) => {
+      console.log("-----SENDING [logInUser]: " + email + password);
+      try {
+        const dbData = await httpClient.post("//localhost:5000/login", {
+          email,
+          password,
+        });
+        console.log("   --STATUS [Login]: " + dbData.data.status);
+
+        if (
+          dbData.data.status === "basic_user" ||
+          "admin_user" ||
+          "coordinator_user"
+        ) {
+          handleLoginClose();
+          window.location.href = "/home";
+        }
+        if (dbData.data.status === "request_error") {
+          handleLoginClose();
+          setErrorMessage(
+            "[request_error]: Error Receiving POST Request (routes.py - /login) "
+          );
+          handleErrorShow();
+        }
+        if (dbData.data.status === "password_error") {
+          handleLoginClose();
+          setErrorMessage(
+            "[password_error]: Password Error (sqliteDB.py - /login) "
+          );
+          handleErrorShow();
+        }
+        if (dbData.data.status === "user_not_exist") {
+          handleLoginClose();
+          setErrorMessage(
+            "[user_not_exist]: User does not exist (sqliteDB.py - /login) "
+          );
+          handleErrorShow();
+        }
+        if (dbData.data.status === "login_error") {
+          handleLoginClose();
+          setErrorMessage(
+            "[login_error]: Log in error (sqliteDB.py - /login) "
+          );
+          handleErrorShow();
+        }
+      } catch (error) {
+        setErrorMessage("Error [Login Componenet]");
+        handleErrorShow();
       }
     };
 
@@ -246,15 +249,20 @@ const Navigation = () => {
         handleRegisterClose();
       }
       if (dbData.data.status === "send_failed") {
+        handleRegisterClose();
+        setErrorMessage(
+          "[send_failed]: Email send to admin failed (routes.py - ) /send_mail"
+        );
+        handleErrorShow();
       }
       if (dbData.data.status === "request_error") {
         setErrorMessage(
-          "[logout_error]: Error Logging Out Users (sqliteDB.py - /logout) "
+          "[request_error]: Error receiving POST request (routes.py - /send_mail) "
         );
         handleErrorShow();
       }
     } catch (error) {
-      setErrorMessage("Error [Logout Componenet]");
+      setErrorMessage("Error [Send Email Componenet]");
       handleErrorShow();
     }
   };
@@ -448,18 +456,51 @@ const Navigation = () => {
 
       console.log("   --STATUS [MakeAdmin]: " + dbData.data.status);
 
+      if (dbData.data.status === "upgrade_success") {
+        setMakeCoordinatorEmail("");
+        setAdminShow(false);
+      }
       if (dbData.data.status === "add_success") {
         setMakeCoordinatorEmail("");
         setAdminShow(false);
       }
-      if (dbData.data.status === "logout_error") {
+      if (dbData.data.status === "request_error") {
         setErrorMessage(
-          "[logout_error]: Error Logging Out Users (sqliteDB.py - /logout) "
+          "[request_error]: Error Receiving POST Request (routes.py - /upgrade) "
         );
         handleErrorShow();
+        setAdminShow(false);
+      }
+      if (dbData.data.status === "upgrade_failed") {
+        setErrorMessage(
+          "[upgrade_failed]: User upgrade failed (sqliteDB.py - /upgrade_to_coordinator) "
+        );
+        handleErrorShow();
+        setAdminShow(false);
+      }
+      if (dbData.data.status === "email_exist") {
+        setErrorMessage(
+          "[email_exist]: Email exists in whiteList (sqliteDB.py - /add_whitelist) "
+        );
+        handleErrorShow();
+        setAdminShow(false);
+      }
+      if (dbData.data.status === "file_not_found") {
+        setErrorMessage(
+          "[file_not_found]: File not found (sqliteDB.py - /add_whitelist) "
+        );
+        handleErrorShow();
+        setAdminShow(false);
+      }
+      if (dbData.data.status === "no_whiteList") {
+        setErrorMessage(
+          "[no_whiteList]: User not given whiteList permissions (sqliteDB.py - /upgrade_to_coordinator) "
+        );
+        handleErrorShow();
+        setAdminShow(false);
       }
     } catch (error) {
-      setErrorMessage("Error [Logout Componenet]");
+      setErrorMessage("Error [Make Coordinator Email Componenet]");
       handleErrorShow();
     }
   };
@@ -681,8 +722,8 @@ const Navigation = () => {
                 </Col>
               </Row>
               {/* <Row> */}
-                {/* <label>White List?</label> */}
-                {/* <input
+              {/* <label>White List?</label> */}
+              {/* <input
                   type="radio"
                   onClick={() => {setWhiteList((s) => !s); console.log(whiteList)}}
                 ></input> */}
@@ -691,7 +732,7 @@ const Navigation = () => {
           </Container>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={sendAdminEmail}>
+          <Button variant="uwa" onClick={sendAdminEmail}>
             Submit
           </Button>
         </Modal.Footer>
