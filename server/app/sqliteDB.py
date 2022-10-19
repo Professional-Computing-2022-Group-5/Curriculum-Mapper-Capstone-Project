@@ -50,19 +50,14 @@ def logout():
 def upgrade_to_coordinator(email,flag):
     print(flag)
     try:
-        print("------try------")
         user = UserModel.query.filter_by(email=email).first()
         if user:
             user.UnitCoordinator = True
             db.session.commit()
-            print("------mid------")
-
             return {'status': 'upgrade_success'}
         # if the user is not exist, add the email to the white list
         if flag:
             result = add_whiteList(email)
-            print("---------func--------")
-            print(result)
             return{'status': result['status']}
         else:
             return {'status': 'no_whiteList'}

@@ -12,6 +12,7 @@ root.render(
     <Navigation />
     <Routes>
       <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/query" element={<Query />} />
       <Route path="/reportGen" element={<ReportGen />} />
     </Routes>

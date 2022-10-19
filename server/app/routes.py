@@ -4,16 +4,6 @@ from flask import render_template, request, jsonify, Response
 from flask_login import current_user
 from flask_mail import Message
 from config import MAIL_USERNAME,RECIPIENT
-
-@app.route('/')
-@app.route('/index.html')
-def index():
-    return render_template('index.html')
-
-# return textbox page
-@app.route('/textbox.html')
-def textBox_page():
-    return render_template('textBox.html')
     
 # register user
 @app.route('/register', methods=['POST', 'GET'])
@@ -39,6 +29,7 @@ def login():
 def logout():
     return sqliteDB.logout()
 
+# check current user status
 @app.route("/@me")
 def get_current_user():
     if current_user.is_authenticated:
@@ -103,7 +94,7 @@ def create_relationship():
     else:
         return {'status': 'request_error'}
 
-# create relationship by selecting nodes and relationships
+# update link direction and delete the link was selected
 @app.route('/relationshisp_update', methods=['POST', 'GET'])
 def create_relationship2():
     if request.method == 'POST':
@@ -127,7 +118,7 @@ def Update_node():
     else:
         return {'status': 'request_error'}
 
-# update relationship attributes
+# update relationship attributes(we haven't used this route)
 @app.route('/linkUpdate', methods=['POST', 'GET'])
 def Update_link():
     if request.method == 'POST':
@@ -200,7 +191,7 @@ def send_mail():
     else:
         return {'status': 'request_error'}
 
-# add an email address to the whitelist
+# add an email address to the whitelist(we haven't used this route cuz we automatically send an email when a new user register)
 @app.route("/add_whitelist", methods=['POST', 'GET'])
 def add_whitelist():
     if request.method == 'POST':
